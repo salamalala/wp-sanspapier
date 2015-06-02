@@ -1,0 +1,83 @@
+main{
+  @include clearfix;
+  @include outer-container; 
+}
+
+.wer{
+  margin-top: -1.2em; 
+  border: none;
+  line-height: 1.7;
+}
+
+.big-text-box{
+  &:nth-of-type(n+2){
+    margin-top: modular-scale(4);
+  }
+
+}
+
+.highlighted{
+  font-weight: 600;
+  color: $dark-gray;
+  &:active,
+  &:focus,
+  &:hover {
+    background-color: lighten($green, 30%);
+  }
+
+}
+
+
+.beratungsbox{
+  @include span-columns(9); 
+  margin-top: modular-scale(4);
+
+  .map{
+    @include span-columns(4 of 9); 
+    @include background(url("../images/map_bern.jpg"));
+    height: 188.675px;
+
+    &:nth-of-type(3){
+      margin-top: modular-scale(2);
+    }
+  }
+
+  .beratung{
+    @include span-columns(5 of 9); 
+    margin-right: 0;
+    display: flex;
+    &:nth-of-type(4){
+      margin-top: modular-scale(2);
+    }
+    }
+
+  h3{
+    border-bottom: solid $medium-gray 0.1em;
+    padding-bottom: (golden-ratio(0.1em,  1));
+  }
+
+  .minorlink{
+    align-self: stretch;
+  }
+}
+
+
+
+.linksbox{
+  @include span-columns(3); 
+  margin-top: modular-scale(4);
+
+  .mainlink{
+
+   &:nth-of-type(n+2){
+    margin-top: modular-scale(1);
+  } 
+
+}
+
+}
+
+
+
+
+

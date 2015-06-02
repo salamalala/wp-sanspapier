@@ -1,0 +1,375 @@
+header.navigation {
+  $base-border-radius: 3px !default;
+  $large-screen: em(860) !default;
+  $medium-screen: em(640);
+  $navigation-padding: 1em;
+  $navigation-background: $dark-gray;
+
+  $navigation-color: transparentize(white, 0.5);
+  $navigation-color-hover: transparentize(white, 0.2);
+  $navigation-height: 120px;
+  $navigation-nav-button-background-hover: lighten($navigation-background, 10%);
+
+
+  $navigation-active-link-color: transparentize(white, 0.5);
+  $navigation-submenu-padding: 1em;
+  $navigation-submenu-width: 12em;
+
+  background-color: $navigation-background;
+  border-bottom: 1px solid darken($navigation-background, 10);
+  min-height: $navigation-height;
+  width: 100%;
+  z-index: 999;
+  font-family: $heading-font-family;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  border-bottom: golden-ratio(0.15em,  1) $green solid;
+
+  // @include texture(0deg, $dark-gray, $dark-gray, 58, 1); 
+
+
+  .navigation-wrapper {
+    @include clearfix;
+    @include outer-container;
+    position: relative;
+    z-index: 9999;
+    height: 120px;
+  }
+
+  // mobile view
+  
+  
+
+  .logo {
+    @include vertical-align;
+    @include span-columns(2); 
+
+    img {
+      max-height: calc(1 * #{$navigation-height});
+    }
+
+
+    @include media ($medium-screen){
+      @include span-columns(2); 
+      img {
+        max-height: calc(1 * #{$navigation-height});
+      }
+    }
+
+
+
+    @include media ($large-screen){
+      @include span-columns(4); 
+      img {
+        max-height: calc(1.2 * #{$navigation-height});
+      }
+
+      h4{
+        position: relative;
+        display: inline-block;
+        color: $green;
+        left: 10px;
+        &:nth-of-type(2){
+          left: 20px;
+          top: 10px;
+        }
+      }
+    }
+  }
+
+  // Mobile view
+
+  .navigation-menu-button {
+    @include vertical-align;
+    color: $navigation-color;
+    display: block;
+    float: right;
+    font-weight: 700;
+    margin: 0;
+    padding: 0.5em 1em;
+    text-transform: uppercase;
+    border:  1px solid $green;
+    margin-right: 1.3em;
+
+    @include media ($large-screen) {
+      display: none;
+    }
+
+    &:focus,
+    &:hover {
+      color: $navigation-color-hover;
+    }
+  }
+
+  // Nav menu
+
+  nav {
+    float: none;
+    z-index: 9999999;
+    @include media ($large-screen) {
+      float: right;
+    }
+  }
+
+  ul.navigation-menu {
+    -webkit-transform-style: preserve-3d; // stop webkit flicker
+    clear: both;
+    display: none;
+    margin: 0 auto;
+    overflow: visible;
+    padding: 0;
+    width: 100%;
+    z-index: 9999;
+    line-height: 100px;
+    &.show {
+      display: block;
+    }
+
+    @include media ($large-screen) {
+      display: inline;
+      margin: 0;
+      padding: 0;
+    }
+  }
+
+  // The nav items
+
+  ul li.nav-link {
+    background: $navigation-background;
+    display: block;
+    overflow: hidden;
+    padding-right: 1.3em;
+    text-align: right;
+    width: 100%;
+    z-index: 9999;
+    @include media ($large-screen) {
+      background: transparent;
+      display: inline;
+      text-decoration: none;
+      width: auto;
+      &:last-child{
+        padding-right: 0;
+        //Unterstützungslink
+        &>a{
+          color: $pink;
+          animation: support-button 2s ease-out;
+          &:hover{
+            color: saturate($pink, 5%);
+            &:before {
+              background: $pink;
+            }
+          }
+        }
+      }
+    }
+    a {
+      color: $navigation-color;
+      position: relative;
+      font-weight: 500;
+      text-decoration: none;
+      padding: 7px 0;
+      @include media ($large-screen) {
+        margin-right: 1em;
+        &:last-child{
+          margin-right: 0;
+        }
+      }
+      &:hover{
+        color: $navigation-color-hover;
+      } 
+      &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        height: 1px;
+        width: 0;
+        transition: width 0s ease, background .5s ease;
+      }
+      &:hover:before {
+        width: 100%;
+        background: $navigation-color-hover;
+        transition: width .5s ease;
+      }
+      &:hover:after {
+        width: 100%;
+        background: transparent;
+        transition: all 0s ease;
+      }
+    }
+  }
+
+  .active-nav-item a {
+    border-bottom: 1px solid $navigation-active-link-color;
+    padding-bottom: 3px;
+  }
+
+  // Sub menus
+
+  li.more.nav-link {
+    padding-right: 0;
+
+    // @include media($large-screen) {
+    //   padding-right: $navigation-submenu-padding;
+    // }
+
+    > ul > li:first-child a  {
+      padding-top: 1em;
+    }
+
+    a {
+      margin-right: $navigation-submenu-padding;
+      &:before{
+        content: none;
+      }
+    }
+    > a {
+      padding-right: 0.6em;
+    }
+
+
+    > a:after {
+      @include position(absolute, auto -0.4em auto auto);
+      content: '\25BE';
+      color: $navigation-color;
+    }
+  }
+
+  li.more {
+    overflow: visible;
+    padding-right: 0;
+
+
+    a {
+      padding-right: 0.8em;
+    }
+
+    > a {
+      padding-right: 1.6em;
+      position: relative;
+
+      @include media($large-screen) {
+        margin-right: $navigation-submenu-padding;
+      }
+    }
+
+    &:focus > .submenu,
+    &:hover > .submenu {
+      display: block;
+    }
+
+    @include media($large-screen) {
+      padding-right: 0.8em;
+      position: relative;
+    }
+  }
+
+  ul.submenu {
+    display: none;
+    padding-left: 0;
+    background-color: $dark-gray;
+
+    @include media($large-screen) {
+      left: -$navigation-submenu-padding;
+      position: absolute;
+      top: 1.5em;
+    }
+
+    .submenu {
+      @include media($large-screen) {
+        left: $navigation-submenu-width - 0.2em;
+        top: 0;
+      }
+    }
+
+    li {
+      display: block;
+      padding-right: 0;
+      line-height: 60px;
+
+
+      @include media($large-screen) {
+
+        &:first-child > a {
+          border-top-left-radius: $base-border-radius;
+          border-top-right-radius: $base-border-radius;
+        }
+
+        &:last-child > a {
+          border-bottom-left-radius: $base-border-radius;
+          border-bottom-right-radius: $base-border-radius;
+          margin-bottom: 0.7em;
+        }
+      }
+
+      a {
+        background-color: darken($navigation-background, 3%);
+        display: inline-block;
+        text-align: right;
+        width: 100%;
+        
+
+        @include media($large-screen) {
+          background-color: $navigation-background;
+          margin-left: $navigation-submenu-padding;
+          text-align: left;
+          width: $navigation-submenu-width;
+        }
+      }
+    }
+  }
+
+//frau
+.name-wrapper{
+  @include outer-container; 
+  $navigation-background: $dark-gray;
+  padding: modular-scale(4) 0 modular-scale(6) 0;
+  @include background(url("../images/Frau2.jpg") no-repeat right);
+
+
+  h1{
+    @include span-columns(10);
+    @include shift(1);
+    color: $green;
+    text-align: center;
+    display: inline-block;
+    @include animation( sliding-header 0.6s cubic-bezier(0.645, 0.045, 0.355, 1.000) both 1s);
+  }
+}
+
+}
+
+@include keyframes(support-button){
+  0%{
+    color: transparentize(white, 0.5);
+  }
+  100%{
+    color: $pink;
+  }
+}
+
+
+
+@include keyframes(sliding-header){
+  0%{
+    @include transform(scale(.3, .3));
+    opacity: 0;
+  }
+  70%{
+    @include transform(scale(1.05, 1.05));
+    opacity: 1;
+  }
+  80%{
+    @include transform(scale(.95, 0.95));
+    opacity: 1;
+  }
+  100% {
+    @include transform(scale(1, 1));
+    opacity: 1;
+  }
+}
+
+
+

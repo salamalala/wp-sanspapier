@@ -1,0 +1,179 @@
+.stylesheet{
+  @include outer-container; 
+  margin-top: 30px;
+
+
+
+  .typo{
+    @include span-columns(9);
+   
+
+    h1{
+      font-size: $very-big-font-size;
+      font-family: $heading-font-family;
+      font-weight: 700;
+      text-transform: uppercase;
+
+    }
+
+    h2{
+      font-size: $big-font-size;
+      border-bottom: 0.15em solid $green;
+      display: inline-block;
+      font-family: $heading-font-family;
+      font-weight: 700;
+    }
+
+
+    .italic{
+      font-style: italic;
+      font-family: $heading-font-family;
+      font-weight: 400;
+      display: block;
+      border-bottom: none;    }
+
+
+    h3{
+      font-size: $medium-font-size;
+      font-family: $heading-font-family;
+      font-weight: 700;
+
+
+    }
+
+    h4.italic{
+      font-size: $base-font-size;
+      font-style: italic;
+      font-family: $heading-font-family;
+      font-weight: 400;
+      display: block;
+      border-bottom: none;   
+      border-bottom: 0.1em solid $dark-gray;
+
+
+    }
+
+
+
+    .big-paragraph{
+      font-size: $medium-font-size;
+      font-family: $base-font-family;
+    }
+
+    .quote{
+      display: inline-block;
+      font-style: italic;
+      font-family: $base-font-family;
+
+      &:before{
+        content: "❝ ";
+        color: $green;
+      }
+      &:after{
+        content: " ❞";
+        color: $green;
+      }
+
+    }
+
+    p{
+      $base-font-size: 1.1em;
+      font-family: $base-font-family;
+    }
+
+  }
+
+    .colors{
+      @include span-columns(2);
+      background-color: #7c7c7c;
+      padding: 20px;
+    }
+
+    .colors > div {
+      width: 60px;
+      height: 60px;
+      margin-bottom: 10px;
+      display: inline-block;
+
+    }
+
+    .darkgrey{
+      background-color: $dark-gray;
+
+    }
+    .mediumgrey{
+      background-color: $medium-gray;
+    }
+    .lightgrey{
+      background-color: $light-gray;
+    }
+
+    .white{
+      background-color: white;
+    }
+    .pink{
+      background-color: $pink;
+    }
+
+    .pink.hover{
+      background-color: saturate($pink, 5%);
+    }
+    .green{
+      background-color: $green;
+    }
+
+    .green.hover{
+      background-color: saturate($green, 10%);
+    }
+
+
+    .linksbox{  
+      a{
+        -webkit-font-smoothing: antialiased;
+        background-color: $pink;
+        border-radius: $base-border-radius;
+        border: none;
+        color: #fff;
+        cursor: pointer;
+        font-family: $heading-font-family;
+        font-size: $big-font-size;
+        font-weight: 900;
+        padding: golden-ratio(0.2em,  1);
+        line-height: 1;
+        text-decoration: none;
+        user-select: none;
+        vertical-align: middle;
+        white-space: nowrap;
+        text-align: center;
+        text-transform: uppercase;
+        letter-spacing: 0.08em;
+
+
+       &:hover,
+       &:focus {
+       @include animation(link_hover 1s linear infinite alternate);
+         color: #fff;
+       }
+
+       &:disabled {
+         cursor: not-allowed;
+         opacity: 0.5;
+       }
+
+       @include keyframes(link_hover){
+        0% {background-color: saturate($pink, 5%)}
+        50% {background-color: saturate($pink, 10%)}
+        100% {background-color: saturate($pink, 5%)}
+       }
+
+     }
+
+  
+
+}
+
+}
+
+
+
+

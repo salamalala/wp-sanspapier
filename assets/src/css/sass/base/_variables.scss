@@ -1,0 +1,50 @@
+// Typography
+$base-font-family:"adelle",serif;
+// $base-font-family:"ff-tisa-web-pro",serif;
+
+$heading-font-family: "brandon-grotesque",sans-serif;
+
+
+// Font Sizes
+$base-font-size: 1.1em;
+$medium-font-size: modular-scale(1);
+$big-font-size: modular-scale(2);
+$very-big-font-size: modular-scale(3);
+$small-font-size: modular-scale(-1);
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.1;
+
+// Other Sizes
+
+$base-border-radius: 0px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 3;
+$base-z-index: 0;
+$big-golden-ratio: golden-ratio(1.3em,  1);
+$medium-golden-ratio: golden-ratio(0.5em, 1);
+$small-golden-ratio: golden-ratio(0.3em,  1);
+
+// Colors
+$pink:  #bf4385;
+$green: #ADCC70;
+$dark-gray:  #373737;
+// $dark-gray: #3f4041;
+
+$medium-gray: #5c5c5c;
+$light-medium-gray:#A0A7AD;
+$light-gray: #F1F4F9;
+
+// Font Colors
+$base-background-color: #fff;
+$base-font-color: $medium-gray;
+$pink: $pink;
+
+// Border
+$base-border-color: $light-gray;
+$base-border: 1px solid $base-border-color;
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($pink, $lightness: -5%, $alpha: -0.3);

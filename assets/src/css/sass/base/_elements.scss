@@ -1,0 +1,120 @@
+body{
+  background-color: $light-gray;
+}
+
+
+.box{
+  padding: $big-golden-ratio;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  p:last-child{
+    margin: 0;
+  }
+}
+
+.big-text-box{
+  border-left: $pink solid 3px;
+}
+
+.minorlink{
+  color: $medium-gray;
+  border-radius: $base-border-radius;
+  border: $medium-gray 3px solid;
+  position: relative;
+  cursor: pointer;
+  font-family: $heading-font-family;
+  padding: $small-golden-ratio;
+  padding-left: $big-golden-ratio;
+  padding-right: $big-golden-ratio;
+  line-height: 1;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  background-color: none;
+  transition: 0.4s ease-out;
+  align-self: flex-end;
+  margin-top: $small-golden-ratio;
+  &:before{
+    content: '➞';
+    position: absolute;
+    color: $medium-gray;
+    transition: all 0.3s;
+    left: 75%;
+    opacity: 0;
+    top: 25%;
+  }
+    &:hover:before{
+      left: 89%;
+      opacity: 1;
+
+    
+  }
+}
+
+.mainlink{
+  display: block;
+  -webkit-font-smoothing: antialiased;
+  background-color: $pink;
+  border-radius: $base-border-radius;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  font-family: $heading-font-family;
+  font-size: $medium-font-size;
+  font-weight: 700;
+  padding: $medium-golden-ratio;
+  line-height: 1;
+  text-decoration: none;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  transition: color 0.1s linear;
+  &:hover,
+  &:focus {
+    @include animation(link_hover 0.6s ease-out infinite alternate);
+    background-color: saturate($pink, 10%);
+    color: #fff;
+  }
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+  p{
+    margin: 0;
+    transform: translateY(0);
+    transition: transform 0.2s ease;
+
+    &:hover{
+      transform: translateY(-3px);
+    }
+  }
+
+}
+
+.big-paragraph{
+  font-size: $medium-font-size;
+}
+
+.quote{
+  display: inline-block;
+  font-style: italic;
+  text-align: center;
+  &:before{
+    content: "❝ ";
+    padding-right: 0.2em;
+    color: $green;
+  }
+  &:after{
+    content: " ❞";
+    color: $green;
+  }
+}
+

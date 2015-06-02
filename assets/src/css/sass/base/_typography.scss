@@ -1,0 +1,101 @@
+  body {
+  @include font-feature-settings("kern", "liga", "pnum");
+  -webkit-font-smoothing: antialiased;
+  color: $base-font-color;
+  font-family: $base-font-family;
+  font-size: $base-font-size;
+  line-height: $base-line-height;
+  
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  line-height: $heading-line-height;
+  margin: 0 0 $small-spacing;
+  letter-spacing: 0.07em;
+}
+
+h1,
+h2,
+h3,
+h4{
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+h1{
+  font-size: $very-big-font-size;
+  text-transform: uppercase;
+}
+
+h2{
+  font-size: $big-font-size;
+  border-bottom: 0.11em solid $medium-gray;
+  display: inline-block;
+}
+
+h3{
+  font-size: $medium-font-size;
+}
+
+.italic{
+  font-style: italic;
+  font-family: $heading-font-family;
+  font-weight: 400;
+  text-transform: none;
+}
+
+h4.italic{
+  font-size: $base-font-size;
+  color: $light-medium-gray;
+  font-size: 0.8em;
+}
+
+h5{
+  font-size: 0.8em;
+  color: $pink;
+  text-transform: uppercase;
+
+}
+
+p {
+  margin: 0 0 $small-spacing;
+  letter-spacing: 0.05em;
+}
+
+a {
+  color: $pink;
+  text-decoration: none;
+  transition: color 0.1s linear;
+
+  // &:active,
+  // &:focus,
+  // &:hover {
+  //   color: saturate($pink, 10%);
+  // }
+
+  &:active,
+  &:focus {
+    outline: none;
+  }
+}
+
+
+hr {
+  border-bottom: $base-border;
+  border-left: none;
+  border-right: none;
+  border-top: none;
+  margin: $base-spacing 0;
+}
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}
