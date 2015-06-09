@@ -379,54 +379,36 @@ header.navigation {
       clear: both;
       content: "";
       display: table; }
+  header.navigation .logo-block {
+    height: 120px;
+    display: inline-block; }
   header.navigation .logo {
     position: relative;
     top: 50%;
     -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 14.70196%; }
-    header.navigation .logo:last-child {
-      margin-right: 0; }
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
+    display: block; }
     header.navigation .logo img {
       max-height: calc(1 * 120px); }
+      header.navigation .logo img.page_logo {
+        max-height: calc(0.5 * 120px); }
     @media screen and (min-width: 40em) {
-      header.navigation .logo {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 14.70196%; }
-        header.navigation .logo:last-child {
-          margin-right: 0; }
-        header.navigation .logo img {
-          max-height: calc(1 * 120px); } }
+      header.navigation .logo img {
+        max-height: calc(1 * 120px); } }
     @media screen and (min-width: 53.75em) {
-      header.navigation .logo {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 31.76157%; }
-        header.navigation .logo:last-child {
-          margin-right: 0; }
-        header.navigation .logo img {
-          max-height: calc(1.2 * 120px); }
-        header.navigation .logo h4 {
-          position: relative;
-          display: inline-block;
-          color: #ADCC70;
-          left: 10px; }
-          header.navigation .logo h4:nth-of-type(2) {
-            left: 20px;
-            top: 10px; } }
+      header.navigation .logo img {
+        max-height: calc(1.2 * 120px); } }
+    header.navigation .logo h4 {
+      position: relative;
+      color: #ADCC70;
+      font-size: 0.65em; }
   header.navigation .navigation-menu-button {
     position: relative;
     top: 50%;
     -webkit-transform: translateY(-50%);
-        -ms-transform: translateY(-50%);
-            transform: translateY(-50%);
+    -ms-transform: translateY(-50%);
+    transform: translateY(-50%);
     color: rgba(255, 255, 255, 0.5);
     display: block;
     float: right;
@@ -456,7 +438,7 @@ header.navigation {
     padding: 0;
     width: 100%;
     z-index: 9999;
-    line-height: 100px; }
+    line-height: 120px; }
     header.navigation ul.navigation-menu.show {
       display: block; }
     @media screen and (min-width: 53.75em) {
@@ -468,7 +450,7 @@ header.navigation {
     background: #373737;
     display: block;
     overflow: hidden;
-    padding-right: 1.3em;
+    padding-right: 1.5em;
     text-align: right;
     width: 100%;
     z-index: 9999; }
@@ -575,7 +557,7 @@ header.navigation {
     header.navigation ul.submenu li {
       display: block;
       padding-right: 0;
-      line-height: 60px; }
+      line-height: 50px; }
       @media screen and (min-width: 53.75em) {
         header.navigation ul.submenu li:first-child > a {
           border-top-left-radius: 0px;

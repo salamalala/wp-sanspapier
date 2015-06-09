@@ -39,42 +39,42 @@ header.navigation {
 
   // mobile view
   
+  .logo-block{
+    height: 120px;
+    display: inline-block;
+  }
+  
   
 
   .logo {
     @include vertical-align;
-    @include span-columns(2); 
+    display:block;
+
 
     img {
       max-height: calc(1 * #{$navigation-height});
+
+      &.page_logo{
+        max-height: calc(0.5 * #{$navigation-height});
+      }
     }
-
-
     @include media ($medium-screen){
-      @include span-columns(2); 
       img {
         max-height: calc(1 * #{$navigation-height});
+
       }
     }
-
-
-
     @include media ($large-screen){
-      @include span-columns(4); 
       img {
         max-height: calc(1.2 * #{$navigation-height});
-      }
 
-      h4{
-        position: relative;
-        display: inline-block;
-        color: $green;
-        left: 10px;
-        &:nth-of-type(2){
-          left: 20px;
-          top: 10px;
-        }
       }
+      
+    }
+    h4{
+      position: relative;
+      color: $green; 
+      font-size: 0.65em;  
     }
   }
 
@@ -121,7 +121,7 @@ header.navigation {
     padding: 0;
     width: 100%;
     z-index: 9999;
-    line-height: 100px;
+    line-height: 120px;
     &.show {
       display: block;
     }
@@ -139,7 +139,7 @@ header.navigation {
     background: $navigation-background;
     display: block;
     overflow: hidden;
-    padding-right: 1.3em;
+    padding-right: 1.5em;
     text-align: right;
     width: 100%;
     z-index: 9999;
@@ -287,7 +287,7 @@ header.navigation {
     li {
       display: block;
       padding-right: 0;
-      line-height: 60px;
+      line-height: 50px;
 
 
       @include media($large-screen) {
@@ -338,6 +338,7 @@ header.navigation {
     @include animation( sliding-header 0.6s cubic-bezier(0.645, 0.045, 0.355, 1.000) both 1s);
   }
 }
+
 
 }
 

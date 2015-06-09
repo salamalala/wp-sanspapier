@@ -14,7 +14,7 @@
 <footer class="footer-2" role="contentinfo">
   <div class="footer-logo">
     <img src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/logo.svg" alt="Logo Sans Papier Beratungsstelle">
-    <h4>Verein Berner Beratungsstelle für Sans-Papiers | Eigerplatz 5 | 3007 Bern</h4>
+    <h4>Verein Berner Beratungsstelle für Sans-Papiers | Eigerplatz 5 | 3007 Bern | +41 31 385 18 27</h4>
   </div>
 
   <div class="footer-secondary-links">
