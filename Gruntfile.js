@@ -1,6 +1,7 @@
 module.exports = function(grunt){
   // Project configuration
   grunt.initConfig({
+
     connect:{
       server:{
         options:{
@@ -97,28 +98,41 @@ module.exports = function(grunt){
         }]
       }
     },
-
+    browserSync: {
+      dev: {
+        bsFiles: {
+          src : [
+          'assets/dist/**/*.css',
+          '*.php'
+          ]
+        },
+        options: {
+          proxy: "http://localhost/wordpress",
+          watchTask: true,
+        }
+      }
+    },
     watch:{
       js:{
         files: ['assets/src/js/*.js'],
         tasks:['uglify:js'],
-        options:{
-          livereload: true,
-        }
+        // options:{
+        //   livereload: true,
+        // }
       },
       sass:{
         files:['**/*.scss'],
         tasks: ['sass:dist', 'autoprefixer:main', 'cssmin:target'],
-        options:{
-          livereload: true,
-        }
+        // options:{
+        //   livereload: true,
+        // }
       },
       images:{
         files:['assets/src/images/*.{jpg,gif,png}'],
         tasks: ['imagemin', 'responsive_images'],
-        options:{
-          livereload: true,
-        }
+        // options:{
+        //   livereload: true,
+        // }
       }
     }
 
@@ -132,9 +146,9 @@ module.exports = function(grunt){
 
   // Default Task
   
-  grunt.registerTask('default',['newer:uglify:js', 'bower_concat:all', 'newer:sass:dist','cssmin:target',  'newer:imagemin', 'newer:responsive_images', 'watch']);
+  grunt.registerTask('default',['newer:uglify:js', 'bower_concat:all', 'newer:sass:dist','cssmin:target',  'newer:imagemin', 'newer:responsive_images','browserSync', 'watch']);
 
- 
+
 
 
 };

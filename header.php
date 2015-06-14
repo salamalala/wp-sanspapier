@@ -25,45 +25,43 @@
 
 	<div class="wrapper-for-content-outside-of-footer">
 
-	<header class="navigation" role="banner">
-		<div class="navigation-wrapper">
-			<div class="logo-block">
-			<a href="<?php echo get_home_url(); ?>" class="logo">
-				<img class="page_logo" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/logo.svg"  alt="Logo Sans Papier Beratungsstelle">
-
-
-			<h4>Berner Beratungsstelle für Sans-Papier</h4>
-			</a>
-			</div>
-
-			<a href="#" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
-
-
-
-			<nav role="navigation">
-
-				<?php 
-
-				$args = array(
-					'container'       => 'ul',
-					'menu_class'      => 'navigation-menu show',
-					'menu_id'					=> 'js-navigation-menu',
-					'depth'           => 0,
-					'walker'          => new My_Sub_Menu()
-					);
-				wp_nav_menu( $args ) 
-
-						?>
-
-
-
-					</nav>
-
-			
-
+		<header class="navigation" role="banner">
+			<div class="navigation-wrapper">
+				<div class="logo-block">
+					<a href="<?php echo get_home_url(); ?>" class="logo">
+						<img class="page_logo" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/logo.svg"  alt="Logo Sans Papier Beratungsstelle">
+						<h4>Berner Beratungsstelle für Sans-Papier</h4>
+					</a>
 				</div>
 
+				<a href="#" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
 
-			</header>
 
-			<div id="content" class="site-content">
+
+				<nav role="navigation">
+
+					<?php 
+
+					$args = array(
+						'container'       => 'ul',
+						'menu_class'      => 'navigation-menu show',
+						'menu_id'					=> 'js-navigation-menu',
+						'depth'           => 0,
+						'walker'          => new My_Sub_Menu()
+						);
+					wp_nav_menu( $args ) 
+
+					?>
+
+
+
+				</nav>
+
+
+
+			</div>
+
+
+		</header>
+
+		<div id="content" class="site-content">
