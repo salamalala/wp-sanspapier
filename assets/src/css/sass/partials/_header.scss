@@ -30,8 +30,8 @@ header.navigation {
 
 
   .navigation-wrapper {
-    @include clearfix;
-    @include outer-container;
+    @include span-columns(10);
+    @include shift(1);
     position: relative;
     z-index: 9999;
     height: 120px;
@@ -39,24 +39,19 @@ header.navigation {
 
   // mobile view
   
-  .logo-block{
+  .block-nav{
     height: 120px;
     display: inline-block;
+    position: absolute;
+    top: 0;
   }
   
-
-
   .logo {
     @include vertical-align;
     display:block;
 
-
     img {
       max-height: calc(1 * #{$navigation-height});
-
-      &.page_logo{
-        max-height: calc(0.5 * #{$navigation-height});
-      }
     }
     @include media ($medium-screen){
       img {
@@ -78,13 +73,19 @@ header.navigation {
     }
   }
 
-  // Mobile view
+  // Mobile view for logo and menu button
+
+  .menu-left{
+    left: 0;
+  }
+  .menu-right{   
+    right: 0;
+  }
 
   .navigation-menu-button {
     @include vertical-align;
-    color: $navigation-color;
     display: block;
-    float: right;
+    color: $navigation-color;
     font-weight: 700;
     margin: 0;
     padding: 0.5em 1em;
@@ -92,7 +93,7 @@ header.navigation {
     border:  1px solid $green;
     margin-right: 1.3em;
 
-    @include media ($large-screen) {
+    @include media ($medium-screen) {
       display: none;
     }
 
@@ -107,7 +108,7 @@ header.navigation {
   nav {
     float: none;
     z-index: 9999999;
-    @include media ($large-screen) {
+    @include media ($medium-screen) {
       float: right;
     }
   }

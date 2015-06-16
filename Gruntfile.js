@@ -71,7 +71,7 @@ module.exports = function(grunt){
           expand: true,                  // Enable dynamic expansion
           cwd: 'assets/src/images/',                   // Src matches are relative to this path
           src: ['**/*.{png,jpg,gif,svg}'],   // Actual patterns to match
-          dest: 'assets/src/images'                  // Destination path prefix
+          dest: 'assets/dist/images'                  // Destination path prefix
         }]
       }
     },
@@ -146,7 +146,7 @@ module.exports = function(grunt){
 
   // Default Task
   
-  grunt.registerTask('default',['newer:uglify:js', 'bower_concat:all', 'newer:sass:dist','cssmin:target',  'newer:imagemin', 'newer:responsive_images','browserSync', 'watch']);
+  grunt.registerTask('default',['newer:uglify:js', 'bower_concat:all', 'newer:sass:dist','newer:autoprefixer', 'cssmin:target',  'newer:imagemin', 'browserSync', 'watch']);
 
 
 

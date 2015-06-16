@@ -1,8 +1,13 @@
 @import "../../../../bower_components/bourbon/app/assets/stylesheets/bourbon";
-// $visual-grid: false;
-@import "../../../../bower_components/neat/app/assets/stylesheets/neat";
+$visual-grid: true;
+$visual-grid-color: yellow;
+$visual-grid-index: front;
+$visual-grid-opacity: 0.1;
 
 @import "base/base";
+@import "../../../../bower_components/neat/app/assets/stylesheets/neat";
+
+
 
 @import "partials/header";
 @import "partials/main";
