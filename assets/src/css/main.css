@@ -362,15 +362,15 @@ body:before {
   height: 100%;
   left: 0;
   margin: 0 auto;
-  max-width: 100%;
-  opacity: 0.1;
+  max-width: 68em;
+  opacity: 0.04;
   pointer-events: none;
   position: fixed;
   right: 0;
   width: 100%;
   z-index: 9999; }
 
-header.navigation {
+header {
   background-color: #373737;
   border-bottom: 1px solid #1e1e1e;
   min-height: 120px;
@@ -381,46 +381,65 @@ header.navigation {
   text-transform: uppercase;
   letter-spacing: 0.07em;
   border-bottom: 0.2427em #ADCC70 solid; }
-  header.navigation .navigation-wrapper {
-    float: left;
-    display: block;
-    margin-right: 2.35765%;
-    width: 82.94039%;
-    margin-left: 8.5298%;
+  header .navigation-wrapper {
+    max-width: 68em;
+    margin-left: auto;
+    margin-right: auto;
     position: relative;
     z-index: 9999;
     height: 120px; }
-    header.navigation .navigation-wrapper:last-child {
-      margin-right: 0; }
-  header.navigation .block-nav {
+    header .navigation-wrapper::after {
+      clear: both;
+      content: "";
+      display: table; }
+  header .block-nav {
     height: 120px;
-    display: inline-block;
-    position: absolute;
-    top: 0; }
-  header.navigation .logo {
+    display: inline-block; }
+  header .logo-left {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 14.70196%;
+    margin-left: 8.5298%; }
+    header .logo-left:last-child {
+      margin-right: 0; }
+  header .logo {
     position: relative;
     top: 50%;
     -webkit-transform: translateY(-50%);
     -ms-transform: translateY(-50%);
     transform: translateY(-50%);
     display: block; }
-    header.navigation .logo img {
+    header .logo img {
       max-height: calc(1 * 120px); }
     @media screen and (min-width: 40em) {
-      header.navigation .logo img {
+      header .logo img {
         max-height: calc(1 * 120px); } }
     @media screen and (min-width: 53.75em) {
-      header.navigation .logo img {
+      header .logo img {
         max-height: calc(1.2 * 120px); } }
-    header.navigation .logo h4 {
+    header .logo h4 {
       position: relative;
       color: #ADCC70;
       font-size: 0.65em; }
-  header.navigation .menu-left {
-    left: 0; }
-  header.navigation .menu-right {
-    right: 0; }
-  header.navigation .navigation-menu-button {
+  header .menu-right {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 40.29137%;
+    margin-left: 25.58941%; }
+    header .menu-right:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 40em) {
+      header .menu-right {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 14.70196%;
+        margin-left: 51.17883%; }
+        header .menu-right:last-child {
+          margin-right: 0; } }
+  header .navigation-menu-button {
     position: relative;
     top: 50%;
     -webkit-transform: translateY(-50%);
@@ -429,23 +448,22 @@ header.navigation {
     display: block;
     color: rgba(255, 255, 255, 0.5);
     font-weight: 700;
-    margin: 0;
     padding: 0.5em 1em;
     text-transform: uppercase;
-    border: 1px solid #ADCC70;
-    margin-right: 1.3em; }
-    @media screen and (min-width: 40em) {
-      header.navigation .navigation-menu-button {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    text-align: center; }
+    @media screen and (min-width: 68em) {
+      header .navigation-menu-button {
         display: none; } }
-    header.navigation .navigation-menu-button:focus, header.navigation .navigation-menu-button:hover {
+    header .navigation-menu-button:focus, header .navigation-menu-button:hover {
       color: rgba(255, 255, 255, 0.8); }
-  header.navigation nav {
+  header nav {
     float: none;
     z-index: 9999999; }
-    @media screen and (min-width: 40em) {
-      header.navigation nav {
+    @media screen and (min-width: 68em) {
+      header nav {
         float: right; } }
-  header.navigation ul.navigation-menu {
+  header ul.navigation-menu {
     -webkit-transform-style: preserve-3d;
     clear: both;
     display: none;
@@ -455,14 +473,14 @@ header.navigation {
     width: 100%;
     z-index: 9999;
     line-height: 120px; }
-    header.navigation ul.navigation-menu.show {
+    header ul.navigation-menu.show {
       display: block; }
-    @media screen and (min-width: 53.75em) {
-      header.navigation ul.navigation-menu {
+    @media screen and (min-width: 68em) {
+      header ul.navigation-menu {
         display: inline;
         margin: 0;
         padding: 0; } }
-  header.navigation ul li.nav-link {
+  header ul li.nav-link {
     background: #373737;
     display: block;
     overflow: hidden;
@@ -470,36 +488,36 @@ header.navigation {
     text-align: right;
     width: 100%;
     z-index: 9999; }
-    @media screen and (min-width: 53.75em) {
-      header.navigation ul li.nav-link {
+    @media screen and (min-width: 68em) {
+      header ul li.nav-link {
         background: transparent;
         display: inline;
         text-decoration: none;
         width: auto; }
-        header.navigation ul li.nav-link:last-child {
+        header ul li.nav-link:last-child {
           padding-right: 0; }
-          header.navigation ul li.nav-link:last-child > a {
+          header ul li.nav-link:last-child > a {
             color: #bf4385;
             -webkit-animation: support-button 2s ease-out;
                     animation: support-button 2s ease-out; }
-            header.navigation ul li.nav-link:last-child > a:hover {
+            header ul li.nav-link:last-child > a:hover {
               color: #c53d85; }
-              header.navigation ul li.nav-link:last-child > a:hover:before {
+              header ul li.nav-link:last-child > a:hover:before {
                 background: #bf4385; } }
-    header.navigation ul li.nav-link a {
+    header ul li.nav-link a {
       color: rgba(255, 255, 255, 0.5);
       position: relative;
       font-weight: 500;
       text-decoration: none;
       padding: 7px 0; }
-      @media screen and (min-width: 53.75em) {
-        header.navigation ul li.nav-link a {
+      @media screen and (min-width: 68em) {
+        header ul li.nav-link a {
           margin-right: 1em; }
-          header.navigation ul li.nav-link a:last-child {
+          header ul li.nav-link a:last-child {
             margin-right: 0; } }
-      header.navigation ul li.nav-link a:hover {
+      header ul li.nav-link a:hover {
         color: rgba(255, 255, 255, 0.8); }
-      header.navigation ul li.nav-link a:before {
+      header ul li.nav-link a:before {
         content: '';
         display: block;
         position: absolute;
@@ -509,30 +527,30 @@ header.navigation {
         width: 0;
         -webkit-transition: width 0s ease, background .5s ease;
                 transition: width 0s ease, background .5s ease; }
-      header.navigation ul li.nav-link a:hover:before {
+      header ul li.nav-link a:hover:before {
         width: 100%;
         background: rgba(255, 255, 255, 0.8);
         -webkit-transition: width .5s ease;
                 transition: width .5s ease; }
-      header.navigation ul li.nav-link a:hover:after {
+      header ul li.nav-link a:hover:after {
         width: 100%;
         background: transparent;
         -webkit-transition: all 0s ease;
                 transition: all 0s ease; }
-  header.navigation .active-nav-item a {
+  header .active-nav-item a {
     border-bottom: 1px solid rgba(255, 255, 255, 0.5);
     padding-bottom: 3px; }
-  header.navigation li.more.nav-link {
+  header li.more.nav-link {
     padding-right: 0; }
-    header.navigation li.more.nav-link > ul > li:first-child a {
+    header li.more.nav-link > ul > li:first-child a {
       padding-top: 1em; }
-    header.navigation li.more.nav-link a {
+    header li.more.nav-link a {
       margin-right: 1em; }
-      header.navigation li.more.nav-link a:before {
+      header li.more.nav-link a:before {
         content: none; }
-    header.navigation li.more.nav-link > a {
+    header li.more.nav-link > a {
       padding-right: 0.6em; }
-    header.navigation li.more.nav-link > a:after {
+    header li.more.nav-link > a:after {
       position: absolute;
       top: auto;
       right: -0.4em;
@@ -540,71 +558,71 @@ header.navigation {
       left: auto;
       content: '\25BE';
       color: rgba(255, 255, 255, 0.5); }
-  header.navigation li.more {
+  header li.more {
     overflow: visible;
     padding-right: 0; }
-    header.navigation li.more a {
+    header li.more a {
       padding-right: 0.8em; }
-    header.navigation li.more > a {
+    header li.more > a {
       padding-right: 1.6em;
       position: relative; }
-      @media screen and (min-width: 53.75em) {
-        header.navigation li.more > a {
+      @media screen and (min-width: 68em) {
+        header li.more > a {
           margin-right: 1em; } }
-    header.navigation li.more:focus > .submenu, header.navigation li.more:hover > .submenu {
+    header li.more:focus > .submenu, header li.more:hover > .submenu {
       display: block; }
-    @media screen and (min-width: 53.75em) {
-      header.navigation li.more {
+    @media screen and (min-width: 68em) {
+      header li.more {
         padding-right: 0.8em;
         position: relative; } }
-  header.navigation ul.submenu {
+  header ul.submenu {
     display: none;
     padding-left: 0;
     background-color: #373737; }
-    @media screen and (min-width: 53.75em) {
-      header.navigation ul.submenu {
+    @media screen and (min-width: 68em) {
+      header ul.submenu {
         left: -1em;
         position: absolute;
         top: 1.5em; } }
-    @media screen and (min-width: 53.75em) {
-      header.navigation ul.submenu .submenu {
+    @media screen and (min-width: 68em) {
+      header ul.submenu .submenu {
         left: 11.8em;
         top: 0; } }
-    header.navigation ul.submenu li {
+    header ul.submenu li {
       display: block;
       padding-right: 0;
       line-height: 50px; }
-      @media screen and (min-width: 53.75em) {
-        header.navigation ul.submenu li:first-child > a {
+      @media screen and (min-width: 68em) {
+        header ul.submenu li:first-child > a {
           border-top-left-radius: 0px;
           border-top-right-radius: 0px; }
-        header.navigation ul.submenu li:last-child > a {
+        header ul.submenu li:last-child > a {
           border-bottom-left-radius: 0px;
           border-bottom-right-radius: 0px;
           margin-bottom: 0.7em; } }
-      header.navigation ul.submenu li a {
+      header ul.submenu li a {
         background-color: #2f2f2f;
         display: inline-block;
         text-align: right;
         width: 100%; }
-        @media screen and (min-width: 53.75em) {
-          header.navigation ul.submenu li a {
+        @media screen and (min-width: 68em) {
+          header ul.submenu li a {
             background-color: #373737;
             margin-left: 1em;
             text-align: left;
             width: 12em; } }
-  header.navigation .name-wrapper {
-    max-width: 100%;
+  header .name-wrapper {
+    max-width: 68em;
     margin-left: auto;
     margin-right: auto;
     padding: 3.15733em 0 5.61023em 0;
     background: url("../images/Frau2.jpg") no-repeat right;
     background: url("../images/Frau2.jpg") no-repeat right; }
-    header.navigation .name-wrapper::after {
+    header .name-wrapper::after {
       clear: both;
       content: "";
       display: table; }
-    header.navigation .name-wrapper h1 {
+    header .name-wrapper h1 {
       float: left;
       display: block;
       margin-right: 2.35765%;
@@ -615,7 +633,7 @@ header.navigation {
       display: inline-block;
       -webkit-animation: sliding-header 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) both 1s;
       animation: sliding-header 0.6s cubic-bezier(0.645, 0.045, 0.355, 1) both 1s; }
-      header.navigation .name-wrapper h1:last-child {
+      header .name-wrapper h1:last-child {
         margin-right: 0; }
 
 @-webkit-keyframes support-button {
@@ -663,7 +681,7 @@ header.navigation {
     transform: scale(1, 1);
     opacity: 1; } }
 main {
-  max-width: 100%;
+  max-width: 68em;
   margin-left: auto;
   margin-right: auto; }
   main::after {
@@ -812,7 +830,7 @@ main {
         opacity: 1; }
 
 .stylesheet {
-  max-width: 100%;
+  max-width: 68em;
   margin-left: auto;
   margin-right: auto;
   margin-top: 30px; }

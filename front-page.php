@@ -25,10 +25,10 @@
 
   <div class="wrapper-for-content-outside-of-footer">
 
-    <header class="navigation" role="banner">
+    <header role="banner">
       <div class="navigation-wrapper">
 
-        <div class="block-nav menu-left">
+        <div class="block-nav logo-left">
 
           <a href="#" class="logo">
 
@@ -37,7 +37,7 @@
             echo get_template_directory_uri(); ?>/assets/dist/images/logo.svg" 
             alt="Logo Sans Papier Beratungsstelle"
             > 
-            
+
           </a>
         </div>
         

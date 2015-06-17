@@ -25,7 +25,7 @@
 
 	<div class="wrapper-for-content-outside-of-footer">
 
-		<header class="navigation" role="banner">
+		<header role="banner">
 			<div class="navigation-wrapper">
 				<div class="logo-block">
 					<a href="<?php echo get_home_url(); ?>" class="logo">
