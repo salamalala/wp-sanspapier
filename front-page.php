@@ -39,10 +39,20 @@
             > 
 
           </a>
+
         </div>
         
         <div class="block-nav menu-right ">
-          <a href="#" class="navigation-menu-button " id="js-mobile-menu">Menu</a>
+            <a href="#" class="navigation-menu-button " id="js-mobile-menu">
+            <span class="menu-size">Menu</span>
+
+            <div class="hamburger-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
+
+            </a>
         </div>
 
 

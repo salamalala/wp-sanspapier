@@ -4,21 +4,20 @@
 // $column: 90px;
 // $gutter: 30px;
 // $grid-columns: 12;
-$max-width: em(1088);
+
+//ems in media queries, react to the browser font size
+$max-width: 68em;
 
 // Neat Breakpoints
 
 //Major breakpoints
 
-//40ems
-$medium-screen: em(640);
-//53.75ems
-$large-screen: em(860);
+$medium-screen: 40em;
 
+$large-screen: 54em;
 
-//Minor breakpoints
-
-$xlarge-screen: em(1088);
+$xlarge-screen: 68em;
 
 // $medium-screen-up: new-breakpoint(min-width $medium-screen 4);
 // $large-screen-up: new-breakpoint(min-width $large-screen 8);
+

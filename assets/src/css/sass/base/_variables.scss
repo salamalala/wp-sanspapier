@@ -7,10 +7,11 @@ $heading-font-family: "brandon-grotesque",sans-serif;
 
 // Font Sizes
 $base-font-size: 1.1em;
+$small-font-size: modular-scale(-1);
 $medium-font-size: modular-scale(1);
 $big-font-size: modular-scale(2);
-$very-big-font-size: modular-scale(3);
-$small-font-size: modular-scale(-1);
+$very-big-font-size: modular-scale(4);
+
 
 // Line height
 $base-line-height: 1.5;
