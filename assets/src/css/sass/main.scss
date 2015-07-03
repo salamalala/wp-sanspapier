@@ -4,8 +4,9 @@ $visual-grid-color: yellow;
 $visual-grid-index: front;
 $visual-grid-opacity: 0.04;
 
-@import "base/base";
+
 @import "../../../../bower_components/neat/app/assets/stylesheets/neat";
+@import "base/base";
 
 
 

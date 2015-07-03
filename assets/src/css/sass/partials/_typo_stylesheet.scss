@@ -148,22 +148,14 @@
         text-transform: uppercase;
         letter-spacing: 0.08em;
 
-
        &:hover,
        &:focus {
-       @include animation(link_hover 1s linear infinite alternate);
          color: #fff;
        }
 
        &:disabled {
          cursor: not-allowed;
          opacity: 0.5;
-       }
-
-       @include keyframes(link_hover){
-        0% {background-color: saturate($pink, 5%)}
-        50% {background-color: saturate($pink, 10%)}
-        100% {background-color: saturate($pink, 5%)}
        }
 
      }

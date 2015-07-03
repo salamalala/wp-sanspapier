@@ -79,7 +79,7 @@
       </div>
 
       <div class="name-wrapper">
-        <h1>Berner Beratungsstelle </h1> <h1>für Sans-Papiers</h1>
+        <h1>Berner Beratungs&shystelle </h1> <h1>für Sans-Papiers</h1>
       </div>
 
     </header>
@@ -93,7 +93,7 @@
 
        <div class="big-text-box box wer">
          <p class="big-paragraph quote">
-           Wir <a class="highlighted" href="#">beraten und informieren MigrantInnen</a>, die in der Schweiz leben, ohne eine Aufenthaltsbewilligung zu besitzen. Zudem leisten wir <a class="highlighted" href="#">Sensibilisierungs- und Informationsarbeit </a>in der Region Bern.
+           Wir <a class="highlighted" href="#">beraten und informieren MigrantInnen</a>, die in der Schweiz leben, ohne eine Aufenthalts&shybewilligung zu besitzen. Zudem leisten wir <a class="highlighted" href="#">Sensibilisierungs- und Informationsarbeit </a>in der Region Bern.
          </p>
        </div>
 
@@ -107,14 +107,16 @@
         <a class="minorlink" href="#">Weiterlesen</a>
       </div>
 
-
       <div class="beratungsbox">
 
+      <ul class="tabs">
+        <li><a href="#beratung-bern"><h3>Bern</h3></a></li>
+        <li><a href="#beratung-biel"><h3>Biel</h3></a></li>
+      </ul>
 
-       <div class="map" id="map-canvas">
-       </div> 
 
-       <div class="beratung box">
+
+       <div class="beratung box" id="beratung-bern">
          <h3>Beratungszeiten Bern:</h3>
          <p>
            Freitag 15.00-19.00 Uhr (ohne Voranmeldung)
@@ -128,14 +130,14 @@
          <p>
            Freitag 15.00-19.00 Uhr (ohne Voranmeldung)
          </p>
+
+         <div class="map" id="map-canvas">
+         </div> 
+
          <a class="minorlink" href="#">Mehr Informationen</a>
        </div>
 
-
-       <div class="map" id="map-canvas">
-       </div>  
-
-       <div class="beratung box">     
+       <div class="beratung box" id="beratung-biel">     
          <h3>Beratungszeiten Biel:</h3>
          <p>
           Mittwoch Nachmittag 14 bis 17 Uhr
@@ -149,12 +151,17 @@
         <p>
           Mittwoch Nachmittag 14 bis 17 Uhr
         </p>
+        
+        <div class="map" id="map-canvas">
+        </div>
+
         <a class="minorlink" href="#">Mehr Informationen</a>
       </div>
 
 
     </div>
-
+    <!-- End of Beratungsbox -->
+    
     <div class="linksbox">
 
       <a class="mainlink" href="#"><p>Mitglied werden</p></a>

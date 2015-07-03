@@ -27,6 +27,7 @@ module.exports = function(grunt){
         }
       }
     },
+
     uglify: {
       js: {
         files: {
@@ -34,6 +35,7 @@ module.exports = function(grunt){
         }
       } 
     },
+
     sass: {                          
       dist: {
        files: [{
@@ -45,96 +47,100 @@ module.exports = function(grunt){
        }]
      }
    },
-   cssmin: {
-    options: {
-      sourceMap: true,
-      shorthandCompacting: false,
-      roundingPrecision: -1
-    },
-    target: {
-     files: [{
-       'assets/dist/css/main.min.css': ['assets/src/css/*.css']
-     }]
-   }     
 
- },
-    // has to be on the min, otherwise sourcemap doesnt work. 
-    autoprefixer:{
-      main:{
-        src: 'assets/src/css/main.css',
-      }
-    },
+   // has to be on the min, otherwise sourcemap doesnt work. 
+  autoprefixer:{
+     main:{
+       src: 'assets/src/css/main.css',
+     }
+  },
+  
+  cssmin: {
+      options: {
+        sourceMap: true,
+        shorthandCompacting: false,
+        roundingPrecision: -1
+      },
+      target: {
+       files: [{
+         'assets/dist/css/main.min.css': ['assets/src/css/*.css']
+       }]
+     }     
+  },
 
-    imagemin: {                          // Task
-      dynamic: {                         // Another target
-        files: [{
-          expand: true,                  // Enable dynamic expansion
-          cwd: 'assets/src/images/',                   // Src matches are relative to this path
-          src: ['**/*.{png,jpg,gif,svg}'],   // Actual patterns to match
-          dest: 'assets/dist/images'                  // Destination path prefix
+  imagemin: {                          // Task
+    dynamic: {                         // Another target
+      files: [{
+        expand: true,                  // Enable dynamic expansion
+        cwd: 'assets/src/images/',                   // Src matches are relative to this path
+        src: ['**/*.{png,jpg,gif,svg}'],   // Actual patterns to match
+        dest: 'assets/dist/images'                  // Destination path prefix
+      }]
+    }
+  },
+
+  responsive_images: {
+    myTask: {
+      options: {
+        sizes: [{
+          width: 320,
+        },{
+          name: 'large',
+          width: 640
+        },{
+          name: "large",
+          width: 1024,
+          suffix: "_x2",
+          quality: 60
         }]
-      }
-    },
-    responsive_images: {
-      myTask: {
-        options: {
-          sizes: [{
-            width: 320,
-          },{
-            name: 'large',
-            width: 640
-          },{
-            name: "large",
-            width: 1024,
-            suffix: "_x2",
-            quality: 60
-          }]
-        },
-        files: [{
-          expand: true,
-          cwd: 'assets/src/images',
-          src: ['**/*.{jpg,gif,png}'],
-          dest: 'assets/dist/images'
-        }]
-      }
-    },
-    browserSync: {
-      dev: {
-        bsFiles: {
-          src : [
-          'assets/dist/**/*.css',
-          '*.php'
-          ]
-        },
-        options: {
-          proxy: "http://localhost/wordpress",
-          watchTask: true,
-        }
-      }
-    },
-    watch:{
-      js:{
-        files: ['assets/src/js/*.js'],
-        tasks:['uglify:js'],
-        // options:{
-        //   livereload: true,
-        // }
       },
-      sass:{
-        files:['**/*.scss'],
-        tasks: ['sass:dist', 'autoprefixer:main', 'cssmin:target'],
-        // options:{
-        //   livereload: true,
-        // }
+      files: [{
+        expand: true,
+        cwd: 'assets/src/images',
+        src: ['**/*.{jpg,gif,png}'],
+        dest: 'assets/dist/images'
+      }]
+    }
+  },
+
+  browserSync: {
+    dev: {
+      bsFiles: {
+        src : [
+        'assets/dist/**/*.css',
+        '*.php'
+        ]
       },
-      images:{
-        files:['assets/src/images/*.{jpg,gif,png}'],
-        tasks: ['imagemin', 'responsive_images'],
-        // options:{
-        //   livereload: true,
-        // }
+      options: {
+        proxy: "http://localhost/wordpress",
+        watchTask: true,
       }
     }
+  },
+
+  watch:{
+    js:{
+      files: ['assets/src/js/*.js'],
+      tasks:['uglify:js'],
+      // options:{
+      //   livereload: true,
+      // }
+    },
+    sass:{
+      files:['**/*.scss'],
+      tasks: ['sass:dist', 'autoprefixer:main', 'cssmin:target'],
+      // options:{
+      //   livereload: true,
+      // }
+    },
+    images:{
+      files:['assets/src/images/*.{jpg,gif,png}'],
+      tasks: ['imagemin', 'responsive_images'],
+      // options:{
+      //   livereload: true,
+      // }
+    }
+  }
 
 
 

@@ -87,7 +87,7 @@ header {
     @include vertical-align;
     display: block;
     color: $navigation-color-hover;
-    font-weight: 700;
+    font-weight: 500;
     padding: 0.3em 1em;
     @include media ($medium-screen) {
       padding: 0.5em 1.5em;
@@ -140,11 +140,11 @@ header {
         }
         &:first-child{
           transform: rotate(45deg);
-          top: -9px;
+          top: -0.5em;
         }
         &:last-child{
           transform: rotate(-45deg);
-          top: -10px;
+          top: -0.5em;
         }
       }
     }
@@ -248,11 +248,6 @@ header {
         background: $navigation-color-hover;
         transition: width .2s ease-out;
       }
-      // &:hover:after {
-      //   width: 100%;
-      //   background: transparent;
-      //   transition: all 0s ease;
-      // }
     }
   }
 
@@ -380,19 +375,30 @@ header {
   @include outer-container; 
   $navigation-background: $dark-gray;
   padding: modular-scale(3) 0 modular-scale(5) 0;
-  @include background(url("../images/Frau2.jpg") no-repeat right bottom);
-
+  @include media($large-screen){
+    @include background(url("../images/Frau2.jpg") no-repeat right bottom);
+  }
   @include media($xlarge-screen){
     padding: modular-scale(5) 0 modular-scale(7) 0;
   }
   h1{
-    @include span-columns(10);
-    @include shift(1);
+    font-size: modular-scale(2);
+    @include span-columns(12);
+    @include word-wrap;
     color: $green;
     text-align: center;
     display: inline-block;
+    margin: 0;
+    line-height: 1.5;
     @include animation( sliding-header 0.6s cubic-bezier(0.645, 0.045, 0.355, 1.000) both 1s);
+    @include media($medium-screen){
+      font-size: modular-scale(3);
+    };
+    @include media($large-screen){
+      font-size: modular-scale(4);
+    }
   }
+
 }
 
 

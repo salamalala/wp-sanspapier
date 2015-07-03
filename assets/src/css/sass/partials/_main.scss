@@ -29,27 +29,65 @@ main{
 
 
 .beratungsbox{
-  @include span-columns(9); 
-  margin-top: modular-scale(4);
+  margin-top: modular-scale(2);
+  @include span-columns(12); 
+  @include media ($large-screen){
+    @include span-columns(9); 
+  }
+
+  //tabs 
+  ul{
+    margin-top: modular-scale(2);
+    @include media ($large-screen){
+      display: none;
+    }
+    li{
+      @include span-columns(5);
+      &:first-child{
+        @include shift(1);
+      }
+      padding: $medium-golden-ratio;
+      color: $light-medium-gray;
+      background-color: white;  
+    }
+    .active{
+      h3{
+        color: $pink;
+      }
+    }
+    h3{
+      border-bottom: none;
+      color: $medium-gray;
+      text-align: center;
+      margin: 0;
+    }
+  }
 
   .map{
     @include span-columns(4 of 9); 
     @include background(url("../images/map_bern.jpg"));
     height: 188.675px;
-
     &:nth-of-type(3){
       margin-top: modular-scale(2);
     }
   }
 
   .beratung{
-    @include span-columns(5 of 9); 
+    @include span-columns(10);
+    @include shift(1);
     margin-right: 0;
     display: flex;
+    display: none;
+    @include media ($large-screen){
+      @include span-columns(5 of 9); 
+    }
     &:nth-of-type(4){
       margin-top: modular-scale(2);
     }
+    &.active-content{
+      display: block;
     }
+  }
 
   h3{
     border-bottom: solid $medium-gray 0.1em;
@@ -64,16 +102,23 @@ main{
 
 
 .linksbox{
+  @include span-columns(10);
+  @include shift(1);
+ 
+  @include media ($large-screen){
   @include span-columns(3); 
+  @include shift(0);
   margin-top: modular-scale(4);
+}
 
   .mainlink{
 
-   &:nth-of-type(n+2){
-    margin-top: modular-scale(1);
-  } 
 
-}
+     &:nth-of-type(n+2){
+      margin-top: modular-scale(1);
+    } 
+
+  }
 
 }
 
