@@ -279,8 +279,6 @@ body {
   cursor: pointer;
   font-family: "brandon-grotesque", sans-serif;
   padding: 0.4854em;
-  padding-left: 2.1034em;
-  padding-right: 2.1034em;
   line-height: 1;
   text-decoration: none;
   -webkit-user-select: none;
@@ -665,7 +663,7 @@ header {
     max-width: 68em;
     margin-left: auto;
     margin-right: auto;
-    padding: 2.36859em 0 4.20873em 0; }
+    padding-bottom: 2.36859em; }
     header .name-wrapper::after {
       clear: both;
       content: "";
@@ -792,39 +790,41 @@ main {
       .beratungsbox:last-child {
         margin-right: 0; } }
   .beratungsbox ul {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 82.94039%;
+    margin-left: 8.5298%;
     margin-top: 1.77689em; }
+    .beratungsbox ul:last-child {
+      margin-right: 0; }
     @media screen and (min-width: 54em) {
       .beratungsbox ul {
         display: none; } }
     .beratungsbox ul li {
       float: left;
-      display: block;
-      margin-right: 2.35765%;
-      width: 40.29137%;
-      padding: 0.809em;
+      width: 50%;
       color: #A0A7AD;
-      background-color: white; }
-      .beratungsbox ul li:last-child {
-        margin-right: 0; }
-      .beratungsbox ul li:first-child {
-        margin-left: 8.5298%; }
-    .beratungsbox ul .active h3 {
-      color: #bf4385; }
+      background-color: #F1F4F9;
+      position: relative; }
+      .beratungsbox ul li a {
+        display: block;
+        padding: 0.809em; }
+        .beratungsbox ul li a h3 {
+          color: #373737; }
+        .beratungsbox ul li a.active {
+          background-color: white; }
+          .beratungsbox ul li a.active h3 {
+            color: #bf4385; }
     .beratungsbox ul h3 {
       border-bottom: none;
       color: #5c5c5c;
       text-align: center;
       margin: 0; }
   .beratungsbox .map {
-    float: left;
-    display: block;
-    margin-right: 3.16844%;
-    width: 42.6842%;
     background: url("../images/map_bern.jpg");
     background: url("../images/map_bern.jpg");
     height: 188.675px; }
-    .beratungsbox .map:last-child {
-      margin-right: 0; }
     .beratungsbox .map:nth-of-type(3) {
       margin-top: 1.77689em; }
   .beratungsbox .beratung {
@@ -833,7 +833,6 @@ main {
     margin-right: 2.35765%;
     width: 82.94039%;
     margin-left: 8.5298%;
-    margin-right: 0;
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
@@ -846,27 +845,38 @@ main {
         float: left;
         display: block;
         margin-right: 3.16844%;
-        width: 54.14736%; }
+        width: 100%;
+        margin-left: 0%; }
         .beratungsbox .beratung:last-child {
-          margin-right: 0; } }
-    .beratungsbox .beratung:nth-of-type(4) {
-      margin-top: 1.77689em; }
+          margin-right: 0; }
+        .beratungsbox .beratung:nth-of-type(2) {
+          margin-top: 1.77689em; } }
     .beratungsbox .beratung.active-content {
       display: block; }
+      @media screen and (min-width: 54em) {
+        .beratungsbox .beratung.active-content {
+          border-top: none; } }
   .beratungsbox h3 {
     border-bottom: solid #5c5c5c 0.1em;
     padding-bottom: 0.1618em; }
   .beratungsbox .minorlink {
-    -webkit-align-self: stretch;
-        -ms-flex-item-align: stretch;
-            align-self: stretch; }
+    display: block;
+    margin-top: 1.333em;
+    -webkit-align-self: flex-end;
+        -ms-flex-item-align: end;
+            align-self: flex-end; }
+    .beratungsbox .minorlink::after {
+      clear: both;
+      content: "";
+      display: table; }
 
 .linksbox {
   float: left;
   display: block;
   margin-right: 2.35765%;
   width: 82.94039%;
-  margin-left: 8.5298%; }
+  margin-left: 8.5298%;
+  margin-top: 1.77689em; }
   .linksbox:last-child {
     margin-right: 0; }
   @media screen and (min-width: 54em) {
@@ -875,8 +885,7 @@ main {
       display: block;
       margin-right: 2.35765%;
       width: 23.23176%;
-      margin-left: 0%;
-      margin-top: 3.15733em; }
+      margin-left: 0%; }
       .linksbox:last-child {
         margin-right: 0; } }
   .linksbox .mainlink:nth-of-type(n+2) {

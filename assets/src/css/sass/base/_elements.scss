@@ -22,8 +22,8 @@ body{
   @include media($xlarge-screen){
    @include span-columns(12);
    @include shift(0);
-  }
-  border-left: $pink solid 3px;
+ }
+ border-left: $pink solid 3px;
 }
 
 .minorlink{
@@ -34,8 +34,6 @@ body{
   cursor: pointer;
   font-family: $heading-font-family;
   padding: $small-golden-ratio;
-  padding-left: $big-golden-ratio;
-  padding-right: $big-golden-ratio;
   line-height: 1;
   text-decoration: none;
   user-select: none;
@@ -57,9 +55,9 @@ body{
     opacity: 0;
     top: 25%;
   }
-    &:hover:before{
-      left: 89%;
-      opacity: 1;
+  &:hover:before{
+    left: 89%;
+    opacity: 1;
   }
 }
 

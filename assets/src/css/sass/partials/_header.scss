@@ -374,7 +374,7 @@ header {
 .name-wrapper{
   @include outer-container; 
   $navigation-background: $dark-gray;
-  padding: modular-scale(3) 0 modular-scale(5) 0;
+  padding-bottom: modular-scale(3);
   @include media($large-screen){
     @include background(url("../images/Frau2.jpg") no-repeat right bottom);
   }

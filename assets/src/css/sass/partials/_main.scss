@@ -37,22 +37,31 @@ main{
 
   //tabs 
   ul{
+    @include span-columns(10 of 12);
+    @include shift(1);
     margin-top: modular-scale(2);
     @include media ($large-screen){
       display: none;
     }
     li{
-      @include span-columns(5);
-      &:first-child{
-        @include shift(1);
-      }
-      padding: $medium-golden-ratio;
+      float: left;
+      width: 50%;
       color: $light-medium-gray;
-      background-color: white;  
-    }
-    .active{
-      h3{
-        color: $pink;
+      background-color: $light-gray;
+      position: relative;
+      a{
+        display: block;
+        padding: $medium-golden-ratio;
+        h3{
+          color: $dark-gray;
+        }
+        &.active{
+          background-color: white;
+          h3{
+            color: $pink;
+          }
+
+        }
       }
     }
     h3{
@@ -64,7 +73,6 @@ main{
   }
 
   .map{
-    @include span-columns(4 of 9); 
     @include background(url("../images/map_bern.jpg"));
     height: 188.675px;
     &:nth-of-type(3){
@@ -75,17 +83,22 @@ main{
   .beratung{
     @include span-columns(10);
     @include shift(1);
-    margin-right: 0;
     display: flex;
     display: none;
     @include media ($large-screen){
-      @include span-columns(5 of 9); 
-    }
-    &:nth-of-type(4){
-      margin-top: modular-scale(2);
+      @include span-columns(9 of 9); 
+      @include shift(0);
+      
+      &:nth-of-type(2){
+        margin-top: modular-scale(2);
+      }
     }
     &.active-content{
       display: block;
+      // border-top: 3px solid $medium-gray;
+      @include media ($large-screen){
+        border-top: none;
+      }
     }
   }
 
@@ -95,7 +108,9 @@ main{
   }
 
   .minorlink{
-    align-self: stretch;
+    @include row();
+    margin-top: modular-scale(1);
+    align-self: flex-end;
   }
 }
 
@@ -104,21 +119,17 @@ main{
 .linksbox{
   @include span-columns(10);
   @include shift(1);
- 
+  margin-top: modular-scale(2);
   @include media ($large-screen){
-  @include span-columns(3); 
-  @include shift(0);
-  margin-top: modular-scale(4);
-}
-
-  .mainlink{
-
-
-     &:nth-of-type(n+2){
-      margin-top: modular-scale(1);
-    } 
-
+    @include span-columns(3); 
+    @include shift(0);  
   }
+  .mainlink{
+   &:nth-of-type(n+2){
+    margin-top: modular-scale(1);
+  } 
+
+}
 
 }
 

@@ -34,7 +34,7 @@
 
            <img src=
             "<?php  
-            echo get_template_directory_uri(); ?>/assets/dist/images/logo.svg" 
+            echo get_template_directory_uri(); ?>/assets/dist/images/logo_def.svg" 
             alt="Logo Sans Papier Beratungsstelle"
             > 
 
