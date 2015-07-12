@@ -32,8 +32,7 @@
 
           <a href="#" class="logo">
 
-           <img src=
-            "<?php  
+           <img src= "<?php  
             echo get_template_directory_uri(); ?>/assets/dist/images/logo_def.svg" 
             alt="Logo Sans Papier Beratungsstelle"
             > 
@@ -54,9 +53,6 @@
 
             </a>
         </div>
-
-
-
 
         <nav role="navigation">
 
@@ -86,9 +82,6 @@
 
     <div id="content" class="site-content">
 
-
-
-
      <main>
 
        <div class="big-text-box box wer">
@@ -114,10 +107,8 @@
         <li><a href="#beratung-biel"><h3>Biel</h3></a></li>
       </ul>
 
-
-
        <div class="beratung box" id="beratung-bern">
-         <h3>Beratungszeiten Bern:</h3>
+         <h3>Beratungszeiten <span class="hide-when-small">Bern</span></h3>
          <p>
            Freitag 15.00-19.00 Uhr (ohne Voranmeldung)
          </p>
@@ -138,7 +129,7 @@
        </div>
 
        <div class="beratung box" id="beratung-biel">     
-         <h3>Beratungszeiten Biel:</h3>
+         <h3>Beratungszeiten <span class="hide-when-small">Biel</span></h3>
          <p>
           Mittwoch Nachmittag 14 bis 17 Uhr
         </p>

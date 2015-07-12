@@ -4,10 +4,8 @@ body{
 
 
 .box{
-  padding: $medium-golden-ratio;
+  padding: $big-golden-ratio $medium-golden-ratio;
   background-color: white;
-  display: flex;
-  flex-direction: column;
   @include media($medium-screen){
     padding: $big-golden-ratio;
   }
@@ -19,21 +17,29 @@ body{
 .big-text-box{
   @include span-columns(10);
   @include shift(1);
+  @include display(flex);
+  @include flex-direction(column);
   @include media($xlarge-screen){
    @include span-columns(12);
    @include shift(0);
+   @include display(flex);
+   @include flex-direction(column);
  }
  border-left: $pink solid 3px;
 }
 
 .minorlink{
+  @include align-self(stretch);
+  @include media ($medium-screen){
+    @include align-self(flex-end);
+  }
   color: $medium-gray;
   border-radius: $base-border-radius;
   border: $medium-gray 3px solid;
   position: relative;
   cursor: pointer;
   font-family: $heading-font-family;
-  padding: $small-golden-ratio;
+  padding: $medium-golden-ratio $big-golden-ratio;
   line-height: 1;
   text-decoration: none;
   user-select: none;
@@ -44,7 +50,6 @@ body{
   letter-spacing: 0.08em;
   background-color: none;
   transition: 0.4s ease-out;
-  align-self: flex-end;
   margin-top: $small-golden-ratio;
   &:before{
     content: '➞';

@@ -49,18 +49,30 @@ main{
       color: $light-medium-gray;
       background-color: $light-gray;
       position: relative;
+      &:first-child{
+        .active{
+          border-right: solid 1.5px $medium-gray;
+        }
+      }
+      &:nth-child(2){
+        .active{
+          border-left: solid 1.5px $medium-gray;
+        }
+      }
       a{
         display: block;
         padding: $medium-golden-ratio;
+        background-color: white;
+        border-bottom: solid 1.5px $medium-gray;
         h3{
-          color: $dark-gray;
+          color: $medium-gray;
         }
         &.active{
+          border-top: solid 1.5px $medium-gray;
           background-color: white;
-          h3{
-            color: $pink;
-          }
-
+          border-bottom: none;
+          border-left:solid 1.5px $medium-gray;
+          border-right: solid 1.5px $medium-gray;
         }
       }
     }
@@ -79,23 +91,25 @@ main{
       margin-top: modular-scale(2);
     }
   }
-
+  
   .beratung{
     @include span-columns(10);
     @include shift(1);
-    display: flex;
+    @include display(flex);
+    @include flex-direction(column);
     display: none;
     @include media ($large-screen){
       @include span-columns(9 of 9); 
       @include shift(0);
-      
+      @include display(flex);
+      @include flex-direction(column);
       &:nth-of-type(2){
         margin-top: modular-scale(2);
       }
     }
     &.active-content{
-      display: block;
-      // border-top: 3px solid $medium-gray;
+      @include display(flex);
+      @include flex-direction(column);
       @include media ($large-screen){
         border-top: none;
       }
@@ -107,10 +121,19 @@ main{
     padding-bottom: (golden-ratio(0.1em,  1));
   }
 
+  .hide-when-small{
+    display: none;
+    @include media ($large-screen){
+    display: inline;
+    }
+  }
+
   .minorlink{
-    @include row();
     margin-top: modular-scale(1);
-    align-self: flex-end;
+    @include align-self(stretch);
+    @include media ($medium-screen){
+      @include align-self(flex-end);
+    }
   }
 }
 

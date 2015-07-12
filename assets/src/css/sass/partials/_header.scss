@@ -18,7 +18,7 @@ header {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.07em;
-  border-bottom: golden-ratio(0.15em,  1) $green solid;
+  border-bottom: golden-ratio(0.2em,  1) $green solid;
 
   .navigation-wrapper {
     @include outer-container;
@@ -34,11 +34,11 @@ header {
     display: inline-block;
   }
   
-
   .logo-left{
-    @include span-columns(2);
+    @include span-columns(5);
     @include shift(1);
     @include media ($xlarge-screen) {
+      @include span-columns(3);
       @include shift(0);
     }
   }
@@ -47,34 +47,31 @@ header {
     @include vertical-align;
     display:block;
     img {
-      max-height: calc(1 * #{$navigation-height});
-    }
-    @include media ($medium-screen){
+      max-height: calc(0.3 * #{$navigation-height});
+    }  
+    @include media($medium-screen){
       img {
-        max-height: calc(1 * #{$navigation-height});
-      }
-    }
-    @include media ($large-screen){
-      img {
-        max-height: calc(1.2 * #{$navigation-height});
-      }      
-    }
-
+        max-height: calc(0.4 * #{$navigation-height});
+     }
+    }      
     h4{
       position: relative;
       color: $green; 
-      font-size: 0.65em;  
+      font-size: 0.65em;
+      line-height: 1.4;  
+     @include media($medium-screen){
+        font-size: 0.75em;  
+      }
     }
   }
 
   .menu-right{
-    @include span-columns(6);
-    @include shift (2);    
+    @include span-columns(4);  
+    @include shift(1);  
     @include media ($medium-screen) {
       @include span-columns(3);
-      @include shift(5);
+      @include shift(2);
     }
-
     @include media ($xlarge-screen) {
       display: none;
     }
@@ -88,24 +85,19 @@ header {
     display: block;
     color: $navigation-color-hover;
     font-weight: 500;
-    padding: 0.3em 1em;
-    @include media ($medium-screen) {
-      padding: 0.5em 1.5em;
-    }
     text-transform: uppercase;
-    border:  1px solid $navigation-color;
-    text-align: center;
-    &:focus,
-    &:hover {
-      border: 1.5px solid $navigation-color-hover;
+    text-align: right;
+    &:hover,
+    &:focus{
+      font-weight: 700;
     }
     .menu-size{
-      font-size: 22px;
+      font-size: 18px;
     }
 
     .hamburger-icon{
       display: inline-block;
-      width: 22px;
+      width: 18px;
       margin-left: 5px;
       position: relative;
       transform: rotate(0deg);
@@ -123,10 +115,10 @@ header {
         transform: rotate(0deg);
         transition: .25s ease-out;
         &:nth-child(1){
-          top: -16px;
+          top: -12px;
         }
         &:nth-child(2){
-          top: -9px;
+          top: -7px;
         }
         &:nth-child(3){
           top: -2px;          
@@ -153,9 +145,6 @@ header {
 //closing menu right
 
 
-
-
-
   // Nav menu
 
   nav {
@@ -179,7 +168,6 @@ header {
     &.show {
       display: block;
     }
-
     @include media ($xlarge-screen) {
       display: inline;
       margin: 0;
@@ -375,7 +363,8 @@ header {
   @include outer-container; 
   $navigation-background: $dark-gray;
   padding-bottom: modular-scale(3);
-  @include media($large-screen){
+  @include media($medium-screen){
+    padding: modular-scale(3) 0 modular-scale(5) 0;
     @include background(url("../images/Frau2.jpg") no-repeat right bottom);
   }
   @include media($xlarge-screen){

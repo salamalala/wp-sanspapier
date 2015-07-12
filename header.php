@@ -27,16 +27,28 @@
 
 		<header role="banner">
 			<div class="navigation-wrapper">
-				<div class="logo-block">
+				<div class="block-nav logo-left">
 					<a href="<?php echo get_home_url(); ?>" class="logo">
-						<img class="page_logo" src="<?php echo get_template_directory_uri(); ?>/assets/dist/images/logo.svg"  alt="Logo Sans Papier Beratungsstelle">
-						<h4>Berner Beratungsstelle für Sans-Papier</h4>
+						<img src= "<?php  
+	            echo get_template_directory_uri(); ?>/assets/dist/images/logo_def.svg" 
+	            alt="Logo Sans Papier Beratungsstelle"
+	            > 
+						<h4>Berner Beratungsstelle <br> für Sans-Papier</h4>
 					</a>
 				</div>
 
-				<a href="#" class="navigation-menu-button" id="js-mobile-menu">MENU</a>
+				<div class="block-nav menu-right ">
+           <a href="#" class="navigation-menu-button " id="js-mobile-menu">
+           <span class="menu-size">Menu</span>
 
+           <div class="hamburger-icon">
+             <span></span>
+             <span></span>
+             <span></span>
+           </div>
 
+           </a>
+       </div>
 
 				<nav role="navigation">
 
@@ -53,14 +65,9 @@
 
 					?>
 
-
-
 				</nav>
 
-
-
 			</div>
-
 
 		</header>
 
