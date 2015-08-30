@@ -1,11 +1,11 @@
 header {
   $navigation-padding: 1em;
   $navigation-background: $dark-gray;
-  $navigation-color: transparentize(white, 0.5);
-  $navigation-color-hover: transparentize(white, 0.2);
+  $navigation-color: transparentize($white, 0.45);
+  $navigation-color-hover: transparentize($white, 0.2);
   $navigation-height: 120px;
   $navigation-nav-button-background-hover: lighten($navigation-background, 10%);
-  $navigation-active-link-color: transparentize(white, 0.5);
+  $navigation-active-link-color: transparentize($white, 0.5);
   $navigation-submenu-padding: 1em;
   $navigation-submenu-width: 12em;
 
@@ -18,7 +18,9 @@ header {
   font-weight: 700;
   text-transform: uppercase;
   letter-spacing: 0.07em;
-  border-bottom: golden-ratio(0.2em,  1) $green solid;
+  box-shadow: 0px 2px 5px $medium-gray;
+  margin-bottom: modular-scale(5);
+  // border-bottom: golden-ratio(0.2em,  1) $green solid;
 
   .navigation-wrapper {
     @include outer-container;
@@ -58,7 +60,8 @@ header {
       position: relative;
       color: $green; 
       font-size: 0.65em;
-      line-height: 1.4;  
+      line-height: 1.4;
+      margin-left: 15px;  
      @include media($medium-screen){
         font-size: 0.75em;  
       }
@@ -141,12 +144,9 @@ header {
       }
     }
 }//closing navigation-menu-button
-}
-//closing menu right
+}//closing menu right
 
-
-  // Nav menu
-
+// Nav menu
   nav {
     float: none;
     z-index: 9999999;
@@ -191,20 +191,25 @@ header {
       display: inline;
       text-decoration: none;
       width: auto;
+      //Unterstützungslink
       &:last-child{
         padding-right: 0;
-        //Unterstützungslink
         &>a{
-          color: $pink;
-          animation: support-button 2s ease-out;
+          color: saturate(lighten($pink, 13), 10);
           &:hover{
-            color: saturate($pink, 5%);
+            color: saturate($pink, 10);
             &:before {
               background: $pink;
             }
           }
         }
       }
+    }
+
+    &.current_page_item{
+      a {
+        color: transparentize($white, 0.2);
+     }
     }
     a {
       color: $navigation-color;
@@ -326,7 +331,6 @@ header {
       padding-right: 0;
       line-height: 50px;
 
-
       @include media($xlarge-screen) {
 
         &:first-child > a {
@@ -365,7 +369,19 @@ header {
   padding-bottom: modular-scale(3);
   @include media($medium-screen){
     padding: modular-scale(3) 0 modular-scale(5) 0;
-    @include background(url("../images/Frau2.jpg") no-repeat right bottom);
+    position: relative;
+    &:before{
+      content: '';
+      position: absolute;
+      @include background(url("../images/Frau2.jpg") no-repeat right bottom);
+      bottom: 1.3em;
+      right: 0;
+      @include animation(bluredPic 10s ease infinite alternate-reverse);
+      width: 100%;
+      height: 100%;
+      z-index: 0;
+    }
+    
   }
   @include media($xlarge-screen){
     padding: modular-scale(5) 0 modular-scale(7) 0;
@@ -379,7 +395,7 @@ header {
     display: inline-block;
     margin: 0;
     line-height: 1.5;
-    @include animation( sliding-header 0.6s cubic-bezier(0.645, 0.045, 0.355, 1.000) both 1s);
+    @include animation (bluredText 3s linear forwards);
     @include media($medium-screen){
       font-size: modular-scale(3);
     };
@@ -390,18 +406,7 @@ header {
 
 }
 
-
 }
-
-@include keyframes(support-button){
-  0%{
-    color: transparentize(white, 0.5);
-  }
-  100%{
-    color: $pink;
-  }
-}
-
 
 
 @include keyframes(sliding-header){
@@ -423,5 +428,30 @@ header {
   }
 }
 
+
+@include keyframes(bluredText) {
+  0% {
+    text-shadow: 0 0 30px $green;
+    opacity: 0;
+  }
+  50% {
+    text-shadow: 0 0 15px $green;
+    opacity: 0.5;
+  }
+  85% {
+    text-shadow: 0 0 5px $green;
+    opacity: 0.8;
+  }
+  100% {
+    text-shadow: 0 0 0 $green;
+    opacity: 1;
+  }
+}
+
+@include keyframes(bluredPic){
+  50%{
+    filter: blur(5px);
+  }
+}
 
 

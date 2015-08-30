@@ -8,26 +8,31 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<header class="entry-header">
-		<?php the_title( '<h1 class="entry-title">', '</h1>' ); ?>
-
-		<div class="entry-meta">
-			<?php wp_sanspapier_posted_on(); ?>
-		</div><!-- .entry-meta -->
-	</header><!-- .entry-header -->
-
-	<div class="entry-content">
-		<?php the_content(); ?>
+	<div class="modular-content">
+		
 		<?php
-			wp_link_pages( array(
-				'before' => '<div class="page-links">' . esc_html__( 'Pages:', 'wp-sanspapier' ),
-				'after'  => '</div>',
-			) );
-		?>
-	</div><!-- .entry-content -->
+	    if( have_rows('flexible_content') ):
+ 					while ( have_rows('flexible_content') ) : the_row();
+	           
+	          if ( get_row_layout() == 'full_width_text' ):  ?>
+	          	             
+	             	<section class="full-width-box box">
+	                <h1><?php the_sub_field('titel'); ?></h1>
+	           			<p><?php the_sub_field('text'); ?></p> 
+	              </section>
 
-	<footer class="entry-footer">
-		<?php wp_sanspapier_entry_footer(); ?>
-	</footer><!-- .entry-footer -->
+	          <?php elseif (get_row_layout() == 'half_width_text' ):  ?>
+
+	            	<section class="half-width-box box">
+	               <h2><?php the_sub_field('titel'); ?></h1>
+	          			<p><?php the_sub_field('text'); ?></p>
+	             </section>
+						          
+	          <?php endif; ?>
+	          
+	         <?php endwhile; ?>
+	      <?php endif; ?> 
+	
+	</div><!-- .entry-content -->
 </article><!-- #post-## -->
 

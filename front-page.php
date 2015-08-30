@@ -23,8 +23,6 @@
 
 <body <?php body_class(); ?>>
 
-  <div class="wrapper-for-content-outside-of-footer">
-
     <header role="banner">
       <div class="navigation-wrapper">
 
@@ -84,13 +82,13 @@
 
      <main>
 
-       <div class="big-text-box box wer">
+       <div class="full-width-box box wer">
          <p class="big-paragraph quote">
            Wir <a class="highlighted" href="#">beraten und informieren MigrantInnen</a>, die in der Schweiz leben, ohne eine Aufenthalts&shybewilligung zu besitzen. Zudem leisten wir <a class="highlighted" href="#">Sensibilisierungs- und Informationsarbeit </a>in der Region Bern.
          </p>
        </div>
 
-       <div class="big-text-box box">
+       <div class="full-width-box box">
          <h5>Fundraising</h5>
          <h2>Solilauf 2015 - jetzt anmelden</h2>
          <h4 class="italic">12.05.2014 | Karin Jenni</h4>

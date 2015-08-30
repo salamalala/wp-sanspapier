@@ -142,6 +142,7 @@ add_action( 'widgets_init', 'wp_sanspapier_widgets_init' );
 // }
 // add_action( 'wp_enqueue_scripts', 'wp_sanspapier_scripts' );
 
+
 /**
  * Implement the Custom Header feature.
  */
@@ -166,3 +167,8 @@ require get_template_directory() . '/inc/customizer.php';
  * Load Jetpack compatibility file.
  */
 require get_template_directory() . '/inc/jetpack.php';
+
+/**
+ * Load custom field file.
+ */
+require get_template_directory() . '/inc/acf.php';

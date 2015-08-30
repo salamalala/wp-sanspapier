@@ -2,10 +2,9 @@ body{
   background-color: $light-gray;
 }
 
-
 .box{
   padding: $big-golden-ratio $medium-golden-ratio;
-  background-color: white;
+  background-color: $white;
   @include media($medium-screen){
     padding: $big-golden-ratio;
   }
@@ -14,18 +13,135 @@ body{
   }
 }
 
-.big-text-box{
+.dark-box{
+  background-color: $medium-gray;
+  color: $white;
+}
+
+.modular-content{
+  @include display(flex);
+  @include flex-wrap(wrap);
+}
+
+.full-width-box{
+  margin: $big-golden-ratio 0;
   @include span-columns(10);
   @include shift(1);
   @include display(flex);
   @include flex-direction(column);
+  
   @include media($xlarge-screen){
    @include span-columns(12);
    @include shift(0);
    @include display(flex);
    @include flex-direction(column);
+   @include omega;
  }
- border-left: $pink solid 3px;
+}
+
+.full-width-image{
+  max-height: 75%;
+   img{
+    object-fit: cover;
+    object-position: 50% 0%
+   } 
+}
+
+.border-left{
+  border-left: $pink solid 3px;
+}
+  
+  
+.half-width-box{
+  margin: $medium-golden-ratio 0;
+  @include span-columns(10);
+  @include shift(1);
+
+  @include media($medium-screen){
+    @include span-columns(5);
+    @include shift(1);
+    @include flex-direction(column);
+    &:nth-of-type(2n){
+      @include shift(0);
+      @include span-columns(5);
+      @include omega;
+    }
+  }
+  
+  @include media($xlarge-screen){
+    @include span-columns(6);
+    @include shift(0);
+    @include flex-direction(column);
+    &:nth-of-type(2n){
+      @include span-columns(6);
+      @include omega;
+    }
+  }
+}
+
+.icon-in-half-width-box{
+  margin: 0 auto;
+  width: 15%;
+  display: block;
+  // border-radius: 100%;
+  // border: solid 2px $dark-gray;
+  padding: 2%;
+  margin-bottom: $medium-golden-ratio;
+
+}
+
+.three-quarter-box{
+  margin: $medium-golden-ratio 0;
+  @include span-columns(10);
+  @include shift(1);
+
+  @include media($medium-screen){
+    @include span-columns(7);
+    @include shift(1);
+    @include flex-direction(column);
+  }
+  
+  @include media($xlarge-screen){
+     @include span-columns(9);
+     @include shift(0);
+     @include flex-direction(column);
+ }
+}
+
+.two-third-box{
+  margin: $medium-golden-ratio 0;
+  @include span-columns(10);
+  @include shift(1);
+
+  @include media($medium-screen){
+    @include span-columns(6);
+    @include shift(1);
+    @include flex-direction(column);
+  }
+  
+  @include media($xlarge-screen){
+     @include span-columns(8);
+     @include shift(0);
+     @include flex-direction(column);
+ }
+}
+
+.one-third-box{
+  margin: $medium-golden-ratio 0;
+  @include span-columns(10);
+  @include shift(1);
+
+  @include media($medium-screen){
+    @include span-columns(6);
+    @include shift(1);
+    @include flex-direction(column);
+  }
+  
+  @include media($xlarge-screen){
+     @include span-columns(4);
+     @include shift(0);
+     @include flex-direction(column);
+ }
 }
 
 .minorlink{
@@ -56,12 +172,12 @@ body{
     position: absolute;
     color: $medium-gray;
     transition: all 0.3s;
-    left: 75%;
+    right: 40px;
     opacity: 0;
     top: 25%;
   }
   &:hover:before{
-    left: 89%;
+    right: 10px;
     opacity: 1;
   }
 }
@@ -100,7 +216,6 @@ body{
     margin: 0;
     transform: translateY(0);
     transition: transform 0.2s ease;
-
     &:hover{
       transform: translateY(-3px);
     }

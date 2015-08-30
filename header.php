@@ -33,7 +33,7 @@
 	            echo get_template_directory_uri(); ?>/assets/dist/images/logo_def.svg" 
 	            alt="Logo Sans Papier Beratungsstelle"
 	            > 
-						<h4>Berner Beratungsstelle <br> für Sans-Papier</h4>
+<!-- 						<h4>Berner Beratungsstelle <br> für Sans-Papier</h4> -->
 					</a>
 				</div>
 

@@ -7,13 +7,13 @@ main{
   margin-top: -1.2em; 
   border: none;
   line-height: 1.7;
+  z-index: 5; 
 }
 
-.big-text-box{
+.full-width-box{
   &:nth-of-type(n+2){
     margin-top: modular-scale(4);
   }
-
 }
 
 .highlighted{
@@ -26,7 +26,6 @@ main{
   }
 
 }
-
 
 .beratungsbox{
   margin-top: modular-scale(2);
@@ -51,28 +50,33 @@ main{
       position: relative;
       &:first-child{
         .active{
-          border-right: solid 1.5px $medium-gray;
+          border-right: solid 2px $medium-gray;
         }
       }
       &:nth-child(2){
         .active{
-          border-left: solid 1.5px $medium-gray;
+          border-left: solid 2px $medium-gray;
         }
       }
+     
       a{
         display: block;
         padding: $medium-golden-ratio;
         background-color: white;
-        border-bottom: solid 1.5px $medium-gray;
+        border-bottom: solid 2px $medium-gray;
         h3{
           color: $medium-gray;
+          transition: transform 0.2s ease;
         }
         &.active{
-          border-top: solid 1.5px $medium-gray;
+          border-top: solid 2px $medium-gray;
           background-color: white;
           border-bottom: none;
-          border-left:solid 1.5px $medium-gray;
-          border-right: solid 1.5px $medium-gray;
+          border-left:solid 2px $medium-gray;
+          border-right: solid 2px $medium-gray;
+        }
+        &:not(.active) h3:hover{
+        transform: translateY(-3px);
         }
       }
     }
@@ -98,6 +102,7 @@ main{
     @include display(flex);
     @include flex-direction(column);
     display: none;
+
     @include media ($large-screen){
       @include span-columns(9 of 9); 
       @include shift(0);

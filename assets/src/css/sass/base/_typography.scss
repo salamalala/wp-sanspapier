@@ -66,18 +66,13 @@ h5{
 p {
   margin: 0 0 $small-spacing;
   letter-spacing: 0.05em;
+  font-size: $base-font-size;
 }
 
 a {
   color: $pink;
   text-decoration: none;
   transition: color 0.1s linear;
-
-  // &:active,
-  // &:focus,
-  // &:hover {
-  //   color: saturate($pink, 10%);
-  // }
 
   &:active,
   &:focus {
