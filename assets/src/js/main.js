@@ -21,47 +21,81 @@ $(document).ready(function() {
       }
     });
   });
+
+
+
+  //jquery tabs
+  $('ul.tabs').each(function(){
+     // For each set of tabs, we want to keep track of
+     // which tab is active and it's associated content
+     var $active, $content, $links = $(this).find('a');
+
+     // If the location.hash matches one of the links, use that as the active tab.
+     // If no match is found, use the first link as the initial active tab.
+     $active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
+     $active.addClass('active');
+
+     $content = $($active[0].hash);
+     $content.addClass('active-content');
+
+     // Hide the remaining content
+     $links.not($active).each(function () {
+       $(this.hash).removeClass('active-content');
+     });
+
+     // Bind the click event handler
+     $(this).on('click', 'a', function(e){
+       // Make the old tab inactive.
+       $active.removeClass('active');
+       $content.removeClass('active-content');
+
+       // Update the variables with the new link and content
+       $active = $(this);
+       $content = $(this.hash);
+
+       // Make the tab active.
+       $active.addClass('active');
+       $content.addClass('active-content');
+
+       // Prevent the anchor's default click action
+       e.preventDefault();
+     });
+   });
+
+
 });
 
 
 
-//jquery tabs
-$('ul.tabs').each(function(){
-   // For each set of tabs, we want to keep track of
-   // which tab is active and it's associated content
-   var $active, $content, $links = $(this).find('a');
 
-   // If the location.hash matches one of the links, use that as the active tab.
-   // If no match is found, use the first link as the initial active tab.
-   $active = $($links.filter('[href="'+location.hash+'"]')[0] || $links[0]);
-   $active.addClass('active');
 
-   $content = $($active[0].hash);
-   $content.addClass('active-content');
+// if !two_third_box || one_third_box && then two_third box then one_third box   
+// clear row after one third box
+// one third box - two third box - clear row after two third box 
 
-   // Hide the remaining content
-   $links.not($active).each(function () {
-     $(this.hash).removeClass('active-content');
-   });
+// $('.modular-content').each(function() {
+//     if 
+//     if (checkPreviousRow();
+//     nextHasClass('.two-third-box', '.one-third-box');
 
-   // Bind the click event handler
-   $(this).on('click', 'a', function(e){
-     // Make the old tab inactive.
-     $active.removeClass('active');
-     $content.removeClass('active-content');
+//      // if ($('.two-third-box').next().hasClass('one-third-box')){
+//      //    console.log("if one third box follows two third box");
+//      // } else {
+//      //  console.log("hellooooooo");
+//      // }
+// });
 
-     // Update the variables with the new link and content
-     $active = $(this);
-     $content = $(this.hash);
+// function nextHasClass(firstElement, secondElement){
+//   $(firstElement).next().hasClass(secondElement);
+// }
 
-     // Make the tab active.
-     $active.addClass('active');
-     $content.addClass('active-content');
+// function NotPreviousRow(){
+//   !$('.two-third-box') || !$('.one-third-box');
+// }
 
-     // Prevent the anchor's default click action
-     e.preventDefault();
-   });
- });
+//first check previous row, next 
+
+
 
 
 

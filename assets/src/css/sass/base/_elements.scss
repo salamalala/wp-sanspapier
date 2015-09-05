@@ -39,14 +39,6 @@ body{
  }
 }
 
-.full-width-image{
-  max-height: 75%;
-   img{
-    object-fit: cover;
-    object-position: 50% 0%
-   } 
-}
-
 .border-left{
   border-left: $pink solid 3px;
 }
@@ -56,10 +48,13 @@ body{
   margin: $medium-golden-ratio 0;
   @include span-columns(10);
   @include shift(1);
+  @include display(flex);
+  @include flex-direction(column);
 
   @include media($medium-screen){
     @include span-columns(5);
     @include shift(1);
+    @include display(flex);
     @include flex-direction(column);
     &:nth-of-type(2n){
       @include shift(0);
@@ -71,6 +66,7 @@ body{
   @include media($xlarge-screen){
     @include span-columns(6);
     @include shift(0);
+    @include display(flex);
     @include flex-direction(column);
     &:nth-of-type(2n){
       @include span-columns(6);
@@ -79,15 +75,18 @@ body{
   }
 }
 
+.icon-wrapper{
+  margin: 0 auto;
+  width: 20%;
+  height: auto;
+  border-radius: 100%;
+  border: solid 2px $dark-gray;
+  margin-bottom: $big-golden-ratio;
+}
 .icon-in-half-width-box{
   margin: 0 auto;
-  width: 15%;
+  padding: 20%;
   display: block;
-  // border-radius: 100%;
-  // border: solid 2px $dark-gray;
-  padding: 2%;
-  margin-bottom: $medium-golden-ratio;
-
 }
 
 .three-quarter-box{
@@ -144,9 +143,22 @@ body{
  }
 }
 
+.image-box-wrapper{
+  max-height: 75%;
+    
+    img {
+      object-fit: cover;
+    }
+
+}
+
+.box-omega{
+  @include omega;
+}
+
 .minorlink{
   @include align-self(stretch);
-  @include media ($medium-screen){
+  @include media ($large-screen){
     @include align-self(flex-end);
   }
   color: $medium-gray;
