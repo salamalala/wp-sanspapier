@@ -14,13 +14,17 @@ $(document).ready(function() {
     e.preventDefault();
     //add class open to span for hamburger menu
     $(this).toggleClass('open');
+    
     $('#js-navigation-menu').slideToggle(function(){
-//if the nav items are hidden, remove all their style attributes
+      //if the nav items are hidden, remove all their style attributes
       if($('#js-navigation-menu').is(':hidden')) {
         $('#js-navigation-menu').removeAttr('style');
       }
     });
+    
   });
+
+});
 
 
 
@@ -65,10 +69,10 @@ $(document).ready(function() {
 
   $(".half-width-box").filter(function(index){
     return index % 2 === 1;
-  }).addClass("second-half-width-box box-omega");
+  }).addClass("second-half-width-box right-element-in-row");
 
 
-});
+
 
 
 

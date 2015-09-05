@@ -897,6 +897,13 @@ acf_add_local_field_group(array (
         'value' => 'page',
       ),
     ),
+    array (
+      array (
+        'param' => 'page_template',
+        'operator' => '!=',
+        'value' => 'front-page.php',
+      ),
+    ),
   ),
   'menu_order' => 0,
   'position' => 'normal',
@@ -904,6 +911,90 @@ acf_add_local_field_group(array (
   'label_placement' => 'top',
   'instruction_placement' => 'label',
   'hide_on_screen' => '',
+));
+
+
+acf_add_local_field_group(array (
+  'key' => 'group_55eb074c480f3',
+  'title' => 'Beratungen',
+  'fields' => array (
+    array (
+      'key' => 'field_55eb075fdea2c',
+      'label' => 'Beratung',
+      'name' => 'beratung',
+      'type' => 'repeater',
+      'instructions' => '',
+      'required' => 0,
+      'conditional_logic' => 0,
+      'wrapper' => array (
+        'width' => '',
+        'class' => '',
+        'id' => '',
+      ),
+      'min' => '',
+      'max' => '',
+      'layout' => 'row',
+      'button_label' => 'Add Row',
+      'sub_fields' => array (
+        array (
+          'key' => 'field_55eb07d2dea2e',
+          'label' => 'Beratungsort',
+          'name' => 'beratungsort',
+          'type' => 'text',
+          'instructions' => '',
+          'required' => 1,
+          'conditional_logic' => 0,
+          'wrapper' => array (
+            'width' => '',
+            'class' => '',
+            'id' => '',
+          ),
+          'default_value' => '',
+          'placeholder' => '',
+          'prepend' => '',
+          'append' => '',
+          'maxlength' => '',
+          'readonly' => 0,
+          'disabled' => 0,
+        ),
+        array (
+          'key' => 'field_55eb07eddea2f',
+          'label' => 'Beratungszeiten',
+          'name' => 'beratungszeiten',
+          'type' => 'wysiwyg',
+          'instructions' => '',
+          'required' => 0,
+          'conditional_logic' => 0,
+          'wrapper' => array (
+            'width' => '',
+            'class' => '',
+            'id' => '',
+          ),
+          'default_value' => '',
+          'tabs' => 'all',
+          'toolbar' => 'basic',
+          'media_upload' => 0,
+        ),
+      ),
+    ),
+  ),
+  'location' => array (
+    array (
+      array (
+        'param' => 'page_template',
+        'operator' => '==',
+        'value' => 'front-page.php',
+      ),
+    ),
+  ),
+  'menu_order' => 0,
+  'position' => 'normal',
+  'style' => 'default',
+  'label_placement' => 'top',
+  'instruction_placement' => 'label',
+  'hide_on_screen' => '',
+  'active' => 1,
+  'description' => '',
 ));
 
 endif;

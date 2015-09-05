@@ -51,7 +51,6 @@
        </div>
 
 				<nav role="navigation">
-
 					<?php 
 
 					$args = array(
@@ -64,7 +63,6 @@
 					wp_nav_menu( $args ) 
 
 					?>
-
 				</nav>
 
 			</div>

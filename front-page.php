@@ -1,4 +1,4 @@
-<?php
+<?php /* Template Name: Front-Page */ 
 /**
  * The header for our theme.
  *
@@ -105,47 +105,26 @@
         <li><a href="#beratung-biel"><h3>Biel</h3></a></li>
       </ul>
 
-       <div class="beratung box" id="beratung-bern">
-         <h3>Beratungszeiten <span class="hide-when-small">Bern</span></h3>
-         <p>
-           Freitag 15.00-19.00 Uhr (ohne Voranmeldung)
-         </p>
-         <p>
-           Freitag 15.00-19.00 Uhr (ohne Voranmeldung)
-         </p>
-         <p>
-           Freitag 15.00-19.00 Uhr (ohne Voranmeldung)
-         </p>
-         <p>
-           Freitag 15.00-19.00 Uhr (ohne Voranmeldung)
-         </p>
+        <?php
+          if( have_rows('beratung') ):
+            while ( have_rows('beratung') ) : the_row();  ?>
 
-         <div class="map" id="map-canvas">
-         </div> 
+            <div class="beratung box" id="beratung-bern">
+            
+              <h3>Beratungszeiten <span class="hide-when-small"><?php the_sub_field('beratungsort'); ?></span></h3>
+              <p><?php the_sub_field('beratungszeiten'); ?></p>
+         
+              <div class="map" id="map-canvas"></div>
+            
+              <a class="minorlink" href="#">Mehr Informationen</a>
+            
+            </div>
 
-         <a class="minorlink" href="#">Mehr Informationen</a>
-       </div>
 
-       <div class="beratung box" id="beratung-biel">     
-         <h3>Beratungszeiten <span class="hide-when-small">Biel</span></h3>
-         <p>
-          Mittwoch Nachmittag 14 bis 17 Uhr
-        </p>
-        <p>
-          Mittwoch Nachmittag 14 bis 17 Uhr
-        </p>
-        <p>
-          Mittwoch Nachmittag 14 bis 17 Uhr
-        </p>
-        <p>
-          Mittwoch Nachmittag 14 bis 17 Uhr
-        </p>
-        
-        <div class="map" id="map-canvas">
-        </div>
+            <?php endwhile; ?>
+          <?php endif; ?> 
+             
 
-        <a class="minorlink" href="#">Mehr Informationen</a>
-      </div>
 
 
     </div>

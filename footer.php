@@ -31,10 +31,9 @@
 </footer><!-- #colophon -->
 
 
+<?php wp_footer(); ?>
 
 <script  type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/dist/js/main.min.js"></script>
-
-<?php wp_footer(); ?>
 
 </body>
 </html>

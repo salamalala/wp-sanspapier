@@ -20,7 +20,6 @@ header {
   letter-spacing: 0.07em;
   box-shadow: 0px 2px 5px $medium-gray;
   margin-bottom: modular-scale(5);
-  // border-bottom: golden-ratio(0.2em,  1) $green solid;
 
   .navigation-wrapper {
     @include outer-container;
@@ -266,7 +265,6 @@ header {
       }
     }
 
-    
     > a {
       padding-right: 0.6em;
     }
@@ -374,7 +372,7 @@ header {
       content: '';
       position: absolute;
       @include background(url("../images/Frau2.jpg") no-repeat right bottom);
-      bottom: 1.3em;
+      bottom: 3em;
       right: 0;
       @include animation(bluredPic 10s ease infinite alternate-reverse);
       width: 100%;

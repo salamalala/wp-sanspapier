@@ -86,8 +86,65 @@
 		           			<?php endif; ?>
 
 		              </div>
+								
+			          <?php elseif (get_row_layout() == 'text_2/3_breite_links_bild_1/3_breite_rechts' ):  ?>			          	             
+			             <div class="box two-third-box left-element-in-row">
+	                  
+	                  <h2><?php the_sub_field('box_links_titel'); ?></h1>
+	              		<p><?php the_sub_field('box_links_text'); ?></p>
+	              			
+              			<?php if( !empty(get_sub_field('box_links_link:_mehr_informationen')) && empty(get_sub_field('box_links_link:_weiterlesen')) ): ?>
+              				<a href="<?php the_sub_field('box_links_link:_mehr_informationen'); ?>" class="minorlink" target="_blank">Mehr Infos</a>
+              			<?php endif; ?>
 
-			          <?php elseif (get_row_layout() == 'bild_2/3_breite_links_text_1/3_breite_rechts' ):  ?>
+              			<?php if( !empty(get_sub_field('box_links_link:_weiterlesen')) && empty(get_sub_field('box_links_link:_mehr_informationen')) ): ?>
+              				<a href="<?php the_sub_field('box_links_link:_weiterlesen'); ?>" class="minorlink">Weiterlesen</a>
+              			<?php endif; ?>
+					
+			              </div>    
+
+			          		<?php $bild_rechts = get_sub_field('bild_rechts');
+
+  		          		if( !empty($bild_rechts) ):
+	  		          		// variables
+	  									$url = $bild_rechts['url'];
+	  									$alt = $bild_rechts['alt']; ?>
+
+											<div class="one-third-box image-box-wrapper right-element-in-row">
+			            			<img src="<?php echo $url; ?>" alt="<?php echo $alt; ?>"/>
+											</div>
+										<?php endif; ?>
+	
+
+			          <?php elseif (get_row_layout() == 'text_1/3_breite_links_bild_2/3_breite_rechts' ):  ?>			          	             
+			             <div class="box one-third-box left-element-in-row">
+	                  
+	                  <h2><?php the_sub_field('box_links_titel'); ?></h1>
+	              		<p><?php the_sub_field('box_links_text'); ?></p>
+	              			
+	              			<?php if( !empty(get_sub_field('box_links_link:_mehr_informationen')) && empty(get_sub_field('box_links_link:_weiterlesen')) ): ?>
+	              				<a href="<?php the_sub_field('box_links_link:_mehr_informationen'); ?>" class="minorlink" target="_blank">Mehr Infos</a>
+	              			<?php endif; ?>
+
+	              			<?php if( !empty(get_sub_field('box_links_link:_weiterlesen')) && empty(get_sub_field('box_links_link:_mehr_informationen')) ): ?>
+	              				<a href="<?php the_sub_field('box_links_link:_weiterlesen'); ?>" class="minorlink">Weiterlesen</a>
+	              			<?php endif; ?>
+					
+			              </div>    
+
+			          		<?php $bild_rechts = get_sub_field('bild_rechts');
+
+  		          		if( !empty($bild_rechts) ):
+  		          		// variables
+  									$url = $bild_rechts['url'];
+  									$alt = $bild_rechts['alt']; ?>
+
+											<div class="two-third-box image-box-wrapper right-element-in-row">
+			            			<img src="<?php echo $url; ?>" alt="<?php echo $alt; ?>"/>
+											</div>
+										<?php endif; ?>
+
+			          <?php elseif (get_row_layout() == 'bild_2/3_breite_links_box_1/3_breite_rechts' ):  ?>
 
 			          		<?php $bild_links = get_sub_field('bild_links');
 
@@ -96,18 +153,54 @@
   									$url = $bild_links['url'];
   									$alt = $bild_links['alt']; ?>
 
-										<div class="two-third-box image-box-wrapper">
-		            			<img src="<?php echo $url; ?>" alt="<?php echo $alt; ?>"/>
-										</div>
-									<?php endif; ?>
+											<div class="two-third-box image-box-wrapper left-element-in-row">
+			            			<img src="<?php echo $url; ?>" alt="<?php echo $alt; ?>"/>
+											</div>
+										<?php endif; ?>
 			          	             
-			             	<div class="box one-third-box box-omega">
-                     <h2><?php the_sub_field('box_rechts_titel'); ?></h1>
-                			<p><?php the_sub_field('box_rechts_text'); ?></p>
-                			<?php if( !empty(the_sub_field('box_rechts_link')) ): ?>
-                			<a href="<?php the_sub_field('box_rechts_link'); ?>" class="minorlink"></a>
-                			<?php endif; ?>  
+			             <div class="box one-third-box right-element-in-row">
+	                  
+	                  <h2><?php the_sub_field('box_rechts_titel'); ?></h1>
+	              			<p><?php the_sub_field('box_rechts_text'); ?></p>
+	              			
+	              			<?php if( !empty(get_sub_field('box_rechts_link:_mehr_informationen')) && empty(get_sub_field('box_rechts_link:_weiterlesen')) ): ?>
+	              				<a href="<?php the_sub_field('box_rechts_link:_mehr_informationen'); ?>" class="minorlink" target="_blank">Mehr Informationen</a>
+	              			<?php endif; ?>
+
+	              			<?php if( !empty(get_sub_field('box_rechts_link:_weiterlesen')) && empty(get_sub_field('box_rechts_link:_mehr_informationen')) ): ?>
+	              				<a href="<?php the_sub_field('box_rechts_link:_weiterlesen'); ?>" class="minorlink">Weiterlesen</a>
+	              			<?php endif; ?>
+					
 			              </div>
+
+			          <?php elseif (get_row_layout() == 'bild_1/3_breite_links_box_2/3_breite_rechts' ):  ?>
+
+			          		<?php $bild_links = get_sub_field('bild_links');
+
+  		          		if( !empty($bild_links) ):
+  		          		// variables
+  									$url = $bild_links['url'];
+  									$alt = $bild_links['alt']; ?>
+
+											<div class="one-third-box image-box-wrapper left-element-in-row">
+			            			<img src="<?php echo $url; ?>" alt="<?php echo $alt; ?>"/>
+											</div>
+										<?php endif; ?>
+			          	             
+			             <div class="box two-third-box right-element-in-row">
+	                  
+	                  <h2><?php the_sub_field('box_rechts_titel'); ?></h1>
+	              			<p><?php the_sub_field('box_rechts_text'); ?></p>
+	              			
+	              			<?php if( !empty(get_sub_field('box_rechts_link:_mehr_informationen')) && empty(get_sub_field('box_rechts_link:_weiterlesen')) ): ?>
+	              				<a href="<?php the_sub_field('box_rechts_link:_mehr_informationen'); ?>" class="minorlink" target="_blank">Mehr Informationen</a>
+	              			<?php endif; ?>
+
+	              			<?php if( !empty(get_sub_field('box_rechts_link:_weiterlesen')) && empty(get_sub_field('box_rechts_link:_mehr_informationen')) ): ?>
+	              				<a href="<?php the_sub_field('box_rechts_link:_weiterlesen'); ?>" class="minorlink">Weiterlesen</a>
+	              			<?php endif; ?>
+					
+			              </div>  
 
 	              <?php elseif (get_row_layout() == 'bild_volle_breite' ):  ?>
               		<?php $bild_voll = get_sub_field('bild_volle_breite');
@@ -131,32 +224,6 @@
 											$alt = $bild_halb['alt']; ?>
 												
 												<div class="half-width-box image-box-wrapper">
-				            			<img src="<?php echo $url; ?>" alt="<?php echo $alt; ?>"/>
-												</div>
-											<?php endif; ?>
-
-			          <?php elseif (get_row_layout() == 'bild_23_breite' ):  ?>
-			          		<?php $bild_2_3 = get_sub_field('bild_23_breite');
-
-				          		if( !empty($bild_2_3) ):
-				          		// variables
-											$url = $bild_2_3['url'];
-											$alt = $bild_2_3['alt']; ?>
-												
-												<div class="two-third-box">
-				            			<img src="<?php echo $url; ?>" alt="<?php echo $alt; ?>"/>
-												</div>
-											<?php endif; ?>
-
-			          <?php elseif (get_row_layout() == 'bild_13_breite' ):  ?>
-			          		<?php $bild_1_3 = get_sub_field('bild_13_breite');
-
-				          		if( !empty($bild_1_3) ):
-				          		// variables
-											$url = $bild_1_3['url'];
-											$alt = $bild_1_3['alt']; ?>
-												
-												<div class="half-width-box">
 				            			<img src="<?php echo $url; ?>" alt="<?php echo $alt; ?>"/>
 												</div>
 											<?php endif; ?>

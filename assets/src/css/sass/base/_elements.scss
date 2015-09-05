@@ -1,275 +1,288 @@
 body{
-  background-color: $light-gray;
+	background-color: $light-gray;
 }
 
 .box{
-  padding: $modular-scale-xlg $modular-scale-lg;
-  background-color: $white;
-  @include media($medium-screen){
-    padding: $modular-scale-xlg;
-  }
-  p{
-    flex: 1 0 auto;
-    &:last-child{
-      margin: 0;
-    }
-  }
+	padding: $modular-scale-xlg $modular-scale-lg;
+	background-color: $white;
+	@include media($medium-screen){
+		padding: $modular-scale-xlg;
+	}
+	p{
+		flex: 1 0 auto;
+		&:last-child{
+			margin: 0;
+		}
+	}
 }
 
 .dark-box{
-  background-color: $medium-gray;
-  color: $white;
+	background-color: $medium-gray;
+	color: $white;
 }
 
 .modular-content{
-  @include display(flex);
-  @include flex-wrap(wrap);
+	@include display(flex);
+	@include flex-wrap(wrap);
 }
 
 .full-width-box{
-  margin: $modular-scale-xlg 0;
-  @include span-columns(10);
-  @include shift(1);
-  @include display(flex);
-  @include flex-direction(column);
-  
-  @include media($xlarge-screen){
-   @include span-columns(12);
-   @include shift(0);
-   @include display(flex);
-   @include flex-direction(column);
-   @include omega;
+	margin: $modular-scale-lg 0;
+	@include span-columns(10);
+	@include shift(1);
+	@include display(flex);
+	@include flex-direction(column);
+	
+	@include media($xlarge-screen){
+	 @include span-columns(12);
+	 @include shift(0);
+	 @include display(flex);
+	 @include flex-direction(column);
+	 @include omega;
  }
 }
 
 .border-left{
-  border-left: $pink solid 3px;
+	border-left: $pink solid 3px;
 }
-  
-  
+	
+	
 .half-width-box{
-  margin: $modular-scale-xlg 0;
-  @include span-columns(10);
-  @include shift(1);
-  @include display(flex);
-  @include flex-direction(column);
+	margin: $modular-scale-lg 0;
+	@include span-columns(10);
+	@include shift(1);
+	@include display(flex);
+	@include flex-direction(column);
 
-  @include media($medium-screen){
-    @include span-columns(5);
-    @include shift(1);
-    @include display(flex);
-    @include flex-direction(column);
+	@include media($medium-screen){
+		@include span-columns(5);
+		@include shift(1);
+		@include display(flex);
+		@include flex-direction(column);
 
-  }
-  
-  @include media($xlarge-screen){
-    @include span-columns(6);
-    @include shift(0);
-    @include display(flex);
-    @include flex-direction(column);
+	}
+	
+	@include media($xlarge-screen){
+		@include span-columns(6);
+		@include shift(0);
+		@include display(flex);
+		@include flex-direction(column);
 
-  }
+	}
 }
 
 .second-half-width-box{
-  @include media($medium-screen){
-    @include shift(0);
-    @include span-columns(5);
-    @include display(flex);
-  }
-  @include media($xlarge-screen){
-    @include span-columns(6);
-    @include display(flex);
-  }
+	@include media($medium-screen){
+		@include shift(0);
+		@include span-columns(5);
+		@include display(flex);
+	}
+	@include media($xlarge-screen){
+		@include span-columns(6);
+		@include display(flex);
+	}
 }
 
 .icon-wrapper{
-  margin: 0 auto;
-  width: 20%;
-  height: auto;
-  border-radius: 100%;
-  border: solid 2px $dark-gray;
-  margin-bottom: $modular-scale-xlg;
+	margin: 0 auto;
+	width: 20%;
+	height: auto;
+	border-radius: 100%;
+	border: solid 2px $dark-gray;
+	margin-bottom: $modular-scale-xlg;
 }
 .icon-in-half-width-box{
-  margin: 0 auto;
-  padding: 20%;
-  display: block;
+	margin: 0 auto;
+	padding: 20%;
+	display: block;
 }
 
 .three-quarter-box{
-  margin: $modular-scale-lg 0;
-  @include span-columns(10);
-  @include shift(1);
-  @include display(flex);
-  @include flex-direction(column);
-
-  @include media($medium-screen){
-    @include span-columns(7);
-    @include shift(1);
-    @include display(flex);
-    @include flex-direction(column);
-  }
-  
-  @include media($xlarge-screen){
-     @include span-columns(9);
-     @include shift(0);
-     @include display(flex);
-     @include flex-direction(column);
+	margin: $modular-scale-lg 0;
+	@include span-columns(10);
+	@include shift(1);
+	@include display(flex);
+	@include flex-direction(column);
+	
+	@include media($xlarge-screen){
+		 @include span-columns(9);
+		 @include shift(0);
+		 @include display(flex);
+		 @include flex-direction(column);
  }
 }
 
 .two-third-box{
-  margin: $modular-scale-lg 0;
-  @include span-columns(10);
-  @include shift(1);
+	margin: $modular-scale-lg 0;
+	@include span-columns(10);
+	@include shift(1);
+	@include display(flex);
+	@include flex-direction(column);
 
-  @include media($medium-screen){
-    @include span-columns(6);
-    @include shift(1);
-    @include flex-direction(column);
-  }
-  
-  @include media($xlarge-screen){
-     @include span-columns(8);
-     @include shift(0);
-     @include flex-direction(column);
+	@include media($medium-screen){
+		@include span-columns(7);
+		@include shift(0);
+		@include display(flex);
+		@include flex-direction(column);
+	}
+	
+	@include media($xlarge-screen){
+		 @include span-columns(8);
+		 @include shift(0);
+		 @include display(flex);
+		 @include flex-direction(column);
  }
 }
 
 .one-third-box{
-  margin: $modular-scale-lg 0;
-  @include span-columns(10);
-  @include shift(1);
+	margin: $modular-scale-lg 0;
+	@include span-columns(10);
+	@include shift(1);
+	@include display(flex);
+	@include flex-direction(column);
 
-  @include media($medium-screen){
-    @include span-columns(6);
-    @include shift(1);
-    @include flex-direction(column);
-  }
-  
-  @include media($xlarge-screen){
-     @include span-columns(4);
-     @include shift(0);
-     @include flex-direction(column);
+	@include media($medium-screen){
+		padding: $modular-scale-sm $modular-scale-xs;
+		@include span-columns(3);
+		@include shift(0);
+		@include display(flex);
+		@include flex-direction(column);
+	}
+	
+	@include media($xlarge-screen){
+		padding: $modular-scale-xlg $modular-scale-lg;
+		@include span-columns(4);
+		@include shift(0);
+		@include display(flex);
+		@include flex-direction(column);
  }
 }
 
 .image-box-wrapper{
-  max-height: 75%;
-    
-    img {
-      object-fit: cover;
-    }
-
+	max-height: 75%;
+	padding: 0;
+		img {
+			object-fit: cover;
+		}
 }
 
-.box-omega{
-  @include omega;
+.left-element-in-row{
+	@include media($medium-screen){
+		@include shift(1);
+	}
+	@include media($xlarge-screen){
+		@include shift(0);
+	}
 }
+
+.right-element-in-row {
+	@include omega;
+}
+
+
 
 .minorlink{
-  @include align-self(stretch);
-  @include media ($large-screen){
-    @include align-self(flex-end);
-  }
-  color: $medium-gray;
-  border-radius: $base-border-radius;
-  border: $medium-gray 3px solid;
-  position: relative;
-  cursor: pointer;
-  font-family: $heading-font-family;
-  padding: $modular-scale-xs $modular-scale-lg;
-  line-height: 1;
-  text-decoration: none;
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  background-color: none;
-  transition: 0.4s ease-out;
-  margin-top: $modular-scale-xxxs;
-  &:before{
-    content: '➞';
-    position: absolute;
-    color: $medium-gray;
-    transition: all 0.3s;
-    right: 25px;
-    opacity: 0;
-    top: 32%;
-  }
-  &:hover:before{
-    right: 10px;
-    opacity: 1;
-  }
+	@include align-self(stretch);
+	@include media ($large-screen){
+		@include align-self(flex-end);
+	}
+	color: $medium-gray;
+	border-radius: $base-border-radius;
+	border: $medium-gray 3px solid;
+	position: relative;
+	cursor: pointer;
+	font-family: $heading-font-family;
+	padding: $modular-scale-xs $modular-scale-lg;
+	line-height: 1;
+	text-decoration: none;
+	user-select: none;
+	vertical-align: middle;
+	white-space: nowrap;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	background-color: none;
+	transition: 0.4s ease-out;
+	margin-top: $modular-scale-xxxs;
+	&:before{
+		content: '➞';
+		position: absolute;
+		color: $medium-gray;
+		transition: all 0.3s;
+		right: 25px;
+		opacity: 0;
+		top: 32%;
+	}
+	&:hover:before{
+		right: 10px;
+		opacity: 1;
+	}
 }
 
 .dark-link{
-  color: $white;
-  border: $white 3px solid;
-  &:before{
-    color: $white;
-  }
+	color: $white;
+	border: $white 3px solid;
+	&:before{
+		color: $white;
+	}
 }
 
 .mainlink{
-  display: block;
-  -webkit-font-smoothing: antialiased;
-  background-color: $pink;
-  border-radius: $base-border-radius;
-  border: none;
-  color: #fff;
-  cursor: pointer;
-  font-family: $heading-font-family;
-  font-size: $medium-font-size;
-  font-weight: 700;
-  padding: $modular-scale-sm $modular-scale-xxxs;
-  line-height: 1;
-  text-decoration: none;
-  user-select: none;
-  vertical-align: middle;
-  white-space: nowrap;
-  text-align: center;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  transition: color 0.1s linear;
-  &:hover,
-  &:focus {
-    background-color: saturate($pink, 10%);
-    color: #fff;
-  }
-  &:disabled {
-    cursor: not-allowed;
-    opacity: 0.5;
-  }
-  p{
-    margin: 0;
-    transform: translateY(0);
-    transition: transform 0.2s ease;
-    &:hover{
-      transform: translateY(-3px);
-    }
-  }
+	display: block;
+	-webkit-font-smoothing: antialiased;
+	background-color: $pink;
+	border-radius: $base-border-radius;
+	border: none;
+	color: #fff;
+	cursor: pointer;
+	font-family: $heading-font-family;
+	font-size: $medium-font-size;
+	font-weight: 700;
+	padding: $modular-scale-sm $modular-scale-xxxs;
+	line-height: 1;
+	text-decoration: none;
+	user-select: none;
+	vertical-align: middle;
+	white-space: nowrap;
+	text-align: center;
+	text-transform: uppercase;
+	letter-spacing: 0.08em;
+	transition: color 0.1s linear;
+	&:hover,
+	&:focus {
+		background-color: saturate($pink, 10%);
+		color: #fff;
+	}
+	&:disabled {
+		cursor: not-allowed;
+		opacity: 0.5;
+	}
+	p{
+		margin: 0;
+		transform: translateY(0);
+		transition: transform 0.2s ease;
+		&:hover{
+			transform: translateY(-3px);
+		}
+	}
 
 }
 
 .big-paragraph{
-  font-size: $medium-font-size;
+	font-size: $medium-font-size;
 }
 
 .quote{
-  display: inline-block;
-  font-style: italic;
-  text-align: center;
-  &:before{
-    content: "❝ ";
-    color: $green;
-  }
-  &:after{
-    content: " ❞";
-    color: $green;
-  }
+	display: inline-block;
+	font-style: italic;
+	text-align: center;
+	&:before{
+		content: "❝ ";
+		color: $green;
+	}
+	&:after{
+		content: " ❞";
+		color: $green;
+	}
 }
 
