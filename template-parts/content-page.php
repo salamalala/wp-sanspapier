@@ -16,24 +16,39 @@
 			           
 			          if ( get_row_layout() == 'text_volle_breite' ):  ?>
 			          	             
-			             	<section class="full-width-box box border-left">
+			             	<div class="full-width-box box border-left">
 			                <h1><?php the_sub_field('titel'); ?></h1>
 			           			<p><?php the_sub_field('text'); ?></p>
-			           			<?php if( !empty(the_sub_field('link')) ): ?>
-			           				<a href="<?php the_sub_field('link'); ?>" class="minorlink">"<?php the_sub_field('link'); ?>"</a>
-			           			<?php endif; ?>
-			              </section>
+											
+											<?php if( !empty(get_sub_field('link:_mehr')) && empty(get_sub_field('link:_weiterlesen')) ): ?>
+												<a href="<?php the_sub_field('link:_mehr'); ?>" class="minorlink" target="_blank">Mehr Informationen</a>
+											<?php endif; ?>
+
+											<?php if( !empty(get_sub_field('link:_weiterlesen')) && empty(get_sub_field('link:_mehr')) ): ?>
+												<a href="<?php the_sub_field('link:_weiterlesen'); ?>" class="minorlink">Weiterlesen</a>
+											<?php endif; ?>
+
+			              </div>
 
 			          <?php elseif (get_row_layout() == 'text_volle_breite_dunkler_hintergrund' ):  ?>
 			          	             
-			             	<section class="full-width-box box dark-box">
+			             	<div class="full-width-box box dark-box">
 			                <h1><?php the_sub_field('titel'); ?></h1>
 			           			<p><?php the_sub_field('text'); ?></p> 
-			              </section>
+											
+											<?php if( !empty(get_sub_field('link:_mehr_informationen')) && empty(get_sub_field('link:_weiterlesen')) ): ?>
+												<a href="<?php the_sub_field('link:_mehr_informationen'); ?>" class="minorlink dark-link" target="_blank">Mehr Informationen</a>
+											<?php endif; ?>
+
+											<?php if( !empty(get_sub_field('link:_weiterlesen')) && empty(get_sub_field('link:_mehr')) ): ?>
+												<a href="<?php the_sub_field('link:_weiterlesen'); ?>" class="minorlink dark-link">Weiterlesen</a>
+											<?php endif; ?>
+
+			              </div>
 
 			         <?php elseif (get_row_layout() == 'text_halbe_breite' ):  ?>
 									
-				          <section class="half-width-box box">
+				          <div class="half-width-box box">
 				          	
 				          	<?php $icon = get_sub_field('icon');
 
@@ -49,42 +64,43 @@
 
 			              <h2><?php the_sub_field('titel'); ?></h1>
 			          		<p><?php the_sub_field('text'); ?></p>
+			          		
 			          		<?php if( !empty(get_sub_field('link_weiterlesen')) ): ?>
 			          			<a href="<?php the_sub_field('link_weiterlesen'); ?>" class="minorlink">Weiterlesen</a>
 			          		<?php endif; ?>
 
-			            </section>
+			            </div>
 							
 							 <?php elseif (get_row_layout() == 'text_3/4_breite' ):  ?>
 		          	             
-		             	<section class="box three-quarter-box">
+		             	<div class="box three-quarter-box">
 		                <h1><?php the_sub_field('titel'); ?></h1>
 		           			<p><?php the_sub_field('text'); ?></p>
 		           			<?php if( !empty(the_sub_field('link')) ): ?>
 		           			<a href="<?php the_sub_field('link'); ?>" class="minorlink"></a>
 		           			<?php endif; ?> 
-		              </section>
+		              </div>
 			          
 			          <?php elseif (get_row_layout() == 'text_2/3_breite' ):  ?>
 			          	             
-			             	<section class="box two-third-box">
+			             	<div class="box two-third-box">
 			                <h1><?php the_sub_field('titel'); ?></h1>
 			           			<p><?php the_sub_field('text'); ?></p>
 			           			<?php if( !empty(the_sub_field('link')) ): ?>
 			           				<a href="<?php the_sub_field('link'); ?>" class="minorlink"></a>
 			           			<?php endif; ?>  
-			              </section>
+			              </div>
 								
 
 								<?php elseif (get_row_layout() == 'text_1/3_breite' ):  ?>
 									             
-								   	<section class="box one-third-box">
+								   	<div class="box one-third-box">
 								      <h2><?php the_sub_field('titel'); ?></h1>
 								 			<p><?php the_sub_field('text'); ?></p>
 								 			<?php if( !empty(the_sub_field('link')) ): ?>
 								 			<a href="<?php the_sub_field('link'); ?>" class="minorlink"></a>
 								 			<?php endif; ?>  
-								    </section>
+								    </div>
 
 
 			          <?php elseif (get_row_layout() == 'bild_2/3_breite_links_text_1/3_breite_rechts' ):  ?>
@@ -101,13 +117,13 @@
 										</div>
 									<?php endif; ?>
 			          	             
-			             	<section class="box one-third-box box-omega">
+			             	<div class="box one-third-box box-omega">
                      <h2><?php the_sub_field('box_rechts_titel'); ?></h1>
                 			<p><?php the_sub_field('box_rechts_text'); ?></p>
                 			<?php if( !empty(the_sub_field('box_rechts_link')) ): ?>
                 			<a href="<?php the_sub_field('box_rechts_link'); ?>" class="minorlink"></a>
                 			<?php endif; ?>  
-			              </section>
+			              </div>
 
 	              <?php elseif (get_row_layout() == 'bild_volle_breite' ):  ?>
               		<?php $bild_voll = get_sub_field('bild_volle_breite');

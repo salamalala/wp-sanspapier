@@ -8,8 +8,11 @@ body{
   @include media($medium-screen){
     padding: $big-golden-ratio;
   }
-  p:last-child{
-    margin: 0;
+  p{
+    flex: 1 0 auto;
+    &:last-child{
+      margin: 0;
+    }
   }
 }
 
@@ -45,7 +48,7 @@ body{
   
   
 .half-width-box{
-  margin: $medium-golden-ratio 0;
+  margin: $big-golden-ratio 0;
   @include span-columns(10);
   @include shift(1);
   @include display(flex);
@@ -56,11 +59,7 @@ body{
     @include shift(1);
     @include display(flex);
     @include flex-direction(column);
-    &:nth-of-type(2n){
-      @include shift(0);
-      @include span-columns(5);
-      @include omega;
-    }
+
   }
   
   @include media($xlarge-screen){
@@ -68,10 +67,19 @@ body{
     @include shift(0);
     @include display(flex);
     @include flex-direction(column);
-    &:nth-of-type(2n){
-      @include span-columns(6);
-      @include omega;
-    }
+
+  }
+}
+
+.second-half-width-box{
+  @include media($medium-screen){
+    @include shift(0);
+    @include span-columns(5);
+    @include display(flex);
+  }
+  @include media($xlarge-screen){
+    @include span-columns(6);
+    @include display(flex);
   }
 }
 
@@ -191,6 +199,14 @@ body{
   &:hover:before{
     right: 10px;
     opacity: 1;
+  }
+}
+
+.dark-link{
+  color: $white;
+  border: $white 3px solid;
+  &:before{
+    color: $white;
   }
 }
 

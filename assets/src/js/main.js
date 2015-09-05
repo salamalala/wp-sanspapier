@@ -63,37 +63,17 @@ $(document).ready(function() {
    });
 
 
+  $(".half-width-box").filter(function(index){
+    return index % 2 === 1;
+  }).addClass("second-half-width-box box-omega");
+
+
 });
 
 
 
 
 
-// if !two_third_box || one_third_box && then two_third box then one_third box   
-// clear row after one third box
-// one third box - two third box - clear row after two third box 
-
-// $('.modular-content').each(function() {
-//     if 
-//     if (checkPreviousRow();
-//     nextHasClass('.two-third-box', '.one-third-box');
-
-//      // if ($('.two-third-box').next().hasClass('one-third-box')){
-//      //    console.log("if one third box follows two third box");
-//      // } else {
-//      //  console.log("hellooooooo");
-//      // }
-// });
-
-// function nextHasClass(firstElement, secondElement){
-//   $(firstElement).next().hasClass(secondElement);
-// }
-
-// function NotPreviousRow(){
-//   !$('.two-third-box') || !$('.one-third-box');
-// }
-
-//first check previous row, next 
 
 
 
