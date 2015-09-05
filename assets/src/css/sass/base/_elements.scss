@@ -3,10 +3,10 @@ body{
 }
 
 .box{
-  padding: $big-golden-ratio $medium-golden-ratio;
+  padding: $modular-scale-xlg $modular-scale-lg;
   background-color: $white;
   @include media($medium-screen){
-    padding: $big-golden-ratio;
+    padding: $modular-scale-xlg;
   }
   p{
     flex: 1 0 auto;
@@ -27,7 +27,7 @@ body{
 }
 
 .full-width-box{
-  margin: $big-golden-ratio 0;
+  margin: $modular-scale-xlg 0;
   @include span-columns(10);
   @include shift(1);
   @include display(flex);
@@ -48,7 +48,7 @@ body{
   
   
 .half-width-box{
-  margin: $big-golden-ratio 0;
+  margin: $modular-scale-xlg 0;
   @include span-columns(10);
   @include shift(1);
   @include display(flex);
@@ -89,7 +89,7 @@ body{
   height: auto;
   border-radius: 100%;
   border: solid 2px $dark-gray;
-  margin-bottom: $big-golden-ratio;
+  margin-bottom: $modular-scale-xlg;
 }
 .icon-in-half-width-box{
   margin: 0 auto;
@@ -98,25 +98,29 @@ body{
 }
 
 .three-quarter-box{
-  margin: $medium-golden-ratio 0;
+  margin: $modular-scale-lg 0;
   @include span-columns(10);
   @include shift(1);
+  @include display(flex);
+  @include flex-direction(column);
 
   @include media($medium-screen){
     @include span-columns(7);
     @include shift(1);
+    @include display(flex);
     @include flex-direction(column);
   }
   
   @include media($xlarge-screen){
      @include span-columns(9);
      @include shift(0);
+     @include display(flex);
      @include flex-direction(column);
  }
 }
 
 .two-third-box{
-  margin: $medium-golden-ratio 0;
+  margin: $modular-scale-lg 0;
   @include span-columns(10);
   @include shift(1);
 
@@ -134,7 +138,7 @@ body{
 }
 
 .one-third-box{
-  margin: $medium-golden-ratio 0;
+  margin: $modular-scale-lg 0;
   @include span-columns(10);
   @include shift(1);
 
@@ -175,7 +179,7 @@ body{
   position: relative;
   cursor: pointer;
   font-family: $heading-font-family;
-  padding: $medium-golden-ratio $big-golden-ratio;
+  padding: $modular-scale-xs $modular-scale-lg;
   line-height: 1;
   text-decoration: none;
   user-select: none;
@@ -186,15 +190,15 @@ body{
   letter-spacing: 0.08em;
   background-color: none;
   transition: 0.4s ease-out;
-  margin-top: $small-golden-ratio;
+  margin-top: $modular-scale-xxxs;
   &:before{
     content: '➞';
     position: absolute;
     color: $medium-gray;
     transition: all 0.3s;
-    right: 40px;
+    right: 25px;
     opacity: 0;
-    top: 25%;
+    top: 32%;
   }
   &:hover:before{
     right: 10px;
@@ -221,7 +225,7 @@ body{
   font-family: $heading-font-family;
   font-size: $medium-font-size;
   font-weight: 700;
-  padding: $medium-golden-ratio;
+  padding: $modular-scale-sm $modular-scale-xxxs;
   line-height: 1;
   text-decoration: none;
   user-select: none;

@@ -236,11 +236,11 @@ body {
   background-color: #F1F4F9; }
 
 .box {
-  padding: 2.1034em 0.809em;
+  padding: 3.15733em 2.36859em;
   background-color: #fff; }
   @media screen and (min-width: 40em) {
     .box {
-      padding: 2.1034em; } }
+      padding: 3.15733em; } }
   .box p {
     -webkit-box-flex: 1;
     -webkit-flex: 1 0 auto;
@@ -269,12 +269,12 @@ body {
   flex-wrap: wrap; }
 
 .full-width-box {
-  margin: 2.1034em 0;
+  margin: 3.15733em 0;
   float: left;
   display: block;
-  margin-right: 2.35765%;
-  width: 82.94039%;
-  margin-left: 8.5298%;
+  margin-right: 4.34783%;
+  width: 82.6087%;
+  margin-left: 8.69565%;
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -296,7 +296,7 @@ body {
     .full-width-box {
       float: left;
       display: block;
-      margin-right: 2.35765%;
+      margin-right: 4.34783%;
       width: 100%;
       margin-left: 0%;
       display: -webkit-box;
@@ -322,12 +322,12 @@ body {
   border-left: #bf4385 solid 3px; }
 
 .half-width-box {
-  margin: 2.1034em 0;
+  margin: 3.15733em 0;
   float: left;
   display: block;
-  margin-right: 2.35765%;
-  width: 82.94039%;
-  margin-left: 8.5298%;
+  margin-right: 4.34783%;
+  width: 82.6087%;
+  margin-left: 8.69565%;
   display: -webkit-box;
   display: -moz-box;
   display: box;
@@ -349,9 +349,9 @@ body {
     .half-width-box {
       float: left;
       display: block;
-      margin-right: 2.35765%;
-      width: 40.29137%;
-      margin-left: 8.5298%;
+      margin-right: 4.34783%;
+      width: 39.13043%;
+      margin-left: 8.69565%;
       display: -webkit-box;
       display: -moz-box;
       display: box;
@@ -373,8 +373,8 @@ body {
     .half-width-box {
       float: left;
       display: block;
-      margin-right: 2.35765%;
-      width: 48.82117%;
+      margin-right: 4.34783%;
+      width: 47.82609%;
       margin-left: 0%;
       display: -webkit-box;
       display: -moz-box;
@@ -399,8 +399,8 @@ body {
     margin-left: 0%;
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 40.29137%;
+    margin-right: 4.34783%;
+    width: 39.13043%;
     display: -webkit-box;
     display: -moz-box;
     display: box;
@@ -414,8 +414,8 @@ body {
   .second-half-width-box {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 48.82117%;
+    margin-right: 4.34783%;
+    width: 47.82609%;
     display: -webkit-box;
     display: -moz-box;
     display: box;
@@ -432,7 +432,7 @@ body {
   height: auto;
   border-radius: 100%;
   border: solid 2px #34373a;
-  margin-bottom: 2.1034em; }
+  margin-bottom: 3.15733em; }
 
 .icon-in-half-width-box {
   margin: 0 auto;
@@ -440,21 +440,43 @@ body {
   display: block; }
 
 .three-quarter-box {
-  margin: 0.809em 0;
+  margin: 2.36859em 0;
   float: left;
   display: block;
-  margin-right: 2.35765%;
-  width: 82.94039%;
-  margin-left: 8.5298%; }
+  margin-right: 4.34783%;
+  width: 82.6087%;
+  margin-left: 8.69565%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column; }
   .three-quarter-box:last-child {
     margin-right: 0; }
   @media screen and (min-width: 40em) {
     .three-quarter-box {
       float: left;
       display: block;
-      margin-right: 2.35765%;
-      width: 57.35098%;
-      margin-left: 8.5298%;
+      margin-right: 4.34783%;
+      width: 56.52174%;
+      margin-left: 8.69565%;
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
       -webkit-box-orient: vertical;
       box-orient: vertical;
       -webkit-box-direction: normal;
@@ -469,9 +491,16 @@ body {
     .three-quarter-box {
       float: left;
       display: block;
-      margin-right: 2.35765%;
-      width: 74.41059%;
+      margin-right: 4.34783%;
+      width: 73.91304%;
       margin-left: 0%;
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
       -webkit-box-orient: vertical;
       box-orient: vertical;
       -webkit-box-direction: normal;
@@ -484,21 +513,21 @@ body {
         margin-right: 0; } }
 
 .two-third-box {
-  margin: 0.809em 0;
+  margin: 2.36859em 0;
   float: left;
   display: block;
-  margin-right: 2.35765%;
-  width: 82.94039%;
-  margin-left: 8.5298%; }
+  margin-right: 4.34783%;
+  width: 82.6087%;
+  margin-left: 8.69565%; }
   .two-third-box:last-child {
     margin-right: 0; }
   @media screen and (min-width: 40em) {
     .two-third-box {
       float: left;
       display: block;
-      margin-right: 2.35765%;
-      width: 48.82117%;
-      margin-left: 8.5298%;
+      margin-right: 4.34783%;
+      width: 47.82609%;
+      margin-left: 8.69565%;
       -webkit-box-orient: vertical;
       box-orient: vertical;
       -webkit-box-direction: normal;
@@ -513,8 +542,8 @@ body {
     .two-third-box {
       float: left;
       display: block;
-      margin-right: 2.35765%;
-      width: 65.88078%;
+      margin-right: 4.34783%;
+      width: 65.21739%;
       margin-left: 0%;
       -webkit-box-orient: vertical;
       box-orient: vertical;
@@ -528,21 +557,21 @@ body {
         margin-right: 0; } }
 
 .one-third-box {
-  margin: 0.809em 0;
+  margin: 2.36859em 0;
   float: left;
   display: block;
-  margin-right: 2.35765%;
-  width: 82.94039%;
-  margin-left: 8.5298%; }
+  margin-right: 4.34783%;
+  width: 82.6087%;
+  margin-left: 8.69565%; }
   .one-third-box:last-child {
     margin-right: 0; }
   @media screen and (min-width: 40em) {
     .one-third-box {
       float: left;
       display: block;
-      margin-right: 2.35765%;
-      width: 48.82117%;
-      margin-left: 8.5298%;
+      margin-right: 4.34783%;
+      width: 47.82609%;
+      margin-left: 8.69565%;
       -webkit-box-orient: vertical;
       box-orient: vertical;
       -webkit-box-direction: normal;
@@ -557,8 +586,8 @@ body {
     .one-third-box {
       float: left;
       display: block;
-      margin-right: 2.35765%;
-      width: 31.76157%;
+      margin-right: 4.34783%;
+      width: 30.43478%;
       margin-left: 0%;
       -webkit-box-orient: vertical;
       box-orient: vertical;
@@ -590,7 +619,7 @@ body {
   position: relative;
   cursor: pointer;
   font-family: "brandon-grotesque", sans-serif;
-  padding: 0.809em 2.1034em;
+  padding: 1em 2.36859em;
   line-height: 1;
   text-decoration: none;
   -webkit-user-select: none;
@@ -605,7 +634,7 @@ body {
   background-color: none;
   -webkit-transition: 0.4s ease-out;
           transition: 0.4s ease-out;
-  margin-top: 0.4854em; }
+  margin-top: 0.56278em; }
   @media screen and (min-width: 54em) {
     .minorlink {
       -webkit-align-self: flex-end;
@@ -617,9 +646,9 @@ body {
     color: #4A5763;
     -webkit-transition: all 0.3s;
             transition: all 0.3s;
-    right: 40px;
+    right: 25px;
     opacity: 0;
-    top: 25%; }
+    top: 32%; }
   .minorlink:hover:before {
     right: 10px;
     opacity: 1; }
@@ -641,7 +670,7 @@ body {
   font-family: "brandon-grotesque", sans-serif;
   font-size: 1.333em;
   font-weight: 700;
-  padding: 0.809em;
+  padding: 1.333em 0.56278em;
   line-height: 1;
   text-decoration: none;
   -webkit-user-select: none;
@@ -716,17 +745,17 @@ header {
   header .logo-left {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 40.29137%;
-    margin-left: 8.5298%; }
+    margin-right: 4.34783%;
+    width: 39.13043%;
+    margin-left: 8.69565%; }
     header .logo-left:last-child {
       margin-right: 0; }
     @media screen and (min-width: 68em) {
       header .logo-left {
         float: left;
         display: block;
-        margin-right: 2.35765%;
-        width: 23.23176%;
+        margin-right: 4.34783%;
+        width: 21.73913%;
         margin-left: 0%; }
         header .logo-left:last-child {
           margin-right: 0; } }
@@ -754,18 +783,18 @@ header {
   header .menu-right {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 31.76157%;
-    margin-left: 8.5298%; }
+    margin-right: 4.34783%;
+    width: 30.43478%;
+    margin-left: 8.69565%; }
     header .menu-right:last-child {
       margin-right: 0; }
     @media screen and (min-width: 40em) {
       header .menu-right {
         float: left;
         display: block;
-        margin-right: 2.35765%;
-        width: 23.23176%;
-        margin-left: 17.05961%; }
+        margin-right: 4.34783%;
+        width: 21.73913%;
+        margin-left: 17.3913%; }
         header .menu-right:last-child {
           margin-right: 0; } }
     @media screen and (min-width: 68em) {
@@ -1015,7 +1044,7 @@ header {
       font-size: 1.77689em;
       float: left;
       display: block;
-      margin-right: 2.35765%;
+      margin-right: 4.34783%;
       width: 100%;
       word-break: break-word;
       -webkit-hyphens: auto;
@@ -1138,7 +1167,7 @@ main {
   margin-top: 1.77689em;
   float: left;
   display: block;
-  margin-right: 2.35765%;
+  margin-right: 4.34783%;
   width: 100%; }
   .beratungsbox:last-child {
     margin-right: 0; }
@@ -1146,16 +1175,16 @@ main {
     .beratungsbox {
       float: left;
       display: block;
-      margin-right: 2.35765%;
-      width: 74.41059%; }
+      margin-right: 4.34783%;
+      width: 73.91304%; }
       .beratungsbox:last-child {
         margin-right: 0; } }
   .beratungsbox ul {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 82.94039%;
-    margin-left: 8.5298%;
+    margin-right: 4.34783%;
+    width: 82.6087%;
+    margin-left: 8.69565%;
     margin-top: 1.77689em; }
     .beratungsbox ul:last-child {
       margin-right: 0; }
@@ -1174,7 +1203,7 @@ main {
         border-left: solid 2px #4A5763; }
       .beratungsbox ul li a {
         display: block;
-        padding: 0.809em;
+        padding: 2.36859em;
         background-color: white;
         border-bottom: solid 2px #4A5763; }
         .beratungsbox ul li a h3 {
@@ -1205,9 +1234,9 @@ main {
   .beratungsbox .beratung {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 82.94039%;
-    margin-left: 8.5298%;
+    margin-right: 4.34783%;
+    width: 82.6087%;
+    margin-left: 8.69565%;
     display: -webkit-box;
     display: -moz-box;
     display: box;
@@ -1230,7 +1259,7 @@ main {
       .beratungsbox .beratung {
         float: left;
         display: block;
-        margin-right: 3.16844%;
+        margin-right: 5.88235%;
         width: 100%;
         margin-left: 0%;
         display: -webkit-box;
@@ -1293,9 +1322,9 @@ main {
 .linksbox {
   float: left;
   display: block;
-  margin-right: 2.35765%;
-  width: 82.94039%;
-  margin-left: 8.5298%;
+  margin-right: 4.34783%;
+  width: 82.6087%;
+  margin-left: 8.69565%;
   margin-top: 1.77689em; }
   .linksbox:last-child {
     margin-right: 0; }
@@ -1303,8 +1332,8 @@ main {
     .linksbox {
       float: left;
       display: block;
-      margin-right: 2.35765%;
-      width: 23.23176%;
+      margin-right: 4.34783%;
+      width: 21.73913%;
       margin-left: 0%; }
       .linksbox:last-child {
         margin-right: 0; } }
@@ -1411,8 +1440,8 @@ html, body {
   .stylesheet .typo {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 74.41059%; }
+    margin-right: 4.34783%;
+    width: 73.91304%; }
     .stylesheet .typo:last-child {
       margin-right: 0; }
     .stylesheet .typo h1 {
@@ -1462,8 +1491,8 @@ html, body {
   .stylesheet .colors {
     float: left;
     display: block;
-    margin-right: 2.35765%;
-    width: 14.70196%;
+    margin-right: 4.34783%;
+    width: 13.04348%;
     background-color: #7c7c7c;
     padding: 20px; }
     .stylesheet .colors:last-child {

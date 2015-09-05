@@ -422,7 +422,7 @@ acf_add_local_field_group(array (
               'key' => 'field_55e334a7969bf',
               'label' => 'Link: Mehr Informationen',
               'name' => 'link:_mehr',
-              'type' => 'text',
+              'type' => 'url',
               'instructions' => '',
               'required' => 0,
               'conditional_logic' => 0,

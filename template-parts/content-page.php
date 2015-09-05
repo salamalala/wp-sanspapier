@@ -76,32 +76,16 @@
 		             	<div class="box three-quarter-box">
 		                <h1><?php the_sub_field('titel'); ?></h1>
 		           			<p><?php the_sub_field('text'); ?></p>
-		           			<?php if( !empty(the_sub_field('link')) ): ?>
-		           			<a href="<?php the_sub_field('link'); ?>" class="minorlink"></a>
-		           			<?php endif; ?> 
+		           			
+		           			<?php if( !empty(get_sub_field('link:_mehr')) && empty(get_sub_field('link:_weiterlesen')) ): ?>
+		           				<a href="<?php the_sub_field('link:_mehr'); ?>" class="minorlink" target="_blank">Mehr Informationen</a>
+		           			<?php endif; ?>
+
+		           			<?php if( !empty(get_sub_field('link:_weiterlesen')) && empty(get_sub_field('link:_mehr')) ): ?>
+		           				<a href="<?php the_sub_field('link:_weiterlesen'); ?>" class="minorlink">Weiterlesen</a>
+		           			<?php endif; ?>
+
 		              </div>
-			          
-			          <?php elseif (get_row_layout() == 'text_2/3_breite' ):  ?>
-			          	             
-			             	<div class="box two-third-box">
-			                <h1><?php the_sub_field('titel'); ?></h1>
-			           			<p><?php the_sub_field('text'); ?></p>
-			           			<?php if( !empty(the_sub_field('link')) ): ?>
-			           				<a href="<?php the_sub_field('link'); ?>" class="minorlink"></a>
-			           			<?php endif; ?>  
-			              </div>
-								
-
-								<?php elseif (get_row_layout() == 'text_1/3_breite' ):  ?>
-									             
-								   	<div class="box one-third-box">
-								      <h2><?php the_sub_field('titel'); ?></h1>
-								 			<p><?php the_sub_field('text'); ?></p>
-								 			<?php if( !empty(the_sub_field('link')) ): ?>
-								 			<a href="<?php the_sub_field('link'); ?>" class="minorlink"></a>
-								 			<?php endif; ?>  
-								    </div>
-
 
 			          <?php elseif (get_row_layout() == 'bild_2/3_breite_links_text_1/3_breite_rechts' ):  ?>
 
@@ -146,7 +130,7 @@
 											$url = $bild_halb['url'];
 											$alt = $bild_halb['alt']; ?>
 												
-												<div class="half-width-box">
+												<div class="half-width-box image-box-wrapper">
 				            			<img src="<?php echo $url; ?>" alt="<?php echo $alt; ?>"/>
 												</div>
 											<?php endif; ?>
