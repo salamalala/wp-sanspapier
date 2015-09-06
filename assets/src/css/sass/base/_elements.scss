@@ -21,6 +21,11 @@ body{
 	color: $white;
 }
 
+.pink-box{
+	background-color: $pink;
+	color: $white;
+}
+
 .modular-content{
 	@include display(flex);
 	@include flex-wrap(wrap);
@@ -219,7 +224,7 @@ body{
 	}
 }
 
-.dark-link{
+.white-link{
 	color: $white;
 	border: $white 3px solid;
 	&:before{

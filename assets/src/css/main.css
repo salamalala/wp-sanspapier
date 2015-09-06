@@ -253,6 +253,10 @@ body {
   background-color: #4A5763;
   color: #fff; }
 
+.pink-box {
+  background-color: #bf4385;
+  color: #fff; }
+
 .modular-content {
   display: -webkit-box;
   display: -moz-box;
@@ -697,10 +701,10 @@ body {
     right: 10px;
     opacity: 1; }
 
-.dark-link {
+.white-link {
   color: #fff;
   border: #fff 3px solid; }
-  .dark-link:before {
+  .white-link:before {
     color: #fff; }
 
 .mainlink {
