@@ -19,16 +19,25 @@ body{
 .dark-box{
 	background-color: $medium-gray;
 	color: $white;
+	h2{
+		border-bottom: 0.11em solid $white;
+	}
 }
 
 .pink-box{
 	background-color: $pink;
 	color: $white;
+	h2{
+		border-bottom: 0.11em solid $white;
+	}
 }
 
 .modular-content{
 	@include display(flex);
 	@include flex-wrap(wrap);
+	@include media($xlarge-screen){
+	@include span-columns(12);
+	}
 }
 
 .full-width-box{

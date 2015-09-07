@@ -148,7 +148,7 @@ header {
 // Nav menu
   nav {
     float: none;
-    z-index: 9999999;
+    z-index: 9;
     @include media ($xlarge-screen) {
       float: right;
     }

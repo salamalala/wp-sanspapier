@@ -136,7 +136,7 @@
 				        <?php elseif (get_row_layout() == 'text_12_breite_pinker_hintergrund' ):  ?>
 				          	             
 				             	<div class="half-width-box box pink-box">
-				                <h1><?php the_sub_field('titel'); ?></h1>
+				                <h2><?php the_sub_field('titel'); ?></h2>
 				           			<p><?php the_sub_field('text'); ?></p> 
 												
 												<?php if( !empty(get_sub_field('link:_mehr_informationen')) && empty(get_sub_field('link:_weiterlesen')) ): ?>

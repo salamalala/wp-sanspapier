@@ -252,10 +252,14 @@ body {
 .dark-box {
   background-color: #4A5763;
   color: #fff; }
+  .dark-box h2 {
+    border-bottom: 0.11em solid #fff; }
 
 .pink-box {
   background-color: #bf4385;
   color: #fff; }
+  .pink-box h2 {
+    border-bottom: 0.11em solid #fff; }
 
 .modular-content {
   display: -webkit-box;
@@ -271,6 +275,14 @@ body {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
+  @media screen and (min-width: 68em) {
+    .modular-content {
+      float: left;
+      display: block;
+      margin-right: 4.34783%;
+      width: 100%; }
+      .modular-content:last-child {
+        margin-right: 0; } }
 
 .full-width-box {
   margin: 2.36859em 0;
@@ -911,7 +923,7 @@ header {
         top: -0.5em; }
   header nav {
     float: none;
-    z-index: 9999999; }
+    z-index: 9; }
     @media screen and (min-width: 68em) {
       header nav {
         float: right; } }
