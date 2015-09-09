@@ -14,6 +14,14 @@ body{
 			margin: 0;
 		}
 	}
+	a{
+		font-weight: 700;
+		transform: translateY(0);
+		transition: transform 0.2s ease;
+		&:hover{
+			transform: translateY(-1.5px);
+		}
+	}
 }
 
 .dark-box{
@@ -21,6 +29,16 @@ body{
 	color: $white;
 	h2{
 		border-bottom: 0.11em solid $white;
+	}
+	a{
+		background-color: $white;
+		color: $medium-gray;
+		padding: 0 $modular-scale-xxxxs;
+		transform: translateY(0);
+		transition: transform 0.2s ease;
+		&:hover{
+			transform: translateY(-1px);
+		}
 	}
 }
 
@@ -37,6 +55,8 @@ body{
 	@include flex-wrap(wrap);
 	@include media($xlarge-screen){
 	@include span-columns(12);
+		@include display(flex);
+		@include flex-wrap(wrap);
 	}
 }
 
@@ -195,12 +215,13 @@ body{
 
 
 
-.minorlink{
+a.minorlink{
 	@include align-self(stretch);
 	@include media ($large-screen){
 		@include align-self(flex-end);
 	}
 	color: $medium-gray;
+	background-color: $white;
 	border-radius: $base-border-radius;
 	border: $medium-gray 3px solid;
 	position: relative;
@@ -215,7 +236,6 @@ body{
 	text-align: center;
 	text-transform: uppercase;
 	letter-spacing: 0.08em;
-	background-color: none;
 	transition: 0.4s ease-out;
 	margin-top: $modular-scale-xxxs;
 	&:before{

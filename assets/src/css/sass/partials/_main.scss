@@ -38,6 +38,8 @@ main{
   ul{
     @include span-columns(10 of 12);
     @include shift(1);
+    list-style-type: none;
+    padding-left: 0;
     margin-top: modular-scale(2);
     @include media ($large-screen){
       display: none;

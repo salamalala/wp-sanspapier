@@ -79,7 +79,7 @@ header {
     }
 
   // Mobile view for logo and menu button
-  .navigation-menu-button {
+  .menu-button{
     @include media ($xlarge-screen) {
       display: none;
     }
@@ -142,15 +142,16 @@ header {
         }
       }
     }
-}//closing navigation-menu-button
+}//closing menu-button
 }//closing menu right
 
 // Nav menu
   nav {
-    float: none;
     z-index: 9;
     @include media ($xlarge-screen) {
-      float: right;
+     @include direction-context(right-to-left) {
+         @include span-columns(9);
+      }
     }
   }
 
@@ -161,14 +162,14 @@ header {
     margin: 0 auto;
     overflow: scroll;
     padding: 0;
-    width: 100%;
     z-index: -100;
     line-height: 60px;
     &.show {
       display: block;
     }
     @include media ($xlarge-screen) {
-      display: inline;
+      float: right;
+      display: inline-block;
       margin: 0;
       padding: 0;
       line-height: 120px;
@@ -183,7 +184,7 @@ header {
     overflow: hidden;
     text-align: center;
     width: 100%;
-    z-index: 9999;
+    z-index: 999;
     @include media ($xlarge-screen) {
       padding-right: 1.5em;
       background: transparent;
@@ -233,6 +234,7 @@ header {
         bottom: 0px;
         height: 1px;
         width: 0;
+        background: transparent;
         transition: width 0s ease, background .5s ease;
       }
       &:hover:before {
@@ -404,52 +406,6 @@ header {
 
 }
 
-}
-
-
-@include keyframes(sliding-header){
-  0%{
-    @include transform(scale(.3, .3));
-    opacity: 0;
-  }
-  70%{
-    @include transform(scale(1.05, 1.05));
-    opacity: 1;
-  }
-  80%{
-    @include transform(scale(.95, 0.95));
-    opacity: 1;
-  }
-  100% {
-    @include transform(scale(1, 1));
-    opacity: 1;
-  }
-}
-
-
-@include keyframes(bluredText) {
-  0% {
-    text-shadow: 0 0 30px $green;
-    opacity: 0;
-  }
-  50% {
-    text-shadow: 0 0 15px $green;
-    opacity: 0.5;
-  }
-  85% {
-    text-shadow: 0 0 5px $green;
-    opacity: 0.8;
-  }
-  100% {
-    text-shadow: 0 0 0 $green;
-    opacity: 1;
-  }
-}
-
-@include keyframes(bluredPic){
-  50%{
-    filter: blur(5px);
-  }
 }
 
 
