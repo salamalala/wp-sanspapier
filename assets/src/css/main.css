@@ -20,7 +20,7 @@ button {
   cursor: pointer;
   display: inline-block;
   font-family: "rooney-web", serif;
-  font-size: 1em;
+  font-size: 1.05em;
   font-weight: 600;
   line-height: 1;
   padding: 0.75em 1em;
@@ -52,7 +52,7 @@ label,
 select {
   display: block;
   font-family: "rooney-web", serif;
-  font-size: 1em; }
+  font-size: 1.05em; }
 
 label {
   font-weight: 600;
@@ -71,7 +71,7 @@ textarea {
   box-shadow: inset 0 1px 3px rgba(0, 0, 0, 0.06);
   box-sizing: border-box;
   font-family: "rooney-web", serif;
-  font-size: 1em;
+  font-size: 1.05em;
   margin-bottom: 0.75em;
   padding: 0.5em;
   -webkit-transition: border-color;
@@ -159,7 +159,7 @@ body {
   -webkit-font-smoothing: antialiased;
   color: #4A5763;
   font-family: "rooney-web", serif;
-  font-size: 1em;
+  font-size: 1.05em;
   line-height: 1.5; }
 
 h1,
@@ -199,7 +199,7 @@ h3 {
   text-transform: none; }
 
 h4.italic {
-  font-size: 1em;
+  font-size: 1.05em;
   color: #63768A;
   font-size: 0.8em; }
 
@@ -211,7 +211,7 @@ h5 {
 p {
   margin: 0 0 0.5em;
   letter-spacing: 0.05em;
-  font-size: 1em; }
+  font-size: 1.05em; }
 
 a {
   color: #bf4385;
@@ -912,7 +912,7 @@ header {
     float: left;
     display: block;
     margin-right: 4.34783%;
-    width: 39.13043%;
+    width: 4.34783%;
     margin-left: 8.69565%; }
     header .logo-left:last-child {
       margin-right: 0; }
@@ -921,7 +921,7 @@ header {
         float: left;
         display: block;
         margin-right: 4.34783%;
-        width: 21.73913%;
+        width: 4.34783%;
         margin-left: 0%; }
         header .logo-left:last-child {
           margin-right: 0; } }
@@ -933,10 +933,7 @@ header {
     transform: translateY(-50%);
     display: block; }
     header .logo img {
-      max-height: calc(0.3 * 120px); }
-    @media screen and (min-width: 40em) {
-      header .logo img {
-        max-height: calc(0.4 * 120px); } }
+      max-height: calc(1 * 120px); }
     header .logo h4 {
       position: relative;
       color: #ADCC70;
@@ -951,7 +948,7 @@ header {
     display: block;
     margin-right: 4.34783%;
     width: 30.43478%;
-    margin-left: 8.69565%; }
+    margin-left: 43.47826%; }
     header .menu-right:last-child {
       margin-right: 0; }
     @media screen and (min-width: 40em) {
@@ -960,7 +957,7 @@ header {
         display: block;
         margin-right: 4.34783%;
         width: 21.73913%;
-        margin-left: 17.3913%; }
+        margin-left: 52.17391%; }
         header .menu-right:last-child {
           margin-right: 0; } }
     @media screen and (min-width: 68em) {
@@ -1034,7 +1031,8 @@ header {
         float: right;
         display: block;
         margin-left: 4.34783%;
-        width: 73.91304%; }
+        width: 91.30435%;
+        height: 120px; }
         header nav:last-child {
           margin-left: 0; } }
   header ul.navigation-menu {
@@ -1042,26 +1040,25 @@ header {
     clear: both;
     display: none;
     margin: 0 auto;
-    overflow: scroll;
-    padding: 0;
-    z-index: -100;
+    overflow: visible;
+    z-index: 999999;
     line-height: 60px; }
     header ul.navigation-menu.show {
       display: block; }
     @media screen and (min-width: 68em) {
       header ul.navigation-menu {
+        line-height: 40px;
         float: right;
-        display: inline-block;
+        display: inline;
         margin: 0;
-        padding: 0;
-        line-height: 120px; } }
+        padding-top: 30px; } }
   header ul li.nav-link {
     background: #34373a;
     display: block;
     overflow: hidden;
     text-align: center;
     width: 100%;
-    z-index: 999; }
+    z-index: 9999; }
     @media screen and (min-width: 68em) {
       header ul li.nav-link {
         padding-right: 1.5em;
@@ -1087,7 +1084,9 @@ header {
       padding: 7px 0; }
       @media screen and (min-width: 68em) {
         header ul li.nav-link a {
-          margin-right: 1em; }
+          margin-right: 1em;
+          position: relative;
+          display: inline-block; }
           header ul li.nav-link a:last-child {
             margin-right: 0; } }
       header ul li.nav-link a:hover {
@@ -1101,8 +1100,8 @@ header {
         height: 1px;
         width: 0;
         background: transparent;
-        -webkit-transition: width 0s ease, background .5s ease;
-                transition: width 0s ease, background .5s ease; }
+        -webkit-transition: width 0s ease, background-color .5s ease;
+                transition: width 0s ease, background-color .5s ease; }
       header ul li.nav-link a:hover:before {
         width: 100%;
         background: rgba(255, 255, 255, 0.8);
@@ -1114,12 +1113,14 @@ header {
   header li.more.nav-link {
     padding-right: 0; }
     @media screen and (min-width: 68em) {
-      header li.more.nav-link > ul > li:first-child a {
-        padding-top: 1em; }
-      header li.more.nav-link a {
-        margin-right: 1em; }
-        header li.more.nav-link a:before {
-          content: none; } }
+      header li.more.nav-link {
+        padding-right: 10px; } }
+    header li.more.nav-link > ul > li:first-child a {
+      padding-top: 1em; }
+    header li.more.nav-link a {
+      margin-right: 1em; }
+      header li.more.nav-link a:before {
+        content: none; }
     header li.more.nav-link > a {
       padding-right: 0.6em; }
     header li.more.nav-link > a:after {
@@ -1571,7 +1572,7 @@ html, body {
       font-family: "brandon-grotesque", sans-serif;
       font-weight: 700; }
     .stylesheet .typo h4.italic {
-      font-size: 1em;
+      font-size: 1.05em;
       font-style: italic;
       font-family: "brandon-grotesque", sans-serif;
       font-weight: 400;
