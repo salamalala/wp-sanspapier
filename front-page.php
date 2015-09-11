@@ -84,7 +84,7 @@
 
        <div class="full-width-box box wer">
          <p class="big-paragraph quote">
-           Wir <a class="highlighted" href="#">beraten und informieren MigrantInnen</a>, die in der Schweiz leben, ohne eine Aufenthalts&shybewilligung zu besitzen. Zudem leisten wir <a class="highlighted" href="#">Sensibilisierungs- und Informationsarbeit </a>in der Region Bern.
+           Wir <a href="#">beraten und informieren MigrantInnen</a>, die in der Schweiz leben, ohne eine Aufenthalts&shybewilligung zu besitzen. Zudem leisten wir <a href="#">Sensibilisierungs- und Informationsarbeit</a> in der Region Bern.
          </p>
        </div>
 

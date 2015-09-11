@@ -16,17 +16,6 @@ main{
   }
 }
 
-.highlighted{
-  font-weight: 600;
-  color: $dark-gray;
-  &:active,
-  &:focus,
-  &:hover {
-    background-color: lighten($green, 30%);
-  }
-
-}
-
 .beratungsbox{
   margin-top: modular-scale(2);
   @include span-columns(12); 

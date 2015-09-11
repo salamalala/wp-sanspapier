@@ -14,14 +14,6 @@ body{
 			margin: 0;
 		}
 	}
-	a{
-		font-weight: 700;
-		transform: translateY(0);
-		transition: transform 0.2s ease;
-		&:hover{
-			transform: translateY(-1.5px);
-		}
-	}
 }
 
 .dark-box{
@@ -295,6 +287,7 @@ a.minorlink{
 		margin: 0;
 		transform: translateY(0);
 		transition: transform 0.2s ease;
+		font-weight: 400;
 		&:hover{
 			transform: translateY(-3px);
 		}
