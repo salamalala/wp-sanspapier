@@ -1,10 +1,12 @@
-main{
-  @include clearfix;
-  @include outer-container; 
+.site-content{
+  @include outer-container;
 }
 
 .wer{
-  margin-top: -7em; 
+  margin-top: -5em;
+  @include media($medium-screen){
+    margin-top: -7em; 
+  }
   border: none;
   line-height: 1.7;
   z-index: 5; 

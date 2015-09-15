@@ -36,9 +36,3 @@
     opacity: 1;
   }
 }
-
-@include keyframes(bluredPic){
-  50%{
-    filter: blur(5px);
-  }
-}

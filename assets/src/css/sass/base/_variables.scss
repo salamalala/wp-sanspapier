@@ -6,7 +6,9 @@ $heading-font-family: "brandon-grotesque",sans-serif;
 $modular-scale-base: 1em;
 
 // Font Sizes
-$base-font-size: 1.02em;
+$base-font-size-sm: 0.97em;
+$base-font-size-md: 1em;
+$base-font-size-lg: 1.02em;
 $small-font-size: modular-scale(-1);
 $medium-font-size: modular-scale(1);
 $big-font-size: modular-scale(2);
@@ -35,13 +37,11 @@ $modular-scale-xlg: modular-scale(4);
 // Colors
 $pink:  #bf4385;
 $green: #ADCC70;
-$dark-gray:  #34373a;
 $white: #fff; 
-// $dark-gray: #3f4041;
-
-$medium-gray: #4A5763;
-$light-medium-gray:#63768A;
-$light-gray: #F1F4F9;
+$dark-gray:  #30373F;
+$medium-gray: #4B5663;
+$light-medium-gray:#8093A8;
+$light-gray: #F4F6F9;
 
 // Font Colors
 $base-background-color: #fff;

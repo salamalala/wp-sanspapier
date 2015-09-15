@@ -17,7 +17,7 @@
 				          	             
 				             	<div class="full-width-box box border-left">
 				                <h1><?php the_sub_field('titel'); ?></h1>
-				           			<p><?php the_sub_field('text'); ?></p>
+				           			<p class="big-paragraph"><?php the_sub_field('text'); ?></p>
 												
 												<?php if( !empty(get_sub_field('link:_mehr')) && empty(get_sub_field('link:_weiterlesen')) ): ?>
 													<a href="<?php the_sub_field('link:_mehr'); ?>" class="minorlink" target="_blank">Mehr Informationen</a>
@@ -33,7 +33,7 @@
 				          	             
 				             	<div class="full-width-box box dark-box">
 				                <h1><?php the_sub_field('titel'); ?></h1>
-				           			<p><?php the_sub_field('text'); ?></p> 
+				           			<p class="big-paragraph"><?php the_sub_field('text'); ?></p> 
 												
 												<?php if( !empty(get_sub_field('link:_mehr_informationen')) && empty(get_sub_field('link:_weiterlesen')) ): ?>
 													<a href="<?php the_sub_field('link:_mehr_informationen'); ?>" class="minorlink white-link" target="_blank">Mehr Informationen</a>
@@ -49,7 +49,7 @@
 	                	             
 	                   	<div class="full-width-box box pink-box">
 	                      <h1><?php the_sub_field('titel'); ?></h1>
-	                 			<p><?php the_sub_field('text'); ?></p> 
+	                 			<p class="big-paragraph"><?php the_sub_field('text'); ?></p> 
 	      								
 	      								<?php if( !empty(get_sub_field('link:_mehr_informationen')) && empty(get_sub_field('link:_weiterlesen')) ): ?>
 	      									<a href="<?php the_sub_field('link:_mehr_informationen'); ?>" class="minorlink white-link" target="_blank">Mehr Informationen</a>

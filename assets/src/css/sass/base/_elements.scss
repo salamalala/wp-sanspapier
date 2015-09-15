@@ -3,7 +3,7 @@ body{
 }
 
 .box{
-	padding: $modular-scale-xlg $modular-scale-lg;
+	padding: $modular-scale-lg $modular-scale-md;
 	background-color: $white;
 	@include media($medium-screen){
 		padding: $modular-scale-xlg;
@@ -46,10 +46,10 @@ body{
 	@include display(flex);
 	@include flex-wrap(wrap);
 	@include media($xlarge-screen){
-	@include span-columns(12);
-		@include display(flex);
-		@include flex-wrap(wrap);
-	}
+		@include span-columns(12);
+			@include display(flex);
+			@include flex-wrap(wrap);
+		}
 }
 
 .full-width-box{
@@ -282,6 +282,16 @@ a.minorlink{
 	&:disabled {
 		cursor: not-allowed;
 		opacity: 0.5;
+	}
+	a{
+		color: $white;
+		margin: 0;
+		transform: translateY(0);
+		transition: transform 0.2s ease;
+		font-weight: 400;
+		&:hover{
+			transform: translateY(-3px);
+		}
 	}
 	p{
 		margin: 0;

@@ -1,0 +1,20 @@
+.bulletin-box{
+  margin: $modular-scale-lg 0;
+  @include span-columns(12);
+  @include shift(0);
+  @include display(flex);
+}
+
+.bulletin-info{
+    @include span-columns(8 of 12);
+}
+
+.bulletin-download{
+    @include span-columns(4 of 12);
+    @include align-self(center);
+    a{
+      white-space: pre-wrap; 
+      word-wrap: break-word;
+    }
+
+}

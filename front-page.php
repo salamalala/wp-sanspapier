@@ -113,8 +113,6 @@
             
               <h3>Beratungszeiten <span class="hide-when-small"><?php the_sub_field('beratungsort'); ?></span></h3>
               <p><?php the_sub_field('beratungszeiten'); ?></p>
-         
-              <div class="map" id="map-canvas"></div>
             
               <a class="minorlink" href="#">Mehr Informationen</a>
             
