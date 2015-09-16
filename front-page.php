@@ -128,25 +128,48 @@
     </div>
     <!-- End of Beratungsbox -->
     
-    <div class="linksbox">
+    <div class="sidebar-links">
+      <div class="mainlink">
+        <a href="#">Mitglied werden</a>
+      </div>
 
-      <a class="mainlink" href="#"><p>Mitglied werden</p></a>
+      <div class="mainlink">
+        <a href="#">Spenden</a>   
+      </div>
 
-      <a class="mainlink" href="#"><p>Spenden</p></a>
+      <div class="mainlink">
+        <a href="#">Bulletin</a>
+      </div>
 
-      <a class="mainlink" href="#"><p>Newsletter</p></a>
+      <div class="mainlink newsletter">
+        <p>Newsletter bestellen</p>
 
-      <a class="mainlink" href="#"><p>Bulletin</p></a>
+        <!-- Begin MailChimp Signup Form -->
+          <div id="mc_embed_signup">
+            <form action="//sans-papiers.us6.list-manage.com/subscribe/post?u=515540207cb90d8a5faa83b5e&amp;id=471eca439c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
+              <div id="mc_embed_signup_scroll">
+            
+                <div class="mc-field-group">
+                  <label for="mce-EMAIL">E-Mail: </label>
+                  <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL">
+                </div>
+                <div id="mce-responses" class="clear">
+                  <div class="response" id="mce-error-response" style="display:none"></div>
+                  <div class="response" id="mce-success-response" style="display:none"></div>
+                </div>    
+                <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
+                <div style="position: absolute; left: -5000px;"><input type="text" name="b_515540207cb90d8a5faa83b5e_471eca439c" tabindex="-1" value=""></div>
+                <div class="clear"><input type="submit" value="Anmelden" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
+              
+              </div>
+            </form>
+          </div>
+            <!--End mc_embed_signup-->
+      </div>
 
-      <a class="mainlink" href="#"><p>Facebook</p></a>
 
 
     </div>
-
-
-
-
-
 
   </main>
 

@@ -23,7 +23,7 @@ h6 {
   font-family: $heading-font-family;
   line-height: $heading-line-height;
   margin: 0 0 $small-spacing;
-  letter-spacing: 0.07em;
+  letter-spacing: $letter-spacing-md;
 }
 
 h1,
@@ -61,7 +61,7 @@ h3{
 .italic{
   font-style: italic;
   font-family: $heading-font-family;
-  font-weight: 500;
+  font-weight: 400;
   text-transform: none;
 }
 
@@ -88,7 +88,7 @@ p {
     font-size: $base-font-size-lg;
   }
   margin: 0 0 $small-spacing;
-  letter-spacing: 0.05em;
+  letter-spacing: $letter-spacing-sm;
   font-weight: 300;
   a {
     color: $dark-gray;

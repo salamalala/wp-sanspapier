@@ -227,7 +227,7 @@ a.minorlink{
 	white-space: nowrap;
 	text-align: center;
 	text-transform: uppercase;
-	letter-spacing: 0.08em;
+	letter-spacing: $letter-spacing-lg;
 	transition: 0.4s ease-out;
 	margin-top: $modular-scale-xxxs;
 	&:before{
@@ -272,7 +272,7 @@ a.minorlink{
 	white-space: nowrap;
 	text-align: center;
 	text-transform: uppercase;
-	letter-spacing: 0.08em;
+	letter-spacing: $letter-spacing-lg;
 	transition: color 0.1s linear;
 	&:hover,
 	&:focus {
@@ -293,16 +293,6 @@ a.minorlink{
 			transform: translateY(-3px);
 		}
 	}
-	p{
-		margin: 0;
-		transform: translateY(0);
-		transition: transform 0.2s ease;
-		font-weight: 400;
-		&:hover{
-			transform: translateY(-3px);
-		}
-	}
-
 }
 
 .big-paragraph{
