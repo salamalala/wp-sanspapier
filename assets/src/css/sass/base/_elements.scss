@@ -76,12 +76,14 @@ body{
 		@include display(flex);
 		@include flex-direction(column);
  	}
+ 	p{
+ 		font-size: $medium-font-size;
+ 	}
 }
 
 .border-left{
 	border-left: $pink solid 3px;
 }
-	
 	
 .half-width-box{
 	margin: $modular-scale-lg 0;
@@ -192,7 +194,6 @@ body{
 			object-fit: cover;
 		}
 }
-
 
 .right-element-in-row {
 	@include omega;

@@ -1492,5 +1492,71 @@ acf_add_local_field_group(array (
   'description' => '',
 ));
 
+  acf_add_local_field_group(array (
+    'key' => 'group_55fd46371ad93',
+    'title' => 'Aktivität',
+    'fields' => array (
+      array (
+        'key' => 'field_55fd4652791bc',
+        'label' => 'Titel',
+        'name' => 'titel',
+        'type' => 'text',
+        'instructions' => '',
+        'required' => 1,
+        'conditional_logic' => 0,
+        'wrapper' => array (
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'default_value' => '',
+        'placeholder' => '',
+        'prepend' => '',
+        'append' => '',
+        'maxlength' => 50,
+        'readonly' => 0,
+        'disabled' => 0,
+      ),
+      array (
+        'key' => 'field_55fd4665791be',
+        'label' => 'Kurzbeschreibung',
+        'name' => 'kurzbeschreibung',
+        'type' => 'textarea',
+        'instructions' => '',
+        'required' => 1,
+        'conditional_logic' => 0,
+        'wrapper' => array (
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'default_value' => '',
+        'placeholder' => '',
+        'maxlength' => 320,
+        'rows' => '',
+        'new_lines' => 'wpautop',
+        'readonly' => 0,
+        'disabled' => 0,
+      ),
+    ),
+    'location' => array (
+      array (
+        array (
+          'param' => 'post_type',
+          'operator' => '==',
+          'value' => 'aktivitaet',
+        ),
+      ),
+    ),
+    'menu_order' => 0,
+    'position' => 'normal',
+    'style' => 'default',
+    'label_placement' => 'top',
+    'instruction_placement' => 'label',
+    'hide_on_screen' => '',
+    'active' => 1,
+    'description' => '',
+  ));
+
 
 endif;

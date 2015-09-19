@@ -31,7 +31,7 @@ main{
   margin-top: modular-scale(2);
   @include span-columns(12); 
   @include media ($large-screen){
-    @include span-columns(8); 
+    @include span-columns(8 of 12); 
   }
 
   //tabs 
