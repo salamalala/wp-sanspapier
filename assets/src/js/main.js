@@ -86,7 +86,7 @@ var mobileMenu = function(){
   var secondBox = function(){
     $(".half-width-box").filter(function(index){
       return index % 2 === 1;
-    }).addClass("second-half-width-box right-element-in-row");
+    }).addClass("right-element-in-row");
   };
 
 

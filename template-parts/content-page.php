@@ -174,7 +174,7 @@
               </div>
 						
 	        	<?php elseif (get_row_layout() == 'text_2/3_breite_links_bild_1/3_breite_rechts' ):  ?>			          	             
-               <div class="box two-third-box left-element-in-row">
+               <div class="box two-third-box  ">
                 
                 <h2><?php the_sub_field('box_links_titel'); ?></h1>
             		<p><?php the_sub_field('box_links_text'); ?></p>
@@ -202,7 +202,7 @@
   							<?php endif; ?>
 
 	        	<?php elseif (get_row_layout() == 'text_1/3_breite_links_bild_2/3_breite_rechts' ):  ?>			          	             
-	             <div class="box one-third-box left-element-in-row">
+	             <div class="box one-third-box  ">
                 
                 <h2><?php the_sub_field('box_links_titel'); ?></h1>
             		<p><?php strip_tags(the_sub_field('box_links_text')); ?></p>
@@ -238,7 +238,7 @@
 								$url = $bild_links['url'];
 								$alt = $bild_links['alt']; ?>
 
-									<div class="two-third-box image-box-wrapper left-element-in-row">
+									<div class="two-third-box image-box-wrapper  ">
 	            			<img src="<?php echo $url; ?>" alt="<?php echo $alt; ?>"/>
 									</div>
 								<?php endif; ?>
@@ -267,7 +267,7 @@
 								$url = $bild_links['url'];
 								$alt = $bild_links['alt']; ?>
 
-									<div class="one-third-box image-box-wrapper left-element-in-row">
+									<div class="one-third-box image-box-wrapper  ">
 	            			<img src="<?php echo $url; ?>" alt="<?php echo $alt; ?>"/>
 									</div>
 								<?php endif; ?>

@@ -172,3 +172,57 @@ require get_template_directory() . '/inc/jetpack.php';
  * Load custom field file.
  */
 require get_template_directory() . '/inc/acf.php';
+
+
+/**
+*create custom post type
+*/
+	// Our custom post type function
+function create_posttype() {
+
+	register_post_type( 'aktivitäten',
+	// CPT Options
+		array(
+			'labels' => array(
+				'name' => 'Aktivitäten',
+				'singular_name' => 'Aktivität',
+				'add_new'            => 'Neue Aktivität',
+		    'add_new_item'       => 'Neue Aktivität hinzufügen',
+		    'edit_item'          => 'Aktivität bearbeiten',
+		    'new_item'           => 'Neue Aktivität',
+		    'all_items'          => 'Alle Aktivitäten',
+		    'view_item'          => 'Aktivität ansehen',
+		    'search_items'       => 'Aktivitäten suchen',
+		    'not_found'          => 'Keine Aktivitäten gefunden',
+		    'not_found_in_trash' => 'Keine Aktivitäten im Papierkorb gefunden', 
+		    'parent_item_colon'  => '',
+		    'menu_name'          => 'Aktivitäten'
+			),
+			'supports' => array('thumbnail', 'revisions'),
+			'rewrite' => array('slug' => 'Aktivität'),
+			// You can associate this CPT with a taxonomy or custom taxonomy. 
+			// 'taxonomies'          => array( 'genres' ),
+			/* A hierarchical CPT is like Pages and can have
+			* Parent and child items. A non-hierarchical CPT
+			* is like Posts.
+			*/	
+			'hierarchical'        => true,
+			'public'              => true,
+			'show_ui'             => true,
+			'show_in_menu'        => true,
+			'show_in_nav_menus'   => true,
+			'show_in_admin_bar'   => true,
+			'menu_position'       => 5,
+			'can_export'          => true,
+			'has_archive'         => true,
+			'exclude_from_search' => false,
+			'publicly_queryable'  => true,
+			'capability_type'     => 'page',
+		)
+	);
+}
+// Hooking up our function to theme setup
+add_action( 'init', 'create_posttype' );
+
+
+

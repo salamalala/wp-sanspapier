@@ -68,5 +68,7 @@
 			</div>
 
 		</header>
+  
+  <div class="main-outer-container">
+	 <main role="main">
 
-		<div id="content" class="site-content">

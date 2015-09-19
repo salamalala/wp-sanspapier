@@ -1202,7 +1202,7 @@ acf_add_local_field_group(array (
         ),
         array (
           'key' => 'field_55eb07eddea2f',
-          'label' => 'Beratungszeiten',
+          'label' => 'Beratunginformationen',
           'name' => 'beratungszeiten',
           'type' => 'wysiwyg',
           'instructions' => '',
@@ -1227,6 +1227,13 @@ acf_add_local_field_group(array (
         'param' => 'page_template',
         'operator' => '==',
         'value' => 'front-page.php',
+      ),
+    ),
+    array (
+      array (
+        'param' => 'page_template',
+        'operator' => '==',
+        'value' => 'template-parts/content-beratungen.php',
       ),
     ),
   ),

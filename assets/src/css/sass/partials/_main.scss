@@ -1,5 +1,14 @@
-.site-content{
+.main-outer-container{
   @include outer-container;
+}
+
+main{
+  @include span-columns(10);
+  @include shift(1);
+  @include media($xlarge-screen){
+    @include span-columns(12);
+    @include shift(0);
+  }
 }
 
 .wer{
@@ -27,8 +36,7 @@
 
   //tabs 
   ul{
-    @include span-columns(10 of 12);
-    @include shift(1);
+    @include span-columns(10 of 10);
     list-style-type: none;
     padding-left: 0;
     margin-top: modular-scale(2);
@@ -90,15 +98,13 @@
   }
   
   .beratung{
-    @include span-columns(10);
-    @include shift(1);
+    @include span-columns(10 of 10);
     @include display(flex);
     @include flex-direction(column);
     display: none;
 
     @include media ($large-screen){
       @include span-columns(8 of 8); 
-      @include shift(0);
       @include display(flex);
       @include flex-direction(column);
       &:nth-of-type(2){
@@ -138,12 +144,10 @@
 
 
 .sidebar-links{
-  @include span-columns(10);
-  @include shift(1);
+  @include span-columns(10 of 10);
   margin-top: modular-scale(2);
   @include media ($large-screen){
     @include span-columns(4); 
-    @include shift(0);  
   }
   .mainlink{
    &:nth-of-type(n+2){

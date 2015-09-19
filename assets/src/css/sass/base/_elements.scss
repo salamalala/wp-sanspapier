@@ -22,16 +22,33 @@ body{
 	h2{
 		border-bottom: 0.11em solid $white;
 	}
-	a{
-		background-color: $white;
-		color: $medium-gray;
-		padding: 0 $modular-scale-xxxxs;
-		transform: translateY(0);
-		transition: transform 0.2s ease;
-		&:hover{
-			transform: translateY(-1px);
-		}
-	}
+	a {
+    color: $white;
+    font-weight: 700;
+    text-decoration: none;
+    position: relative;
+    display: inline-block;
+    &:after {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 0.5px;
+      background: $white;
+      content: '';
+      opacity: 0;
+      transition: height 0.3s, opacity 0.3s, transform 0.3s;
+      transform: translateY(-3px);
+    }
+    &:hover{
+      color: $white;
+    }
+    &:hover:after{
+      height: 1.5px;
+      opacity: 1;
+      transform: translate(0px);
+    }
+  }
 }
 
 .pink-box{
@@ -43,29 +60,22 @@ body{
 }
 
 .modular-content{
+	width: 100%;
 	@include display(flex);
 	@include flex-wrap(wrap);
-	@include media($xlarge-screen){
-		@include span-columns(12);
-			@include display(flex);
-			@include flex-wrap(wrap);
-		}
 }
 
 .full-width-box{
 	margin: $modular-scale-lg 0;
-	@include span-columns(10);
-	@include shift(1);
+	width: 100%;
 	@include display(flex);
 	@include flex-direction(column);
-	
+
 	@include media($xlarge-screen){
-	 @include span-columns(12);
-	 @include shift(0);
-	 @include display(flex);
-	 @include flex-direction(column);
-	 @include omega;
- }
+		width: 100%;
+		@include display(flex);
+		@include flex-direction(column);
+ 	}
 }
 
 .border-left{
@@ -75,37 +85,21 @@ body{
 	
 .half-width-box{
 	margin: $modular-scale-lg 0;
-	@include span-columns(10);
-	@include shift(1);
+	@include span-columns(10 of 10);
 	@include display(flex);
 	@include flex-direction(column);
 
 	@include media($medium-screen){
-		@include span-columns(5);
-		@include shift(1);
+		@include span-columns(5 of 10);
 		@include display(flex);
 		@include flex-direction(column);
-
 	}
 	
 	@include media($xlarge-screen){
-		@include span-columns(6);
-		@include shift(0);
+		@include span-columns(6 of 12);
 		@include display(flex);
 		@include flex-direction(column);
 
-	}
-}
-
-.second-half-width-box{
-	@include media($medium-screen){
-		@include shift(0);
-		@include span-columns(5);
-		@include display(flex);
-	}
-	@include media($xlarge-screen){
-		@include span-columns(6);
-		@include display(flex);
 	}
 }
 
@@ -125,14 +119,12 @@ body{
 
 .three-quarter-box{
 	margin: $modular-scale-lg 0;
-	@include span-columns(10);
-	@include shift(1);
+	@include span-columns(10 of 10);
 	@include display(flex);
 	@include flex-direction(column);
 	
 	@include media($xlarge-screen){
-		 @include span-columns(9);
-		 @include shift(0);
+		 @include span-columns(9 of 12);
 		 @include display(flex);
 		 @include flex-direction(column);
  }
@@ -140,21 +132,18 @@ body{
 
 .two-third-box{
 	margin: $modular-scale-lg 0;
-	@include span-columns(10);
-	@include shift(1);
+	@include span-columns(10 of 10);
 	@include display(flex);
 	@include flex-direction(column);
 
 	@include media($medium-screen){
-		@include span-columns(7);
-		@include shift(0);
+		@include span-columns(7 of 10);
 		@include display(flex);
 		@include flex-direction(column);
 	}
 	
 	@include media($xlarge-screen){
-		 @include span-columns(8);
-		 @include shift(0);
+		 @include span-columns(8 of 12);
 		 @include display(flex);
 		 @include flex-direction(column);
  }
@@ -162,34 +151,29 @@ body{
 
 .one-third-box{
 	margin: $modular-scale-lg 0;
-	@include span-columns(10);
-	@include shift(1);
+	@include span-columns(10 of 10);
 	@include display(flex);
 	@include flex-direction(column);
 
 	@include media($medium-screen){
 		padding: $modular-scale-sm $modular-scale-xs;
-		@include span-columns(3);
-		@include shift(0);
+		@include span-columns(3 of 10);
 		@include display(flex);
 		@include flex-direction(column);
 	}
 	
 	@include media($xlarge-screen){
 		padding: $modular-scale-xlg $modular-scale-lg;
-		@include span-columns(4);
-		@include shift(0);
+		@include span-columns(4 of 12);
 		@include display(flex);
 		@include flex-direction(column);
  }
 }
 
 .gallery-card{
-	@include span-columns(10);
-	@include shift(1);
+	@include span-columns(10 of 10);
 	@include media($medium-screen){
-		@include span-columns(4);
-		@include shift(0);
+		@include span-columns(4 of 12);
 	}
 }
 
@@ -209,20 +193,10 @@ body{
 		}
 }
 
-.left-element-in-row{
-	@include media($medium-screen){
-		@include shift(1);
-	}
-	@include media($xlarge-screen){
-		@include shift(0);
-	}
-}
 
 .right-element-in-row {
 	@include omega;
 }
-
-
 
 a.minorlink{
 	@include align-self(stretch);
@@ -293,7 +267,7 @@ a.minorlink{
 	transition: color 0.1s linear;
 	&:hover,
 	&:focus {
-		background-color: saturate($pink, 10%);
+		background-color: saturate($pink, 5%);
 		color: #fff;
 	}
 	&:disabled {

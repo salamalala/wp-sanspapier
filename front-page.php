@@ -78,9 +78,9 @@
 
     </header>
 
-    <div id="content" class="site-content">
-
-     <main>
+    
+    <div class="main-outer-container">
+      <main role="main">
 
        <div class="full-width-box box wer">
          <p class="big-paragraph quote">
@@ -166,15 +166,6 @@
           </div>
             <!--End mc_embed_signup-->
       </div>
-
-
-
-    </div>
-
-  </main>
-
-
-
 
 
   <?php get_footer(); ?>

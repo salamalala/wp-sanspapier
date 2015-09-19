@@ -8,8 +8,8 @@
  */
 
 ?>
-
-</div><!-- wrapper for content outside of footer-->
+  </main><!-- site content-->
+</div><!-- outer container-->
 </div>
 
 <footer class="footer" role="contentinfo">
