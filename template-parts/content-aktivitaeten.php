@@ -16,7 +16,7 @@ get_header();
     while( $loop->have_posts() ) : $loop->the_post(); ?>
       <div class="half-width-box box">
         <h5>Fundraising</h5>
-        <h2><?php the_field('titel'); ?></h2>
+        <h2><?php the_title(); ?></h2>
         <h4 class="italic">12.05.2014 | Karin Jenni</h4>
         <p><?php the_field('kurzbeschreibung'); ?></p>
         <a class="minorlink" href="#">Weiterlesen</a>
@@ -26,4 +26,4 @@ get_header();
   
   <?php wp_reset_query(); ?>
 
-  <?php   get_footer();   ?>
+  <?php get_footer();   ?>

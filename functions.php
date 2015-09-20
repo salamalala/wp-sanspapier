@@ -198,14 +198,10 @@ function create_posttype() {
 		    'parent_item_colon'  => '',
 		    'menu_name'          => 'Aktivitäten'
 			),
-			'supports' => array('thumbnail', 'revisions','author'),
-			'rewrite' => array('slug' => 'Aktivität'),
+			'supports' => array('title', 'thumbnail', 'revisions','author'),
+			'rewrite' => array('slug' => 'aktivität'),
 			// You can associate this CPT with a taxonomy or custom taxonomy. 
 			'taxonomies' => array('category'),
-			/* A hierarchical CPT is like Pages and can have
-			* Parent and child items. A non-hierarchical CPT
-			* is like Posts.
-			*/	
 			'hierarchical'        => true,
 			'public'              => true,
 			'show_ui'             => true,
@@ -224,15 +220,15 @@ function create_posttype() {
 // Hooking up our function to theme setup
 add_action( 'init', 'create_posttype' );
 
-// Show posts of 'post', 'page' and 'movie' post types on home page
+// Show posts of 'post', 'page' and 'aktivität' post types on home page
 
-function add_my_post_types_to_query( $query ) {
-  if ( is_home() && $query->is_main_query() )
-    $query->set( 'post_type', array( 'post', 'page', 'aktivitaet' ) );
-  return $query;
-}
+// function add_my_post_types_to_query( $query ) {
+//   if ( is_home() && $query->is_main_query() )
+//     $query->set( 'post_type', array( 'post', 'page', 'aktivitaet' ) );
+//   return $query;
+// }
 
-add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
+// add_action( 'pre_get_posts', 'add_my_post_types_to_query' );
 
 
 

@@ -1497,27 +1497,6 @@ acf_add_local_field_group(array (
     'title' => 'Aktivität',
     'fields' => array (
       array (
-        'key' => 'field_55fd4652791bc',
-        'label' => 'Titel',
-        'name' => 'titel',
-        'type' => 'text',
-        'instructions' => '',
-        'required' => 1,
-        'conditional_logic' => 0,
-        'wrapper' => array (
-          'width' => '',
-          'class' => '',
-          'id' => '',
-        ),
-        'default_value' => '',
-        'placeholder' => '',
-        'prepend' => '',
-        'append' => '',
-        'maxlength' => 50,
-        'readonly' => 0,
-        'disabled' => 0,
-      ),
-      array (
         'key' => 'field_55fd4665791be',
         'label' => 'Kurzbeschreibung',
         'name' => 'kurzbeschreibung',

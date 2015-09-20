@@ -15,7 +15,7 @@
 				           
 				          if ( get_row_layout() == 'text_volle_breite' ):  ?>
 				          	             
-				             	<div class="full-width-box box border-left">
+				             	<div class="full-width-box box">
 				                <h1><?php the_sub_field('titel'); ?></h1>
 				           			<p class="big-paragraph"><?php the_sub_field('text'); ?></p>
 												
