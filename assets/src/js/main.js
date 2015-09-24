@@ -131,6 +131,21 @@ var mobileMenu = function(){
       styles: customStyles
     });
 
+
+    var marker = '/wordpress/wp-content/themes/wp-sanspapier/assets/dist/images/pink_marker.svg';
+    var markerBern = new google.maps.Marker({
+        position: {lat: 46.940918, lng: 7.431619},
+        map: mapBern,
+        icon: marker
+    });
+
+    var markerBiel = new google.maps.Marker({
+        position: {lat: 47.141163, lng: 7.251038},
+        map: mapBiel,
+        icon: marker
+    });
+
+
     
   };
 
