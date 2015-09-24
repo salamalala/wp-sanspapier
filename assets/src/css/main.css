@@ -1091,7 +1091,7 @@ header {
               color: #cc3686; }
               header ul li.nav-link:last-child > a:hover:before {
                 background: #bf4385; } }
-    header ul li.nav-link.current_page_item a {
+    header ul li.nav-link.current_page_item > a, header ul li.nav-link.current_menu_item > a, header ul li.nav-link.current_page_parent > a {
       color: rgba(255, 255, 255, 0.8); }
     header ul li.nav-link a {
       color: rgba(255, 255, 255, 0.55);
@@ -1619,6 +1619,12 @@ html, body {
   .bulletin-download a {
     white-space: pre-wrap;
     word-wrap: break-word; }
+
+#map-bern {
+  height: 500px; }
+
+#map-biel {
+  height: 500px; }
 
 .stylesheet {
   max-width: 68em;

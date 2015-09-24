@@ -8,18 +8,34 @@ get_header();
 
 <?php
   if( have_rows('beratung') ):
+    
+    $row = 1;
+    
     while ( have_rows('beratung') ) : the_row();  ?>
 
-    <div class="two-third-box box">
-    
-      <h3>Beratungen <?php the_sub_field('beratungsort'); ?></h3>
-      <p><?php the_sub_field('beratungszeiten'); ?></p>
-    
-    </div>
+      <?php if($row == 1): ?>
 
-    <div class="one-third-box box">
-      Hello
-    </div>
+        <div class="two-third-box box">        
+          <h3>Beratungen <?php the_sub_field('beratungsort'); ?></h3>
+          <p><?php the_sub_field('beratungszeiten'); ?></p>
+        </div>
+
+        <div id="map-bern" class="one-third-box right-element-in-row">
+        </div>
+
+      <?php elseif($row == 2): ?>
+
+          <div class="two-third-box box">
+            <h3>Beratungen <?php the_sub_field('beratungsort'); ?></h3>
+            <p><?php the_sub_field('beratungszeiten'); ?></p>
+          </div>
+
+          <div id="map-biel" class="one-third-box right-element-in-row">
+          </div>
+      
+      <?php endif; ?>
+        
+    <?php ++ $row;  ?>
 
     <?php endwhile; ?>
   <?php endif; ?> 

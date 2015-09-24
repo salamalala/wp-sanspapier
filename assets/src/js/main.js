@@ -99,10 +99,38 @@ var mobileMenu = function(){
 
 
 
+  function initMap() {
+
+    var customStyles = [
+      {
+       "elementType": "geometry.fill",
+      },
+      {
+        "stylers": [
+          { "visibility": "on" },
+          { "gamma": 0.93 },
+          { "lightness": 11 },
+          { "saturation": 1 }
+        ]
+      }
+    ];
+
+    var bern = new google.maps.LatLng(46.940918, 7.431619);
+    var biel = new google.maps.LatLng(47.141163, 7.251038);
 
 
+    var mapBern = new google.maps.Map(document.getElementById('map-bern'), {
+      center: bern,
+      zoom: 16,
+      styles: customStyles
+    });
 
+    var mapBiel = new google.maps.Map(document.getElementById('map-biel'), {
+      center: biel,
+      zoom: 16,
+      styles: customStyles
+    });
 
-
-
+    
+  };
 

@@ -35,5 +35,9 @@
 
 <script  type="text/javascript" src="<?php echo get_template_directory_uri(); ?>/assets/dist/js/main.min.js"></script>
 
+<script async defer
+      src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDe7jBX-HMogImeuWCTG102lgLOI0YMqQc&callback=initMap">
+</script>
+
 </body>
 </html>

@@ -205,10 +205,10 @@
       }
     }
 
-    &.current_page_item{
-      a {
+    &.current_page_item>a, 
+    &.current_menu_item>a,
+    &.current_page_parent>a{
         color: transparentize($white, 0.2);
-     }
     }
     a {
       color: $navigation-color;

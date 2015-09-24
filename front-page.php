@@ -98,7 +98,7 @@
                 <h2><?php the_title(); ?></h2>
                 <h4 class="italic">12.05.2014 | Karin Jenni</h4>
                 <p><?php the_field('kurzbeschreibung'); ?></p>
-                <a class="minorlink" href="#">Weiterlesen</a>
+                <a class="minorlink" href="<?php the_permalink()?>">Weiterlesen</a>
               </div>
             <?php endwhile; ?>
           <?php endif; ?>
