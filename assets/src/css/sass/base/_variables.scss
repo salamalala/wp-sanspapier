@@ -9,7 +9,9 @@ $modular-scale-base: 1em;
 $base-font-size-sm: 0.97em;
 $base-font-size-md: 1em;
 $base-font-size-lg: 1.02em;
+
 $small-font-size: modular-scale(-1);
+$normal-font-size: modular-scale(0);
 $medium-font-size: modular-scale(1);
 $big-font-size: modular-scale(2);
 $very-big-font-size: modular-scale(3);

@@ -83,7 +83,8 @@ var mobileMenu = function(){
 
   
   //detect second half box
-  var secondBox = function(){
+  var secondBox = function() {
+
     $(".half-width-box").filter(function(index){
       return index % 2 === 1;
     }).addClass("right-element-in-row");
@@ -94,9 +95,7 @@ var mobileMenu = function(){
     $('p:empty').remove();
   };
 
-
-
-
+  
 
 
   function initMap() {
@@ -144,8 +143,6 @@ var mobileMenu = function(){
         map: mapBiel,
         icon: marker
     });
-
-
     
   };
 

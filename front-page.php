@@ -106,18 +106,19 @@
 
           <div class="beratungsbox">
             <ul class="tabs">
-              <li><a href="#beratung-bern"><h3>Bern</h3></a></li>
-              <li><a href="#beratung-biel"><h3>Biel</h3></a></li>
+              <li><a href="#Bern"><h3>Bern</h3></a></li>
+              <li><a href="#Biel"><h3>Biel</h3></a></li>
             </ul>
 
             <?php
               if( have_rows('beratung') ):
                 while ( have_rows('beratung') ) : the_row();  ?>
 
-                <div class="beratung box" id="beratung-bern">          
+                <div class="beratung box" id="<?php the_sub_field('beratungsort'); ?>">          
                   <h3>Beratungszeiten <span class="hide-when-small"><?php the_sub_field('beratungsort'); ?></span></h3>
                   <p><?php the_sub_field('beratungszeiten'); ?></p>
                   <a class="minorlink" href="#">Mehr Informationen</a>            
+
                 </div>
 
                 <?php endwhile; ?>

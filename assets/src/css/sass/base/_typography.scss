@@ -45,7 +45,7 @@ h1{
 h2{
   font-weight: 500;
   font-size: $medium-font-size;
-  @include media ($medium-screen) {
+  @include media ($large-screen) {
     font-size: $big-font-size;  
   }
   padding-bottom: 0.15em;
@@ -73,7 +73,7 @@ h4.italic{
 
 h5{
   font-weight: 600;
-  font-size: 0.8em;
+  font-size: $small-font-size;
   color: $pink;
   text-transform: uppercase;
 

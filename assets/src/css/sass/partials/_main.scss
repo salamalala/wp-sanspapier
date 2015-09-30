@@ -1,18 +1,17 @@
-.main-outer-container{
-  @include outer-container;
-}
-
-main{
-  @include span-columns(10);
-  @include shift(1);
-  @include media($xlarge-screen){
-    @include span-columns(12);
-    @include shift(0);
+.main-outer-container {
+  @include outer-container(90%);
+  @include media($xlarge-screen) {
+    @include outer-container();
   }
 }
 
+main{
+  @include span-columns(12);
+  @include shift(0);
+}
+
 .wer{
-  margin-top: -5em;
+  margin-top: -3.5em;
   @include media($medium-screen){
     margin-top: -7em; 
   }
@@ -62,7 +61,10 @@ main{
      
       a{
         display: block;
-        padding: $modular-scale-lg;
+        padding: $modular-scale-md;
+        @include media($large-screen) {
+          padding: $modular-scale-lg;
+        }
         background-color: white;
         border-bottom: solid 2px $medium-gray;
         h3{
