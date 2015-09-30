@@ -1497,6 +1497,22 @@ acf_add_local_field_group(array (
     'title' => 'Aktivität',
     'fields' => array (
       array (
+        'key' => 'field_560b9c9a64809',
+        'label' => 'Aktivität erscheint auf der Homepage:',
+        'name' => 'auf_der_homepage',
+        'type' => 'true_false',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array (
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'message' => '',
+        'default_value' => 0,
+      ),
+      array (
         'key' => 'field_55fd4665791be',
         'label' => 'Kurzbeschreibung',
         'name' => 'kurzbeschreibung',

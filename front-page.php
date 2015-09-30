@@ -89,17 +89,19 @@
         </div>
       
         <?php 
-          $loop = new WP_Query( array( 'post_type' => 'aktivitaet', 'cat' => 3, ) );
+          $loop = new WP_Query( array( 'post_type' => 'aktivitaet') );
 
-          if( $loop->have_posts() ):
-            while( $loop->have_posts() ) : $loop->the_post(); ?>
-              <div class="half-width-box box">
-                <h5>Fundraising</h5>
-                <h2><?php the_title(); ?></h2>
-                <h4 class="italic">12.05.2014 | Karin Jenni</h4>
-                <p><?php the_field('kurzbeschreibung'); ?></p>
-                <a class="minorlink" href="<?php the_permalink()?>">Weiterlesen</a>
-              </div>
+          if( $loop->have_posts()):
+            while( $loop->have_posts() ) : $loop->the_post(); 
+              if (get_field('auf_der_homepage')): ?>
+                <div class="half-width-box box">
+                  <h5>Fundraising</h5>
+                  <h2><?php the_title(); ?></h2>
+                  <h4 class="italic">12.05.2014 | Karin Jenni</h4>
+                  <p><?php the_field('kurzbeschreibung'); ?></p>
+                  <a class="minorlink" href="<?php the_permalink()?>">Weiterlesen</a>
+                </div>
+              <?php endif; ?>
             <?php endwhile; ?>
           <?php endif; ?>
           <?php wp_reset_query(); ?>
