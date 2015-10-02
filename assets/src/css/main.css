@@ -285,7 +285,12 @@ p {
               transform: translate(0px); }
 
 a {
-  text-decoration: none; }
+  text-decoration: none;
+  color: #bf4385;
+  -webkit-transition: color 0.5s;
+          transition: color 0.5s; }
+  a:hover {
+    color: #d23086; }
 
 .pink-box p a,
 .dark-box p a {

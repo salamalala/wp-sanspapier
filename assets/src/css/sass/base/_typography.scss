@@ -119,8 +119,13 @@ p {
   }
 }
 
-a{
+a {
   text-decoration: none;
+  color: $pink;
+  transition: color 0.5s;
+  &:hover {
+    color: saturate($pink, 15%);
+  }
 }
 
 .pink-box p a,
