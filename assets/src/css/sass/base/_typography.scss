@@ -2,6 +2,12 @@
   @include font-feature-settings("kern", "liga", "pnum");
   -webkit-font-smoothing: antialiased;
   color: $base-font-color;
+    
+    .pink-box, 
+    .dark-box {
+      color: $white
+    }
+
   font-family: $base-font-family;
   font-size: $base-font-size-sm;
   @include media($medium-screen){
@@ -68,6 +74,12 @@ h3{
 h4.italic{
   font-size: $base-font-size-lg;
   color: $light-medium-gray;
+
+  .pink-box &, 
+  .dark-box &{
+    color: $white
+  }
+
   font-size: 0.8em;
 }
 
@@ -75,6 +87,12 @@ h5{
   font-weight: 600;
   font-size: $small-font-size;
   color: $pink;
+
+  .pink-box &, 
+  .dark-box &{
+    color: $white
+  }
+
   text-transform: uppercase;
 
 }
@@ -135,10 +153,6 @@ a {
     background: $white;
   }
 }
-
-
-
-
 
 hr {
   border-bottom: $base-border;

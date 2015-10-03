@@ -95,9 +95,9 @@
             while( $loop->have_posts() ) : $loop->the_post(); 
               if (get_field('auf_der_homepage')): ?>
                 <div class="half-width-box box">
-                  <h5><?php the_category(); ?></h5>
+                  <h5><?php display_category_terms(); ?></h5>
                   <h2><?php the_title(); ?></h2>
-                  <h4 class="italic">12.05.2014 | Karin Jenni</h4>
+                  <h4 class="italic"><?php the_field('datum'); ?></h4>
                   <p><?php the_field('kurzbeschreibung'); ?></p>
                   <a class="minorlink" href="<?php the_permalink()?>">Weiterlesen</a>
                 </div>

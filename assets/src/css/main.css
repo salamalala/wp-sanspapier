@@ -181,6 +181,9 @@ body {
   font-family: "adelle", serif;
   font-size: 0.97em;
   line-height: 1.5; }
+  body .pink-box,
+  body .dark-box {
+    color: #fff; }
   @media screen and (min-width: 40em) {
     body {
       font-size: 1em; } }
@@ -237,12 +240,16 @@ h4.italic {
   font-size: 1.02em;
   color: #8093A8;
   font-size: 0.8em; }
+  .pink-box h4.italic, .dark-box h4.italic {
+    color: #fff; }
 
 h5 {
   font-weight: 600;
   font-size: 0.75019em;
   color: #bf4385;
   text-transform: uppercase; }
+  .pink-box h5, .dark-box h5 {
+    color: #fff; }
 
 p {
   font-size: 0.97em;
@@ -332,8 +339,7 @@ body {
       margin: 0; }
 
 .dark-box {
-  background-color: #4B5663;
-  color: #fff; }
+  background-color: #4B5663; }
   .dark-box h2 {
     border-bottom: 0.11em solid #fff; }
   .dark-box a {
@@ -366,8 +372,7 @@ body {
               transform: translate(0px); }
 
 .pink-box {
-  background-color: #bf4385;
-  color: #fff; }
+  background-color: #bf4385; }
   .pink-box h2 {
     border-bottom: 0.11em solid #fff; }
 

@@ -17,7 +17,7 @@ get_header();
       <div class="half-width-box box">
         <h5>Fundraising</h5>
         <h2><?php the_title(); ?></h2>
-        <h4 class="italic">12.05.2014 | Karin Jenni</h4>
+        <h4></h4>
         <p><?php the_field('kurzbeschreibung'); ?></p>
         <a class="minorlink" href="<?php the_permalink()?>">Weiterlesen</a>
       </div>

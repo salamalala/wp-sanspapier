@@ -200,7 +200,6 @@ function create_posttype() {
 			'supports' => array('title', 'thumbnail', 'revisions','author'),
 			'rewrite' => array('slug' => 'aktivität'),
 			// You can associate this CPT with a taxonomy or custom taxonomy. 
-			'taxonomies' => array('category'),
 			'hierarchical'        => true,
 			'public'              => true,
 			'show_ui'             => true,
@@ -220,6 +219,28 @@ function create_posttype() {
 add_action( 'init', 'create_posttype' );
 
 
+add_action( 'init', 'create_custom_category_tax' );
+
+function create_custom_category_tax() {
+	register_taxonomy(
+		'custom_category',
+		'aktivitaet',
+		array(
+			'label' => __( 'Aktivitäts-Kategorie' ),
+			'rewrite' => array( 'slug' => 'art' ),
+			'hierarchical' => true,
+		)
+	);
+}
 
 
+function display_category_terms() {
+	global $post;
 
+	$terms = get_the_terms($post->ID, 'custom_category');                           
+	if ( $terms ) {
+    foreach ( $terms as $term ) {   
+        echo $term->name;            
+    }
+	}
+}

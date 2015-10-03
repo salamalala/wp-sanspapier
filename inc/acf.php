@@ -1513,6 +1513,23 @@ acf_add_local_field_group(array (
         'default_value' => 0,
       ),
       array (
+        'key' => 'field_560fd205f6870',
+        'label' => 'Datum der Aktivität',
+        'name' => 'datum',
+        'type' => 'date_picker',
+        'instructions' => '',
+        'required' => 0,
+        'conditional_logic' => 0,
+        'wrapper' => array (
+          'width' => '',
+          'class' => '',
+          'id' => '',
+        ),
+        'display_format' => 'd/m/Y',
+        'return_format' => 'd/m/Y',
+        'first_day' => 1,
+      ),
+      array (
         'key' => 'field_55fd4665791be',
         'label' => 'Kurzbeschreibung',
         'name' => 'kurzbeschreibung',
