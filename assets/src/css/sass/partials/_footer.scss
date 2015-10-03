@@ -31,9 +31,8 @@ html, body {
   background-color: $dark-gray;
   color: $white;
 
-
   .footer-content {
-    @include outer-container;
+    @include outer-container(90%);
     position: relative;
     height: 8em;
 
@@ -43,11 +42,16 @@ html, body {
   }
 
   h4 {
-    display: inline-block;
-    margin: 0;
+    @include span-columns(12);
+    margin: 1em 0;
+    text-align: center;
+    @include media($medium-screen) {
+      @include span-columns(10);
+      @include vertical-align;
+      text-align: left;
+      margin: 0;
+    }
     font-weight: 400;
-    @include vertical-align;
-
     a {
       color: $white;
     }
@@ -55,9 +59,17 @@ html, body {
 
   ul {
     list-style-type: none;
-    display: inline-block;
-    @include vertical-align;
-    right: 0;
+    @include span-columns(12);
+    text-align: center;
+    padding-left: 0;
+    @include media($medium-screen) {
+      @include span-columns(2);
+      right: 0;
+      text-align: right;
+      @include vertical-align;
+    }
+    
+    
     height: 30px;
 
     li {

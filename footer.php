@@ -15,6 +15,8 @@
 
     <footer class="footer" role="contentinfo">
       <div class="footer-content">
+
+        <div class="vertical-align">
         
         <h4>Verein Berner Beratungsstelle für Sans-Papiers | Eigerplatz 5 | 3007 Bern | <a href="tel://+41 31 385 18 27">+41 31 385 18 27</a></h4>
 
@@ -38,7 +40,7 @@
           </li> 
 
         </ul>
-
+        </div>
       </div>
 
     </footer>

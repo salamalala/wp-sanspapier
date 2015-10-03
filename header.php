@@ -37,7 +37,7 @@
 				</div>
 
 				<div class="block-nav menu-right ">
-           <a href="#" class="menu-button " id="js-mobile-menu">
+           <a href="#" class="menu-button " id="js-mobile-menu" >
            <span class="menu-size">Menu</span>
 
            <div class="hamburger-icon">
