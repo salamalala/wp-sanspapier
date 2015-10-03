@@ -16,6 +16,7 @@ select {
 label {
   font-weight: 500;
   margin-bottom: $small-spacing / 2;
+  text-transform: uppercase;  
 
   &.required::after {
     content: "*";
@@ -42,7 +43,6 @@ textarea {
   width: 100%;
   color: $medium-gray;
   font-weight: 500;
-  background: $light-gray;
 
   &:hover {
     border-color: darken($base-border-color, 10%);

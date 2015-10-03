@@ -1,4 +1,4 @@
-  header{
+header{
   $navigation-padding: 1em;
   $navigation-background: $dark-gray;
   $navigation-color: transparentize($white, 0.45);
@@ -180,7 +180,7 @@
 
   // The nav items
 
-  ul li.nav-link {
+  .nav-link {
     background: $navigation-background;
     display: block;
     overflow: hidden;
@@ -196,6 +196,10 @@
       //Unterstützungslink
       &:last-child{
         padding-right: 0;
+        &.current_page_item>a {
+          color: desaturate($pink, 0.2);
+          font-weight: 600;
+        }
         &>a{
           color: saturate(lighten($pink, 13), 10);
           &:hover{
@@ -211,7 +215,8 @@
     &.current_page_item>a, 
     &.current_menu_item>a,
     &.current_page_parent>a{
-        color: transparentize($white, 0.2);
+      color: transparentize($white, 0.2);
+      font-weight: 600;
     }
     a {
       color: $navigation-color;
@@ -247,11 +252,6 @@
         transition: width .2s ease-out;
       }
     }
-  }
-
-  .active-nav-item a {
-    border-bottom: 1px solid $navigation-active-link-color;
-    padding-bottom: 3px;
   }
 
   // Sub menus

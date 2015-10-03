@@ -27,44 +27,79 @@ html, body {
 
 .footer {
   margin-top: $modular-scale-xlg;
+  width: 100%;
   background-color: $dark-gray;
   color: $white;
-  @include display(flex);
-  width: 100%;
+
 
   .footer-content {
     @include outer-container;
     position: relative;
-    margin-bottom: 1em;      
-    @include display(flex);
-    @include align-items(center);
+    height: 8em;
 
     @include media($large-screen) {
-      margin-bottom: 0;
+      height: 4em;
     }
+  }
 
-    img {
-      height: 2.2em;
-      margin-right: 1.5em;
-    } 
+  h4 {
+    display: inline-block;
+    margin: 0;
+    font-weight: 400;
+    @include vertical-align;
 
-    h4 {
-      display: inline-block;
-      margin: 0;
-      font-weight: 400;
+    a {
+      color: $white;
     }
   }
 
   ul {
     list-style-type: none;
-    transition: 0.5s fill linear;
-    svg {
-      height: 50%;
-      width: 50%;
-        &:hover path {
-          fill: #758ab6;
-        }
+    display: inline-block;
+    @include vertical-align;
+    right: 0;
+    height: 30px;
+
+    li {
+      display: inline-block;
+      height: 100%;
+      &:last-child {
+        margin-left: 20px;  
       }
+    }
+
+    svg {
+      height: 30px;
+      width: 30px;      
+      border-radius: 100%;
+      
+      &.fb-icon {
+        
+        path {
+          transition: fill 0.1s ease-out;  
+          
+          &:hover {
+            fill: #3b5998;
+          }
+            
+        } 
+        
+      } 
+
+      &.twitter-icon {
+        
+        path {
+          transition: fill 0.1s ease-out;  
+          
+          &:hover {
+            fill: #0084b4;
+          }
+
+        } 
+        
+      } 
+       
+    }
 
   }
 
