@@ -10,12 +10,21 @@ label,
 select {
   display: block;
   font-family: $heading-font-family;
-  font-size: $small-font-size;
+  font-size: $normal-font-size;
+  margin-bottom: 1em;
+
+}
+
+::-webkit-input-placeholder {
+  color: $light-medium-gray;
+}
+
+:-ms-input-placeholder {
+  color: $light-medium-gray; 
 }
 
 label {
   font-weight: 500;
-  margin-bottom: $small-spacing / 2;
   text-transform: uppercase;  
 
   &.required::after {
@@ -30,19 +39,19 @@ label {
 #{$all-text-inputs},
 select[multiple=multiple],
 textarea {
-  background-color: $base-background-color;
+  background-color: $transparent;
   border: $base-border;
   border-radius: $base-border-radius;
   box-shadow: $form-box-shadow;
   box-sizing: border-box;
   font-family: $base-font-family;
   font-size: $base-font-size-md;
-  margin-bottom: $base-spacing / 2;
-  padding: $base-spacing / 3;
+  margin-bottom: $modular-scale-md;
+  padding: $modular-scale-xs;
   transition: border-color;
   width: 100%;
-  color: $medium-gray;
-  font-weight: 500;
+  color: $pink;
+  font-weight: 600;
 
   &:hover {
     border-color: darken($base-border-color, 10%);
@@ -50,6 +59,7 @@ textarea {
 
   &:focus {
     border-color: $pink;
+    background-color: $white;
     box-shadow: $form-box-shadow-focus;
     outline: none;
   }
@@ -81,19 +91,37 @@ select {
 }
 
 #{$all-buttons} {
- font-family: $heading-font-family;
- border-radius: $base-border-radius;
- background: $pink;
- color: $white;
- border: $white 3px solid;
- font-weight: 400;
- text-transform: uppercase;
- font-size: $small-font-size;
- font-weight: 500;  
- letter-spacing: $letter-spacing-lg;
- transition: background 0.2s ease-out;
- &:hover{
-   background: $white;
-   color: $pink;
- }
+  @include plain-link($white, $pink);
+  
+  .pink-box & {
+    @include plain-link($pink, $white);  
+  }
+
+}
+
+//alert messages;
+.wpcf7 {
+
+  label {
+    margin-bottom: -1em;
+  }
+  
+  span.wpcf7-not-valid-tip {
+    color: $pink;
+    background: $white;
+    font-weight: 600;
+  }
+
+  .wpcf7-validation-errors {
+    border-color: $pink;
+  }
+
+  .wpcf7-mail-sent-ok {
+    border: none;
+    width: 100%;
+    font-family: $heading-font-family;
+    text-align: center;
+    font-size: $base-font-size-lg;
+  }
+
 }

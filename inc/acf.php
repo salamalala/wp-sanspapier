@@ -32,7 +32,7 @@ acf_add_local_field_group(array (
           'key' => '55b00198640c8',
           'name' => 'text_volle_breite',
           'label' => 'Text volle breite',
-          'display' => 'block',
+          'display' => 'row',
           'sub_fields' => array (
             array (
               'key' => 'field_55b001a67ded5',
@@ -314,7 +314,7 @@ acf_add_local_field_group(array (
           'key' => '55dad0ae1dc85',
           'name' => 'text_halbe_breite',
           'label' => 'Text halbe breite',
-          'display' => 'block',
+          'display' => 'row',
           'sub_fields' => array (
             array (
               'key' => 'field_55dad0d1d8fa2',

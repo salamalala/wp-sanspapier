@@ -1,6 +1,6 @@
 @import "../../../../bower_components/bourbon/app/assets/stylesheets/bourbon";
 $visual-grid: false;
-$visual-grid-color: blue;
+$visual-grid-color: yellow;
 $visual-grid-index: front;
 $visual-grid-opacity: 0.04;
 
@@ -16,7 +16,6 @@ $visual-grid-opacity: 0.04;
 @import "partials/gallery";
 @import "partials/bulletin";
 @import "partials/beratung";
-@import "partials/typo_stylesheet";
 
 
 

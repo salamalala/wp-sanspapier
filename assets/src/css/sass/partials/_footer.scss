@@ -33,6 +33,9 @@ html, body {
 
   .footer-content {
     @include outer-container(90%);
+    @include media($xlarge-screen) {
+      @include outer-container();
+    }
     position: relative;
     height: 8em;
 

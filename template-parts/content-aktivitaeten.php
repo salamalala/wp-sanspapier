@@ -19,7 +19,7 @@ get_header();
         <h2><?php the_title(); ?></h2>
         <h4></h4>
         <p><?php the_field('kurzbeschreibung'); ?></p>
-        <a class="minorlink" href="<?php the_permalink()?>">Weiterlesen</a>
+        <a class="minorlink-dark" href="<?php the_permalink()?>">Weiterlesen</a>
       </div>
     <?php endwhile; ?>
   <?php endif; ?>

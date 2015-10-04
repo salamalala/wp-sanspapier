@@ -1,7 +1,13 @@
 #map-bern{
-  height: 500px;
+  height: 350px;  
+  @include media($medium-screen) {
+    height: 500px;  
+  }
 }
 
 #map-biel{
-  height: 500px;
+  height: 350px;  
+  @include media($medium-screen) {
+    height: 500px;  
+  }
 }

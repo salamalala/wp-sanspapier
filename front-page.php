@@ -21,7 +21,9 @@
   <?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?>>
+<body <?php body_class(); ?> >
+
+  <div class="wrapper-for-content-outside-of-footer">
 
     <header role="banner">
       <div class="navigation-wrapper">
@@ -29,14 +31,11 @@
         <div class="block-nav logo-left">
 
           <a href="#" class="logo">
-
            <img src= "<?php  
             echo get_template_directory_uri(); ?>/assets/dist/images/logo_def.svg" 
             alt="Logo Sans Papier Beratungsstelle"
             > 
-
           </a>
-
         </div>
         
         <div class="block-nav menu-right ">
@@ -99,7 +98,7 @@
                   <h2><?php the_title(); ?></h2>
                   <h4 class="italic"><?php the_field('datum'); ?></h4>
                   <p><?php the_field('kurzbeschreibung'); ?></p>
-                  <a class="minorlink" href="<?php the_permalink()?>">Weiterlesen</a>
+                  <a class="minorlink-dark" href="<?php the_permalink()?>">Weiterlesen</a>
                 </div>
               <?php endif; ?>
             <?php endwhile; ?>
@@ -119,7 +118,7 @@
                 <div class="beratung box" id="<?php the_sub_field('beratungsort'); ?>">          
                   <h3>Beratungszeiten <span class="hide-when-small"><?php the_sub_field('beratungsort'); ?></span></h3>
                   <p><?php the_sub_field('beratungszeiten'); ?></p>
-                  <a class="minorlink" href="#">Mehr Informationen</a>            
+                  <a class="minorlink-dark" href="#">Mehr Informationen</a>            
 
                 </div>
 
@@ -130,20 +129,20 @@
           <!-- End of Beratungsbox -->
     
           <div class="sidebar-links">
-            <div class="mainlink">
+            <div class="mainlink pink-box">
               <a href="#">Mitglied werden</a>
             </div>
 
-            <div class="mainlink">
+            <div class="mainlink pink-box">
               <a href="#">Spenden</a>   
             </div>
 
-            <div class="mainlink">
+            <div class="mainlink pink-box">
               <a href="#">Bulletin</a>
             </div>
 
-            <div class="mainlink newsletter">
-              <p>Newsletter bestellen</p>
+            <div class="mainlink pink-box newsletter">
+              <p>Newsletter</p>
 
               <!-- Begin MailChimp Signup Form -->
                 <div id="mc_embed_signup">
@@ -151,7 +150,7 @@
                     <div id="mc_embed_signup_scroll">
                   
                       <div class="mc-field-group">
-                        <label class="italic" for="mce-EMAIL">E-Mail: </label>
+                        <label for="mce-EMAIL">E-Mail: </label>
                         <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Emailadresse">
                       </div>
                       <div id="mce-responses" class="clear">

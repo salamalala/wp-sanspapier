@@ -26,41 +26,45 @@ header{
   }
 
   .navigation-wrapper {
-    @include outer-container;
+    @include outer-container(90%);
+    @include media($xlarge-screen) {
+      @include outer-container();
+    }
     position: relative;
     z-index: 9999;
-    height: 120px;
+    min-height: 120px;
   }
 
   // mobile view
   
-  .block-nav{
+  .block-nav {
     height: 120px;
     display: inline-block;
   }
   
-  .logo-left{
+  .logo-left {
     @include span-columns(2);
-    @include shift(1);
+    position: absolute;
     @include media ($xlarge-screen) {
       @include span-columns(1);
-      @include shift(0);
     }
   }
 
   .logo {
     @include vertical-align;
     display:block;
+
     img {
       max-height: 60px;
-    }       
-    h4{
+    }
+
+    h4 {
       position: relative;
       color: $green; 
       font-size: 0.65em;
       line-height: 1.4;
       margin-left: 15px;  
-     @include media($medium-screen){
+      @include media($medium-screen){
         font-size: 0.75em;  
       }
     }
@@ -68,11 +72,11 @@ header{
 
   .menu-right {
     @include span-columns(4);  
-    @include shift(4); 
+    @include shift(8); 
     position: relative; 
     @include media ($medium-screen) {
-      @include span-columns(2);
-      @include shift(6);
+      @include span-columns(3);
+      @include shift(9);
     }
     @include media ($xlarge-screen) {
       display: none;
@@ -163,8 +167,8 @@ header{
     display: none;
     margin: 0 auto;
     overflow: visible;
-    z-index: 999999;
-    line-height: 60px;
+    z-index: 9999;
+    line-height: 50px;
     padding-left: 0;
     &.show {
       display: block;
@@ -218,13 +222,14 @@ header{
       color: transparentize($white, 0.2);
       font-weight: 600;
     }
+
     a {
       color: $navigation-color;
       position: relative;
       font-weight: 500;
       text-decoration: none;
-      padding: 7px 0;
       @include media ($xlarge-screen) {
+        padding: 7px 0;
         margin-right: 1em;
         position: relative;
         display: inline-block;
@@ -235,21 +240,23 @@ header{
       &:hover{
         color: $navigation-color-hover;
       } 
-      &:before{
-        content: '';
-        display: block;
-        position: absolute;
-        left: 0;
-        bottom: 0px;
-        height: 1px;
-        width: 0;
-        background: transparent;
-        transition: width 0s ease, background-color .5s ease;
-      }
-      &:hover:before {
-        width: 100%;
-        background: $navigation-color-hover;
-        transition: width .2s ease-out;
+      @include media($xlarge-screen) {
+        &:before{
+          content: '';
+          display: block;
+          position: absolute;
+          left: 0;
+          bottom: 0px;
+          height: 1px;
+          width: 0;
+          background: transparent;
+          transition: width 0s ease, background-color .5s ease;
+        }
+        &:hover:before {
+          width: 100%;
+          background: $navigation-color-hover;
+          transition: width .2s ease-out;
+        }
       }
     }
   }
@@ -261,16 +268,21 @@ header{
 
     @include media ($xlarge-screen) {
       padding-right: 10px;
+    } 
+
+    > ul > li:first-child a {
+      @include media ($xlarge-screen) {
+        padding-right: 10px;
+      } 
     }
-      > ul > li:first-child a  {
-        padding-top: 1em;
-      }
-      a {
+
+    a {
+      @include media ($xlarge-screen) {
         margin-right: $navigation-submenu-padding;
-        &:before{
-          content: none;
-        }
-    
+      }
+      &:before{
+        content: none;
+      }
     }
 
     > a {
@@ -288,15 +300,9 @@ header{
     overflow: visible;
     padding-right: 0;
 
-
-    a {
-      padding-right: 0.8em;
-    }
-
     > a {
       padding-right: 1.6em;
       position: relative;
-
       @include media($xlarge-screen) {
         margin-right: $navigation-submenu-padding;
       }
@@ -324,12 +330,12 @@ header{
       top: 1.5em;
     }
 
-    .submenu {
-      @include media($xlarge-screen) {
-        left: $navigation-submenu-width - 0.2em;
-        top: 0;
-      }
-    }
+    // .submenu {
+    //   @include media($xlarge-screen) {
+    //     left: $navigation-submenu-width - 0.2em;
+    //     top: 0;
+    //   }
+    // }
 
     li {
       display: block;
@@ -337,15 +343,10 @@ header{
       line-height: 50px;
 
       @include media($xlarge-screen) {
-
         &:first-child > a {
-          border-top-left-radius: $base-border-radius;
-          border-top-right-radius: $base-border-radius;
+          margin-top: 0.7em;
         }
-
         &:last-child > a {
-          border-bottom-left-radius: $base-border-radius;
-          border-bottom-right-radius: $base-border-radius;
           margin-bottom: 0.7em;
         }
       }
@@ -355,8 +356,6 @@ header{
         display: inline-block;
         text-align: center;
         width: 100%;
-        
-
         @include media($xlarge-screen) {
           background-color: $navigation-background;
           margin-left: $navigation-submenu-padding;
@@ -367,50 +366,52 @@ header{
     }
   }
 
-//frau
-.name-wrapper{
-  @include outer-container; 
-  $navigation-background: $dark-gray;
-  padding-bottom: modular-scale(3);
-  @include media($medium-screen) {
-    padding: modular-scale(3) 0 modular-scale(5) 0;
-    position: relative;
-    &:before{
-      content: '';
-      position: absolute;
-      @include background(url("../images/Frau2.jpg") no-repeat right bottom);
-      bottom: 2.75em;
-      right: 0;
-      filter: blur(1px);
-      width: 100%;
-      height: 100%;
-      z-index: 0;
+  //frau
+  .name-wrapper{
+    @include outer-container; 
+    $navigation-background: $dark-gray;
+    padding-bottom: modular-scale(3);
+    @include media($medium-screen) {
+      padding: modular-scale(3) 0 modular-scale(5) 0;
+      position: relative;
+      
+      &:before{
+        content: '';
+        position: absolute;
+        @include background(url("../images/Frau2.jpg") no-repeat right bottom);
+        bottom: 2.75em;
+        right: 0;
+        filter: blur(1px);
+        width: 100%;
+        height: 100%;
+        z-index: 0;
+      }
+      
     }
-    
-  }
-  @include media($xlarge-screen){
-    padding: modular-scale(5) 0 modular-scale(7) 0;
-  }
-  h1{
-    font-size: modular-scale(2);
-    @include span-columns(12);
-    @include word-wrap;
-    color: $green;
-    text-align: center;
-    display: inline-block;
-    margin: 0;
-    line-height: 1.5;
-    @include animation (bluredText 3s linear forwards);
-    @include media($medium-screen){
-      font-size: modular-scale(3);
-    };
-    @include media($large-screen){
-      font-size: modular-scale(4);
+    @include media($xlarge-screen) {
+      padding: modular-scale(5) 0 modular-scale(7) 0;
     }
+
+    h1 {
+      font-size: modular-scale(2);
+      @include span-columns(12);
+      @include word-wrap;
+      color: $green;
+      text-align: center;
+      display: inline-block;
+      margin: 0;
+      line-height: 1.5;
+      @include animation (bluredText 3s linear forwards);
+      @include media($medium-screen){
+        font-size: modular-scale(3);
+      };
+      @include media($large-screen){
+        font-size: modular-scale(4);
+      }
+    }
+
   }
 
-}
-
-}
+} // header
 
 

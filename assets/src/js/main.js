@@ -88,6 +88,7 @@ var mobileMenu = function(){
     $(".half-width-box").filter(function(index){
       return index % 2 === 1;
     }).addClass("right-element-in-row");
+    
   };
 
 

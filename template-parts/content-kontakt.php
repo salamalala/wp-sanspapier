@@ -16,10 +16,16 @@ get_header();
     <p> Tel: 031 385 18 27</p>
     <p> Email: beratung@sans-papiers-contact.ch <p>
   </div>
-  <div class="contact-form">
-    <?php echo do_shortcode( '[contact-form-7 id="530" title="Kontaktformular"]' ); ?>    
-  </div>
+
+  <?php while ( have_posts() ) : the_post(); ?>
+    <div class="contact-form">
+      <?php the_content(); ?> 
+    </div>
+  <?php endwhile; // End of the loop. ?>
+
 </div>
+
+
 
 
 <?php   get_footer();   ?>
