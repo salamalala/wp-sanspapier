@@ -1,0 +1,17 @@
+.gallery-card {
+	@include span-columns(10 of 10);
+	
+	@include media($medium-screen){
+		@include span-columns(4 of 12);
+	}
+}
+
+.gallery-text {
+	padding: $modular-scale-lg $modular-scale-md;
+	background-color: $white;
+	
+	@include media($medium-screen){
+		padding: $modular-scale-md;
+	}
+}
+
