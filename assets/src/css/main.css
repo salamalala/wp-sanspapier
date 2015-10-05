@@ -1252,19 +1252,7 @@ header {
     @media screen and (min-width: 40em) {
       header .name-wrapper {
         padding: 2.36859em 0 4.20873em 0;
-        position: relative; }
-        header .name-wrapper:before {
-          content: '';
-          position: absolute;
-          background: url("../images/Frau2.jpg") no-repeat right bottom;
-          background: url("../images/Frau2.jpg") no-repeat right bottom;
-          bottom: 2.75em;
-          right: 0;
-          -webkit-filter: blur(1px);
-                  filter: blur(1px);
-          width: 100%;
-          height: 100%;
-          z-index: 0; } }
+        position: relative; } }
     @media screen and (min-width: 68em) {
       header .name-wrapper {
         padding: 4.20873em 0 7.47844em 0; } }
