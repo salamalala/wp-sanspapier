@@ -83,7 +83,7 @@
 
         <div class="full-width-box box wer">
           <p class="quote">
-           Wir <a href="#">beraten und informieren MigrantInnen</a>, die in der Schweiz leben, ohne eine Aufenthalts&shybewilligung zu besitzen. Zudem leisten wir <a href="#">Sensibilisierungs- und Informationsarbeit</a> in der Region Bern.
+           Wir <a href="<?php bloginfo('url'); ?>/beratungen/">beraten und informieren MigrantInnen</a>, die in der Schweiz leben, ohne eine Aufenthalts&shybewilligung zu besitzen. Zudem leisten wir <a href="<?php bloginfo('url'); ?>/aktivitaeten/">Sensibilisierungs- und Informationsarbeit</a> in der Region Bern.
           </p>
         </div>
       
@@ -118,7 +118,7 @@
                 <div class="beratung box" id="<?php the_sub_field('beratungsort'); ?>">          
                   <h3>Beratungszeiten <span class="hide-when-small"><?php the_sub_field('beratungsort'); ?></span></h3>
                   <p><?php the_sub_field('beratungszeiten'); ?></p>
-                  <a class="minorlink-dark" href="#">Mehr Informationen</a>            
+                  <a class="minorlink-dark" href="<?php bloginfo('url'); ?>/beratungen/">Mehr Informationen</a>            
 
                 </div>
 
@@ -130,15 +130,15 @@
     
           <div class="sidebar-links">
             <div class="mainlink pink-box">
-              <a href="#">Mitglied werden</a>
+              <a href="<?php bloginfo('url'); ?>/unterstuetzung/">Mitglied werden</a>
             </div>
 
             <div class="mainlink pink-box">
-              <a href="#">Spenden</a>   
+              <a href="<?php bloginfo('url'); ?>/unterstuetzung/">Spenden</a>   
             </div>
 
             <div class="mainlink pink-box">
-              <a href="#">Bulletin</a>
+              <a href="<?php bloginfo('url'); ?>/unterstuetzung/">Bulletin</a>
             </div>
 
             <div class="mainlink pink-box newsletter">

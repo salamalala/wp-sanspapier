@@ -6,6 +6,7 @@ get_header();
 
 ?>
 
+
 <?php get_template_part( 'template-parts/content', 'page' ); ?>
 
 <?php
@@ -29,4 +30,6 @@ get_header();
   <?php endif; ?> 
 
 
-  <?php   get_footer();   ?>
+
+
+<?php   get_footer();   ?>
