@@ -24,7 +24,7 @@ acf_add_local_field_group(array (
         'class' => '',
         'id' => '',
       ),
-      'button_label' => 'Add Row',
+      'button_label' => 'Box hinzufügen',
       'min' => '',
       'max' => '',
       'layouts' => array (
@@ -162,7 +162,7 @@ acf_add_local_field_group(array (
             array (
               'key' => 'field_55eab3ac43f4d',
               'label' => 'Link: Mehr Informationen',
-              'name' => 'link:_mehr_informationen',
+              'name' => 'link:_mehr',
               'type' => 'url',
               'instructions' => '',
               'required' => 0,
@@ -243,7 +243,7 @@ acf_add_local_field_group(array (
             array (
               'key' => 'field_55eb2b6b7cfc9',
               'label' => 'Link: Mehr Informationen',
-              'name' => 'link:_mehr_informationen',
+              'name' => 'link:_mehr',
               'type' => 'url',
               'instructions' => '',
               'required' => 0,
@@ -468,7 +468,7 @@ acf_add_local_field_group(array (
             array (
               'key' => 'field_55eb2b8f7cfce',
               'label' => 'Link: Mehr Informationen',
-              'name' => 'link:_mehr_informationen',
+              'name' => 'link:_mehr',
               'type' => 'url',
               'instructions' => '',
               'required' => 0,
@@ -549,7 +549,7 @@ acf_add_local_field_group(array (
             array (
               'key' => 'field_55eb2b9d7cfd3',
               'label' => 'Link: Mehr Informationen',
-              'name' => 'link:_mehr_informationen',
+              'name' => 'link:_mehr',
               'type' => 'url',
               'instructions' => '',
               'required' => 0,
@@ -750,7 +750,7 @@ acf_add_local_field_group(array (
             array (
               'key' => 'field_55eaaf6fa1c05',
               'label' => 'Box links Link: Mehr Informationen',
-              'name' => 'box_links_link:_mehr_informationen',
+              'name' => 'link:_mehr',
               'type' => 'url',
               'instructions' => '',
               'required' => 0,
@@ -766,7 +766,7 @@ acf_add_local_field_group(array (
             array (
               'key' => 'field_55eaaf6fa1c06',
               'label' => 'Box links Link: Weiterlesen',
-              'name' => 'box_links_link:_weiterlesen',
+              'name' => 'link:_weiterlesen',
               'type' => 'url',
               'instructions' => '',
               'required' => 0,
@@ -855,7 +855,7 @@ acf_add_local_field_group(array (
             array (
               'key' => 'field_55eaa4c5cdc3a',
               'label' => 'Box links Link: Mehr Informationen',
-              'name' => 'box_links_link:_mehr_informationen',
+              'name' => 'link:_mehr',
               'type' => 'url',
               'instructions' => '',
               'required' => 0,
@@ -871,7 +871,7 @@ acf_add_local_field_group(array (
             array (
               'key' => 'field_55eaa4c5cdc3b',
               'label' => 'Box links Link: Weiterlesen',
-              'name' => 'box_links_link:_weiterlesen',
+              'name' => 'link:_weiterlesen',
               'type' => 'url',
               'instructions' => '',
               'required' => 0,
@@ -984,7 +984,7 @@ acf_add_local_field_group(array (
             array (
               'key' => 'field_55eaa4f2cdc40',
               'label' => 'Box rechts Link: Mehr Informationen',
-              'name' => 'box_rechts_link:_mehr_informationen',
+              'name' => 'link:_mehr',
               'type' => 'url',
               'instructions' => '',
               'required' => 0,
@@ -1000,7 +1000,7 @@ acf_add_local_field_group(array (
             array (
               'key' => 'field_55eaa4f2cdc41',
               'label' => 'Box rechts Link: Weiterlesen',
-              'name' => 'box_rechts_link:_weiterlesen',
+              'name' => 'link:_weiterlesen',
               'type' => 'url',
               'instructions' => '',
               'required' => 0,
@@ -1089,7 +1089,7 @@ acf_add_local_field_group(array (
             array (
               'key' => 'field_55eaa584cdc47',
               'label' => 'Box rechts Link: Mehr Informationen',
-              'name' => 'box_rechts_link:_mehr_informationen',
+              'name' => 'link:_mehr',
               'type' => 'url',
               'instructions' => '',
               'required' => 0,
@@ -1105,7 +1105,7 @@ acf_add_local_field_group(array (
             array (
               'key' => 'field_55eaa584cdc48',
               'label' => 'Box rechts Link: Weiterlesen',
-              'name' => 'box_rechts_link:_weiterlesen',
+              'name' => 'link:_weiterlesen',
               'type' => 'url',
               'instructions' => '',
               'required' => 0,
@@ -1177,7 +1177,7 @@ acf_add_local_field_group(array (
       'min' => '',
       'max' => '',
       'layout' => 'row',
-      'button_label' => 'Add Row',
+      'button_label' => 'Beratungsort hinzufügen',
       'sub_fields' => array (
         array (
           'key' => 'field_55eb07d2dea2e',
@@ -1389,7 +1389,7 @@ acf_add_local_field_group(array (
       'min' => '',
       'max' => '',
       'layout' => 'row',
-      'button_label' => 'Add Row',
+      'button_label' => 'Video hinzufügen',
       'sub_fields' => array (
         array (
           'key' => 'field_55fa65e5ccaf8',
