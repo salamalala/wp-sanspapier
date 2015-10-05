@@ -52,16 +52,21 @@ textarea {
   width: 100%;
   color: $pink;
   font-weight: 600;
+  .pink-box & {
+    color: $white;
 
+  }
   &:hover {
     border-color: darken($base-border-color, 10%);
   }
-
   &:focus {
     border-color: $pink;
     background-color: $white;
     box-shadow: $form-box-shadow-focus;
     outline: none;
+    .pink-box & {
+      background-color: $light-medium-gray;
+    }
   }
 }
 

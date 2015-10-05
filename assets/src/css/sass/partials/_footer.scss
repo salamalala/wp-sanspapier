@@ -48,13 +48,15 @@ html, body {
     @include span-columns(12);
     margin: 1em 0;
     text-align: center;
-    @include media($medium-screen) {
+    font-weight: 400;
+    font-size: 0.8em;
+    @include media($large-screen) {
       @include span-columns(10);
       @include vertical-align;
+      font-size: 1em;
       text-align: left;
       margin: 0;
     }
-    font-weight: 400;
     a {
       color: $white;
     }
@@ -65,7 +67,7 @@ html, body {
     @include span-columns(12);
     text-align: center;
     padding-left: 0;
-    @include media($medium-screen) {
+    @include media($large-screen) {
       @include span-columns(2);
       right: 0;
       text-align: right;

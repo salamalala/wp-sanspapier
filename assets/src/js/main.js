@@ -145,5 +145,5 @@ var mobileMenu = function(){
         icon: marker
     });
     
-  };
+  }
 
