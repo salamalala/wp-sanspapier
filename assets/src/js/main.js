@@ -4,6 +4,8 @@ $(document).ready(function() {
 
   secondBox();
 
+  galleryCard();
+
   tabFunction();
 
   emptyPTag();
@@ -92,12 +94,17 @@ var mobileMenu = function(){
   };
 
 
+  var galleryCard = function() {
+
+    $(".gallery-card").filter(function(index){
+        return index % 3 == 2;
+    }).addClass("right-element-in-row");
+
+  };
+
   var emptyPTag = function(){
     $('p:empty').remove();
   };
-
-  
-
 
   function initMap() {
 
