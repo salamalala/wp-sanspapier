@@ -33,7 +33,7 @@ module.exports = function(grunt){
         files: {
           'assets/dist/js/main.min.js': ['assets/src/js/*.js']
         }
-      } 
+      }
     },
 
     sass: {                          
@@ -65,7 +65,7 @@ module.exports = function(grunt){
        files: [{
          'assets/dist/css/main.min.css': ['assets/src/css/*.css']
        }]
-     }     
+     }
   },
 
   imagemin: {                          // Task
@@ -75,30 +75,6 @@ module.exports = function(grunt){
         cwd: 'assets/src/images/',                   // Src matches are relative to this path
         src: ['**/*.{png,jpg,gif,svg}'],   // Actual patterns to match
         dest: 'assets/dist/images'                  // Destination path prefix
-      }]
-    }
-  },
-
-  responsive_images: {
-    myTask: {
-      options: {
-        sizes: [{
-          width: 320,
-        },{
-          name: 'large',
-          width: 640
-        },{
-          name: "large",
-          width: 1024,
-          suffix: "_x2",
-          quality: 60
-        }]
-      },
-      files: [{
-        expand: true,
-        cwd: 'assets/src/images',
-        src: ['**/*.{jpg,gif,png}'],
-        dest: 'assets/dist/images'
       }]
     }
   },
@@ -141,8 +117,6 @@ module.exports = function(grunt){
       // }
     }
   }
-
-
 
   });
 

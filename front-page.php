@@ -83,7 +83,7 @@
 
         <div class="full-width-box box wer">
           <p class="quote">
-           Wir <a href="<?php bloginfo('url'); ?>/beratungen/">beraten und informieren MigrantInnen</a>, die in der Schweiz leben, ohne eine Aufenthalts&shybewilligung zu besitzen. Zudem leisten wir <a href="<?php bloginfo('url'); ?>/aktivitaeten/">Sensibilisierungs- und Informationsarbeit</a> in der Region Bern.
+           Wir <a href="<?php bloginfo('url'); ?>/beratungen/">beraten und informieren Menschen</a>, die in der Schweiz leben, ohne eine Aufenthalts&shybewilligung zu besitzen. Zudem leisten wir <a href="<?php bloginfo('url'); ?>/aktivitaeten/">Sensibilisierungs- und Informationsarbeit</a> in der Region Bern.
           </p>
         </div>
       

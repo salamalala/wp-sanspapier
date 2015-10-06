@@ -9,13 +9,20 @@ get_header();
 <?php get_template_part( 'template-parts/content', 'page' ); ?>
 
 <?php 
+  
+  $args = array(
+    'orderby' => 'modified',
+    'order'   => 'ASC',
+  );
+  $query = new WP_Query( $args );
+
   $loop = new WP_Query( array( 'post_type' => 'aktivitaet' ) );
 
 
   if( $loop->have_posts() ):
     while( $loop->have_posts() ) : $loop->the_post(); ?>
       <div class="half-width-box box">
-        <h5>Fundraising</h5>
+        <h5><?php display_category_terms(); ?></h5>
         <h2><?php the_title(); ?></h2>
         <h4></h4>
         <p><?php the_field('kurzbeschreibung'); ?></p>
