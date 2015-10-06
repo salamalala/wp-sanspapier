@@ -43,8 +43,8 @@ header{
   }
   
   .logo-left {
-    @include span-columns(2);
-    position: absolute;
+    @include span-columns(3);
+    position: relative;
     @include media ($xlarge-screen) {
       @include span-columns(1);
     }
@@ -72,11 +72,13 @@ header{
 
   .menu-right {
     @include span-columns(4);  
-    @include shift(8); 
-    position: relative; 
+    @include shift(5); 
+    @include omega;
+    position: relative;
     @include media ($medium-screen) {
       @include span-columns(3);
-      @include shift(9);
+      @include shift(6);
+      @include omega;
     }
     @include media ($xlarge-screen) {
       display: none;
@@ -290,8 +292,8 @@ header{
     }
 
     > a:after {
-      @include position(absolute, auto -0.4em auto auto);
       content: '\25BE';
+      @include position(absolute, auto -0.4em auto auto);
       color: $navigation-color;
     }
   }
@@ -373,23 +375,29 @@ header{
     padding-bottom: modular-scale(3);
     @include media($medium-screen) {
       padding: modular-scale(3) 0 modular-scale(5) 0;
-      position: relative;
-      
-      // &:before{
-      //   content: '';
-      //   position: absolute;
-      //   @include background(url("../images/Frau2.jpg") no-repeat right bottom);
-      //   bottom: 2.75em;
-      //   right: 0;
-      //   filter: blur(1px);
-      //   width: 100%;
-      //   height: 100%;
-      //   z-index: -10;
-      // }
       
     }
+  
+    @include media($large-screen) {
+      position: relative;
+
+      &:before{
+        content: '';
+        position: absolute;
+        @include background(url("../images/Frau2.jpg") no-repeat right bottom);
+        bottom: 2.75em;
+        right: 0;
+        filter: blur(1px);
+        width: 220px;
+        height: 300px;
+        z-index: 0;
+      }
+
+    }
+
     @include media($xlarge-screen) {
       padding: modular-scale(5) 0 modular-scale(7) 0;
+
     }
 
     h1 {
@@ -402,6 +410,7 @@ header{
       margin: 0;
       line-height: 1.5;
       z-index: 10;
+      position: relative;
       @include animation (bluredText 3s linear forwards);
       @include media($medium-screen){
         font-size: modular-scale(3);

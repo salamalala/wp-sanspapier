@@ -74,9 +74,9 @@ main{
      
       a{
         display: block;
-        padding: $modular-scale-md;
-        @include media($large-screen) {
-          padding: $modular-scale-lg;
+        padding: $modular-scale-sm;
+        @include media($medium-screen) {
+          padding: $modular-scale-md;
         }
         background-color: white;
         border-bottom: solid 2px $medium-gray;
@@ -104,14 +104,6 @@ main{
     }
   }
 
-  .map{
-    @include background(url("../images/map_bern.jpg"));
-    height: 188.675px;
-    &:nth-of-type(3){
-      margin-top: modular-scale(2);
-    }
-  }
-  
   .beratung{
     @include span-columns(10 of 10);
     @include display(flex);

@@ -971,8 +971,8 @@ header {
     float: left;
     display: block;
     margin-right: 4.34783%;
-    width: 13.04348%;
-    position: absolute; }
+    width: 21.73913%;
+    position: relative; }
     header .logo-left:last-child {
       margin-right: 0; }
     @media screen and (min-width: 68em) {
@@ -1006,7 +1006,8 @@ header {
     display: block;
     margin-right: 4.34783%;
     width: 30.43478%;
-    margin-left: 69.56522%;
+    margin-left: 43.47826%;
+    margin-right: 0;
     position: relative; }
     header .menu-right:last-child {
       margin-right: 0; }
@@ -1016,7 +1017,8 @@ header {
         display: block;
         margin-right: 4.34783%;
         width: 21.73913%;
-        margin-left: 78.26087%; }
+        margin-left: 52.17391%;
+        margin-right: 0; }
         header .menu-right:last-child {
           margin-right: 0; } }
     @media screen and (min-width: 68em) {
@@ -1189,12 +1191,12 @@ header {
     header li.more.nav-link > a {
       padding-right: 0.6em; }
     header li.more.nav-link > a:after {
+      content: '\25BE';
       position: absolute;
       top: auto;
       right: -0.4em;
       bottom: auto;
       left: auto;
-      content: '\25BE';
       color: rgba(255, 255, 255, 0.55); }
   header li.more {
     overflow: visible;
@@ -1251,8 +1253,22 @@ header {
       display: table; }
     @media screen and (min-width: 40em) {
       header .name-wrapper {
-        padding: 2.36859em 0 4.20873em 0;
-        position: relative; } }
+        padding: 2.36859em 0 4.20873em 0; } }
+    @media screen and (min-width: 54em) {
+      header .name-wrapper {
+        position: relative; }
+        header .name-wrapper:before {
+          content: '';
+          position: absolute;
+          background: url("../images/Frau2.jpg") no-repeat right bottom;
+          background: url("../images/Frau2.jpg") no-repeat right bottom;
+          bottom: 2.75em;
+          right: 0;
+          -webkit-filter: blur(1px);
+                  filter: blur(1px);
+          width: 220px;
+          height: 300px;
+          z-index: 0; } }
     @media screen and (min-width: 68em) {
       header .name-wrapper {
         padding: 4.20873em 0 7.47844em 0; } }
@@ -1273,6 +1289,7 @@ header {
       margin: 0;
       line-height: 1.5;
       z-index: 10;
+      position: relative;
       -webkit-animation: bluredText 3s linear forwards;
       animation: bluredText 3s linear forwards; }
       header .name-wrapper h1:last-child {
@@ -1367,12 +1384,12 @@ main {
         border-left: solid 2px #4B5663; }
       .beratungsbox ul li a {
         display: block;
-        padding: 1.77689em;
+        padding: 1.333em;
         background-color: white;
         border-bottom: solid 2px #4B5663; }
-        @media screen and (min-width: 54em) {
+        @media screen and (min-width: 40em) {
           .beratungsbox ul li a {
-            padding: 2.36859em; } }
+            padding: 1.77689em; } }
         .beratungsbox ul li a h3 {
           color: #4B5663;
           -webkit-transition: -webkit-transform 0.2s ease;
@@ -1392,12 +1409,6 @@ main {
       color: #4B5663;
       text-align: center;
       margin: 0; }
-  .beratungsbox .map {
-    background: url("../images/map_bern.jpg");
-    background: url("../images/map_bern.jpg");
-    height: 188.675px; }
-    .beratungsbox .map:nth-of-type(3) {
-      margin-top: 1.77689em; }
   .beratungsbox .beratung {
     float: left;
     display: block;
