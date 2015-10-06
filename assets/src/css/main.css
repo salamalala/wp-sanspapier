@@ -693,7 +693,7 @@ picture {
       width: 30.43478%; }
       .gallery-card:last-child {
         margin-right: 0; } }
-  .gallery-card:nth-of-type(3) {
+  .gallery-card:nth-of-type(3n) {
     margin-right: 0; }
 
 .gallery-text {

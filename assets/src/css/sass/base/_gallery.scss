@@ -5,7 +5,7 @@
 		@include span-columns(4 of 12);
 	}
 
-	&:nth-of-type(3) {
+	&:nth-of-type(3n) {
 		@include omega;
 	}
 }
