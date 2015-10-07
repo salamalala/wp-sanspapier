@@ -9,6 +9,12 @@ body {
   }
 }
 
+main{
+  width: 100%;
+  // @include display(flex);
+  // @include flex-wrap(wrap);
+}
+
 .modular-content {
   width: 100%;
   @include display(flex);
@@ -16,11 +22,7 @@ body {
 }
 
 
-main{
-  width: 100%;
-    @include display(flex);
-    @include flex-wrap(wrap);
-}
+
 
 .wer{
   margin-top: -3.5em;

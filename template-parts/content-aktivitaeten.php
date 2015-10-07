@@ -11,10 +11,10 @@ get_header();
 <?php 
   
   $args = array(
-    'orderby' => 'modified',
-    'order'   => 'ASC',
-  );
-  $query = new WP_Query( $args );
+     'post_type' => 'aktivitaet',
+     'orderby' => 'modified',
+     'order'   => 'DESC'
+   );
 
   $loop = new WP_Query( array( 'post_type' => 'aktivitaet' ) );
 

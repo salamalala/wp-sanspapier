@@ -5,6 +5,7 @@ get_header();
 
 ?>
 
+<div class="modular-content">
 
 <?php
   if( have_rows('beratung') ):
@@ -39,6 +40,8 @@ get_header();
 
     <?php endwhile; ?>
   <?php endif; ?> 
+
+</div>
 
 
 <?php get_template_part( 'template-parts/content', 'page' ); ?>
