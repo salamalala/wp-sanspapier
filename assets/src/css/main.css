@@ -704,10 +704,43 @@ picture {
 .gallery-text {
   padding: 2.36859em 1.77689em;
   background-color: #fff;
-  min-height: 400px; }
+  position: relative; }
   @media screen and (min-width: 40em) {
     .gallery-text {
-      padding: 1.77689em; } }
+      padding: 1.77689em;
+      min-height: 400px; } }
+  .gallery-text .boldcircle {
+    position: absolute;
+    top: -2em;
+    right: -1em;
+    height: 80px;
+    width: 80px;
+    padding: 0.42219em;
+    line-height: 70px;
+    text-align: center;
+    font-size: 0.7em;
+    background-color: #4B5663;
+    color: #fff;
+    -webkit-transform: rotate(10deg);
+        -ms-transform: rotate(10deg);
+            transform: rotate(10deg);
+    border-radius: 100%; }
+    @media screen and (min-width: 40em) {
+      .gallery-text .boldcircle {
+        top: -2em;
+        right: -2em;
+        height: 70px;
+        width: 70px;
+        padding: 0.42219em;
+        line-height: 60px;
+        text-align: center;
+        font-size: 0.8em;
+        background-color: #4B5663;
+        color: #fff;
+        -webkit-transform: rotate(10deg);
+            -ms-transform: rotate(10deg);
+                transform: rotate(10deg);
+        border-radius: 100%; } }
 
 .icon-wrapper {
   margin: 0 auto;
@@ -1785,30 +1818,38 @@ html, body {
     border: none;
     color: #8093A8;
     padding: none; }
-  .bulletin-info h3 {
+  .bulletin-info .boldcircle {
     top: -4em;
     right: -3em;
+    position: absolute;
     height: 60px;
     width: 60px;
-    line-height: 50px;
-    font-size: 0.7em;
-    position: absolute;
-    background: #8093A8;
-    color: #fff;
     padding: 0.42219em;
-    border-radius: 100%;
+    line-height: 50px;
     text-align: center;
+    font-size: 0.7em;
+    background-color: #8093A8;
+    color: #fff;
     -webkit-transform: rotate(10deg);
         -ms-transform: rotate(10deg);
-            transform: rotate(10deg); }
+            transform: rotate(10deg);
+    border-radius: 100%; }
     @media screen and (min-width: 40em) {
-      .bulletin-info h3 {
+      .bulletin-info .boldcircle {
         top: -5em;
         right: -5em;
         height: 80px;
         width: 80px;
+        padding: 0.42219em;
         line-height: 70px;
-        font-size: 0.8em; } }
+        text-align: center;
+        font-size: 0.8em;
+        background-color: #8093A8;
+        color: #fff;
+        -webkit-transform: rotate(10deg);
+            -ms-transform: rotate(10deg);
+                transform: rotate(10deg);
+        border-radius: 100%; } }
 
 .bulletin-link {
   float: left;

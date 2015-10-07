@@ -19,7 +19,7 @@ get_header();
       <div class="box half-width-box">
 
         <div class="bulletin-info">
-          <h3>Nr. <?php the_sub_field('nummer'); ?></h3>
+          <h3 class="boldcircle">Nr. <?php the_sub_field('nummer'); ?></h3>
           <h4><?php the_sub_field('datum'); ?></h4>
           <h2 class="italic">Bulletin Thema: </h2>
           <h1><?php the_sub_field('thema'); ?></h1>

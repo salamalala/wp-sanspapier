@@ -170,5 +170,18 @@
   }
 }
 
+@mixin circle($background-color, $color, $size, $font-size) {
+  height: $size;
+  width: $size;
+  padding: $modular-scale-xxxxs;
+  line-height: $size - 10px;
+  text-align: center;
+  font-size: $font-size;
+  background-color: $background-color;
+  color: $color;
+  transform: rotate(10deg);
+  border-radius: 100%;
+}
+
 
 

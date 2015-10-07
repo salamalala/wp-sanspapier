@@ -13,27 +13,16 @@
       padding: none;
     }
 
-    h3 {
+    .boldcircle {
       top: -4em;
       right: -3em;  
-      height: 60px;
-      width: 60px;
-      line-height: 50px;
-      font-size: 0.7em;
       position: absolute;
-      background: $light-medium-gray;
-      color: $white;
-      padding: $modular-scale-xxxxs;
-      border-radius: 100%;
-      text-align: center;
-      transform: rotate(10deg);
+      @include circle($light-medium-gray, $white, 60px, 0.7em);
+      
       @include media($medium-screen){
         top: -5em;
         right: -5em;  
-        height: 80px;
-        width: 80px;
-        line-height: 70px;
-        font-size: 0.8em;
+        @include circle($light-medium-gray, $white, 80px, 0.8em);
       }
     }
 }
