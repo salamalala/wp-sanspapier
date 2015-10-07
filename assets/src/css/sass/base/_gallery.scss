@@ -1,8 +1,15 @@
+.gallery {
+	@include display(flex);
+}
+
 .gallery-card {
 	@include span-columns(10 of 10);
-	
+	margin-bottom: 30px;
+	@include display(flex);
+
 	@include media($medium-screen){
 		@include span-columns(4 of 12);
+
 	}
 
 }
@@ -12,13 +19,12 @@
 	background-color: $white;
 	@include display(flex);
 	@include flex-direction(column);
-	
+	min-height: 400px;
+
 	@include media($medium-screen){
 		padding: $modular-scale-md;
-		@include display(flex);
-		@include flex-direction(column);
-	}
 
+	}
 
 }
 

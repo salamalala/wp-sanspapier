@@ -2,13 +2,6 @@ body {
   background-color: $light-gray;
 }
 
-// .modular-content {
-//   width: 100%;
-//   @include display(flex);
-//   @include flex-wrap(wrap);
-// }
-
-
 .main-outer-container {
   @include outer-container(90%);
   @include media($xlarge-screen) {
@@ -16,11 +9,17 @@ body {
   }
 }
 
+.modular-content {
+  width: 100%;
+  @include display(flex);
+  @include flex-wrap(wrap);
+}
 
 
 main{
-  @include span-columns(12);
-  @include shift(0);
+  width: 100%;
+    @include display(flex);
+    @include flex-wrap(wrap);
 }
 
 .wer{
