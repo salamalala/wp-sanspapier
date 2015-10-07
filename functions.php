@@ -143,6 +143,7 @@ add_action( 'widgets_init', 'wp_sanspapier_widgets_init' );
 // add_action( 'wp_enqueue_scripts', 'wp_sanspapier_scripts' );
 
 
+
 /**
  * Implement the Custom Header feature.
  */

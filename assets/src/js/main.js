@@ -141,7 +141,7 @@ var mobileMenu = function(){
 
     var markerBern = new google.maps.Marker({
       position: mapBern.getCenter(),
-      icon: new google.maps.MarkerImage('/wordpress/wp-content/themes/wp-sanspapier/assets/dist/images/pink_marker.svg',
+      icon: new google.maps.MarkerImage('/wp-content/uploads/2015/10/pink_marker.svg',
         null, null, null, new google.maps.Size(64,64)),
       draggable: false,
       map: mapBern
@@ -149,7 +149,7 @@ var mobileMenu = function(){
 
     var markerBiel = new google.maps.Marker({
       position: mapBiel.getCenter(),
-      icon: new google.maps.MarkerImage('/wordpress/wp-content/themes/wp-sanspapier/assets/dist/images/pink_marker.svg',
+      icon: new google.maps.MarkerImage('/wp-content/uploads/2015/10/pink_marker.svg',
         null, null, null, new google.maps.Size(64,64)),
       draggable: false,
       map: mapBiel

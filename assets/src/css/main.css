@@ -406,61 +406,12 @@ p {
                 transform: translate(0px); }
 
 a {
-  color: #30373F;
-  font-weight: 600;
   text-decoration: none;
-  position: relative;
-  display: inline-block; }
-  a:after {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 100%;
-    height: 0.5px;
-    background: #4B5663;
-    content: '';
-    opacity: 0;
-    -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
-            transition: height 0.3s, opacity 0.3s, transform 0.3s;
-    -webkit-transform: translateY(-3px);
-        -ms-transform: translateY(-3px);
-            transform: translateY(-3px); }
+  color: #bf4385;
+  -webkit-transition: color 0.5s;
+          transition: color 0.5s; }
   a:hover {
-    color: #4B5663; }
-  a:hover:after {
-    height: 1.5px;
-    opacity: 1;
-    -webkit-transform: translate(0px);
-        -ms-transform: translate(0px);
-            transform: translate(0px); }
-  .dark-box a, .pink-box a {
-    color: #fff;
-    font-weight: 600;
-    text-decoration: none;
-    position: relative;
-    display: inline-block; }
-    .dark-box a:after, .pink-box a:after {
-      position: absolute;
-      top: 100%;
-      left: 0;
-      width: 100%;
-      height: 0.5px;
-      background: #fff;
-      content: '';
-      opacity: 0;
-      -webkit-transition: height 0.3s, opacity 0.3s, -webkit-transform 0.3s;
-              transition: height 0.3s, opacity 0.3s, transform 0.3s;
-      -webkit-transform: translateY(-3px);
-          -ms-transform: translateY(-3px);
-              transform: translateY(-3px); }
-    .dark-box a:hover, .pink-box a:hover {
-      color: #fff; }
-    .dark-box a:hover:after, .pink-box a:hover:after {
-      height: 1.5px;
-      opacity: 1;
-      -webkit-transform: translate(0px);
-          -ms-transform: translate(0px);
-              transform: translate(0px); }
+    color: #d23086; }
 
 img,
 picture {
@@ -1270,12 +1221,12 @@ header {
     header li.more.nav-link > a {
       padding-right: 0.6em; }
     header li.more.nav-link > a:after {
-      content: '\25BE';
       position: absolute;
       top: auto;
       right: -0.4em;
       bottom: auto;
       left: auto;
+      content: '\25BE';
       color: rgba(255, 255, 255, 0.55); }
   header li.more {
     overflow: visible;
