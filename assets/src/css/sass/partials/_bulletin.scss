@@ -1,13 +1,10 @@
 .bulletin-info{
-    @include span-columns(4 of 4);
+    @include span-columns(6 of 6);
     padding-top: $modular-scale-lg;
     position: relative;
     display: flex;
     flex-direction: column;
-    
-    h1 {
-      flex: 1 0 auto;
-    }
+    flex: 1 0 auto;
 
     h2 {
       margin-top: 0.5em;
@@ -41,12 +38,19 @@
     }
 }
 
-.bulletin-download{
-    @include span-columns(4 of 4);
+.bulletin-link{
+    @include span-columns(6 of 6);
     // @include align-self(center);
-    a{
-      white-space: pre-wrap; 
-      word-wrap: break-word;
+
+    p {
+      @include span-columns (10 of 12);
+    }
+
+    &__svg {
+      @include span-columns (2 of 12);
+      height: 20px;
+      width: 20px;
+      
     }
 
 }

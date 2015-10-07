@@ -147,18 +147,20 @@ main{
   }
 }
 
-.sidebar-links{
+.sidebar-links {
   @include span-columns(10 of 10);
   margin-top: modular-scale(2);
   @include media ($large-screen){
     @include span-columns(4); 
   }
-  .mainlink{
+
+  .mainlink {
    &:nth-of-type(n+2){
     margin-top: modular-scale(1);
     } 
   }
-  .newsletter{
+
+  .newsletter {
     cursor: none;
     p {
       word-break:break-all;  
@@ -166,12 +168,14 @@ main{
   }
 }
 
-#mc_embed_signup{
+#mc_embed_signup {
+  
   label{
     text-align: left;
     margin-top: $modular-scale-md;
   }
-  #mc-embedded-subscribe{
+
+  #mc-embedded-subscribe {
     width: 100%;
   }
 }

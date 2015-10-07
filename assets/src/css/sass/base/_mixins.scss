@@ -85,6 +85,7 @@
 }
 
 @mixin link-plain-push($background-color, $font-color) {
+  display: block;
   width: 100%;
   -webkit-font-smoothing: antialiased;
   background-color: $background-color;
@@ -117,17 +118,20 @@
     opacity: 0.5;
   }
 
-  a {
+  p {
     color: $font-color;
     margin: 0;
     transform: translateY(0);
     transition: transform 0.2s ease;
     font-weight: 400;
+    display: inline-block;
+    text-align: center;
     
     &:hover {
       transform: translateY(-3px);
     }
   }
+
 }
 
 @mixin plain-link($font-color, $background-color) {

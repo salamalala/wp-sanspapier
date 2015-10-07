@@ -16,7 +16,7 @@ get_header();
      'order'   => 'DESC'
    );
 
-  $loop = new WP_Query( array( 'post_type' => 'aktivitaet' ) );
+  $loop = new WP_Query( $args );
 
 
   if( $loop->have_posts() ):
@@ -31,6 +31,6 @@ get_header();
     <?php endwhile; ?>
   <?php endif; ?>
   
-  <?php wp_reset_query(); ?>
+<?php wp_reset_query(); ?>
 
-  <?php get_footer();   ?>
+<?php get_footer();   ?>

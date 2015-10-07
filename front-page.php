@@ -135,22 +135,24 @@
           <!-- End of Beratungsbox -->
     
           <div class="sidebar-links">
-            <div class="mainlink pink-box">
-              <a href="<?php bloginfo('url'); ?>/unterstuetzung/">Mitglied werden</a>
-            </div>
+            
+            <a class="mainlink pink-box" href="<?php bloginfo('url'); ?>/unterstuetzung/">
+              <p>Mitglied werden</p> 
+            </a>
+            
 
-            <div class="mainlink pink-box">
-              <a href="<?php bloginfo('url'); ?>/unterstuetzung/">Spenden</a>   
-            </div>
+            <a class="mainlink pink-box" href="<?php bloginfo('url'); ?>/unterstuetzung/">
+              <p>Spenden</p>   
+            </a>
 
-            <div class="mainlink pink-box">
-              <a href="<?php bloginfo('url'); ?>/unterstuetzung/">Bulletin</a>
-            </div>
+            <a class="mainlink pink-box" href="<?php bloginfo('url'); ?>/unterstuetzung/">
+              <p>Bulletin</p>
+            </a>
 
-            <div class="mainlink pink-box newsletter">
+            <a class="mainlink pink-box newsletter">
               <p>Newsletter</p>
 
-              <!-- Begin MailChimp Signup Form -->
+            <!-- Begin MailChimp Signup Form -->
                 <div id="mc_embed_signup">
                   <form action="//sans-papiers.us6.list-manage.com/subscribe/post?u=515540207cb90d8a5faa83b5e&amp;id=471eca439c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                     <div id="mc_embed_signup_scroll">
@@ -171,7 +173,9 @@
                   </form>
                 </div>
                   <!--End mc_embed_signup-->
-            </div>
+            </a>
+
+          </div>
 
 
   <?php get_footer(); ?>
