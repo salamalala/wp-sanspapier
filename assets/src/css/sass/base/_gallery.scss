@@ -4,9 +4,9 @@
 }
 
 .gallery-card {
-	@include span-columns(10 of 10);
+	@include span-columns(12 of 12);
 	margin-bottom: 30px;
-	@include display(flex);
+	@include omega;
 
 	@include media($medium-screen){
 		@include span-columns(4 of 12);
@@ -18,8 +18,6 @@
 .gallery-text {
 	padding: $modular-scale-lg $modular-scale-md;
 	background-color: $white;
-	@include display(flex);
-	@include flex-direction(column);
 	min-height: 400px;
 
 	@include media($medium-screen){

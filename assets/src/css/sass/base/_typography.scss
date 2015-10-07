@@ -125,6 +125,7 @@ p {
 a {
  text-decoration: none;      
   color: $pink;      
+  font-weight: 600;
   transition: color 0.5s; 
   &:hover {      
     color: saturate($pink, 15%);
