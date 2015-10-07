@@ -123,21 +123,12 @@ p {
 }
 
 a {
-  text-decoration: none;
-  color: $pink;
-  transition: color 0.5s;
-  &:hover {
-    color: saturate($pink, 15%);
-  }
-  
-  .dark-box &, 
-  .pink-box & {
-    color: $white;
-    transition: color 0.5s;
-    &:hover {
-      color: lighten($white, 15%);
-    }
-  }
+  @include underline-link($dark-gray, $medium-gray);
+
+   .dark-box &, 
+   .pink-box & {
+     @include underline-link($white, $white);
+   }
 
 }
 

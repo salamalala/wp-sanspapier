@@ -139,29 +139,26 @@ var mobileMenu = function(){
     });
 
 
-
-
-    var marker = {
-      path: "M48.67 22.13c-6.81 0-12.33 5.52-12.33 12.33 0 6.81 5.52 12.33 12.33 12.33 6.81 0 12.33-5.52 12.33-12.33 0-6.81-5.52-12.33-12.33-12.33zm2.96 73.35c1.95-22.25 26.44-42.2 26.44-61.55C78.08 17.98 64.91 5.06 48.67 5.06c-16.24 0-29.41 12.92-29.41 28.87 0 19.35 24.72 39.29 26.56 61.55h5.81zm-2.96-80.94c11 0 19.92 8.92 19.92 19.92 0 11-8.92 19.92-19.92 19.92-11 0-19.92-8.92-19.92-19.92 0-11 8.92-19.92 19.92-19.92z",
-      fillColor: '#BF4385',
-      fillOpacity: 1,
-      strokeWeight: 0,
-      anchor: new google.maps.Point(100,100),
-      scale: 1
-      };
-
-
     var markerBern = new google.maps.Marker({
-        position: mapBern.getCenter(),
-        map: mapBern,
-        icon: marker
+      position: mapBern.getCenter(),
+      icon: new google.maps.MarkerImage('/wordpress/wp-content/themes/wp-sanspapier/assets/dist/images/pink_marker.svg',
+        null, null, null, new google.maps.Size(64,64)),
+      draggable: false,
+      map: mapBern
     });
 
     var markerBiel = new google.maps.Marker({
-        position: {lat: 47.141163, lng: 7.251038},
-        map: mapBiel,
-        icon: marker
+      position: mapBiel.getCenter(),
+      icon: new google.maps.MarkerImage('/wordpress/wp-content/themes/wp-sanspapier/assets/dist/images/pink_marker.svg',
+        null, null, null, new google.maps.Size(64,64)),
+      draggable: false,
+      map: mapBiel
     });
+
+
+
     
   }
+
+
 
