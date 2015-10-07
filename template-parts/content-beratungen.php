@@ -5,7 +5,7 @@ get_header();
 
 ?>
 
-<div class="modular-content">
+<div class="flex-content">
 
 <?php
   if( have_rows('beratung') ):

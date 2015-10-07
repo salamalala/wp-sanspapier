@@ -11,11 +11,9 @@ body {
 
 main{
   width: 100%;
-  // @include display(flex);
-  // @include flex-wrap(wrap);
 }
 
-.modular-content {
+.flex-content {
   width: 100%;
   @include display(flex);
   @include flex-wrap(wrap);

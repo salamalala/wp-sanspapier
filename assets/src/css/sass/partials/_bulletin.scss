@@ -1,20 +1,35 @@
 .bulletin-info{
-    @include span-columns(6 of 6);
+    @include span-columns(4 of 4);
     padding-top: $modular-scale-lg;
     position: relative;
-    h2{
+    display: flex;
+    flex-direction: column;
+    
+    h1 {
+      flex: 1 0 auto;
+    }
+
+    h2 {
       margin-top: 0.5em;
       border: none;
       color: $light-medium-gray;
       padding: none;
     }
-    h3{
+
+    h3 {
       top: -4em;
       right: -3em;  
       height: 60px;
       width: 60px;
       line-height: 50px;
       font-size: 0.7em;
+      position: absolute;
+      background: $light-medium-gray;
+      color: $white;
+      padding: $modular-scale-xxxxs;
+      border-radius: 100%;
+      text-align: center;
+      transform: rotate(10deg);
       @include media($medium-screen){
         top: -5em;
         right: -5em;  
@@ -23,18 +38,11 @@
         line-height: 70px;
         font-size: 0.8em;
       }
-      position: absolute;
-      background: $light-medium-gray;
-      color: $white;
-      padding: $modular-scale-xxxxs;
-      border-radius: 100%;
-      text-align: center;
-      transform: rotate(10deg);
     }
 }
 
 .bulletin-download{
-    @include span-columns(6 of 6);
+    @include span-columns(4 of 4);
     // @include align-self(center);
     a{
       white-space: pre-wrap; 

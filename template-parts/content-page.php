@@ -9,7 +9,7 @@
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 	
-  <div class="modular-content">
+  <div class="flex-content">
     <?php
       if( have_rows('flexible_content') ):
         while ( have_rows('flexible_content') ) : the_row();
