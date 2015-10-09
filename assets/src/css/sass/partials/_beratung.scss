@@ -1,11 +1,5 @@
-#map-bern{
-  height: 350px;  
-  @include media($medium-screen) {
-    height: 500px;  
-  }
-}
-
-#map-biel{
+#map-bern, 
+#map-biel {
   height: 350px;  
   @include media($medium-screen) {
     height: 500px;  

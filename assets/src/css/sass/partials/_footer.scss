@@ -26,10 +26,13 @@ html, body {
 }
 
 .footer {
-  margin-top: $modular-scale-xlg;
   width: 100%;
   background-color: $dark-gray;
   color: $white;
+
+  @include media($medium-screen) {
+    margin-top: $modular-scale-xlg;
+  }
 
   .footer-content {
     @include outer-container(90%);

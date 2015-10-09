@@ -438,7 +438,7 @@ picture {
   background-color: #bf4385; }
 
 .full-width-box {
-  margin: 2.36859em 0;
+  margin: 1.77689em 0;
   width: 100%;
   display: -webkit-box;
   display: -moz-box;
@@ -480,7 +480,7 @@ picture {
         font-size: 1.333em; } }
 
 .half-width-box {
-  margin: 2.36859em 0;
+  margin: 1.77689em 0;
   float: left;
   display: block;
   margin-right: 4.34783%;
@@ -499,7 +499,8 @@ picture {
   -webkit-flex-direction: column;
   -moz-flex-direction: column;
   flex-direction: column;
-  -ms-flex-direction: column; }
+  -ms-flex-direction: column;
+  margin-right: 0; }
   .half-width-box:last-child {
     margin-right: 0; }
   @media screen and (min-width: 40em) {
@@ -527,7 +528,7 @@ picture {
         margin-right: 0; } }
 
 .three-quarter-box {
-  margin: 2.36859em 0;
+  margin: 1.77689em 0;
   float: left;
   display: block;
   margin-right: 4.34783%;
@@ -546,7 +547,8 @@ picture {
   -webkit-flex-direction: column;
   -moz-flex-direction: column;
   flex-direction: column;
-  -ms-flex-direction: column; }
+  -ms-flex-direction: column;
+  margin-right: 0; }
   .three-quarter-box:last-child {
     margin-right: 0; }
   @media screen and (min-width: 68em) {
@@ -574,7 +576,7 @@ picture {
         margin-right: 0; } }
 
 .two-third-box {
-  margin: 2.36859em 0;
+  margin: 1.77689em 0;
   float: left;
   display: block;
   margin-right: 4.34783%;
@@ -593,7 +595,8 @@ picture {
   -webkit-flex-direction: column;
   -moz-flex-direction: column;
   flex-direction: column;
-  -ms-flex-direction: column; }
+  -ms-flex-direction: column;
+  margin-right: 0; }
   .two-third-box:last-child {
     margin-right: 0; }
   @media screen and (min-width: 40em) {
@@ -621,7 +624,7 @@ picture {
         margin-right: 0; } }
 
 .one-third-box {
-  margin: 2.36859em 0;
+  margin: 1.77689em 0;
   float: left;
   display: block;
   margin-right: 4.34783%;
@@ -640,7 +643,8 @@ picture {
   -webkit-flex-direction: column;
   -moz-flex-direction: column;
   flex-direction: column;
-  -ms-flex-direction: column; }
+  -ms-flex-direction: column;
+  margin-right: 0; }
   .one-third-box:last-child {
     margin-right: 0; }
   @media screen and (min-width: 40em) {
@@ -1677,10 +1681,12 @@ html, body {
       height: 4em; } }
 
 .footer {
-  margin-top: 3.15733em;
   width: 100%;
   background-color: #30373F;
   color: #fff; }
+  @media screen and (min-width: 40em) {
+    .footer {
+      margin-top: 3.15733em; } }
   .footer .footer-content {
     max-width: 90%;
     margin-left: auto;
@@ -1875,14 +1881,10 @@ html, body {
     .bulletin-link__svg:last-child {
       margin-right: 0; }
 
-#map-bern {
-  height: 350px; }
-  @media screen and (min-width: 40em) {
-    #map-bern {
-      height: 500px; } }
-
+#map-bern,
 #map-biel {
   height: 350px; }
   @media screen and (min-width: 40em) {
+    #map-bern,
     #map-biel {
       height: 500px; } }

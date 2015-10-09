@@ -1,8 +1,6 @@
 .gallery {
 	@include display(flex);
 	@include flex-wrap(wrap);
-
-	
 }
 
 .gallery-card {
