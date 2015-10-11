@@ -52,10 +52,6 @@ textarea {
   width: 100%;
   color: $pink;
   font-weight: 600;
-  .pink-box & {
-    color: $white;
-
-  }
   &:hover {
     border-color: darken($base-border-color, 10%);
   }
@@ -64,9 +60,12 @@ textarea {
     background-color: $white;
     box-shadow: $form-box-shadow-focus;
     outline: none;
-    .pink-box & {
-      background-color: $light-medium-gray;
-    }
+  }
+  .pink-box & {
+    color: $white;
+    &:focus {
+     color: $pink;
+    }  
   }
 }
 
@@ -115,6 +114,9 @@ select {
     color: $pink;
     background: $white;
     font-weight: 600;
+    padding: $modular-scale-xxxxs;
+    text-align: center;
+    font-style: italic;
   }
 
   .wpcf7-validation-errors {
@@ -127,6 +129,14 @@ select {
     font-family: $heading-font-family;
     text-align: center;
     font-size: $base-font-size-lg;
+  }
+
+  div.wpcf7-validation-errors {
+    text-align: center;
+    font-family: $heading-font-family;
+    font-size: $base-font-size-lg;
+    border: none;
+    width: 100%;
   }
 
 }

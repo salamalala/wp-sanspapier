@@ -63,3 +63,4 @@ $base-border: 0.11em solid $base-border-color;
 // Forms
 $form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
 $form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($pink, $lightness: -5%, $alpha: -0.3);
+$form-box-shadow-focus-white: $form-box-shadow, 0 0 5px adjust-color($white, $lightness: -5%, $alpha: -0.3);

@@ -109,8 +109,6 @@ header{
       width: 18px;
       margin-left: 5px;
       position: relative;
-      transform: rotate(0deg);
-      transition: .5s ease-in-out;
       cursor: pointer;
       span{
         display: block;
@@ -122,7 +120,7 @@ header{
         opacity: 1;
         left: 0;
         transform: rotate(0deg);
-        transition: .25s ease-out;
+        transition: .3s ease-in-out;
         &:nth-child(1){
           top: -12px;
         }
@@ -138,6 +136,7 @@ header{
       span{
         &:nth-child(2){
           opacity: 0;
+          left: -20px;
         }
         &:first-child{
           transform: rotate(45deg);
@@ -145,7 +144,7 @@ header{
         }
         &:last-child{
           transform: rotate(-45deg);
-          top: -0.4em;
+          top: -0.5em;
         }
       }
     }
