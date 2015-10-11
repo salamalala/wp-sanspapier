@@ -421,7 +421,30 @@ picture {
 
 .box {
   padding: 1.77689em 1.333em;
-  background-color: #fff; }
+  background-color: #fff;
+  margin: 1.333em 0;
+  float: left;
+  display: block;
+  margin-right: 4.34783%;
+  width: 100%;
+  display: -webkit-box;
+  display: -moz-box;
+  display: box;
+  display: -webkit-flex;
+  display: -moz-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  box-orient: vertical;
+  -webkit-box-direction: normal;
+  box-direction: normal;
+  -webkit-flex-direction: column;
+  -moz-flex-direction: column;
+  flex-direction: column;
+  -ms-flex-direction: column;
+  margin-right: 0; }
+  .box:last-child {
+    margin-right: 0; }
   @media screen and (min-width: 40em) {
     .box {
       padding: 1.77689em; } }
@@ -438,7 +461,10 @@ picture {
   background-color: #bf4385; }
 
 .full-width-box {
-  margin: 1.77689em 0;
+  margin: 1.333em 0;
+  float: left;
+  display: block;
+  margin-right: 4.34783%;
   width: 100%;
   display: -webkit-box;
   display: -moz-box;
@@ -454,9 +480,18 @@ picture {
   -webkit-flex-direction: column;
   -moz-flex-direction: column;
   flex-direction: column;
-  -ms-flex-direction: column; }
+  -ms-flex-direction: column;
+  margin-right: 0; }
+  .full-width-box:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 40em) {
+    .full-width-box {
+      margin: 1.77689em 0; } }
   @media screen and (min-width: 68em) {
     .full-width-box {
+      float: left;
+      display: block;
+      margin-right: 4.34783%;
       width: 100%;
       display: -webkit-box;
       display: -moz-box;
@@ -472,7 +507,9 @@ picture {
       -webkit-flex-direction: column;
       -moz-flex-direction: column;
       flex-direction: column;
-      -ms-flex-direction: column; } }
+      -ms-flex-direction: column; }
+      .full-width-box:last-child {
+        margin-right: 0; } }
   .full-width-box p {
     font-size: 1em; }
     @media screen and (min-width: 40em) {
@@ -480,7 +517,7 @@ picture {
         font-size: 1.333em; } }
 
 .half-width-box {
-  margin: 1.77689em 0;
+  margin: 1.333em 0;
   float: left;
   display: block;
   margin-right: 4.34783%;
@@ -505,6 +542,7 @@ picture {
     margin-right: 0; }
   @media screen and (min-width: 40em) {
     .half-width-box {
+      margin: 1.77689em 0;
       float: left;
       display: block;
       margin-right: 4.34783%;
@@ -528,7 +566,7 @@ picture {
         margin-right: 0; } }
 
 .three-quarter-box {
-  margin: 1.77689em 0;
+  margin: 1.333em 0;
   float: left;
   display: block;
   margin-right: 4.34783%;
@@ -553,6 +591,7 @@ picture {
     margin-right: 0; }
   @media screen and (min-width: 68em) {
     .three-quarter-box {
+      margin: 1.77689em 0;
       float: left;
       display: block;
       margin-right: 4.34783%;
@@ -576,7 +615,7 @@ picture {
         margin-right: 0; } }
 
 .two-third-box {
-  margin: 1.77689em 0;
+  margin: 1.333em 0;
   float: left;
   display: block;
   margin-right: 4.34783%;
@@ -601,6 +640,7 @@ picture {
     margin-right: 0; }
   @media screen and (min-width: 40em) {
     .two-third-box {
+      margin: 1.77689em 0;
       float: left;
       display: block;
       margin-right: 4.34783%;
@@ -624,7 +664,7 @@ picture {
         margin-right: 0; } }
 
 .one-third-box {
-  margin: 1.77689em 0;
+  margin: 1.333em 0;
   float: left;
   display: block;
   margin-right: 4.34783%;
@@ -649,6 +689,7 @@ picture {
     margin-right: 0; }
   @media screen and (min-width: 40em) {
     .one-third-box {
+      margin: 1.77689em 0;
       padding: 1.333em 1em;
       float: left;
       display: block;
@@ -671,6 +712,13 @@ picture {
       -ms-flex-direction: column; }
       .one-third-box:last-child {
         margin-right: 0; } }
+
+.image-box-wrapper {
+  padding: 0; }
+  .image-box-wrapper img {
+    -o-object-fit: cover;
+       object-fit: cover;
+    max-width: none; }
 
 .gallery {
   display: -webkit-box;
@@ -759,13 +807,6 @@ picture {
   padding: 20%;
   display: block; }
 
-.image-box-wrapper {
-  padding: 0; }
-  .image-box-wrapper img {
-    -o-object-fit: cover;
-       object-fit: cover;
-    max-width: none; }
-
 .right-element-in-row {
   margin-right: 0; }
 
@@ -773,8 +814,8 @@ a.minorlink-dark {
   -webkit-align-self: stretch;
   align-self: stretch;
   -ms-flex-item-align: stretch;
+  padding: 1em 1em;
   position: relative;
-  padding: 1em 2.36859em;
   vertical-align: middle;
   color: #4B5663;
   background-color: #fff;
@@ -782,6 +823,7 @@ a.minorlink-dark {
   border: #4B5663 0.2em solid;
   cursor: pointer;
   font-family: "brandon-grotesque", sans-serif;
+  font-weight: 400;
   line-height: 1;
   text-decoration: none;
   -webkit-user-select: none;
@@ -799,7 +841,8 @@ a.minorlink-dark {
     a.minorlink-dark {
       -webkit-align-self: flex-end;
       align-self: flex-end;
-      -ms-flex-item-align: end; } }
+      -ms-flex-item-align: end;
+      padding: 1em 2.36859em; } }
   a.minorlink-dark:before {
     content: '➞';
     position: absolute;
@@ -817,8 +860,8 @@ a.minorlink-white {
   -webkit-align-self: stretch;
   align-self: stretch;
   -ms-flex-item-align: stretch;
+  padding: 1em 1em;
   position: relative;
-  padding: 1em 2.36859em;
   vertical-align: middle;
   color: #fff;
   background-color: transparent;
@@ -826,6 +869,7 @@ a.minorlink-white {
   border: #fff 0.2em solid;
   cursor: pointer;
   font-family: "brandon-grotesque", sans-serif;
+  font-weight: 400;
   line-height: 1;
   text-decoration: none;
   -webkit-user-select: none;
@@ -843,7 +887,8 @@ a.minorlink-white {
     a.minorlink-white {
       -webkit-align-self: flex-end;
       align-self: flex-end;
-      -ms-flex-item-align: end; } }
+      -ms-flex-item-align: end;
+      padding: 1em 2.36859em; } }
   a.minorlink-white:before {
     content: '➞';
     position: absolute;
@@ -1397,9 +1442,6 @@ main {
     .wer {
       margin-top: -7em; } }
 
-.full-width-box:nth-of-type(n+2) {
-  margin-top: 3.15733em; }
-
 .beratungsbox {
   margin-top: 1.77689em;
   float: left;
@@ -1486,7 +1528,8 @@ main {
     -moz-flex-direction: column;
     flex-direction: column;
     -ms-flex-direction: column;
-    display: none; }
+    display: none;
+    margin-top: 0; }
     .beratungsbox .beratung:last-child {
       margin-right: 0; }
     @media screen and (min-width: 54em) {

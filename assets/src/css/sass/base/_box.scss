@@ -1,6 +1,7 @@
 .box {
 	padding: $modular-scale-md $modular-scale-sm;
 	background-color: $white;
+	@include full-width-flex-box;
 	
 	@include media($medium-screen) {
 		padding: $modular-scale-md;
@@ -26,13 +27,14 @@
 }
 
 .full-width-box {
-	margin: $modular-scale-md 0;
-	width: 100%;
-	@include display(flex);
-	@include flex-direction(column);
+	@include full-width-flex-box;
+
+	@include media($medium-screen) {
+		margin: $modular-scale-md 0;
+	}
 	
 	@include media($xlarge-screen) {
-		width: 100%;
+		@include span-columns(12 of 12);
 		@include display(flex);
 		@include flex-direction(column);
  	}
@@ -43,17 +45,13 @@
  		 	font-size: $medium-font-size;
  		}
  	}
-
 }
 	
 .half-width-box {
-	margin: $modular-scale-md 0;
-	@include span-columns(12 of 12);
-	@include display(flex);
-	@include flex-direction(column);
-	@include omega; 
+	@include full-width-flex-box;
 
 	@include media($medium-screen) {
+		margin: $modular-scale-md 0;
 		@include span-columns(6 of 12);
 		@include display(flex);
 		@include flex-direction(column);
@@ -61,13 +59,10 @@
 }
 
 .three-quarter-box {
-	margin: $modular-scale-md 0;
-	@include span-columns(12 of 12);
-	@include display(flex);
-	@include flex-direction(column);
-	@include omega; 
-	
+	@include full-width-flex-box;
+
 	@include media($xlarge-screen) {
+		margin: $modular-scale-md 0;
 		@include span-columns(9 of 12);
 		@include display(flex);
 		@include flex-direction(column);
@@ -75,13 +70,10 @@
 }
 
 .two-third-box {
-	margin: $modular-scale-md 0;
-	@include span-columns(12 of 12);
-	@include display(flex);
-	@include flex-direction(column);
-	@include omega; 
+	@include full-width-flex-box;
 
 	@include media($medium-screen) {
+		margin: $modular-scale-md 0;
 		@include span-columns(8 of 12);
 		@include display(flex);
 		@include flex-direction(column);
@@ -89,16 +81,22 @@
 }
 
 .one-third-box {
-	margin: $modular-scale-md 0;
-	@include span-columns(12 of 12);
-	@include display(flex);
-	@include flex-direction(column);
-	@include omega; 
-
+	@include full-width-flex-box;
+	
 	@include media($medium-screen) {
+		margin: $modular-scale-md 0;
 		padding: $modular-scale-sm $modular-scale-xs;
 		@include span-columns(4 of 12);
 		@include display(flex);
 		@include flex-direction(column);
+	}
+}
+
+.image-box-wrapper {
+	padding: 0;
+		
+	img { 
+		object-fit: cover;
+		max-width: none;
 	}
 }

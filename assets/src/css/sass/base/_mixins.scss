@@ -13,12 +13,8 @@
 
 @mixin link-with-border($main-color, $background-color){
   @include align-self(stretch);
-  
-  @include media ($large-screen) {
-    @include align-self(flex-end);
-  }
+  padding: $modular-scale-xs $modular-scale-xs;
   position: relative;
-  padding: $modular-scale-xs $modular-scale-lg;
   vertical-align: middle;
   color: $main-color;
   background-color: $background-color;
@@ -26,6 +22,7 @@
   border: $main-color 0.2em solid;
   cursor: pointer;
   font-family: $heading-font-family;
+  font-weight: 400;
   line-height: 1;
   text-decoration: none;
   user-select: none;
@@ -35,6 +32,11 @@
   letter-spacing: $letter-spacing-lg;
   transition: 0.4s ease-out;
   margin-top: $modular-scale-xxxs;
+
+  @include media ($large-screen) {
+    @include align-self(flex-end);
+    padding: $modular-scale-xs $modular-scale-lg;
+  }
   
   &:before {
     content: '➞';
@@ -181,6 +183,14 @@
   color: $color;
   transform: rotate(10deg);
   border-radius: 100%;
+}
+
+@mixin full-width-flex-box {
+  margin: $modular-scale-sm 0;
+  @include span-columns(12 of 12);
+  @include display(flex);
+  @include flex-direction(column);
+  @include omega; 
 }
 
 

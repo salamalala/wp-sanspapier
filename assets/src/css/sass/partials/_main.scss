@@ -19,9 +19,6 @@ main{
   @include flex-wrap(wrap);
 }
 
-
-
-
 .wer{
   margin-top: -3.5em;
   @include media($medium-screen){
@@ -30,12 +27,6 @@ main{
   border: none;
   line-height: 1.7;
   z-index: 5; 
-}
-
-.full-width-box{
-  &:nth-of-type(n+2){
-    margin-top: modular-scale(4);
-  }
 }
 
 .beratungsbox{
@@ -108,6 +99,7 @@ main{
     @include display(flex);
     @include flex-direction(column);
     display: none;
+    margin-top: 0;
 
     @include media ($large-screen){
       @include span-columns(8 of 8); 
