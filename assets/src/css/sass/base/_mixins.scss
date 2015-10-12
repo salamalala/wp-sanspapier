@@ -58,13 +58,13 @@
   color: $font-color;
   font-weight: 600;
   text-decoration: none;
-  position: relative;
-  display: inline-block;
   &:hover{
     text-decoration: underline;
     color: $font-color;
   }
   @include media($large-screen) {
+    position: relative;
+    display: inline-block;
     &:after {
       position: absolute;
       top: 100%;
@@ -79,6 +79,7 @@
     }
     &:hover{
       color: $underline-color;
+      text-decoration: none;
     }
     &:hover:after{
       height: 1.5px;

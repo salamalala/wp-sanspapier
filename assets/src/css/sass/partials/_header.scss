@@ -222,6 +222,20 @@ header{
     &.current_page_parent>a{
       color: transparentize($white, 0.2);
       font-weight: 600;
+      &:before{
+        content: '';
+        display: block;
+        position: absolute;
+        left: 0;
+        bottom: 0px;
+        height: 1px;
+        width: 0;
+        background: transparent;
+      }
+      &:hover:before {
+        width: 100%;
+        background: transparent;
+      }
     }
 
     a {
@@ -371,15 +385,14 @@ header{
   .name-wrapper{
     @include outer-container; 
     $navigation-background: $dark-gray;
-    padding-bottom: modular-scale(3);
+    padding-bottom: modular-scale(5);
+    
     @include media($medium-screen) {
       padding: modular-scale(3) 0 modular-scale(5) 0;
-      
     }
   
     @include media($large-screen) {
       position: relative;
-
       &:before{
         content: '';
         position: absolute;
