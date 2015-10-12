@@ -10,12 +10,16 @@ get_header(); ?>
 	<div id="primary" class="content-area">
 		<main id="main" class="site-main" role="main">
 
-      <div class="full-width-box box pink-box">
-        <h5><?php display_category_terms(); ?></h5>
-        <h1><?php the_title(); ?></h1>
-        <h4 class="italic"><?php the_field('datum'); ?></h4>
-        <p><?php the_field('kurzbeschreibung'); ?></p>
-        <p></p>
+      <div class="flex-content">
+
+        <div class="full-width-box box pink-box">
+          <h5><?php display_category_terms(); ?></h5>
+          <h1><?php the_title(); ?></h1>
+          <h4 class="italic"><?php the_field('datum'); ?></h4>
+          <p><?php the_field('kurzbeschreibung'); ?></p>
+          <p></p>
+        </div>
+
       </div>
 
     
