@@ -1466,197 +1466,6 @@ main {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
 
-.wer {
-  margin-top: -3.5em;
-  border: none;
-  line-height: 1.7;
-  z-index: 5; }
-  @media screen and (min-width: 40em) {
-    .wer {
-      margin-top: -7em; } }
-
-.beratungsbox {
-  margin-top: 1.77689em;
-  float: left;
-  display: block;
-  margin-right: 4.34783%;
-  width: 100%; }
-  .beratungsbox:last-child {
-    margin-right: 0; }
-  @media screen and (min-width: 54em) {
-    .beratungsbox {
-      float: left;
-      display: block;
-      margin-right: 4.34783%;
-      width: 65.21739%; }
-      .beratungsbox:last-child {
-        margin-right: 0; } }
-  .beratungsbox ul {
-    float: left;
-    display: block;
-    margin-right: 5.26316%;
-    width: 100%;
-    list-style-type: none;
-    padding-left: 0;
-    margin-top: 1.77689em; }
-    .beratungsbox ul:last-child {
-      margin-right: 0; }
-    @media screen and (min-width: 54em) {
-      .beratungsbox ul {
-        display: none; } }
-    .beratungsbox ul li {
-      float: left;
-      width: 50%;
-      color: #8093A8;
-      background-color: #F4F6F9;
-      position: relative; }
-      .beratungsbox ul li:first-child .active {
-        border-right: solid 2px #4B5663; }
-      .beratungsbox ul li:nth-child(2) .active {
-        border-left: solid 2px #4B5663; }
-      .beratungsbox ul li a {
-        display: block;
-        padding: 1.333em;
-        background-color: white;
-        border-bottom: solid 2px #4B5663; }
-        @media screen and (min-width: 40em) {
-          .beratungsbox ul li a {
-            padding: 1.77689em; } }
-        .beratungsbox ul li a h3 {
-          color: #4B5663;
-          -webkit-transition: -webkit-transform 0.2s ease;
-                  transition: transform 0.2s ease; }
-        .beratungsbox ul li a.active {
-          border-top: solid 2px #4B5663;
-          background-color: white;
-          border-bottom: none;
-          border-left: solid 2px #4B5663;
-          border-right: solid 2px #4B5663; }
-        .beratungsbox ul li a:not(.active) h3:hover {
-          -webkit-transform: translateY(-3px);
-              -ms-transform: translateY(-3px);
-                  transform: translateY(-3px); }
-    .beratungsbox ul h3 {
-      border-bottom: none;
-      color: #4B5663;
-      text-align: center;
-      margin: 0; }
-  .beratungsbox .beratung {
-    float: left;
-    display: block;
-    margin-right: 5.26316%;
-    width: 100%;
-    display: -webkit-box;
-    display: -moz-box;
-    display: box;
-    display: -webkit-flex;
-    display: -moz-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-orient: vertical;
-    box-orient: vertical;
-    -webkit-box-direction: normal;
-    box-direction: normal;
-    -webkit-flex-direction: column;
-    -moz-flex-direction: column;
-    flex-direction: column;
-    -ms-flex-direction: column;
-    display: none;
-    margin-top: 0; }
-    .beratungsbox .beratung:last-child {
-      margin-right: 0; }
-    @media screen and (min-width: 54em) {
-      .beratungsbox .beratung {
-        float: left;
-        display: block;
-        margin-right: 6.66667%;
-        width: 100%;
-        display: -webkit-box;
-        display: -moz-box;
-        display: box;
-        display: -webkit-flex;
-        display: -moz-flex;
-        display: -ms-flexbox;
-        display: flex;
-        -webkit-box-orient: vertical;
-        box-orient: vertical;
-        -webkit-box-direction: normal;
-        box-direction: normal;
-        -webkit-flex-direction: column;
-        -moz-flex-direction: column;
-        flex-direction: column;
-        -ms-flex-direction: column; }
-        .beratungsbox .beratung:last-child {
-          margin-right: 0; }
-        .beratungsbox .beratung:nth-of-type(2) {
-          margin-top: 1.77689em; } }
-    .beratungsbox .beratung.active-content {
-      display: -webkit-box;
-      display: -moz-box;
-      display: box;
-      display: -webkit-flex;
-      display: -moz-flex;
-      display: -ms-flexbox;
-      display: flex;
-      -webkit-box-orient: vertical;
-      box-orient: vertical;
-      -webkit-box-direction: normal;
-      box-direction: normal;
-      -webkit-flex-direction: column;
-      -moz-flex-direction: column;
-      flex-direction: column;
-      -ms-flex-direction: column; }
-      @media screen and (min-width: 54em) {
-        .beratungsbox .beratung.active-content {
-          border-top: none; } }
-  .beratungsbox h3 {
-    border-bottom: solid #4B5663 0.1em;
-    padding-bottom: 0.1618em; }
-  .beratungsbox .hide-when-small {
-    display: none; }
-    @media screen and (min-width: 54em) {
-      .beratungsbox .hide-when-small {
-        display: inline; } }
-  .beratungsbox .minorlink-dark {
-    margin-top: 1.333em;
-    -webkit-align-self: stretch;
-    align-self: stretch;
-    -ms-flex-item-align: stretch; }
-    @media screen and (min-width: 40em) {
-      .beratungsbox .minorlink-dark {
-        -webkit-align-self: flex-end;
-        align-self: flex-end;
-        -ms-flex-item-align: end; } }
-
-.sidebar-links {
-  float: left;
-  display: block;
-  margin-right: 5.26316%;
-  width: 100%;
-  margin-top: 1.77689em; }
-  .sidebar-links:last-child {
-    margin-right: 0; }
-  @media screen and (min-width: 54em) {
-    .sidebar-links {
-      float: left;
-      display: block;
-      margin-right: 4.34783%;
-      width: 30.43478%; }
-      .sidebar-links:last-child {
-        margin-right: 0; } }
-  .sidebar-links .mainlink:nth-of-type(n+2) {
-    margin-top: 1.333em; }
-  .sidebar-links .newsletter {
-    cursor: none; }
-    .sidebar-links .newsletter p {
-      word-break: break-all; }
-
-#mc_embed_signup label {
-  text-align: left;
-  margin-top: 1.77689em; }
-#mc_embed_signup #mc-embedded-subscribe {
-  width: 100%; }
-
 .contact {
   float: left;
   display: block;
@@ -1859,6 +1668,197 @@ html, body {
                 transition: fill 0.1s ease-out; }
         .footer ul svg.twitter-icon path:hover {
           fill: #0084b4; }
+
+.wer {
+  margin-top: -3.5em;
+  border: none;
+  line-height: 1.7;
+  z-index: 5; }
+  @media screen and (min-width: 40em) {
+    .wer {
+      margin-top: -7em; } }
+
+.beratungsbox {
+  margin-top: 1.77689em;
+  float: left;
+  display: block;
+  margin-right: 4.34783%;
+  width: 100%; }
+  .beratungsbox:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 54em) {
+    .beratungsbox {
+      float: left;
+      display: block;
+      margin-right: 4.34783%;
+      width: 65.21739%; }
+      .beratungsbox:last-child {
+        margin-right: 0; } }
+  .beratungsbox ul {
+    float: left;
+    display: block;
+    margin-right: 5.26316%;
+    width: 100%;
+    list-style-type: none;
+    padding-left: 0;
+    margin-top: 1.77689em; }
+    .beratungsbox ul:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 54em) {
+      .beratungsbox ul {
+        display: none; } }
+    .beratungsbox ul li {
+      float: left;
+      width: 50%;
+      color: #8093A8;
+      background-color: #F4F6F9;
+      position: relative; }
+      .beratungsbox ul li:first-child .active {
+        border-right: solid 2px #4B5663; }
+      .beratungsbox ul li:nth-child(2) .active {
+        border-left: solid 2px #4B5663; }
+      .beratungsbox ul li a {
+        display: block;
+        padding: 1.333em;
+        background-color: white;
+        border-bottom: solid 2px #4B5663; }
+        @media screen and (min-width: 40em) {
+          .beratungsbox ul li a {
+            padding: 1.77689em; } }
+        .beratungsbox ul li a h3 {
+          color: #4B5663;
+          -webkit-transition: -webkit-transform 0.2s ease;
+                  transition: transform 0.2s ease; }
+        .beratungsbox ul li a.active {
+          border-top: solid 2px #4B5663;
+          background-color: white;
+          border-bottom: none;
+          border-left: solid 2px #4B5663;
+          border-right: solid 2px #4B5663; }
+        .beratungsbox ul li a:not(.active) h3:hover {
+          -webkit-transform: translateY(-3px);
+              -ms-transform: translateY(-3px);
+                  transform: translateY(-3px); }
+    .beratungsbox ul h3 {
+      border-bottom: none;
+      color: #4B5663;
+      text-align: center;
+      margin: 0; }
+  .beratungsbox .beratung {
+    float: left;
+    display: block;
+    margin-right: 5.26316%;
+    width: 100%;
+    display: -webkit-box;
+    display: -moz-box;
+    display: box;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    box-orient: vertical;
+    -webkit-box-direction: normal;
+    box-direction: normal;
+    -webkit-flex-direction: column;
+    -moz-flex-direction: column;
+    flex-direction: column;
+    -ms-flex-direction: column;
+    display: none;
+    margin-top: 0; }
+    .beratungsbox .beratung:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 54em) {
+      .beratungsbox .beratung {
+        float: left;
+        display: block;
+        margin-right: 6.66667%;
+        width: 100%;
+        display: -webkit-box;
+        display: -moz-box;
+        display: box;
+        display: -webkit-flex;
+        display: -moz-flex;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-orient: vertical;
+        box-orient: vertical;
+        -webkit-box-direction: normal;
+        box-direction: normal;
+        -webkit-flex-direction: column;
+        -moz-flex-direction: column;
+        flex-direction: column;
+        -ms-flex-direction: column; }
+        .beratungsbox .beratung:last-child {
+          margin-right: 0; }
+        .beratungsbox .beratung:nth-of-type(2) {
+          margin-top: 1.77689em; } }
+    .beratungsbox .beratung.active-content {
+      display: -webkit-box;
+      display: -moz-box;
+      display: box;
+      display: -webkit-flex;
+      display: -moz-flex;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-orient: vertical;
+      box-orient: vertical;
+      -webkit-box-direction: normal;
+      box-direction: normal;
+      -webkit-flex-direction: column;
+      -moz-flex-direction: column;
+      flex-direction: column;
+      -ms-flex-direction: column; }
+      @media screen and (min-width: 54em) {
+        .beratungsbox .beratung.active-content {
+          border-top: none; } }
+  .beratungsbox h3 {
+    border-bottom: solid #4B5663 0.1em;
+    padding-bottom: 0.1618em; }
+  .beratungsbox .hide-when-small {
+    display: none; }
+    @media screen and (min-width: 54em) {
+      .beratungsbox .hide-when-small {
+        display: inline; } }
+  .beratungsbox .minorlink-dark {
+    margin-top: 1.333em;
+    -webkit-align-self: stretch;
+    align-self: stretch;
+    -ms-flex-item-align: stretch; }
+    @media screen and (min-width: 40em) {
+      .beratungsbox .minorlink-dark {
+        -webkit-align-self: flex-end;
+        align-self: flex-end;
+        -ms-flex-item-align: end; } }
+
+.sidebar-links {
+  float: left;
+  display: block;
+  margin-right: 5.26316%;
+  width: 100%;
+  margin-top: 1.77689em; }
+  .sidebar-links:last-child {
+    margin-right: 0; }
+  @media screen and (min-width: 54em) {
+    .sidebar-links {
+      float: left;
+      display: block;
+      margin-right: 4.34783%;
+      width: 30.43478%; }
+      .sidebar-links:last-child {
+        margin-right: 0; } }
+  .sidebar-links .mainlink:nth-of-type(n+2) {
+    margin-top: 1.333em; }
+  .sidebar-links .newsletter {
+    cursor: none; }
+    .sidebar-links .newsletter p {
+      word-break: break-all; }
+
+#mc_embed_signup label {
+  text-align: left;
+  margin-top: 1.77689em; }
+#mc_embed_signup #mc-embedded-subscribe {
+  width: 100%; }
 
 .video-wrapper {
   position: relative;

@@ -87,29 +87,37 @@
           </p>
         </div>
       
-        <?php 
-          $args = array(
-            'post_type' => 'aktivitaet',
-            'orderby' => 'modified',
-            'order'   => 'DESC'
-          );
+        <div class="row">
 
-          $loop = new WP_Query( $args) ;
+          <?php 
+            $args = array(
+              'post_type' => 'aktivitaet',
+              'orderby' => 'modified',
+              'order'   => 'DESC', 
+              'posts_per_page' => 2,
+            );
 
-          if( $loop->have_posts()):
-            while( $loop->have_posts() ) : $loop->the_post(); 
-              if (get_field('auf_der_homepage')): ?>
-                <div class="half-width-box box">
-                  <h5><?php display_category_terms(); ?></h5>
-                  <h2><?php the_title(); ?></h2>
-                  <h4 class="italic"><?php the_field('datum'); ?></h4>
-                  <p><?php the_field('kurzbeschreibung'); ?></p>
-                  <a class="minorlink-dark" href="<?php the_permalink()?>">Weiterlesen</a>
-                </div>
-              <?php endif; ?>
-            <?php endwhile; ?>
-          <?php endif; ?>
-          <?php wp_reset_query(); ?>
+            $loop = new WP_Query( $args) ;
+
+            if( $loop->have_posts()):
+              while( $loop->have_posts() ) : $loop->the_post(); 
+                if (get_field('auf_der_homepage')): ?>
+
+                  <div class="half-width-box box">
+                    <h5><?php display_category_terms(); ?></h5>
+                    <h2><?php the_title(); ?></h2>
+                    <h4 class="italic"><?php the_field('datum'); ?></h4>
+                    <p><?php the_field('kurzbeschreibung'); ?></p>
+                    <a class="minorlink-dark" href="<?php the_permalink()?>">Weiterlesen</a>
+                  </div>
+
+                <?php endif; ?>
+              <?php endwhile; ?>
+            <?php endif; ?>
+
+            <?php wp_reset_query(); ?>
+
+          </div>
 
           <div class="beratungsbox">
             <ul class="tabs">

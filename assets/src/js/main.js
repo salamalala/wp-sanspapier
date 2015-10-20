@@ -68,9 +68,9 @@ var tabFunction = function(){
 
   
 //detect second half box
-var secondBox = function(element) {
+var secondBox = function(e) {
 
-  $(element).filter(function(index){
+  $(e).filter(function(index){
     return index % 2 === 1;
   }).addClass("right-element-in-row");
   
@@ -79,9 +79,9 @@ var secondBox = function(element) {
 
 
 //detect second half box
-var thirdBox = function(element) {
+var thirdBox = function(e) {
 
-  $(element).filter(function(index){
+  $(e).filter(function(index){
       return index % 3 == 2;
   }).addClass("right-element-in-row");
 
@@ -148,7 +148,7 @@ $(function(){
 
   mobileMenu();
 
-  secondBox(".half-width-box");
+  secondBox(".flex-content .half-width-box");
 
   thirdBox(".gallery-card");
 
