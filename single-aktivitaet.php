@@ -12,7 +12,7 @@ get_header(); ?>
 
       <div class="flex-content">
 
-        <div class="full-width-box box pink-box">
+        <div class="full-width-box box big-letter-box pink-box">
           <h5><?php display_category_terms(); ?></h5>
           <h1><?php the_title(); ?></h1>
           <h4 class="italic"><?php the_field('datum'); ?></h4>
