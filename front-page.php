@@ -87,7 +87,7 @@
           </p>
         </div>
       
-        <div class="flex-content" >
+        <div class="flex-content">
 
           <?php 
             $args = array(
