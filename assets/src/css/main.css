@@ -1939,10 +1939,10 @@ html, body {
   width: 100%; }
 
 @media screen and (min-width: 40em) {
-  .bulletin {
+  .bulletin__item {
     font-size: 0.6rem; } }
 @media screen and (min-width: 68em) {
-  .bulletin {
+  .bulletin__item {
     font-size: 0.8rem; } }
 
 .bulletin-info {

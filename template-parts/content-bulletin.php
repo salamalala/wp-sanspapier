@@ -16,7 +16,7 @@ get_header();
     if( have_rows('bulletin') ):
       while ( have_rows('bulletin') ) : the_row();  ?>
 
-      <div class="bulletin box one-third-box">
+      <div class="bulletin__item box one-third-box">
 
         <div class="bulletin-info">
           <h3 class="boldcircle">Nr. <?php the_sub_field('nummer'); ?></h3>
