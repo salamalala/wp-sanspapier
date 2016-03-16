@@ -1,3 +1,15 @@
+.bulletin {
+
+  @include media($medium-screen) {
+    font-size: 0.6rem;  
+  }
+  
+  
+  @include media($xlarge-screen) {
+    font-size: 0.8rem;
+  }
+}
+
 .bulletin-info{
     @include span-columns(6 of 6);
     padding-top: $modular-scale-sm;
@@ -24,8 +36,8 @@
       @include circle($light-medium-gray, $white, 60px, 0.7em);
       
       @include media($medium-screen){
-        top: -5em;
-        right: -5em;  
+        top: -3em;
+        right: -3em;  
         @include circle($light-medium-gray, $white, 80px, 0.8em);
       }
     }

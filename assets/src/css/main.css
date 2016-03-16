@@ -1938,6 +1938,13 @@ html, body {
 #mc_embed_signup #mc-embedded-subscribe {
   width: 100%; }
 
+@media screen and (min-width: 40em) {
+  .bulletin {
+    font-size: 0.6rem; } }
+@media screen and (min-width: 68em) {
+  .bulletin {
+    font-size: 0.8rem; } }
+
 .bulletin-info {
   float: left;
   display: block;
@@ -1986,8 +1993,8 @@ html, body {
     border-radius: 100%; }
     @media screen and (min-width: 40em) {
       .bulletin-info .boldcircle {
-        top: -5em;
-        right: -5em;
+        top: -3em;
+        right: -3em;
         height: 80px;
         width: 80px;
         padding: 0.42219em;
