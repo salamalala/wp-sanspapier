@@ -151,6 +151,10 @@ $(function(){
   if ( $('.flex-content .half-width-box').length ) {
     secondBox(".flex-content .half-width-box");
   }
+
+  if ( $('.flex-content .one-third-box').length ) {
+    thirdBox(".flex-content .one-third-box");
+  }
   
   if ( $('.gallery-card').length ) {
     thirdBox(".gallery-card");

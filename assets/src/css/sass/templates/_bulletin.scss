@@ -38,7 +38,7 @@
       @include media($medium-screen){
         top: -3em;
         right: -3em;  
-        @include circle($light-medium-gray, $white, 80px, 0.8em);
+        @include circle($light-medium-gray, $white, 80px, 1em);
       }
     }
 }
