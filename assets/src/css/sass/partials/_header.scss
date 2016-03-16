@@ -252,9 +252,11 @@ header{
           margin-right: 0;
         }
       }
+
       &:hover{
         color: $navigation-color-hover;
-      } 
+      }
+
       @include media($xlarge-screen) {
         &:before{
           content: '';
@@ -356,6 +358,11 @@ header{
       display: block;
       padding-right: 0;
       line-height: 50px;
+      
+      @include media($large-screen) {
+        line-height: 35px;
+      }
+
 
       @include media($xlarge-screen) {
         &:first-child > a {

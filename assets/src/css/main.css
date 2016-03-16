@@ -1332,6 +1332,9 @@ header {
       display: block;
       padding-right: 0;
       line-height: 50px; }
+      @media screen and (min-width: 54em) {
+        header ul.submenu li {
+          line-height: 35px; } }
       @media screen and (min-width: 68em) {
         header ul.submenu li:first-child > a {
           margin-top: 0.7em; }
