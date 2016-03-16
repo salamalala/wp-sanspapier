@@ -31,7 +31,7 @@ acf_add_local_field_group(array (
         array (
           'key' => '55b00198640c8',
           'name' => 'text_volle_breite',
-          'label' => 'Text volle breite - normale Schrift',
+          'label' => 'Text volle breite weisser Hintergrund - normale Schrift',
           'display' => 'row',
           'sub_fields' => array (
             array (
