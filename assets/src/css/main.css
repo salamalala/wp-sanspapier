@@ -1692,6 +1692,11 @@ html, body {
   @media screen and (min-width: 40em) {
     .wer {
       margin-top: -7em; } }
+  .wer p {
+    font-size: 1em; }
+    @media screen and (min-width: 40em) {
+      .wer p {
+        font-size: 1.333em; } }
 
 .beratungsbox {
   margin-top: 1.77689em;
