@@ -23,7 +23,7 @@
   }
 
   //tabs 
-  ul{
+  ul {
     @include span-columns(10 of 10);
     list-style-type: none;
     padding-left: 0;
@@ -31,7 +31,8 @@
     @include media ($large-screen){
       display: none;
     }
-    li{
+
+    li {
       float: left;
       width: 50%;
       color: $light-medium-gray;
@@ -48,31 +49,36 @@
         }
       }
      
-      a{
+      a {
         display: block;
-        padding: $modular-scale-sm;
+        padding: $modular-scale-xs;
         @include media($medium-screen) {
           padding: $modular-scale-md;
         }
+
         background-color: white;
         border-bottom: solid 2px $medium-gray;
-        h3{
+        
+        h3 {
           color: $medium-gray;
           transition: transform 0.2s ease;
         }
-        &.active{
+
+        &.active {
           border-top: solid 2px $medium-gray;
           background-color: white;
           border-bottom: none;
           border-left:solid 2px $medium-gray;
           border-right: solid 2px $medium-gray;
         }
-        &:not(.active) h3:hover{
-        transform: translateY(-3px);
+
+        &:not(.active) h3:hover {
+          transform: translateY(-3px);
         }
       }
     }
-    h3{
+
+    h3 {
       border-bottom: none;
       color: $medium-gray;
       text-align: center;

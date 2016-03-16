@@ -18,15 +18,23 @@ html, body {
 
 .footer, .wrapper-for-content-outside-of-footer:after {
   $large-screen: em(860) !default;
-  height: 8em;
+  height: 11em;
+  
+  @include media($medium-screen) {
+    height: 8em;
+  }
 
   @include media($xlarge-screen) {
-    height: 4em;
+    height: 6em;
   }
 }
 
 .footer {
+  @include display(flex);
+  @include flex-direction(column);
+  @include justify-content(center);
   width: 100%;
+  padding: $modular-scale-sm 0;
   background-color: $dark-gray;
   color: $white;
 
@@ -34,96 +42,101 @@ html, body {
     margin-top: $modular-scale-xlg;
   }
 
-  .footer-content {
+  &__content {
     @include outer-container(90%);
-    position: relative;
-    height: 8em;
     @include display(flex);
     @include flex-direction(column);
     @include justify-content(center);
-
+    position: relative;
+    
     @include media($xlarge-screen) {
       @include outer-container();
-      height: 4em;
+      width: 100%;
     }
   }
 
-  h4 {
-    @include span-columns(12);
-    margin: 1.5em 0;
+  &__contact {
+    @include media($xlarge-screen) {
+      @include display(flex);
+      @include justify-content(space-between);
+    }
+  }
+
+  &__address {
     text-align: center;
     font-weight: 400;
-    font-size: 0.8em;
+    color: $green;
+    margin: 0;
+    font-size: $small-font-size;
+    font-weight: 700;
 
     @include media($xlarge-screen) {
-      @include span-columns(10);
-      @include vertical-align;
-      font-size: 1em;
       text-align: left;
-      margin: 0;
+      font-size: $normal-font-size;
     }
 
     a {
-      color: $white;
+      color: $green;
     }
-
   }
 
-  ul {
+  &__social-media-icons {
     list-style-type: none;
-    @include span-columns(12);
     text-align: center;
+    margin: 0.5em 0;
     padding-left: 0;
     height: 30px;
 
+    @include media($medium-screen) {
+      margin: 0.8em 0;
+    }
+
     @include media($xlarge-screen) {
-      @include span-columns(2);
-      right: 0;
+      margin: 0;
       text-align: right;
-      @include vertical-align;
     }
+  }
     
-    li {
-      display: inline-block;
-      height: 100%;
-      &:last-child {
-        margin-left: 20px;  
-      }
+  &__social-media-icon {
+    display: inline-block;
+    height: 100%;
+    &:last-child {
+      margin-left: 20px;  
     }
-
-    svg {
-      height: 30px;
-      width: 30px;      
-      border-radius: 100%;
-      
-      &.fb-icon {
-        
-        path {
-          transition: fill 0.1s ease-out;  
-          
-          &:hover {
-            fill: #3b5998;
-          }
-            
-        } 
-        
-      } 
-
-      &.twitter-icon {
-        
-        path {
-          transition: fill 0.1s ease-out;  
-          
-          &:hover {
-            fill: #0084b4;
-          }
-
-        } 
-        
-      } 
-       
-    }
-
   }
 
+  &__svg {
+    height: 30px;
+    width: 30px;      
+    border-radius: 100%;
+    
+    &.fb-icon path {
+      transition: fill 0.1s ease-out;  
+        
+      &:hover {
+        fill: #3b5998;
+      }      
+    } 
+
+    &.twitter-icon path {
+      transition: fill 0.1s ease-out;  
+        
+      &:hover {
+        fill: #0084b4;
+      }      
+    }     
+  }
+
+  &__impressum {
+    color: $white;
+    margin: 0;
+    text-align: center;
+    @include media($xlarge-screen) {
+      text-align: left;
+    }
+
+    a {
+      @include underline-link($white, $white) 
+    }
+  }
 }
