@@ -87,14 +87,13 @@
           </p>
         </div>
       
-        <div class="row">
+        <div>
 
           <?php 
             $args = array(
               'post_type' => 'aktivitaet',
               'orderby' => 'modified',
               'order'   => 'DESC', 
-              'posts_per_page' => 2,
             );
 
             $loop = new WP_Query( $args) ;

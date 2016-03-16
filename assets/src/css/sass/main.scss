@@ -13,10 +13,13 @@ $visual-grid-opacity: 0.04;
 @import "partials/header";
 @import "partials/main";
 @import "partials/footer";
-@import "partials/front-page";
 @import "partials/video";
-@import "partials/bulletin";
-@import "partials/beratung";
+@import "partials/contact";
+
+@import "templates/front-page";
+@import "templates/bulletin";
+@import "templates/beratung";
+@import "templates/aktivitaeten";
 
 
 

@@ -29,7 +29,7 @@ get_header();
 
           <?php if( get_sub_field('file') ): ?>
             <a class="bulletin-link mainlink" href="<?php the_sub_field('file'); ?>" >
-              <p>Download Bulletin</p>
+              <p class="bulletin-link__text">Download Bulletin</p>
               
               <svg class="bulletin-link__svg" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" id="Layer_1" x="0" y="0" width="403.2px" height="403.2px" viewBox="278.4 78.4 403.2 403.2"  xml:space="preserve">
                 

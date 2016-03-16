@@ -17,18 +17,6 @@
 	@include omega;
 }
 
-a.minorlink-dark {
-	@include link-with-border($medium-gray, $white);
-}
-
-a.minorlink-white  {
-	@include link-with-border($white, $transparent);
-}
-
-.mainlink {
-	@include link-plain-push($pink, $white)
-}
-
 .quote {
 	display: inline-block;
 	font-style: italic;

@@ -6,18 +6,19 @@
     .pink-box, 
     .dark-box {
       color: $white
-    }
-
+    } 
+   
   font-family: $base-font-family;
   font-size: $base-font-size-sm;
-  @include media($medium-screen){
+  line-height: $base-line-height;
+
+  @include media($medium-screen) {
     font-size: $base-font-size-md;
   }
-  @include media($large-screen){
+
+  @include media($large-screen) {
     font-size: $base-font-size-lg;
   }
-  line-height: $base-line-height;
-  
 }
 
 h1,
@@ -102,15 +103,17 @@ h5 {
 
 p {
   font-size: $base-font-size-sm;
-  @include media($medium-screen) {
-    font-size: $base-font-size-md;
-  }
-  @include media($large-screen) {
-    font-size: $base-font-size-lg;
-  }
   margin: 0 0 $small-spacing;
   letter-spacing: $letter-spacing-sm;
   font-weight: 300;
+
+  @include media($medium-screen) {
+    font-size: $base-font-size-md;
+  }
+  
+  @include media($large-screen) {
+    font-size: $base-font-size-lg;
+  }
 
   a {
     @include underline-link($dark-gray, $medium-gray);

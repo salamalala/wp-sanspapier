@@ -1,4 +1,4 @@
-<div class="full-width-box box dark-box">
+<div class="full-width-box box big-letter-box dark-box">
 
   <?php $titel = get_sub_field('titel'); ?>
   <?php $link_mehr = get_sub_field('link:_mehr'); ?>

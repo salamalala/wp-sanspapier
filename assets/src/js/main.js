@@ -27,8 +27,8 @@ var mobileMenu = function(){
 
 
 //jquery tabs
-var tabFunction = function(){
-  $('ul.tabs').each(function(){
+var tabFunction = function(e){
+  $(e).each(function(){
      // For each set of tabs, we want to keep track of
      // which tab is active and it's associated content
      var $active, $content, $links = $(this).find('a');
@@ -148,11 +148,17 @@ $(function(){
 
   mobileMenu();
 
-  secondBox(".flex-content .half-width-box");
-
-  thirdBox(".gallery-card");
-
-  tabFunction();
+  if ( $('.flex-content .half-width-box').length ) {
+    secondBox(".flex-content .half-width-box");
+  }
+  
+  if ( $('.gallery-card').length ) {
+    thirdBox(".gallery-card");
+  }
+  
+  if ( $('ul.tabs').length ) {
+    tabFunction('ul.tabs');
+  }
 
   emptyPTag();
 

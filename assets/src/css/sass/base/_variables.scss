@@ -6,6 +6,7 @@ $heading-font-family: "brandon-grotesque",sans-serif;
 $modular-scale-base: 1em;
 
 // Font Sizes
+$base-font-size-xs: 0.7em;
 $base-font-size-sm: 0.97em;
 $base-font-size-md: 1em;
 $base-font-size-lg: 1.02em;
@@ -35,6 +36,7 @@ $modular-scale-sm: modular-scale(1);
 $modular-scale-md: modular-scale(2);
 $modular-scale-lg: modular-scale(3);
 $modular-scale-xlg: modular-scale(4);
+$modular-scale-xxlg: modular-scale(6);
 
 
 $letter-spacing-sm: 0.05em;

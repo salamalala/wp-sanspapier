@@ -31,7 +31,7 @@ acf_add_local_field_group(array (
         array (
           'key' => '55b00198640c8',
           'name' => 'text_volle_breite',
-          'label' => 'Text volle breite',
+          'label' => 'Text volle breite - normale Schrift',
           'display' => 'row',
           'sub_fields' => array (
             array (
@@ -117,7 +117,7 @@ acf_add_local_field_group(array (
         array (
           'key' => '55eab3ac43f49',
           'name' => 'text_volle_breite_dunkler_hintergrund',
-          'label' => 'Text volle Breite dunkler Hintergrund',
+          'label' => 'Text volle Breite dunkler Hintergrund - grosse Schrift',
           'display' => 'row',
           'sub_fields' => array (
             array (
@@ -198,7 +198,7 @@ acf_add_local_field_group(array (
         array (
           'key' => '55eb2b6b7cfc6',
           'name' => 'text_volle_breite_pinker_hintergrund',
-          'label' => 'Text volle Breite pinker Hintergrund',
+          'label' => 'Text volle Breite pinker Hintergrund - grosse Schrift',
           'display' => 'row',
           'sub_fields' => array (
             array (

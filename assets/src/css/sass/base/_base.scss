@@ -3,11 +3,11 @@
 // Copyright 2013-2015 thoughtbot, inc.
 // MIT License
 
-@import "variables";
-@import "mixins";
-
 // Neat Settings -- uncomment if using Neat -- must be imported before Neat
 @import "grid-settings";
+
+@import "variables";
+@import "mixins";
 
 @import "buttons";
 @import "forms";
@@ -17,6 +17,7 @@
 @import "box";
 @import "gallery";
 @import "elements";
+@import "links";
 
 @import "keyframes";
 
