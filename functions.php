@@ -245,3 +245,32 @@ function display_category_terms() {
     }
 	}
 }
+
+
+function remove_editor() {
+  remove_post_type_support('page', 'editor');
+}
+add_action('admin_init', 'remove_editor');
+
+
+add_filter( 'acf/fields/wysiwyg/toolbars' , 'my_toolbars'  );
+
+function my_toolbars( $toolbars )
+{
+
+	// Add a new toolbar called "Very Simple"
+	// - this toolbar has only 1 row of buttons
+	$toolbars['Very Simple' ] = array();
+	$toolbars['Very Simple' ][1] = array('bold' , 'italic' , 'bullist' ,'numlist', 'link', 'unlink');
+
+	// Edit the "Full" toolbar and remove 'code'
+	// - delet from array code from http://stackoverflow.com/questions/7225070/php-array-delete-by-value-not-key
+	if( ($key = array_search('code' , $toolbars['Full' ][2])) !== false )
+	{
+	    unset( $toolbars['Full' ][2][$key] );
+	}
+
+	// return $toolbars - IMPORTANT!
+	return $toolbars;
+}
+
