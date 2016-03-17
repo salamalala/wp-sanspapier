@@ -264,3 +264,8 @@ function wp_sanspapier_category_transient_flusher() {
 }
 add_action( 'edit_category', 'wp_sanspapier_category_transient_flusher' );
 add_action( 'save_post',     'wp_sanspapier_category_transient_flusher' );
+
+function remove_editor() {
+  remove_post_type_support('page', 'editor');
+}
+add_action('admin_init', 'remove_editor');
