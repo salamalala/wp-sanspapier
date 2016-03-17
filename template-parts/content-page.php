@@ -40,6 +40,14 @@
           <?php elseif (get_row_layout() == 'text_12_breite_pinker_hintergrund' ):  ?>
 
             <?php get_template_part( 'template-parts/partial', 'half-width-pink' ); ?> 
+
+          <?php elseif (get_row_layout() == 'bild_halbe_breite' ):  ?>
+            
+            <?php get_template_part( 'template-parts/partial', 'half-width-image' ); ?>
+
+          <?php elseif (get_row_layout() == 'video_12_breite' ):  ?>
+            
+            <?php get_template_part( 'template-parts/partial', 'half-width-video' ); ?>
                                    
           <?php elseif (get_row_layout() == 'text_3/4_breite' ):  ?>
                        
@@ -59,9 +67,7 @@
             
             <?php get_template_part( 'template-parts/partial', '1_3-image-2_3-text' ); ?>             
               
-          <?php elseif (get_row_layout() == 'bild_halbe_breite' ):  ?>
-            
-            <?php get_template_part( 'template-parts/partial', 'half-width-image' ); ?>             
+                       
 
           <?php endif; ?>
             
