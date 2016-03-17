@@ -42,7 +42,7 @@
           </ul>
         </div>
 
-        <h5 class="footer__impressum">© 2016 Sanspapier Beratungsstelle Bern | <a href="<?php bloginfo('url'); ?>/impressum/">Impressum</a></h5>
+        <h5 class="footer__impressum">© 2016 Beratungsstelle für Sans-Papiers | <a href="<?php bloginfo('url'); ?>/impressum/">Impressum</a></h5>
 
       </div>
 
