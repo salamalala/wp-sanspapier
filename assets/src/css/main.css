@@ -781,34 +781,24 @@ picture {
   -webkit-flex-wrap: wrap;
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
-
-.gallery-card {
-  float: left;
-  display: block;
-  margin-right: 4.34783%;
-  width: 100%;
-  margin-bottom: 30px;
-  margin-right: 0; }
-  .gallery-card:last-child {
+  .gallery__item {
+    float: left;
+    display: block;
+    margin-right: 4.34783%;
+    width: 100%;
+    margin-bottom: 30px;
     margin-right: 0; }
-  @media screen and (min-width: 40em) {
-    .gallery-card {
-      float: left;
-      display: block;
-      margin-right: 4.34783%;
-      width: 30.43478%; }
-      .gallery-card:last-child {
-        margin-right: 0; } }
-
-.gallery-text {
-  padding: 2.36859em 1.77689em;
-  background-color: #fff;
-  position: relative; }
-  @media screen and (min-width: 40em) {
-    .gallery-text {
-      padding: 1.77689em;
-      min-height: 400px; } }
-  .gallery-text .boldcircle {
+    .gallery__item:last-child {
+      margin-right: 0; }
+    @media screen and (min-width: 40em) {
+      .gallery__item {
+        float: left;
+        display: block;
+        margin-right: 4.34783%;
+        width: 30.43478%; }
+        .gallery__item:last-child {
+          margin-right: 0; } }
+  .gallery__boldcircle {
     position: absolute;
     top: -2em;
     right: -1em;
@@ -825,7 +815,7 @@ picture {
             transform: rotate(10deg);
     border-radius: 100%; }
     @media screen and (min-width: 40em) {
-      .gallery-text .boldcircle {
+      .gallery__boldcircle {
         top: -2em;
         right: -2em;
         height: 70px;
@@ -1741,6 +1731,15 @@ html, body {
           margin-right: 0; } }
     .contact .contact-form input {
       width: 100%; }
+
+.card__text {
+  padding: 2.36859em 1.77689em;
+  background-color: #fff;
+  position: relative; }
+  @media screen and (min-width: 40em) {
+    .card__text {
+      padding: 1.77689em;
+      min-height: 400px; } }
 
 .wer {
   margin-top: -3.5em;

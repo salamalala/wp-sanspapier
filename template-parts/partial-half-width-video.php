@@ -1,9 +1,9 @@
-<div class="half-width-box">
+<div class="card half-width-box">
 
-  <div class="video-wrapper">
-    <div class="video"><?php the_sub_field('video'); ?></div>
+  <div class="card__media video-wrapper">
+    <div><?php the_sub_field('video'); ?></div>
   </div>
-  <div class="gallery-text">
+  <div class="card__text">
     <h2><?php the_sub_field('titel'); ?></h2>
     <h4 class="italic">Von: <?php the_sub_field('macherin'); ?></h4>
     <p><?php the_sub_field('beschreibung'); ?></p>

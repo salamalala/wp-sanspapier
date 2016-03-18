@@ -5,15 +5,15 @@
     $preis = get_sub_field('preis'); ?>
    
 
-     <div class="gallery-card">
+     <div class="gallery__item card">
         
-        <div class="video-wrapper">
-          <div class="video"><?php the_sub_field('video'); ?></div>
+        <div class="video-wrapper card__media">
+          <div><?php the_sub_field('video'); ?></div>
         </div>
-        <div class="gallery-text">
 
+        <div class="gallery__text card__text">
           <?php if( !empty($preis) ): ?>
-            <h3 class="boldcircle"><?php the_sub_field('preis'); ?></h3>
+            <h3 class="gallery__boldcircle boldcircle"><?php the_sub_field('preis'); ?></h3>
           <?php endif; ?> 
 
           <h2><?php the_sub_field('titel'); ?></h2>
