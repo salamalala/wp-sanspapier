@@ -765,6 +765,7 @@ picture {
   .image-box-wrapper img {
     -o-object-fit: cover;
        object-fit: cover;
+    min-width: 100%;
     max-width: none; }
 
 .gallery {
@@ -1742,6 +1743,14 @@ html, body {
   @media screen and (min-width: 40em) {
     .card__text {
       padding: 1.77689em; } }
+
+.media__embedded {
+  margin-top: 1.333em;
+  margin-bottom: 1.333em; }
+  @media screen and (min-width: 54em) {
+    .media__embedded {
+      margin-top: 1.77689em;
+      margin-bottom: 1.77689em; } }
 
 .wer {
   margin-top: -3.5em;

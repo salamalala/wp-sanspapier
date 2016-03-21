@@ -66,8 +66,6 @@
 
           ?>
 
-
-
         </nav>
       </div>
 
@@ -102,11 +100,30 @@
               while( $loop->have_posts() ) : $loop->the_post(); 
                 if (get_field('auf_der_homepage')): ?>
 
+                <?php $video = get_field('video'); ?>
+                <?php $bild = get_field('bild'); ?>
+               
+
                   <div class="half-width-box box">
                     <h5><?php display_category_terms(); ?></h5>
                     <h2><?php the_title(); ?></h2>
                     <h4 class="italic"><?php the_field('datum'); ?></h4>
                     <p><?php the_field('kurzbeschreibung'); ?></p>
+                  
+                    <?php if(!empty($bild) && empty($video)): 
+                      $url = $bild['url'];
+                      $alt = $bild['alt']; ?>
+                      <div class="image-box-wrapper media__embedded">
+                        <img src="<?php echo $url; ?>" alt="<?php echo $alt; ?>"/>
+                      </div>
+                    <?php endif; ?>
+
+                    <?php if(!empty($video) && empty($bild)) : ?>
+                      <div class="responsive-video media__embedded">
+                        <div><?php the_field('video'); ?></div>
+                      </div>
+                    <?php endif; ?>
+
                     <a class="minorlink-dark" href="<?php the_permalink()?>">Weiterlesen</a>
                   </div>
 
