@@ -798,6 +798,9 @@ picture {
         width: 30.43478%; }
         .gallery__item:last-child {
           margin-right: 0; } }
+  @media screen and (min-width: 40em) {
+    .gallery__text {
+      min-height: 400px; } }
   .gallery__boldcircle {
     position: absolute;
     top: -2em;
@@ -1679,13 +1682,13 @@ html, body {
                 -ms-transform: translate(0px);
                     transform: translate(0px); } }
 
-.video-wrapper {
+.responsive-video {
   position: relative;
   padding-bottom: 56.25%;
   height: 0;
   overflow: hidden;
   max-width: 100%; }
-  .video-wrapper iframe {
+  .responsive-video iframe {
     position: absolute;
     top: 0;
     left: 0;
@@ -1738,8 +1741,7 @@ html, body {
   position: relative; }
   @media screen and (min-width: 40em) {
     .card__text {
-      padding: 1.77689em;
-      min-height: 400px; } }
+      padding: 1.77689em; } }
 
 .wer {
   margin-top: -3.5em;

@@ -61,7 +61,11 @@
 	            
 	        <?php elseif (get_row_layout() == 'bild_halbe_breite' ):  ?>
 	          
-	          <?php get_template_part( 'template-parts/partial', 'half-width-image' ); ?>             
+	          <?php get_template_part( 'template-parts/partial', 'half-width-image' ); ?>
+
+	        <?php elseif (get_row_layout() == 'video_12_breite' ):  ?>
+	          
+	          <?php get_template_part( 'template-parts/partial', 'half-width-video' ); ?>             
 
 	        <?php endif; ?>
 	          

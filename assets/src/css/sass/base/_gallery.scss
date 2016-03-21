@@ -13,6 +13,12 @@
     }
   }
 
+  &__text {
+    @include media($medium-screen) {
+      min-height: 400px;
+    }
+  }
+
   &__boldcircle {
     position: absolute;
     top: -2em;

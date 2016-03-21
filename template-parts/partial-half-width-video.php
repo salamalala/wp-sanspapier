@@ -1,6 +1,6 @@
 <div class="card half-width-box">
 
-  <div class="card__media video-wrapper">
+  <div class="card__media responsive-video">
     <div><?php the_sub_field('video'); ?></div>
   </div>
   <div class="card__text">
