@@ -1,13 +1,27 @@
 <div class="card half-width-box">
 
+  <?php $titel = get_sub_field('titel'); ?>
+  <?php $macherin = get_sub_field('macherin'); ?>
+  <?php $beschreibung = get_sub_field('beschreibung'); ?>
+
   <div class="card__media responsive-video">
     <div><?php the_sub_field('video'); ?></div>
   </div>
-  <div class="card__text">
-    <h2><?php the_sub_field('titel'); ?></h2>
-    <h4 class="italic">Von: <?php the_sub_field('macherin'); ?></h4>
-    <p><?php the_sub_field('beschreibung'); ?></p>
-  </div>
+
+  <!-- if no text element is there don't show white text box -->
+  <?php if (!empty($titel) || !empty($macherin) || !empty($beschreibung)): ?>
+  
+    <div class="card__text">
+      <h2><?php the_sub_field('titel'); ?></h2>
+      
+      <!-- otherwise 'von' would appear -->
+      <?php if( !empty($macherin)): ?>
+        <h4 class="italic">Von: <?php the_sub_field('macherin'); ?></h4>
+      <?php endif; ?> 
+
+      <p><?php the_sub_field('beschreibung'); ?></p>
+    </div>
+  <?php endif; ?> 
 
 </div>
 
