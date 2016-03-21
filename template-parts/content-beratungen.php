@@ -21,7 +21,7 @@ get_header();
           <p><?php the_sub_field('beratungszeiten'); ?></p>
         </div>
 
-        <div id="map-bern" class="one-third-box right-element-in-row">
+        <div id="map-bern" class="one-third-box right-element-in-row map">
         </div>
 
       <?php elseif($row == 2): ?>
@@ -31,7 +31,7 @@ get_header();
             <p><?php the_sub_field('beratungszeiten'); ?></p>
           </div>
 
-          <div id="map-biel" class="one-third-box right-element-in-row">
+          <div id="map-biel" class="one-third-box right-element-in-row map">
           </div>
       
       <?php endif; ?>

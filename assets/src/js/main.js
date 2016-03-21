@@ -147,6 +147,7 @@ var initMap = function() {
 $(function(){
 
   mobileMenu();
+  emptyPTag();
 
   if ( $('.flex-content .half-width-box').length ) {
     secondBox(".flex-content .half-width-box");
@@ -162,11 +163,11 @@ $(function(){
   
   if ( $('ul.tabs').length ) {
     tabFunction('ul.tabs');
+  }  
+
+  if ( $('.map').length ) {
+    initMap();
   }
-
-  emptyPTag();
-
-  initMap();
 
 });
 
