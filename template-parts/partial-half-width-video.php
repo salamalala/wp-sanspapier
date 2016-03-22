@@ -4,8 +4,11 @@
   <?php $macherin = get_sub_field('macherin'); ?>
   <?php $beschreibung = get_sub_field('beschreibung'); ?>
 
-  <div class="card__media responsive-video">
-    <div><?php the_sub_field('video'); ?></div>
+  <!-- needs an extra div in order not to break in firefox due to flex on parent element -->
+  <div>
+    <div class="responsive-video">
+      <?php the_sub_field('video'); ?>
+    </div>
   </div>
 
   <!-- if no text element is there don't show white text box -->

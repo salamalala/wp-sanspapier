@@ -1,6 +1,7 @@
 .gallery {
 	@include display(flex);
 	@include flex-wrap(wrap);
+  @include span-columns(12);
 
 
   &__item {

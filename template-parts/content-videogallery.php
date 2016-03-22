@@ -7,7 +7,7 @@
 
      <div class="gallery__item card">
         
-        <div class="responsive-video card__media">
+        <div class="responsive-video">
           <div><?php the_sub_field('video'); ?></div>
         </div>
 

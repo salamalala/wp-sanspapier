@@ -119,8 +119,12 @@
                     <?php endif; ?>
 
                     <?php if(!empty($video) && empty($bild)) : ?>
-                      <div class="responsive-video media__embedded">
-                        <div><?php the_field('video'); ?></div>
+                      
+                      <!-- needs an extra div in order not to break in firefox due to flex on parent element -->
+                      <div>
+                        <div class="responsive-video media__embedded">
+                          <?php the_field('video'); ?>
+                        </div>
                       </div>
                     <?php endif; ?>
 
@@ -149,7 +153,6 @@
                   <h3>Beratungszeiten <span class="hide-when-small"><?php the_sub_field('beratungsort'); ?></span></h3>
                   <p><?php the_sub_field('beratungszeiten'); ?></p>
                   <a class="minorlink-dark" href="<?php bloginfo('url'); ?>/beratungen/">Mehr Informationen</a>            
-
                 </div>
 
                 <?php endwhile; ?>
