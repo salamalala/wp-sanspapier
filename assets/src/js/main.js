@@ -157,8 +157,8 @@ $(function(){
     thirdBox(".flex-content .one-third-box");
   }
   
-  if ( $('.gallery-card').length ) {
-    thirdBox(".gallery-card");
+  if ( $('.gallery__item').length ) {
+    thirdBox(".gallery__item");
   }
   
   if ( $('ul.tabs').length ) {
