@@ -26,6 +26,10 @@
 	background-color: $pink;
 }
 
+.element-expand {
+	flex-grow: 1;
+}
+
 .full-width-box {
 	@include full-width-flex-box;
 
@@ -95,6 +99,7 @@
 
 .image-box-wrapper {
 	padding: 0;
+	overflow: hidden;
 		
 	img { 
 		object-fit: cover;
