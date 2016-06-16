@@ -3,32 +3,32 @@
 	@include display(flex);
 	@include flex-wrap(wrap);
 
-  &__item {
-    @include span-columns(12 of 12);
-    margin-bottom: 30px;
-    @include omega;
+	&__item {
+		@include span-columns(12 of 12);
+		margin-bottom: 30px;
+		@include omega;
 
-    @include media($medium-screen){
-      @include span-columns(4 of 12);
-    }
-  }
+		@include media($medium-screen){
+		  @include span-columns(4 of 12);
+		}
+	}
 
-  &__text {
-    @include media($medium-screen) {
-      min-height: 400px;
-    }
-  }
+	&__text {
+		@include media($medium-screen) {
+		  min-height: 400px;
+		}
+	}
 
-  &__boldcircle {
-    position: absolute;
-    top: -2em;
-    right: -1em;
-    @include circle($medium-gray, $white, 80px, 0.7em);
+	&__boldcircle {
+		position: absolute;
+		top: -2em;
+		right: -1em;
+		@include circle($medium-gray, $white, 80px, 0.7em);
 
-    @include media($medium-screen) {
-      top: -2em;
-      right: -2em;
-      @include circle($medium-gray, $white, 70px, 0.8em);
-    }
-  }
+		@include media($medium-screen) {
+		  top: -2em;
+		  right: -2em;
+		  @include circle($medium-gray, $white, 70px, 0.8em);
+		}
+	}
 }
