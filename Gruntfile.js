@@ -13,14 +13,14 @@ module.exports = function(grunt){
     },
 
     bower_concat: {
-      // concatenation of all bower files. 
+      // concatenation of all bower files.
       all: {
         dest: 'assets/src/js/_bower.js',
         cssDest: 'assets/src/css/_bower.css',
         bowerOptions: {
           relative: false
         },
-        // specifying files which don't have a main file by default. 
+        // specifying files which don't have a main file by default.
         mainFiles: {
           'bourbon' : 'bourbon/app/assets/src/css/_bourbon.scss',
           'neat' : 'neat/app/assets/src/css/_neat.scss'
@@ -36,7 +36,7 @@ module.exports = function(grunt){
       }
     },
 
-    sass: {                          
+    sass: {
       dist: {
        files: [{
          expand: true,
@@ -48,13 +48,13 @@ module.exports = function(grunt){
      }
    },
 
-   // has to be on the min, otherwise sourcemap doesnt work. 
+   // has to be on the min, otherwise sourcemap doesnt work.
   autoprefixer:{
      main:{
        src: 'assets/src/css/main.css',
      }
   },
-  
+
   cssmin: {
       options: {
         sourceMap: true,
@@ -121,15 +121,11 @@ module.exports = function(grunt){
   });
 
 
-  // This command replaces all the other tasks. 
+  // This command replaces all the other tasks.
   require('load-grunt-tasks')(grunt);
 
   // Default Task
-  
+
   grunt.registerTask('default',['newer:uglify:js', 'bower_concat:all', 'newer:sass:dist','newer:autoprefixer', 'cssmin:target',  'newer:imagemin', 'browserSync', 'watch']);
 
-
-
-
 };
-

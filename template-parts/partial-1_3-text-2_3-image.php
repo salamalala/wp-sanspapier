@@ -1,16 +1,16 @@
-<div class="box one-third-box  ">
-  
+<div class="box one-third-box not-right-element-in-row">
+
   <?php $titel = get_sub_field('box_links_titel'); ?>
   <?php $link_mehr = get_sub_field('link:_mehr'); ?>
   <?php $link_weiterlesen = get_sub_field('link:_weiterlesen'); ?>
-  
+
   <?php if( !empty($titel) ): ?>
     <h2><?php the_sub_field('box_links_titel'); ?></h1>
-  <?php endif; ?> 
+  <?php endif; ?>
 
   <p><?php strip_tags(the_sub_field('box_links_text')); ?></p>
 
-    
+
   <?php if( !empty($link_mehr) && empty($link_weiterlesen) ): ?>
     <a href="<?php the_sub_field('link:_mehr'); ?>" class="minorlink-white" target="_blank">Mehr Infos</a>
   <?php endif; ?>
@@ -19,7 +19,7 @@
     <a href="<?php the_sub_field('link:_weiterlesen'); ?>" class="minorlink-dark">Weiterlesen</a>
   <?php endif; ?>
 
-</div>    
+</div>
 
 <?php $bild_rechts = get_sub_field('bild_rechts');
 

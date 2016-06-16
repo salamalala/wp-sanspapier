@@ -148,11 +148,13 @@ $(function(){
   mobileMenu();
   emptyPTag();
 
-  if ( $('.flex-content .half-width-box').length ) {
+  //check if there is a half width box which isn't in a row
+  if (  ($('.flex-content .half-width-box').length ) && (!$('.half-width-box').hasClass('not-right-element-in-row')) ) {
     secondBox(".flex-content .half-width-box");
   }
 
-  if ( $('.flex-content .one-third-box').length ) {
+  //check if there is a one third box which isn't in a row
+  if (  ($('.flex-content .one-third-box').length ) && (!$('.one-third-box').hasClass('not-right-element-in-row')) ) {
     thirdBox(".flex-content .one-third-box");
   }
 
