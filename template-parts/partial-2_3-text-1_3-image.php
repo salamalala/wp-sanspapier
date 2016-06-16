@@ -1,4 +1,4 @@
-<div class="box two-third-box not-right-element-in-row">
+<div class="box two-third-box not-right-element-in-row ">
 
   <?php $titel = get_sub_field('box_links_titel'); ?>
   <?php $link_mehr = get_sub_field('link:_mehr'); ?>

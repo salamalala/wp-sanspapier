@@ -5,7 +5,7 @@ if( !empty($bild_links) ):
 $url = $bild_links['url'];
 $alt = $bild_links['alt']; ?>
 
-  <div class="two-third-box image-box-wrapper not-right-element-in-row">
+  <div class="two-third-box image-box-wrapper not-right-element-in-row ">
     <img src="<?php echo $url; ?>" alt="<?php echo $alt; ?>"/>
   </div>
 <?php endif; ?>

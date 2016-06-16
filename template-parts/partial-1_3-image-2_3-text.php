@@ -5,7 +5,7 @@
     $url = $bild_links['url'];
     $alt = $bild_links['alt']; ?>
 
-        <div class="one-third-box image-box-wrapper not-right-element-in-row">
+        <div class="one-third-box image-box-wrapper not-right-element-in-row ">
           <img src="<?php echo $url; ?>" alt="<?php echo $alt; ?>"/>
         </div>
 

@@ -148,7 +148,7 @@ $(function(){
   mobileMenu();
   emptyPTag();
 
-  //check if there is a half width box which doesn't have the class not right element in row
+  //check if there is a half width box which doesn't have the class not right element in row 
   if (  ($('.flex-content .half-width-box').length ) && (!$('.half-width-box').hasClass('not-right-element-in-row')) ) {
     secondBox(".flex-content .half-width-box");
   }
