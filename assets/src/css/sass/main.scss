@@ -2,7 +2,7 @@
 $visual-grid: false;
 $visual-grid-color: yellow;
 $visual-grid-index: front;
-$visual-grid-opacity: 0.04;
+$visual-grid-opacity: 0.08;
 
 
 @import "../../../../bower_components/neat/app/assets/stylesheets/neat";
@@ -22,6 +22,3 @@ $visual-grid-opacity: 0.04;
 @import "templates/bulletin";
 @import "templates/beratung";
 @import "templates/aktivitaeten";
-
-
-

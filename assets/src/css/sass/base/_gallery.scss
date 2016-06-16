@@ -1,7 +1,7 @@
 .gallery {
 	@include display(flex);
 	@include flex-wrap(wrap);
-  @include span-columns(12);
+  	@include span-columns(12);
 
 
   &__item {
@@ -23,19 +23,13 @@
   &__boldcircle {
     position: absolute;
     top: -2em;
-    right: -1em;  
+    right: -1em;
     @include circle($medium-gray, $white, 80px, 0.7em);
-   
+
     @include media($medium-screen) {
       top: -2em;
-      right: -2em;  
+      right: -2em;
       @include circle($medium-gray, $white, 70px, 0.8em);
     }
   }
 }
-
-
- 
-
-
-
