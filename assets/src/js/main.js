@@ -3,7 +3,7 @@ var mobileMenu = function(){
   // unbind all event handlers from the mobile menu button
   var menuToggle = $('#js-mobile-menu').unbind();
 
-  //js-navigation-menu is ul of nav 
+  //js-navigation-menu is ul of nav
   //dont show the list, display block, only show the menu button
   $('#js-navigation-menu').removeClass("show");
 
@@ -14,14 +14,14 @@ var mobileMenu = function(){
     e.preventDefault();
     //add class open to span for hamburger menu
     $(this).toggleClass('open');
-    
+
     $('#js-navigation-menu').slideToggle(function(){
       //if the nav items are hidden, remove all their style attributes
       if($('#js-navigation-menu').is(':hidden')) {
         $('#js-navigation-menu').removeAttr('style');
       }
     });
-    
+
   });
 };
 
@@ -66,19 +66,18 @@ var tabFunction = function(e){
    });
 };
 
-  
+
 //detect second half box
 var secondBox = function(e) {
 
   $(e).filter(function(index){
     return index % 2 === 1;
   }).addClass("right-element-in-row");
-  
+
 };
 
 
-
-//detect second half box
+//detect third half box
 var thirdBox = function(e) {
 
   $(e).filter(function(index){
@@ -139,11 +138,11 @@ var initMap = function() {
     draggable: false,
     map: mapBiel
   });
-  
+
 };
 
 
-// same than $(document).ready(function() 
+// same than $(document).ready(function()
 $(function(){
 
   mobileMenu();
@@ -156,20 +155,17 @@ $(function(){
   if ( $('.flex-content .one-third-box').length ) {
     thirdBox(".flex-content .one-third-box");
   }
-  
+
   if ( $('.gallery__item').length ) {
     thirdBox(".gallery__item");
   }
-  
+
   if ( $('ul.tabs').length ) {
     tabFunction('ul.tabs');
-  }  
+  }
 
   if ( $('.map').length ) {
     initMap();
   }
 
 });
-
-
-
