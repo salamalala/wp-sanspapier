@@ -7,7 +7,6 @@ var mobileMenu = function(){
   //dont show the list, display block, only show the menu button
   $('#js-navigation-menu').removeClass("show");
 
-
   //when clicking on the menu button, don't do the default function (here clicking on the link
     // display with slidetoggle )
   menuToggle.on('click', function(e) {
@@ -141,14 +140,30 @@ var initMap = function() {
 
 };
 
+var donatedAmount = function() {
+  $('#form1 input').on('change', function() {
+    var selectedAmount = $('input[name=online-spende]:checked').val();
+    $('input[name=AMOUNT]').val(selectedAmount * 100);
+  });
+}
+
+var dynamicOrderID = function() {
+  var num = Math.floor(Math.random() * 999999);
+  $('input[name=ORDERID]').val(num);
+}
 
 // same than $(document).ready(function()
 $(function(){
 
+  if ( $('#form1').length ) {
+    donatedAmount();
+    dynamicOrderID();
+  }
+
   mobileMenu();
   emptyPTag();
 
-  //check if there is a half width box which doesn't have the class not right element in row 
+  //check if there is a half width box which doesn't have the class not right element in row
   if (  ($('.flex-content .half-width-box').length ) && (!$('.half-width-box').hasClass('not-right-element-in-row')) ) {
     secondBox(".flex-content .half-width-box");
   }
