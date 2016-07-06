@@ -19,8 +19,10 @@ get_header();
     <label for="os50"> 50 Franken </label>
     <input type="radio" name="online-spende" value="100" id="os100" class="online-spende">
     <label for="os100"> 100 Franken </label>
-    
-    <input type="number" value="" id="osopen" class="online-spende">
+    <input type="radio" name="online-spende" value="200" id="os200" class="online-spende">
+    <label for="os200"> 200 Franken </label>
+    <!-- min is 1 and steps avoids floats -->
+    <input type="number" value="" id="osopen" min="1" step="1" class="online-spende">
     <label for="osopen"> Franken </label>
 
     <input type="hidden" name="PSPID" value="sanspapiersTEST">

@@ -142,21 +142,22 @@ var initMap = function() {
 
 var donatedAmount = function() {
 
-  $('#form1 input').keyup(function() {
+  $('#form1 input').on('change keyup paste click', function() {
 
-    if (!$('#osopen').val()) {
-      console.log("osopen empty");
-      var selectedAmount = $('input[name=online-spende]:checked').val()
-      $('#osopen:empty').val('');
-      $('input[name=AMOUNT]').val(selectedAmount * 100)
-
-    } else {
-      console.log("os open not empty");
+    // if there is something in the open field then
+    // } else if ($('#osopen').val().length > 0){
+    if ($('#osopen').is(":focus")){
+      console.log("os open has a value");
       $('input[type=radio]').prop('checked', false);
       var chosenAmount = $('#osopen:empty').val()
       $('input[name=AMOUNT]').val(chosenAmount * 100);
+    // if one of the radio buttons is ticked
+    } else if ($('input:radio[name=online-spende]').is(":checked")) {
+      console.log("radio box is checked");
+      var selectedAmount = $('input[name=online-spende]:checked').val()
+      $('#osopen').val('');
+      $('input[name=AMOUNT]').val(selectedAmount * 100)
     }
-
   });
 
 }
