@@ -1457,46 +1457,6 @@ main {
   -ms-flex-wrap: wrap;
   flex-wrap: wrap; }
 
-.page-template-content-unterstuetzung {
-  background-color: #4B5663; }
-  .page-template-content-unterstuetzung header {
-    border-bottom: none; }
-  .page-template-content-unterstuetzung form {
-    margin-top: 4em;
-    color: #fff; }
-    .page-template-content-unterstuetzung form .unterstuetzung-form {
-      float: left;
-      display: block;
-      margin-right: 4.34783%;
-      width: 100%; }
-      .page-template-content-unterstuetzung form .unterstuetzung-form:last-child {
-        margin-right: 0; }
-      @media screen and (min-width: 54em) {
-        .page-template-content-unterstuetzung form .unterstuetzung-form {
-          float: left;
-          display: block;
-          margin-right: 4.34783%;
-          width: 39.13043%; }
-          .page-template-content-unterstuetzung form .unterstuetzung-form:last-child {
-            margin-right: 0; } }
-    .page-template-content-unterstuetzung form .unterstuetzung-adresse {
-      float: left;
-      display: block;
-      margin-right: 4.34783%;
-      width: 100%; }
-      .page-template-content-unterstuetzung form .unterstuetzung-adresse:last-child {
-        margin-right: 0; }
-      @media screen and (min-width: 54em) {
-        .page-template-content-unterstuetzung form .unterstuetzung-adresse {
-          float: left;
-          display: block;
-          margin-right: 4.34783%;
-          width: 39.13043%;
-          margin-left: 17.3913%;
-          margin-right: 0; }
-          .page-template-content-unterstuetzung form .unterstuetzung-adresse:last-child {
-            margin-right: 0; } }
-
 .wrapper-for-content-outside-of-footer {
   min-height: 100%;
   height: auto !important;
@@ -2085,3 +2045,44 @@ html, body {
 
 .aktivitaeten div:nth-child(even) {
   margin-right: 0; }
+
+.page-template-content-unterstuetzung {
+  background-color: #4B5663;
+  color: #fff; }
+  .page-template-content-unterstuetzung header {
+    border-bottom: none; }
+  .page-template-content-unterstuetzung form {
+    margin-top: 4em;
+    color: #fff; }
+    .page-template-content-unterstuetzung form .unterstuetzung-form {
+      float: left;
+      display: block;
+      margin-right: 4.34783%;
+      width: 100%; }
+      .page-template-content-unterstuetzung form .unterstuetzung-form:last-child {
+        margin-right: 0; }
+      @media screen and (min-width: 54em) {
+        .page-template-content-unterstuetzung form .unterstuetzung-form {
+          float: left;
+          display: block;
+          margin-right: 4.34783%;
+          width: 39.13043%; }
+          .page-template-content-unterstuetzung form .unterstuetzung-form:last-child {
+            margin-right: 0; } }
+    .page-template-content-unterstuetzung form .unterstuetzung-adresse {
+      float: left;
+      display: block;
+      margin-right: 4.34783%;
+      width: 100%; }
+      .page-template-content-unterstuetzung form .unterstuetzung-adresse:last-child {
+        margin-right: 0; }
+      @media screen and (min-width: 54em) {
+        .page-template-content-unterstuetzung form .unterstuetzung-adresse {
+          float: left;
+          display: block;
+          margin-right: 4.34783%;
+          width: 39.13043%;
+          margin-left: 17.3913%;
+          margin-right: 0; }
+          .page-template-content-unterstuetzung form .unterstuetzung-adresse:last-child {
+            margin-right: 0; } }

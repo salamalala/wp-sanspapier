@@ -141,10 +141,24 @@ var initMap = function() {
 };
 
 var donatedAmount = function() {
-  $('#form1 input').on('change', function() {
-    var selectedAmount = $('input[name=online-spende]:checked').val();
-    $('input[name=AMOUNT]').val(selectedAmount * 100);
+
+  $('#form1 input').keyup(function() {
+
+    if (!$('#osopen').val()) {
+      console.log("osopen empty");
+      var selectedAmount = $('input[name=online-spende]:checked').val()
+      $('#osopen:empty').val('');
+      $('input[name=AMOUNT]').val(selectedAmount * 100)
+
+    } else {
+      console.log("os open not empty");
+      $('input[type=radio]').prop('checked', false);
+      var chosenAmount = $('#osopen:empty').val()
+      $('input[name=AMOUNT]').val(chosenAmount * 100);
+    }
+
   });
+
 }
 
 var dynamicOrderID = function() {
