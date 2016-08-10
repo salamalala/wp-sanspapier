@@ -7,25 +7,68 @@
   }
 
   form {
-    margin-top: 4em;
     color: $white;
+  }
 
-    .unterstuetzung-form {
-      @include span-columns(12 of 12);
-      @include media($large-screen) {
-        @include span-columns(5);
+  .unterstuetzung-box {
+    @include span-columns(12 of 12);
+    border: solid $light-gray 2px;
+    padding: $modular-scale-lg $modular-scale-md;
+    margin-top: $modular-scale-xlg;
+
+    h3 {
+      position: relative;
+      margin-bottom: $modular-scale-xs;
+
+      &:after {
+        content: '';
+        position: absolute;
+        bottom: -0.2em;
+        left: 0;
+        height: 2px;
+        width: 100%;
+        background-color: $pink;
       }
     }
+  }
 
-    .unterstuetzung-adresse {
-      @include span-columns(12 of 12);
-      @include media($large-screen) {
-        @include span-columns(5);
-        @include shift(2);
-        @include omega;
-      }
+  .online-box,
+  .account-box {
+    @include span-columns(12 of 12);
+    @include media($large-screen) {
+      @include span-columns(6 of 12);
+    }
+  }
 
+  .online-form {
+    label {
+      display: inline-block;
     }
 
+    input[type=number] {
+      @include span-columns(3 of 6);
+    }
+  }
+
+  .account-box {
+    @include omega;
+  }
+
+  .unterstuetzung-form {
+    @include span-columns(12 of 12);
+    @include media($large-screen) {
+      @include span-columns(6 of 12);
+    }
+  }
+
+  .unterstuetzung-adresse {
+    @include span-columns(12 of 12);
+    margin-top: $modular-scale-lg;
+    @include media($large-screen) {
+      @include span-columns(5 of 12);
+      @include shift(1);
+      @include omega;
+      margin-top: 0;
+    }
   }
 }

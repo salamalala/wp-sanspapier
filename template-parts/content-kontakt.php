@@ -1,4 +1,4 @@
-<?php /* Template Name: Kontakt */ 
+<?php /* Template Name: Kontakt */
 
 
 get_header();
@@ -17,11 +17,9 @@ get_header();
     <p> Email: beratung@sans-papiers-contact.ch <p>
   </div>
 
-  <?php while ( have_posts() ) : the_post(); ?>
-    <div class="contact-form">
-      <?php the_content(); ?> 
-    </div>
-  <?php endwhile; // End of the loop. ?>
+  <div class="contact-form">
+    <?php echo do_shortcode( '[contact-form-7 id="530" title="Kontaktformular"]' ); ?>
+  </div>
 
 </div>
 

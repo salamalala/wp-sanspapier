@@ -1,13 +1,13 @@
-  body {
+body {
   @include font-feature-settings("kern", "liga", "pnum");
   -webkit-font-smoothing: antialiased;
   color: $base-font-color;
-    
-    .pink-box, 
+
+    .pink-box,
     .dark-box {
       color: $white
-    } 
-   
+    }
+
   font-family: $base-font-family;
   font-size: $base-font-size-sm;
   line-height: $base-line-height;
@@ -44,7 +44,7 @@ h1 {
   font-weight: 700;
   font-size: $big-font-size;
   @include media ($medium-screen) {
-    font-size: $very-big-font-size;  
+    font-size: $very-big-font-size;
   }
   text-transform: uppercase;
 }
@@ -54,17 +54,17 @@ h2 {
   font-weight: 500;
   font-size: $medium-font-size;
   @include media ($large-screen) {
-    font-size: $big-font-size;  
+    font-size: $big-font-size;
   }
   padding-bottom: 0.15em;
   @include title-border-bottom($medium-gray);
-    
-    .dark-box &, 
+
+    .dark-box &,
     .pink-box & {
       @include title-border-bottom($white);
     }
 }
- 
+
 h3 {
   font-weight: 500;
   font-size: $medium-font-size;
@@ -79,7 +79,7 @@ h4.italic {
   font-size: $base-font-size-lg;
   color: $light-medium-gray;
 
-  .pink-box &, 
+  .pink-box &,
   .dark-box &{
     color: $white
   }
@@ -92,7 +92,7 @@ h5 {
   font-size: $small-font-size;
   color: $pink;
 
-  .pink-box &, 
+  .pink-box &,
   .dark-box &{
     color: $white
   }
@@ -110,7 +110,7 @@ p {
   @include media($medium-screen) {
     font-size: $base-font-size-md;
   }
-  
+
   @include media($large-screen) {
     font-size: $base-font-size-lg;
   }
@@ -118,7 +118,7 @@ p {
   a {
     @include underline-link($dark-gray, $medium-gray);
 
-    .dark-box &, 
+    .dark-box &,
     .pink-box & {
       @include underline-link($white, $white);
     }
@@ -126,11 +126,11 @@ p {
 }
 
 a {
- text-decoration: none;      
-  color: $pink;      
+ text-decoration: none;
+  color: $pink;
   font-weight: 600;
-  transition: color 0.5s; 
-  &:hover {      
+  transition: color 0.5s;
+  &:hover {
     color: saturate($pink, 15%);
   }
 }

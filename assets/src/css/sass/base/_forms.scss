@@ -11,8 +11,7 @@ select {
   display: block;
   font-family: $heading-font-family;
   font-size: $normal-font-size;
-  margin-bottom: 1em;
-
+  margin-bottom: $modular-scale-xxxxs;
 }
 
 ::-webkit-input-placeholder {
@@ -20,12 +19,12 @@ select {
 }
 
 :-ms-input-placeholder {
-  color: $light-medium-gray; 
+  color: $light-medium-gray;
 }
 
 label {
   font-weight: 500;
-  text-transform: uppercase;  
+  text-transform: uppercase;
 
   &.required::after {
     content: "*";
@@ -65,7 +64,7 @@ textarea {
     color: $white;
     &:focus {
      color: $pink;
-    }  
+    }
   }
 }
 
@@ -96,9 +95,9 @@ select {
 
 #{$all-buttons} {
   @include plain-link($white, $pink);
-  
+
   .pink-box & {
-    @include plain-link($pink, $white);  
+    @include plain-link($pink, $white);
   }
 
 }
@@ -106,10 +105,6 @@ select {
 //alert messages;
 .wpcf7 {
 
-  label {
-    margin-bottom: -1em;
-  }
-  
   span.wpcf7-not-valid-tip {
     color: $pink;
     background: $white;
@@ -117,6 +112,10 @@ select {
     padding: $modular-scale-xxxxs;
     text-align: center;
     font-style: italic;
+  }
+
+  span.wpcf7-list-item {
+    margin-left: 0;
   }
 
   .wpcf7-validation-errors {
