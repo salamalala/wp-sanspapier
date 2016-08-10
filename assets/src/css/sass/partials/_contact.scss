@@ -2,20 +2,16 @@
   @include span-columns(12);
 
   .contact-information {
-    @include span-columns(12);  
+    @include span-columns(12);
     @include media($medium-screen) {
-      @include span-columns(6);  
+      @include span-columns(6);
     }
   }
 
   .contact-form {
-    @include span-columns(12);  
+    @include span-columns(12);
       @include media($medium-screen) {
-        @include span-columns(6);  
-    }
-    input {
-      width: 100%;
+        @include span-columns(6);
     }
   }
 }
-
