@@ -2045,12 +2045,9 @@ html, body {
   margin-right: 0; }
 
 .page-template-content-unterstuetzung {
-  background-color: #4B5663;
-  color: #fff; }
+  background-color: #4B5663; }
   .page-template-content-unterstuetzung header {
     border-bottom: none; }
-  .page-template-content-unterstuetzung form {
-    color: #fff; }
   .page-template-content-unterstuetzung .unterstuetzung-box {
     float: left;
     display: block;
@@ -2058,7 +2055,8 @@ html, body {
     width: 100%;
     border: solid #F4F6F9 2px;
     padding: 2.36859em 1.77689em;
-    margin-top: 3.15733em; }
+    margin-top: 3.15733em;
+    color: #fff; }
     .page-template-content-unterstuetzung .unterstuetzung-box:last-child {
       margin-right: 0; }
     .page-template-content-unterstuetzung .unterstuetzung-box h3 {

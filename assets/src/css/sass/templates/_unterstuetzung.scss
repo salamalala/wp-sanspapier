@@ -1,13 +1,8 @@
 .page-template-content-unterstuetzung {
   background-color: $medium-gray;
-  color: $white;
 
   header {
     border-bottom: none;
-  }
-
-  form {
-    color: $white;
   }
 
   .unterstuetzung-box {
@@ -15,6 +10,7 @@
     border: solid $light-gray 2px;
     padding: $modular-scale-lg $modular-scale-md;
     margin-top: $modular-scale-xlg;
+    color: $white;
 
     h3 {
       position: relative;
