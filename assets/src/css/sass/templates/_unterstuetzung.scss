@@ -26,6 +26,13 @@
         background-color: $pink;
       }
     }
+
+    &__validation {
+      display: none;
+      color: $pink;
+      text-align: center;
+      font-size: $medium-font-size;
+    }
   }
 
   .online-box,

@@ -147,20 +147,36 @@ var donatedAmount = function() {
     // if there is something in the open field then
     // } else if ($('#osopen').val().length > 0){
     if ($('#osopen').is(":focus")){
-      console.log("os open has a value");
       $('input[type=radio]').prop('checked', false);
       var chosenAmount = $('#osopen:empty').val()
       $('input[name=AMOUNT]').val(chosenAmount * 100);
     // if one of the radio buttons is ticked
     } else if ($('input:radio[name=online-spende]').is(":checked")) {
-      console.log("radio box is checked");
       var selectedAmount = $('input[name=online-spende]:checked').val()
       $('#osopen').val('');
       $('input[name=AMOUNT]').val(selectedAmount * 100)
     }
   });
 
-}
+};
+
+var validationForm = function() {
+
+  $('#form1').submit(function () {
+
+    if ($('input[name=online-spende]').is(':checked') || $('#osopen').val()) {
+      $('.unterstuetzung-box__validation').css("display", "none");
+      return true;
+    } else {
+      $('.unterstuetzung-box__validation').css("display", "block");
+      return false;
+    }
+
+  });
+
+};
+
+
 
 var dynamicOrderID = function() {
   var num = Math.floor(Math.random() * 999999);
@@ -173,6 +189,7 @@ $(function(){
   if ( $('#form1').length ) {
     donatedAmount();
     dynamicOrderID();
+    validationForm();
   }
 
   mobileMenu();

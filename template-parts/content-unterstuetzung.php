@@ -47,6 +47,10 @@ get_header();
 
       <input type="submit" value="Online Spenden" id="submit" name="submit">
 
+      <p class="unterstuetzung-box__validation">
+        Bitte fügen Sie einen Spendenbetrag ein.
+      </p>
+
     </form>
 
   </div>

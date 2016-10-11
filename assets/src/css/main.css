@@ -2070,6 +2070,11 @@ html, body {
         height: 2px;
         width: 100%;
         background-color: #bf4385; }
+    .page-template-content-unterstuetzung .unterstuetzung-box__validation {
+      display: none;
+      color: #bf4385;
+      text-align: center;
+      font-size: 1.333em; }
   .page-template-content-unterstuetzung .online-box,
   .page-template-content-unterstuetzung .account-box {
     float: left;
