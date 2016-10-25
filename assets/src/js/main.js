@@ -163,7 +163,6 @@ var donatedAmount = function() {
 var validationForm = function() {
 
   $('#form1').submit(function () {
-
     if ($('input[name=online-spende]').is(':checked') || $('#osopen').val()) {
       $('.unterstuetzung-box__validation').css("display", "none");
       return true;
@@ -171,12 +170,9 @@ var validationForm = function() {
       $('.unterstuetzung-box__validation').css("display", "block");
       return false;
     }
-
   });
 
 };
-
-
 
 var dynamicOrderID = function() {
   var num = Math.floor(Math.random() * 999999);
