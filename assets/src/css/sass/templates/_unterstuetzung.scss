@@ -5,6 +5,21 @@
     border-bottom: none;
   }
 
+  h3 {
+    position: relative;
+    margin-bottom: $modular-scale-xs;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -0.2em;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background-color: $pink;
+    }
+  }
+
 
   .unterstuetzung-box {
     @include span-columns(12 of 12);
@@ -18,21 +33,6 @@
       color: $pink;
       text-align: center;
       font-size: $medium-font-size;
-    }
-  }
-
-  .unterstuetzung-title {
-    position: relative;
-    margin-bottom: $modular-scale-xs;
-
-    &:after {
-      content: '';
-      position: absolute;
-      bottom: -0.2em;
-      left: 0;
-      height: 2px;
-      width: 100%;
-      background-color: $pink;
     }
   }
 

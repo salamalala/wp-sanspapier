@@ -2048,6 +2048,17 @@ html, body {
   background-color: #4B5663; }
   .page-template-content-unterstuetzung header {
     border-bottom: none; }
+  .page-template-content-unterstuetzung h3 {
+    position: relative;
+    margin-bottom: 1em; }
+    .page-template-content-unterstuetzung h3:after {
+      content: '';
+      position: absolute;
+      bottom: -0.2em;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background-color: #bf4385; }
   .page-template-content-unterstuetzung .unterstuetzung-box {
     float: left;
     display: block;
@@ -2064,17 +2075,6 @@ html, body {
       color: #bf4385;
       text-align: center;
       font-size: 1.333em; }
-  .page-template-content-unterstuetzung .unterstuetzung-title {
-    position: relative;
-    margin-bottom: 1em; }
-    .page-template-content-unterstuetzung .unterstuetzung-title:after {
-      content: '';
-      position: absolute;
-      bottom: -0.2em;
-      left: 0;
-      height: 2px;
-      width: 100%;
-      background-color: #bf4385; }
   .page-template-content-unterstuetzung .online-box,
   .page-template-content-unterstuetzung .account-box {
     float: left;
