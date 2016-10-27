@@ -63,7 +63,7 @@ get_header();
     <p>Berner Beratungsstelle für Sans-Papiers <br> Eigerplatz 5 <br> 3007 Bern </p>
   </div>
 
-  <?php echo do_shortcode( '[contact-form-7 id="526" title="Unterstützungsformular"]' ); ?>
+  <?php echo do_shortcode( '[contact-form-7 id="140" title="Unterstützungsformular"]' ); ?>
 
   <?php get_template_part( 'template-parts/content', 'page' ); ?>
 
