@@ -8,9 +8,9 @@
 
   .unterstuetzung-box {
     @include span-columns(12 of 12);
+    margin-top: $modular-scale-xlg;
     border: solid $light-gray 2px;
     padding: $modular-scale-lg $modular-scale-md;
-    margin-top: $modular-scale-xlg;
     color: $white;
 
     h3 {
