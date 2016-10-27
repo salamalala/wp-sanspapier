@@ -9,7 +9,7 @@ get_header();
 
   <div class="unterstuetzung-box online-box">
 
-    <h3>Online-Spende (mit Postkonto, Visa oder Masterkarte möglich)</h3>
+    <h3 class="unterstuetzung-title">Online-Spende (mit Postkonto, Visa oder Masterkarte möglich)</h3>
 
     <form method="post" action="https://e-payment.postfinance.ch/ncol/test/orderstandard_utf8.asp" id=form1 class="online-form" name=form1>
 

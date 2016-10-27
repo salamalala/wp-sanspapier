@@ -88,7 +88,7 @@ module.exports = function(grunt){
         ]
       },
       options: {
-        proxy: "http://localhost/wordpress",
+        proxy: "http://sanspapiers.dev/",
         watchTask: true,
       }
     }
