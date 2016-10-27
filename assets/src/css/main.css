@@ -2059,22 +2059,22 @@ html, body {
     color: #fff; }
     .page-template-content-unterstuetzung .unterstuetzung-box:last-child {
       margin-right: 0; }
-    .page-template-content-unterstuetzung .unterstuetzung-box h3 {
-      position: relative;
-      margin-bottom: 1em; }
-      .page-template-content-unterstuetzung .unterstuetzung-box h3:after {
-        content: '';
-        position: absolute;
-        bottom: -0.2em;
-        left: 0;
-        height: 2px;
-        width: 100%;
-        background-color: #bf4385; }
     .page-template-content-unterstuetzung .unterstuetzung-box__validation {
       display: none;
       color: #bf4385;
       text-align: center;
       font-size: 1.333em; }
+  .page-template-content-unterstuetzung .unterstuetzung-title {
+    position: relative;
+    margin-bottom: 1em; }
+    .page-template-content-unterstuetzung .unterstuetzung-title:after {
+      content: '';
+      position: absolute;
+      bottom: -0.2em;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background-color: #bf4385; }
   .page-template-content-unterstuetzung .online-box,
   .page-template-content-unterstuetzung .account-box {
     float: left;

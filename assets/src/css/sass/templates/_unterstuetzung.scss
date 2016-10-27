@@ -13,26 +13,26 @@
     padding: $modular-scale-lg $modular-scale-md;
     color: $white;
 
-    h3 {
-      position: relative;
-      margin-bottom: $modular-scale-xs;
-
-      &:after {
-        content: '';
-        position: absolute;
-        bottom: -0.2em;
-        left: 0;
-        height: 2px;
-        width: 100%;
-        background-color: $pink;
-      }
-    }
-
     &__validation {
       display: none;
       color: $pink;
       text-align: center;
       font-size: $medium-font-size;
+    }
+  }
+
+  .unterstuetzung-title {
+    position: relative;
+    margin-bottom: $modular-scale-xs;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -0.2em;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background-color: $pink;
     }
   }
 
