@@ -105,6 +105,10 @@ select {
 //alert messages;
 .wpcf7 {
 
+  label + br {
+    display: none;
+  }
+
   span.wpcf7-not-valid-tip {
     color: $pink;
     background: $white;

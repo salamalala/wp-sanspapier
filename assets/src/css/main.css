@@ -225,6 +225,8 @@ button, input[type="button"], input[type="reset"], input[type="submit"] {
       cursor: not-allowed;
       opacity: 0.5; }
 
+.wpcf7 label + br {
+  display: none; }
 .wpcf7 span.wpcf7-not-valid-tip {
   color: #bf4385;
   background: #fff;
