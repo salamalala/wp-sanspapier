@@ -31,13 +31,13 @@
         <div class="block-nav logo-left">
 
           <a href="#" class="logo">
-           <img src= "<?php  
-            echo get_template_directory_uri(); ?>/assets/dist/images/logo_def.svg" 
+           <img src= "<?php
+            echo get_template_directory_uri(); ?>/assets/dist/images/logo_def.svg"
             alt="Logo Sans Papier Beratungsstelle"
-            > 
+            >
           </a>
         </div>
-        
+
         <div class="block-nav menu-right ">
             <a href="#" class="menu-button " id="js-mobile-menu">
             <span class="menu-size">Menu</span>
@@ -52,8 +52,7 @@
         </div>
 
         <nav role="navigation">
-
-          <?php 
+          <?php
 
           $args = array(
             'container'       => 'ul',
@@ -62,7 +61,7 @@
             'depth'           => 0,
             'walker'          => new My_Sub_Menu()
             );
-          wp_nav_menu( $args ) 
+          wp_nav_menu( $args )
 
           ?>
 
@@ -75,7 +74,7 @@
 
     </header>
 
-    
+
     <div class="main-outer-container">
       <main role="main">
 
@@ -84,25 +83,25 @@
            Wir <a href="<?php bloginfo('url'); ?>/beratungen/">beraten und informieren Menschen</a>, die in der Schweiz leben, ohne eine Aufenthalts&shy;bewilligung zu besitzen. Zudem leisten wir <a href="<?php bloginfo('url'); ?>/aktivitaeten/">Sensibilisierungs- und Informationsarbeit</a> in der Region Bern.
           </p>
         </div>
-      
+
         <div class="flex-content">
 
-          <?php 
+          <?php
             $args = array(
               'post_type' => 'aktivitaet',
               'orderby' => 'modified',
-              'order'   => 'DESC', 
+              'order'   => 'DESC',
             );
 
             $loop = new WP_Query( $args) ;
 
             if( $loop->have_posts()):
-              while( $loop->have_posts() ) : $loop->the_post(); 
+              while( $loop->have_posts() ) : $loop->the_post();
                 if (get_field('auf_der_homepage')): ?>
 
                 <?php $video = get_field('video'); ?>
                 <?php $bild = get_field('bild'); ?>
-               
+
 
                   <div class="half-width-box box">
 
@@ -110,8 +109,8 @@
                     <h2><?php the_title(); ?></h2>
                     <h4 class="italic"><?php the_field('datum'); ?></h4>
                     <p class="element-expand"><?php the_field('kurzbeschreibung'); ?></p>
-                  
-                    <?php if(!empty($bild) && empty($video)): 
+
+                    <?php if(!empty($bild) && empty($video)):
                       $url = $bild['url'];
                       $alt = $bild['alt']; ?>
 
@@ -122,7 +121,7 @@
                     <?php endif; ?>
 
                     <?php if(!empty($video) && empty($bild)) : ?>
-                      
+
                       <!-- needs an extra div in order not to break in firefox due to flex on parent element -->
                       <div>
                         <div class="responsive-video media__embedded">
@@ -153,27 +152,27 @@
               if( have_rows('beratung') ):
                 while ( have_rows('beratung') ) : the_row();  ?>
 
-                <div class="beratung box" id="<?php the_sub_field('beratungsort'); ?>">          
+                <div class="beratung box" id="<?php the_sub_field('beratungsort'); ?>">
                   <h3>Beratungszeiten <span class="hide-when-small"><?php the_sub_field('beratungsort'); ?></span></h3>
                   <p><?php the_sub_field('beratungszeiten'); ?></p>
-                  <a class="minorlink-dark" href="<?php bloginfo('url'); ?>/beratungen/">Mehr Informationen</a>            
+                  <a class="minorlink-dark" href="<?php bloginfo('url'); ?>/beratungen/">Mehr Informationen</a>
                 </div>
 
                 <?php endwhile; ?>
-              <?php endif; ?> 
+              <?php endif; ?>
 
           </div>
           <!-- End of Beratungsbox -->
-    
+
           <div class="sidebar-links">
-            
-            <a class="mainlink pink-box" href="<?php bloginfo('url'); ?>/unterstuetzung/">
-              <p>Mitglied werden</p> 
-            </a>
-            
 
             <a class="mainlink pink-box" href="<?php bloginfo('url'); ?>/unterstuetzung/">
-              <p>Spenden</p>   
+              <p>Mitglied werden</p>
+            </a>
+
+
+            <a class="mainlink pink-box" href="<?php bloginfo('url'); ?>/unterstuetzung/">
+              <p>Spenden</p>
             </a>
 
             <a class="mainlink pink-box" href="<?php bloginfo('url'); ?>/unterstuetzung/">
@@ -187,7 +186,7 @@
                 <div id="mc_embed_signup">
                   <form action="//sans-papiers.us6.list-manage.com/subscribe/post?u=515540207cb90d8a5faa83b5e&amp;id=471eca439c" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate>
                     <div id="mc_embed_signup_scroll">
-                  
+
                       <div class="mc-field-group">
                         <label for="mce-EMAIL">E-Mail: </label>
                         <input type="email" value="" name="EMAIL" class="required email" id="mce-EMAIL" placeholder="Emailadresse">
@@ -195,11 +194,11 @@
                       <div id="mce-responses" class="clear">
                         <div class="response" id="mce-error-response" style="display:none"></div>
                         <div class="response" id="mce-success-response" style="display:none"></div>
-                      </div>    
+                      </div>
                       <!-- real people should not fill this in and expect good things - do not remove this or risk form bot signups-->
                       <div style="position: absolute; left: -5000px;"><input type="text" name="b_515540207cb90d8a5faa83b5e_471eca439c" tabindex="-1" value=""></div>
                       <div class="clear"><input type="submit" value="Anmelden" name="subscribe" id="mc-embedded-subscribe" class="button"></div>
-                    
+
                     </div>
                   </form>
                 </div>
