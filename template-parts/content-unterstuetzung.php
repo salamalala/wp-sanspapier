@@ -43,7 +43,8 @@ get_header();
       <input type="hidden" name="AMOUNT" value="">
       <input type="hidden" name="CURRENCY" value="CHF">
       <input type="hidden" name="LANGUAGE" value="de_CH">
-      <input type="hidden" name=" ACCEPTURL" value="http://sanspapiersbern.ch/">
+      <input type="hidden" name="ACCEPTURL" value="http://sanspapiersbern.ch/">
+      <input type="hidden" name="SHASIGN" value="">
 
       <input type="submit" value="Online Spenden" id="submit" name="submit">
 
