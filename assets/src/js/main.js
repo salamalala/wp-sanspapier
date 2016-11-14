@@ -85,12 +85,13 @@ var thirdBox = function(e) {
 
 };
 
-
+//remove p tags inserted by WP
 var emptyPTag = function(){
   $('p:empty').remove();
 };
 
 
+//Google Maps
 var initMap = function() {
 
   var customStyles = [
@@ -140,12 +141,21 @@ var initMap = function() {
 
 };
 
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+/* Online Payment
+/* - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -  */
+
+
+//create a dynamic Order ID
+var dynamicOrderID = function() {
+  var num = Math.floor(Math.random() * 999999);
+  $('input[name=ORDERID]').val(num);
+};
+
+//get the donated Amount
 var donatedAmount = function() {
 
-  $('#form1 input').on('change keyup paste click', function() {
-
     // if there is something in the open field then
-    // } else if ($('#osopen').val().length > 0){
     if ($('#osopen').is(":focus")){
       $('input[type=radio]').prop('checked', false);
       var chosenAmount = $('#osopen:empty').val()
@@ -156,10 +166,10 @@ var donatedAmount = function() {
       $('#osopen').val('');
       $('input[name=AMOUNT]').val(selectedAmount * 100)
     }
-  });
 
 };
 
+//validate the form if input is added or not
 var validationForm = function() {
 
   $('#form1').submit(function () {
@@ -174,18 +184,39 @@ var validationForm = function() {
 
 };
 
-var dynamicOrderID = function() {
-  var num = Math.floor(Math.random() * 999999);
-  $('input[name=ORDERID]').val(num);
+
+var chainedSHAString;
+
+var chainedSHA = function() {
+  chainedSHAString =
+  "ACCEPTURL=http://sanspapiersbern.ch/YqAYc1TILyjt8o38" +
+  "AMOUNT=" + $('input[name=AMOUNT]').val() + "YqAYc1TILyjt8o38" +
+  "CURRENCY=CHFYqAYc1TILyjt8o38" +
+  "LANGUAGE=de_CHYqAYc1TILyjt8o38" +
+  "ORDERID=" + $('input[name=ORDERID]').val() + "YqAYc1TILyjt8o38" +
+  "PSPID=sanspapiersTESTYqAYc1TILyjt8o38";
+};
+
+
+var calculatingSHA = function() {
+    $('input[name=SHASIGN]').val(Sha1.hash(chainedSHAString));
+};
+
+var dynamicFormValues = function() {
+  $('#form1 input').on('change keyup paste click', function() {
+    donatedAmount();
+    chainedSHA();
+    calculatingSHA();
+  });
 }
 
 // same than $(document).ready(function()
 $(function(){
 
   if ( $('#form1').length ) {
-    donatedAmount();
     dynamicOrderID();
     validationForm();
+    dynamicFormValues();
   }
 
   mobileMenu();
