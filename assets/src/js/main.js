@@ -184,7 +184,6 @@ var validationForm = function() {
 
 };
 
-
 var chainedSHAString;
 
 var chainedSHA = function() {

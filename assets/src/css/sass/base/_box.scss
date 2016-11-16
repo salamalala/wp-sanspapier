@@ -2,11 +2,11 @@
 	padding: $modular-scale-md $modular-scale-sm;
 	background-color: $white;
 	@include full-width-flex-box;
-	
+
 	@include media($medium-screen) {
 		padding: $modular-scale-md;
 	}
-	
+
 	@include media($large-screen) {
 		padding: $modular-scale-xlg;
 	}
@@ -18,7 +18,7 @@
 	}
 }
 
-.dark-box { 
+.dark-box {
 	background-color: $medium-gray;
 }
 
@@ -36,7 +36,7 @@
 	@include media($medium-screen) {
 		margin: $modular-scale-md 0;
 	}
-	
+
 	@include media($xlarge-screen) {
 		@include full-width-flex-box;
 		padding: $modular-scale-xlg $modular-scale-xxlg;
@@ -51,7 +51,7 @@
 		}
 	}
 }
-	
+
 .half-width-box {
 	@include full-width-flex-box;
 
@@ -87,7 +87,7 @@
 
 .one-third-box {
 	@include full-width-flex-box;
-	
+
 	@include media($medium-screen) {
 		margin: $modular-scale-md 0;
 		padding: $modular-scale-sm $modular-scale-xs;
@@ -100,9 +100,10 @@
 .image-box-wrapper {
 	padding: 0;
 	overflow: hidden;
-		
-	img { 
-		object-fit: cover;
+	background-color: $white;
+
+	img {
+		object-fit: contain;
 		min-width: 100%;
 		max-width: none;
 	}
