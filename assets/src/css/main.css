@@ -771,7 +771,7 @@ picture {
 .image-box-wrapper {
   padding: 0;
   overflow: hidden;
-  background-color: #30373F; }
+  background-color: #fff; }
   .image-box-wrapper img {
     -o-object-fit: contain;
        object-fit: contain;
