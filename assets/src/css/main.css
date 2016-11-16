@@ -771,12 +771,11 @@ picture {
 .image-box-wrapper {
   padding: 0;
   overflow: hidden;
-  background-color: #fff; }
+  background-color: #30373F; }
   .image-box-wrapper img {
     -o-object-fit: contain;
        object-fit: contain;
-    min-width: 100%;
-    max-width: none; }
+    min-width: 100%; }
 
 .gallery {
   float: left;

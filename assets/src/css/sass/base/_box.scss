@@ -100,11 +100,10 @@
 .image-box-wrapper {
 	padding: 0;
 	overflow: hidden;
-	background-color: $white;
+	background-color: $dark-gray;
 
 	img {
 		object-fit: contain;
 		min-width: 100%;
-		max-width: none;
 	}
 }
