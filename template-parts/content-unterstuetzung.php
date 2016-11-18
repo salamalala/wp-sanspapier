@@ -11,7 +11,7 @@ get_header();
 
     <h3>Online-Spende (mit Postkonto, Visa oder Masterkarte möglich)</h3>
 
-    <form method="post" action="https://e-payment.postfinance.ch/ncol/test/orderstandard_utf8.asp" id=form1 class="online-form" name=form1>
+    <form method="post" action="https://e-payment.postfinance.ch/ncol/prod/orderstandard_utf8.asp" id=form1 class="online-form" name=form1>
 
       <div>
         <input type="radio" name="online-spende" value="20" id="os20" class="online-spende">
@@ -38,7 +38,7 @@ get_header();
         <input type="number" value="" id="osopen" min="1" step="1" class="online-spende" placeholder="Spende in CHF">
       </div>
 
-      <input type="hidden" name="PSPID" value="sanspapiersTEST">
+      <input type="hidden" name="PSPID" value="sanspapiers">
       <input type="hidden" name="ORDERID" value="">
       <input type="hidden" name="AMOUNT" value="">
       <input type="hidden" name="CURRENCY" value="CHF">
