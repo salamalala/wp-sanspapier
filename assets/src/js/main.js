@@ -193,7 +193,7 @@ var chainedSHA = function() {
   "CURRENCY=CHFYqAYc1TILyjt8o38" +
   "LANGUAGE=de_CHYqAYc1TILyjt8o38" +
   "ORDERID=" + $('input[name=ORDERID]').val() + "YqAYc1TILyjt8o38" +
-  "PSPID=sanspapiersTESTYqAYc1TILyjt8o38";
+  "PSPID=sanspapiersYqAYc1TILyjt8o38";
 };
 
 
