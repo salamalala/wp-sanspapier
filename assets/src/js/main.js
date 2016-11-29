@@ -154,7 +154,6 @@ var dynamicOrderID = function() {
 
 //get the donated Amount
 var donatedAmount = function() {
-
     // if there is something in the open field then
     if ($('#osopen').is(":focus")){
       $('input[type=radio]').prop('checked', false);
@@ -166,7 +165,26 @@ var donatedAmount = function() {
       $('#osopen').val('');
       $('input[name=AMOUNT]').val(selectedAmount * 100)
     }
+};
 
+var donaterName = function() {
+  $('input[name=CN]').val($('#donater-name').val());
+};
+
+var donaterAddress = function() {
+  $('input[name=OWNERADDRESS]').val($('#donater-address').val());
+};
+
+var donaterZip = function() {
+  $('input[name=OWNERZIP]').val($('#donater-zip').val());
+};
+
+var donaterTown = function() {
+  $('input[name=OWNERTOWN]').val($('#donater-town').val());
+};
+
+var donaterEmail = function() {
+  $('input[name=EMAIL]').val($('#donater-email').val());
 };
 
 //validate the form if input is added or not
@@ -190,9 +208,14 @@ var chainedSHA = function() {
   chainedSHAString =
   "ACCEPTURL=http://sanspapiersbern.ch/YqAYc1TILyjt8o38" +
   "AMOUNT=" + $('input[name=AMOUNT]').val() + "YqAYc1TILyjt8o38" +
+  "CN=" + $('input[name=CN]').val() + "YqAYc1TILyjt8o38" +
   "CURRENCY=CHFYqAYc1TILyjt8o38" +
+  "EMAIL=" + $('input[name=EMAIL]').val() + "YqAYc1TILyjt8o38" +
   "LANGUAGE=de_CHYqAYc1TILyjt8o38" +
   "ORDERID=" + $('input[name=ORDERID]').val() + "YqAYc1TILyjt8o38" +
+  "OWNERADDRESS=" + $('input[name=OWNERADDRESS]').val() + "YqAYc1TILyjt8o38" +
+  "OWNERTOWN=" + $('input[name=OWNERTOWN]').val() + "YqAYc1TILyjt8o38" +
+  "OWNERZIP=" + $('input[name=OWNERZIP]').val() + "YqAYc1TILyjt8o38" +
   "PSPID=sanspapiersYqAYc1TILyjt8o38";
 };
 
@@ -204,6 +227,11 @@ var calculatingSHA = function() {
 var dynamicFormValues = function() {
   $('#form1 input').on('change keyup paste click', function() {
     donatedAmount();
+    donaterName();
+    donaterAddress();
+    donaterZip();
+    donaterTown();
+    donaterEmail();
     chainedSHA();
     calculatingSHA();
   });

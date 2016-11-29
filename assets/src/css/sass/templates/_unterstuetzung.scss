@@ -36,21 +36,27 @@
     }
   }
 
-  .online-box,
-  .account-box {
-    @include span-columns(12 of 12);
-    @include media($large-screen) {
-      @include span-columns(6 of 12);
+  .online {
+    @include span-columns(8);
+    &__donation{
+      @include span-columns(3 of 8);
+    }
+    &__address {
+      @include span-columns(4 of 8);
+      @include shift(1);
+      @include omega();
     }
   }
+
+  .account-box {
+    @include span-columns(4);
+    @include omega();
+  }
+
 
   .online-form {
     label {
       display: inline-block;
-    }
-
-    input[type=number] {
-      @include span-columns(3 of 6);
     }
   }
 

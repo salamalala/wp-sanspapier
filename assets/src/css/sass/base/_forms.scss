@@ -14,6 +14,10 @@ select {
   margin-bottom: $modular-scale-xxxxs;
 }
 
+input[type=radio] {
+  margin-bottom: $modular-scale-md;
+}
+
 ::-webkit-input-placeholder {
   color: $light-medium-gray;
 }

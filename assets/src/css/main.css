@@ -73,6 +73,9 @@ select {
   font-size: 1em;
   margin-bottom: 0.42219em; }
 
+input[type=radio] {
+  margin-bottom: 1.77689em; }
+
 ::-webkit-input-placeholder {
   color: #8093A8; }
 
@@ -2100,34 +2103,39 @@ html, body {
       color: #bf4385;
       text-align: center;
       font-size: 1.333em; }
-  .page-template-content-unterstuetzung .online-box,
+  .page-template-content-unterstuetzung .online {
+    float: left;
+    display: block;
+    margin-right: 2.35765%;
+    width: 65.88078%; }
+    .page-template-content-unterstuetzung .online:last-child {
+      margin-right: 0; }
+    .page-template-content-unterstuetzung .online__donation {
+      float: left;
+      display: block;
+      margin-right: 3.57866%;
+      width: 35.26334%; }
+      .page-template-content-unterstuetzung .online__donation:last-child {
+        margin-right: 0; }
+    .page-template-content-unterstuetzung .online__address {
+      float: left;
+      display: block;
+      margin-right: 3.57866%;
+      width: 48.21067%;
+      margin-left: 12.94733%;
+      margin-right: 0; }
+      .page-template-content-unterstuetzung .online__address:last-child {
+        margin-right: 0; }
   .page-template-content-unterstuetzung .account-box {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 100%; }
-    .page-template-content-unterstuetzung .online-box:last-child,
+    width: 31.76157%;
+    margin-right: 0; }
     .page-template-content-unterstuetzung .account-box:last-child {
       margin-right: 0; }
-    @media screen and (min-width: 54em) {
-      .page-template-content-unterstuetzung .online-box,
-      .page-template-content-unterstuetzung .account-box {
-        float: left;
-        display: block;
-        margin-right: 2.35765%;
-        width: 48.82117%; }
-        .page-template-content-unterstuetzung .online-box:last-child,
-        .page-template-content-unterstuetzung .account-box:last-child {
-          margin-right: 0; } }
   .page-template-content-unterstuetzung .online-form label {
     display: inline-block; }
-  .page-template-content-unterstuetzung .online-form input[type=number] {
-    float: left;
-    display: block;
-    margin-right: 4.82916%;
-    width: 47.58542%; }
-    .page-template-content-unterstuetzung .online-form input[type=number]:last-child {
-      margin-right: 0; }
   .page-template-content-unterstuetzung .account-box {
     margin-right: 0; }
   .page-template-content-unterstuetzung .unterstuetzung-form {
