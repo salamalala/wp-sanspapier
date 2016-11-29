@@ -15,7 +15,9 @@ select {
 }
 
 input[type=radio] {
-  margin-bottom: $modular-scale-md;
+  @include media($medium-screen) {
+    margin-bottom: $modular-scale-md;
+  }
 }
 
 ::-webkit-input-placeholder {
