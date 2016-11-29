@@ -11,7 +11,7 @@ get_header();
 
     <h3>Online-Spende (mit Postkonto, Visa oder Masterkarte möglich)</h3>
 
-    <form method="post" action="https://e-payment.postfinance.ch/ncol/prod/orderstandard_utf8.asp" id=form1 class="online-form" name=form1>
+    <form method="post" action="https://e-payment.postfinance.ch/ncol/prod/orderstandard_utf8.asp" id=form1 class="online__form" name=form1>
 
       <div class="online__donation">
         <div>

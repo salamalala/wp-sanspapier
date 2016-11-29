@@ -2107,37 +2107,68 @@ html, body {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 65.88078%; }
+    width: 100%; }
     .page-template-content-unterstuetzung .online:last-child {
       margin-right: 0; }
+    @media screen and (min-width: 54em) {
+      .page-template-content-unterstuetzung .online {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 65.88078%; }
+        .page-template-content-unterstuetzung .online:last-child {
+          margin-right: 0; } }
+    .page-template-content-unterstuetzung .online__form label {
+      display: inline-block; }
     .page-template-content-unterstuetzung .online__donation {
       float: left;
       display: block;
-      margin-right: 3.57866%;
-      width: 35.26334%; }
+      margin-right: 2.35765%;
+      width: 100%; }
       .page-template-content-unterstuetzung .online__donation:last-child {
         margin-right: 0; }
+      @media screen and (min-width: 54em) {
+        .page-template-content-unterstuetzung .online__donation {
+          float: left;
+          display: block;
+          margin-right: 3.57866%;
+          width: 35.26334%; }
+          .page-template-content-unterstuetzung .online__donation:last-child {
+            margin-right: 0; } }
     .page-template-content-unterstuetzung .online__address {
       float: left;
       display: block;
-      margin-right: 3.57866%;
-      width: 48.21067%;
-      margin-left: 12.94733%;
+      margin-right: 2.35765%;
+      width: 100%;
       margin-right: 0; }
       .page-template-content-unterstuetzung .online__address:last-child {
         margin-right: 0; }
+      @media screen and (min-width: 54em) {
+        .page-template-content-unterstuetzung .online__address {
+          float: left;
+          display: block;
+          margin-right: 3.57866%;
+          width: 48.21067%;
+          margin-left: 12.94733%;
+          margin-right: 0; }
+          .page-template-content-unterstuetzung .online__address:last-child {
+            margin-right: 0; } }
   .page-template-content-unterstuetzung .account-box {
     float: left;
     display: block;
     margin-right: 2.35765%;
-    width: 31.76157%;
-    margin-right: 0; }
+    width: 100%; }
     .page-template-content-unterstuetzung .account-box:last-child {
       margin-right: 0; }
-  .page-template-content-unterstuetzung .online-form label {
-    display: inline-block; }
-  .page-template-content-unterstuetzung .account-box {
-    margin-right: 0; }
+    @media screen and (min-width: 54em) {
+      .page-template-content-unterstuetzung .account-box {
+        float: left;
+        display: block;
+        margin-right: 2.35765%;
+        width: 31.76157%;
+        margin-right: 0; }
+        .page-template-content-unterstuetzung .account-box:last-child {
+          margin-right: 0; } }
   .page-template-content-unterstuetzung .unterstuetzung-form {
     float: left;
     display: block;

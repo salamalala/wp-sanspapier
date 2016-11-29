@@ -37,32 +37,40 @@
   }
 
   .online {
-    @include span-columns(8);
+    @include span-columns(12 of 12);
+      @include media($large-screen) {
+        @include span-columns(8);
+      }
+    &__form {
+      label {
+        display: inline-block;
+      }
+    }
     &__donation{
-      @include span-columns(3 of 8);
+      @include span-columns(12 of 12);
+      @include media($large-screen) {
+        @include span-columns(3 of 8);
+      }
     }
     &__address {
-      @include span-columns(4 of 8);
-      @include shift(1);
+      @include span-columns(12 of 12);
+      @include omega();
+      @include media($large-screen) {
+        @include span-columns(4 of 8);
+        @include shift(1);
+        @include omega();
+      }
+    }
+  }
+
+  .account-box {
+    @include span-columns(12 of 12);
+    @include media($large-screen) {
+      @include span-columns(4);
       @include omega();
     }
   }
 
-  .account-box {
-    @include span-columns(4);
-    @include omega();
-  }
-
-
-  .online-form {
-    label {
-      display: inline-block;
-    }
-  }
-
-  .account-box {
-    @include omega;
-  }
 
   .unterstuetzung-form {
     @include span-columns(12 of 12);
