@@ -168,23 +168,43 @@ var donatedAmount = function() {
 };
 
 var donaterName = function() {
-  $('input[name=CN]').val($('#donater-name').val());
+  if( !$('#donater-name').val() ) {
+    $('input[name=CN]').val("empty");
+  } else {
+    $('input[name=CN]').val($('#donater-name').val());
+  }
 };
 
 var donaterAddress = function() {
-  $('input[name=OWNERADDRESS]').val($('#donater-address').val());
+  if( !$('#donater-address').val() ) {
+    $('input[name=OWNERADDRESS]').val("empty");
+  } else {
+    $('input[name=OWNERADDRESS]').val($('#donater-address').val());
+  }
 };
 
 var donaterZip = function() {
-  $('input[name=OWNERZIP]').val($('#donater-zip').val());
+  if( !$('#donater-zip').val() ) {
+    $('input[name=OWNERZIP]').val("empty");
+  } else {
+    $('input[name=OWNERZIP]').val($('#donater-zip').val());
+  }
 };
 
 var donaterTown = function() {
-  $('input[name=OWNERTOWN]').val($('#donater-town').val());
+  if( !$('#donater-town').val() ) {
+    $('input[name=OWNERTOWN]').val("empty");
+  } else {
+    $('input[name=OWNERTOWN]').val($('#donater-town').val());
+  }
 };
 
 var donaterEmail = function() {
-  $('input[name=EMAIL]').val($('#donater-email').val());
+  if( !$('#donater-email').val() ) {
+    $('input[name=EMAIL]').val("empty");
+  } else {
+    $('input[name=EMAIL]').val($('#donater-email').val());
+  }
 };
 
 //validate the form if input is added or not

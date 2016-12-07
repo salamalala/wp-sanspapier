@@ -43,27 +43,27 @@ get_header();
       <div class="online__address">
         <div>
           <label for="donater-name"> Name </label>
-          <input type="text" name="online-spende" value="" id="donater-name" class="online-spende" placeholder="Vorname und Nachname" required>
+          <input type="text" name="online-spende" value="" id="donater-name" class="online-spende" placeholder="Vorname und Nachname">
         </div>
 
         <div>
           <label for="donater-address"> Adresse </label>
-          <input type="text" name="online-spende" value="" id="donater-address" class="online-spende" placeholder="Strasse / Hausnummer" required>
+          <input type="text" name="online-spende" value="" id="donater-address" class="online-spende" placeholder="Strasse / Hausnummer">
         </div>
 
         <div>
           <label for="donater-zip"> Postleitzahl </label>
-          <input type="text" name="online-spende" value="" id="donater-zip" class="online-spende" placeholder="PLZ" required>
+          <input type="text" name="online-spende" value="" id="donater-zip" class="online-spende" placeholder="PLZ">
         </div>
 
         <div>
           <label for="donater-town"> Ort </label>
-          <input type="text" name="online-spende" value="" id="donater-town" class="online-spende" placeholder="Ort" required>
+          <input type="text" name="online-spende" value="" id="donater-town" class="online-spende" placeholder="Ort">
         </div>
 
         <div>
           <label for="donater-email"> Email </label>
-          <input type="email" name="online-spende" value="" id="donater-email" class="online-spende" placeholder="ich@mail.ch" required>
+          <input type="email" name="online-spende" value="" id="donater-email" class="online-spende" placeholder="ich@mail.ch">
         </div>
       </div>
 
