@@ -2154,6 +2154,10 @@ html, body {
           margin-right: 0; }
           .page-template-content-unterstuetzung .online__address:last-child {
             margin-right: 0; } }
+      .page-template-content-unterstuetzung .online__address--required {
+        color: #bf4385;
+        font-weight: bold;
+        font-size: 110%; }
   .page-template-content-unterstuetzung .account-box {
     float: left;
     display: block;

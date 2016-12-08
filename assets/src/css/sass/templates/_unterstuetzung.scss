@@ -60,6 +60,12 @@
         @include shift(1);
         @include omega();
       }
+
+      &--required {
+        color: $pink;
+        font-weight: bold;
+        font-size: 110%;
+      }
     }
   }
 
