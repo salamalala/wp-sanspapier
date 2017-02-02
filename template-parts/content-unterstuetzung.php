@@ -82,7 +82,13 @@ get_header();
       <input type="hidden" name="ACCEPTURL" value="http://sanspapiersbern.ch/">
       <input type="hidden" name="SHASIGN" value="">
 
-      <input type="submit" value="Online Spenden" id="submit" name="submit">
+      <div class="online__agb">
+        <input  type="checkbox" name="" id="agb" class="online-spende" required="">
+        <label for="agb">Ich habe die <a href="http://sanspapiersbern.ch/wp-content/uploads/2017/02/AGB-VBBS.pdf" target="_blank">Allgemeinen Geschäftsbedingungen</a> und die <a href="http://sanspapiersbern.ch/wp-content/uploads/2017/02/Datenschutzbestimmungen-VBBS_1.pdf" target="_blank">Datenschutzbestimmungen</a> gelesen und akzeptiere diese. </label>
+      </div>
+
+
+      <input type="submit" value="Jetzt Spenden" id="submit" name="submit">
 
       <p class="unterstuetzung-box__validation">
         Bitte fügen Sie einen Spendenbetrag ein.

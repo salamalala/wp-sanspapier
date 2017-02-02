@@ -923,7 +923,7 @@ a.minorlink-dark {
       -ms-flex-item-align: end;
       padding: 1em 2.36859em; } }
   a.minorlink-dark:before {
-    content: '➞';
+    content: "➞";
     position: absolute;
     color: #4B5663;
     -webkit-transition: all 0.3s;
@@ -954,7 +954,7 @@ a.minorlink-white {
       -ms-flex-item-align: end;
       padding: 1em 2.36859em; } }
   a.minorlink-white:before {
-    content: '➞';
+    content: "➞";
     position: absolute;
     color: #fff;
     -webkit-transition: all 0.3s;
@@ -2158,6 +2158,12 @@ html, body {
         color: #bf4385;
         font-weight: bold;
         font-size: 110%; }
+    .page-template-content-unterstuetzung .online__agb {
+      margin-bottom: 1.5em; }
+      .page-template-content-unterstuetzung .online__agb input {
+        height: 1em; }
+      .page-template-content-unterstuetzung .online__agb label {
+        display: inline; }
   .page-template-content-unterstuetzung .account-box {
     float: left;
     display: block;
