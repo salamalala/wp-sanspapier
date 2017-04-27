@@ -18,7 +18,7 @@
 
         <div class="footer__contact">
 
-          <h4 class="footer__address">Verein Berner Beratungsstelle für Sans-Papiers | Eigerplatz 5 | 3007 Bern | <a href="tel://+41 31 385 18 27">+41 31 385 18 27</a></h4>
+          <h4 class="footer__address">Verein Berner Beratungsstelle für Sans-Papiers | Effingerstrasse 35 | 3008 Bern | <a href="tel://+41 31 385 18 27">+41 31 382 00 15</a></h4>
 
           <ul class="footer__social-media-icons">
             <li class="footer__social-media-icon">
