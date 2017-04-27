@@ -108,7 +108,7 @@ var initMap = function() {
     }
   ];
 
-  var bern = new google.maps.LatLng(46.940918, 7.431619);
+  var bern = new google.maps.LatLng(46.9457484, 7.431763);
   var biel = new google.maps.LatLng(47.141163, 7.251038);
 
   var mapBern = new google.maps.Map(document.getElementById('map-bern'), {
