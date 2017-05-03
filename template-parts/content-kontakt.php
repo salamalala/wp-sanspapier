@@ -11,9 +11,9 @@ get_header();
   <div class="contact-information">
     <h1>Kontakt: </h1>
     <p> Verein Berner Beratungsstelle für Sans-Papiers </p>
-    <p> Eigerplatz 5 </p>
-    <p> 3007 Bern </p>
-    <p> Tel: 031 385 18 27</p>
+    <p> Effingerstrasse 35 </p>
+    <p> 3008 Bern </p>
+    <p> Tel: 031 382 00 15</p>
     <p> Email: beratung@sans-papiers-contact.ch <p>
   </div>
 

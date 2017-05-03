@@ -103,7 +103,7 @@ get_header();
 
     <h4> PC 30-586 909-1 | IBAN CH4809000000305869091</h4>
 
-    <p>Berner Beratungsstelle für Sans-Papiers <br> Eigerplatz 5 <br> 3007 Bern </p>
+    <p>Berner Beratungsstelle für Sans-Papiers <br> Effingerstrasse 35 <br> 3008 Bern </p>
   </div>
 
   <div class="unterstuetzung-box">
