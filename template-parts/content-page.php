@@ -11,5 +11,4 @@
 
   <?php get_template_part( 'template-parts/partial', 'flex-content' ); ?>
 
-
 </article><!-- #post-## -->
