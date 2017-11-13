@@ -1,0 +1,142 @@
+// Uncomment this for a sticky footer.
+
+.wrapper-for-content-outside-of-footer {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -4em;
+}
+
+html, body {
+ height: 100%;
+}
+
+.wrapper-for-content-outside-of-footer:after {
+  content: "";
+  display: block;
+}
+
+.footer, .wrapper-for-content-outside-of-footer:after {
+  $large-screen: em(860) !default;
+  height: 11em;
+  
+  @include media($medium-screen) {
+    height: 8em;
+  }
+
+  @include media($xlarge-screen) {
+    height: 6em;
+  }
+}
+
+.footer {
+  @include display(flex);
+  @include flex-direction(column);
+  @include justify-content(center);
+  width: 100%;
+  padding: $modular-scale-sm 0;
+  background-color: $dark-gray;
+  color: $white;
+
+  @include media($medium-screen) {
+    margin-top: $modular-scale-xlg;
+  }
+
+  &__content {
+    @include outer-container(90%);
+    @include display(flex);
+    @include flex-direction(column);
+    @include justify-content(center);
+    position: relative;
+    
+    @include media($xlarge-screen) {
+      @include outer-container();
+      width: 100%;
+    }
+  }
+
+  &__contact {
+    @include media($xlarge-screen) {
+      @include display(flex);
+      @include justify-content(space-between);
+    }
+  }
+
+  &__address {
+    text-align: center;
+    font-weight: 400;
+    color: $green;
+    margin: 0;
+    font-size: $small-font-size;
+    font-weight: 700;
+
+    @include media($xlarge-screen) {
+      text-align: left;
+      font-size: $normal-font-size;
+    }
+
+    a {
+      color: $green;
+    }
+  }
+
+  &__social-media-icons {
+    list-style-type: none;
+    text-align: center;
+    margin: 0.5em 0;
+    padding-left: 0;
+    height: 30px;
+
+    @include media($medium-screen) {
+      margin: 0.8em 0;
+    }
+
+    @include media($xlarge-screen) {
+      margin: 0;
+      text-align: right;
+    }
+  }
+    
+  &__social-media-icon {
+    display: inline-block;
+    height: 100%;
+    &:last-child {
+      margin-left: 20px;  
+    }
+  }
+
+  &__svg {
+    height: 30px;
+    width: 30px;      
+    border-radius: 100%;
+    
+    &.fb-icon path {
+      transition: fill 0.1s ease-out;  
+        
+      &:hover {
+        fill: #3b5998;
+      }      
+    } 
+
+    &.twitter-icon path {
+      transition: fill 0.1s ease-out;  
+        
+      &:hover {
+        fill: #0084b4;
+      }      
+    }     
+  }
+
+  &__impressum {
+    color: $white;
+    margin: 0;
+    text-align: center;
+    @include media($xlarge-screen) {
+      text-align: left;
+    }
+
+    a {
+      @include underline-link($white, $white) 
+    }
+  }
+}

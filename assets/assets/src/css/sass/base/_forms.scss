@@ -1,0 +1,142 @@
+fieldset {
+  background-color: lighten($base-border-color, 10%);
+  border: $base-border;
+  margin: 0 0 $small-spacing;
+  padding: $base-spacing;
+}
+
+input,
+label,
+select {
+  display: block;
+  font-family: $heading-font-family;
+  font-size: $normal-font-size;
+  margin-bottom: 1em;
+
+}
+
+::-webkit-input-placeholder {
+  color: $light-medium-gray;
+}
+
+:-ms-input-placeholder {
+  color: $light-medium-gray; 
+}
+
+label {
+  font-weight: 500;
+  text-transform: uppercase;  
+
+  &.required::after {
+    content: "*";
+  }
+
+  abbr {
+    display: none;
+  }
+}
+
+#{$all-text-inputs},
+select[multiple=multiple],
+textarea {
+  background-color: $transparent;
+  border: $base-border;
+  border-radius: $base-border-radius;
+  box-shadow: $form-box-shadow;
+  box-sizing: border-box;
+  font-family: $base-font-family;
+  font-size: $base-font-size-md;
+  margin-bottom: $modular-scale-md;
+  padding: $modular-scale-xs;
+  transition: border-color;
+  width: 100%;
+  color: $pink;
+  font-weight: 600;
+  &:hover {
+    border-color: darken($base-border-color, 10%);
+  }
+  &:focus {
+    border-color: $pink;
+    background-color: $white;
+    box-shadow: $form-box-shadow-focus;
+    outline: none;
+  }
+  .pink-box & {
+    color: $white;
+    &:focus {
+     color: $pink;
+    }  
+  }
+}
+
+textarea {
+  resize: vertical;
+}
+
+input[type="search"] {
+  @include appearance(none);
+}
+
+input[type="checkbox"],
+input[type="radio"] {
+  display: inline;
+  margin-right: $small-spacing / 2;
+}
+
+input[type="file"] {
+  padding-bottom: $small-spacing;
+  width: 100%;
+}
+
+select {
+  margin-bottom: $base-spacing;
+  max-width: 100%;
+  width: auto;
+}
+
+#{$all-buttons} {
+  @include plain-link($white, $pink);
+  
+  .pink-box & {
+    @include plain-link($pink, $white);  
+  }
+
+}
+
+//alert messages;
+.wpcf7 {
+
+  label {
+    margin-bottom: -1em;
+  }
+  
+  span.wpcf7-not-valid-tip {
+    color: $pink;
+    background: $white;
+    font-weight: 600;
+    padding: $modular-scale-xxxxs;
+    text-align: center;
+    font-style: italic;
+  }
+
+  .wpcf7-validation-errors {
+    border-color: $pink;
+  }
+
+  .wpcf7-mail-sent-ok {
+    border: none;
+    width: 100%;
+    font-family: $heading-font-family;
+    text-align: center;
+    font-size: $base-font-size-lg;
+  }
+
+  div.wpcf7-validation-errors {
+    text-align: center;
+    font-family: $heading-font-family;
+    font-size: $base-font-size-lg;
+    border: none;
+    width: 100%;
+  }
+
+}

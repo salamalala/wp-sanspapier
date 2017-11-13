@@ -1,0 +1,20 @@
+body {
+  background-color: $light-gray;
+}
+
+.main-outer-container {
+  @include outer-container(90%);
+  @include media($xlarge-screen) {
+    @include outer-container();
+  }
+}
+
+main{
+  width: 100%;
+}
+
+.flex-content {
+  width: 100%;
+  @include display(flex);
+  @include flex-wrap(wrap);
+}

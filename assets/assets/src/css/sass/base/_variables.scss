@@ -1,0 +1,68 @@
+// Typography
+$base-font-family:"adelle", serif;
+
+$heading-font-family: "brandon-grotesque",sans-serif;
+
+$modular-scale-base: 1em;
+
+// Font Sizes
+$base-font-size-xs: 0.7em;
+$base-font-size-sm: 0.97em;
+$base-font-size-md: 1em;
+$base-font-size-lg: 1.02em;
+
+$small-font-size: modular-scale(-1);
+$normal-font-size: modular-scale(0);
+$medium-font-size: modular-scale(1);
+$big-font-size: modular-scale(2);
+$very-big-font-size: modular-scale(3);
+
+
+// Line height
+$base-line-height: 1.5;
+$heading-line-height: 1.1;
+
+// Other Sizes
+
+$base-border-radius: 0px;
+$base-spacing: $base-line-height * 1em;
+$small-spacing: $base-spacing / 3;
+$base-z-index: 0;
+$modular-scale-xxxxs:  modular-scale(-3);
+$modular-scale-xxxs:  modular-scale(-2);
+$modular-scale-xxs: modular-scale(1);
+$modular-scale-xs: modular-scale(0);
+$modular-scale-sm: modular-scale(1);
+$modular-scale-md: modular-scale(2);
+$modular-scale-lg: modular-scale(3);
+$modular-scale-xlg: modular-scale(4);
+$modular-scale-xxlg: modular-scale(6);
+
+
+$letter-spacing-sm: 0.05em;
+$letter-spacing-md: 0.07em; 
+$letter-spacing-lg: 0.09em; 
+
+// Colors
+$pink:  #bf4385;
+$green: #ADCC70;
+$white: #fff; 
+$dark-gray:  #30373F;
+$medium-gray: #4B5663;
+$light-medium-gray:#8093A8;
+$light-gray: #F4F6F9;
+$transparent: transparent;
+
+// Font Colors
+$base-background-color: #fff;
+$base-font-color: $medium-gray;
+$pink: $pink;
+
+// Border
+$base-border-color: $light-gray;
+$base-border: 0.11em solid $base-border-color;
+
+// Forms
+$form-box-shadow: inset 0 1px 3px rgba(#000, 0.06);
+$form-box-shadow-focus: $form-box-shadow, 0 0 5px adjust-color($pink, $lightness: -5%, $alpha: -0.3);
+$form-box-shadow-focus-white: $form-box-shadow, 0 0 5px adjust-color($white, $lightness: -5%, $alpha: -0.3);

@@ -1,0 +1,113 @@
+.page-template-content-unterstuetzung {
+  background-color: $medium-gray;
+
+  header {
+    border-bottom: none;
+  }
+
+  h3 {
+    position: relative;
+    margin-bottom: $modular-scale-xs;
+
+    &:after {
+      content: '';
+      position: absolute;
+      bottom: -0.2em;
+      left: 0;
+      height: 2px;
+      width: 100%;
+      background-color: $pink;
+    }
+  }
+
+
+  .unterstuetzung-box {
+    @include span-columns(12 of 12);
+    margin-top: $modular-scale-xlg;
+    border: solid $light-gray 2px;
+    padding: $modular-scale-lg $modular-scale-md;
+    color: $white;
+
+    &__validation {
+      display: none;
+      color: $pink;
+      text-align: center;
+      font-size: $medium-font-size;
+    }
+  }
+
+  .online {
+    @include span-columns(12 of 12);
+      @include media($large-screen) {
+        @include span-columns(8);
+      }
+
+    &__form {
+      label {
+        display: inline-block;
+      }
+    }
+
+    &__donation{
+      @include span-columns(12 of 12);
+      @include media($large-screen) {
+        @include span-columns(3 of 8);
+      }
+    }
+
+    &__address {
+      @include span-columns(12 of 12);
+      @include omega();
+      @include media($large-screen) {
+        @include span-columns(4 of 8);
+        @include shift(1);
+        @include omega();
+      }
+
+      &--required {
+        color: $pink;
+        font-weight: bold;
+        font-size: 110%;
+      }
+    }
+
+    &__agb {
+      margin-bottom: $base-spacing;
+
+      input {
+        height: 1em;
+      }
+
+      label {
+        display: inline;
+      }
+    }
+  }
+
+  .account-box {
+    @include span-columns(12 of 12);
+    @include media($large-screen) {
+      @include span-columns(4);
+      @include omega();
+    }
+  }
+
+
+  .unterstuetzung-form {
+    @include span-columns(12 of 12);
+    @include media($large-screen) {
+      @include span-columns(6 of 12);
+    }
+  }
+
+  .unterstuetzung-adresse {
+    @include span-columns(12 of 12);
+    margin-top: $modular-scale-lg;
+    @include media($large-screen) {
+      @include span-columns(5 of 12);
+      @include shift(1);
+      @include omega;
+      margin-top: 0;
+    }
+  }
+}

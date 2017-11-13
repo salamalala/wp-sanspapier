@@ -1,0 +1,13 @@
+.card {
+  
+  &__text {
+    padding: $modular-scale-lg $modular-scale-md;
+    background-color: $white;
+    position: relative;
+
+    @include media($medium-screen) {
+      padding: $modular-scale-md;
+    }
+  }
+
+}

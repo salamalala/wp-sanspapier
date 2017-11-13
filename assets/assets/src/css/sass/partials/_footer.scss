@@ -1,0 +1,129 @@
+// Uncomment this for a sticky footer.
+
+.wrapper-for-content-outside-of-footer {
+  min-height: 100%;
+  height: auto !important;
+  height: 100%;
+  margin: 0 auto -4em;
+}
+
+html, body {
+ height: 100%;
+}
+
+.wrapper-for-content-outside-of-footer:after {
+  content: "";
+  display: block;
+}
+
+.footer, .wrapper-for-content-outside-of-footer:after {
+  $large-screen: em(860) !default;
+  height: 8em;
+
+  @include media($xlarge-screen) {
+    height: 4em;
+  }
+}
+
+.footer {
+  width: 100%;
+  background-color: $dark-gray;
+  color: $white;
+
+  @include media($medium-screen) {
+    margin-top: $modular-scale-xlg;
+  }
+
+  .footer-content {
+    @include outer-container(90%);
+    position: relative;
+    height: 8em;
+    @include display(flex);
+    @include flex-direction(column);
+    @include justify-content(center);
+
+    @include media($xlarge-screen) {
+      @include outer-container();
+      height: 4em;
+    }
+  }
+
+  h4 {
+    @include span-columns(12);
+    margin: 1.5em 0;
+    text-align: center;
+    font-weight: 400;
+    font-size: 0.8em;
+
+    @include media($xlarge-screen) {
+      @include span-columns(10);
+      @include vertical-align;
+      font-size: 1em;
+      text-align: left;
+      margin: 0;
+    }
+
+    a {
+      color: $white;
+    }
+
+  }
+
+  ul {
+    list-style-type: none;
+    @include span-columns(12);
+    text-align: center;
+    padding-left: 0;
+    height: 30px;
+
+    @include media($xlarge-screen) {
+      @include span-columns(2);
+      right: 0;
+      text-align: right;
+      @include vertical-align;
+    }
+    
+    li {
+      display: inline-block;
+      height: 100%;
+      &:last-child {
+        margin-left: 20px;  
+      }
+    }
+
+    svg {
+      height: 30px;
+      width: 30px;      
+      border-radius: 100%;
+      
+      &.fb-icon {
+        
+        path {
+          transition: fill 0.1s ease-out;  
+          
+          &:hover {
+            fill: #3b5998;
+          }
+            
+        } 
+        
+      } 
+
+      &.twitter-icon {
+        
+        path {
+          transition: fill 0.1s ease-out;  
+          
+          &:hover {
+            fill: #0084b4;
+          }
+
+        } 
+        
+      } 
+       
+    }
+
+  }
+
+}

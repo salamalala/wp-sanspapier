@@ -1,0 +1,13 @@
+.media {
+  &__embedded {
+    margin-top: $modular-scale-sm;
+    margin-bottom: $modular-scale-sm;
+
+    @include media($large-screen) {
+      margin-top: $modular-scale-md;
+      margin-bottom: $modular-scale-md;    
+    }
+
+  }
+
+}

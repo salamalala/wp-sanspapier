@@ -1,0 +1,35 @@
+.icon-wrapper {
+	margin: 0 auto;
+	width: 20%;
+	height: auto;
+	border-radius: 100%;
+	border: solid 2px $dark-gray;
+	margin-bottom: $modular-scale-xlg;
+}
+
+.icon-in-half-width-box {
+	margin: 0 auto;
+	padding: 20%;
+	display: block;
+}
+
+.right-element-in-row {
+	@include omega;
+}
+
+.quote {
+	display: inline-block;
+	font-style: italic;
+	text-align: center;
+	
+	&:before {
+		content: "❝ ";
+		color: $green;
+	} 
+
+	&:after {
+		content: " ❞";
+		color: $green;
+	}
+}
+

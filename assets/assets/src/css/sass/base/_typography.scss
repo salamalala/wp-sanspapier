@@ -1,0 +1,143 @@
+  body {
+  @include font-feature-settings("kern", "liga", "pnum");
+  -webkit-font-smoothing: antialiased;
+  color: $base-font-color;
+    
+    .pink-box, 
+    .dark-box {
+      color: $white
+    } 
+   
+  font-family: $base-font-family;
+  font-size: $base-font-size-sm;
+  line-height: $base-line-height;
+
+  @include media($medium-screen) {
+    font-size: $base-font-size-md;
+  }
+
+  @include media($large-screen) {
+    font-size: $base-font-size-lg;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: $heading-font-family;
+  line-height: $heading-line-height;
+  margin: 0 0 $small-spacing;
+  letter-spacing: $letter-spacing-md;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  text-transform: uppercase;
+}
+
+h1 {
+  font-weight: 700;
+  font-size: $big-font-size;
+  @include media ($medium-screen) {
+    font-size: $very-big-font-size;  
+  }
+  text-transform: uppercase;
+}
+
+h2 {
+  display: inline-block;
+  font-weight: 500;
+  font-size: $medium-font-size;
+  @include media ($large-screen) {
+    font-size: $big-font-size;  
+  }
+  padding-bottom: 0.15em;
+  @include title-border-bottom($medium-gray);
+    
+    .dark-box &, 
+    .pink-box & {
+      @include title-border-bottom($white);
+    }
+}
+ 
+h3 {
+  font-weight: 500;
+  font-size: $medium-font-size;
+}
+
+.italic {
+  font-style: italic;
+  text-transform: none;
+}
+
+h4.italic {
+  font-size: $base-font-size-lg;
+  color: $light-medium-gray;
+
+  .pink-box &, 
+  .dark-box &{
+    color: $white
+  }
+
+  font-size: 0.8em;
+}
+
+h5 {
+  font-weight: 700;
+  font-size: $small-font-size;
+  color: $pink;
+
+  .pink-box &, 
+  .dark-box &{
+    color: $white
+  }
+
+  text-transform: uppercase;
+
+}
+
+p {
+  font-size: $base-font-size-sm;
+  margin: 0 0 $small-spacing;
+  letter-spacing: $letter-spacing-sm;
+  font-weight: 300;
+
+  @include media($medium-screen) {
+    font-size: $base-font-size-md;
+  }
+  
+  @include media($large-screen) {
+    font-size: $base-font-size-lg;
+  }
+
+  a {
+    @include underline-link($dark-gray, $medium-gray);
+
+    .dark-box &, 
+    .pink-box & {
+      @include underline-link($white, $white);
+    }
+  }
+}
+
+a {
+ text-decoration: none;      
+  color: $pink;      
+  font-weight: 600;
+  transition: color 0.5s; 
+  &:hover {      
+    color: saturate($pink, 15%);
+  }
+}
+
+
+img,
+picture {
+  margin: 0;
+  max-width: 100%;
+}

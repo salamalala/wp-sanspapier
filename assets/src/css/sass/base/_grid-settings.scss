@@ -1,0 +1,23 @@
+@import "../../../../../bower_components/neat/app/assets/stylesheets/neat-helpers"; // or "../neat/neat-helpers" when not in Rails
+
+// Neat Overrides
+// $column: 90px;
+// $gutter: 30px;
+// $grid-columns: 12;
+
+//ems in media queries, react to the browser font size
+$max-width: 68em;
+
+// Neat Breakpoints
+
+//Major breakpoints
+
+$medium-screen: 40em;
+
+$large-screen: 54em;
+
+$xlarge-screen: 68em;
+
+// $medium-screen-up: new-breakpoint(min-width $medium-screen 4);
+// $large-screen-up: new-breakpoint(min-width $large-screen 8);
+

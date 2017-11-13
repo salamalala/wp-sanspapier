@@ -1,0 +1,38 @@
+@include keyframes(sliding-header){
+  0%{
+    @include transform(scale(.3, .3));
+    opacity: 0;
+  }
+  70%{
+    @include transform(scale(1.05, 1.05));
+    opacity: 1;
+  }
+  80%{
+    @include transform(scale(.95, 0.95));
+    opacity: 1;
+  }
+  100% {
+    @include transform(scale(1, 1));
+    opacity: 1;
+  }
+}
+
+
+@include keyframes(bluredText) {
+  0% {
+    text-shadow: 0 0 30px $green;
+    opacity: 0;
+  }
+  50% {
+    text-shadow: 0 0 15px $green;
+    opacity: 0.5;
+  }
+  85% {
+    text-shadow: 0 0 5px $green;
+    opacity: 0.8;
+  }
+  100% {
+    text-shadow: 0 0 0 $green;
+    opacity: 1;
+  }
+}

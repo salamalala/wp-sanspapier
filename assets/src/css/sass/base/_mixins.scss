@@ -1,0 +1,209 @@
+@charset "UTF-8";
+
+@mixin vertical-align {
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+@mixin word-wrap() {
+  word-break: break-word;
+  hyphens: auto;
+}
+
+.link-box {
+  position: relative;
+  user-select: none;
+  white-space: nowrap;
+  vertical-align: middle;
+  border-radius: $base-border-radius;
+  cursor: pointer;
+  font-family: $heading-font-family;
+  line-height: 1;
+  text-decoration: none;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: $letter-spacing-lg;
+  -webkit-font-smoothing: antialiased;
+}
+
+@mixin link-with-border($main-color, $background-color) {
+  @extend .link-box;
+  @include align-self(stretch);
+  margin-top: $modular-scale-xxxs;
+  padding: $modular-scale-xs $modular-scale-xs;
+  border: $main-color 0.2em solid;
+  color: $main-color;
+  background-color: $background-color;
+  font-weight: 400;
+  transition: 0.4s ease-out;
+
+  @include media ($large-screen) {
+    @include align-self(flex-end);
+    padding: $modular-scale-xs $modular-scale-lg;
+  }
+
+  &:before {
+    content: "➞";
+    position: absolute;
+    color: $main-color;
+    transition: all 0.3s;
+    right: 25px;
+    opacity: 0;
+    top: 32%;
+  }
+
+  &:hover:before {
+    right: 10px;
+    opacity: 1;
+  }
+}
+
+@mixin underline-link($font-color, $underline-color) {
+  color: $font-color;
+  font-weight: 600;
+  text-decoration: none;
+
+  &:hover{
+    text-decoration: underline;
+    color: $font-color;
+  }
+
+  @include media($large-screen) {
+    position: relative;
+    display: inline-block;
+
+    &:after {
+      position: absolute;
+      top: 100%;
+      left: 0;
+      width: 100%;
+      height: 0.5px;
+      background: $underline-color;
+      content: '';
+      opacity: 0;
+      transition: height 0.3s, opacity 0.3s, transform 0.3s;
+      transform: translateY(-3px);
+    }
+
+    &:hover{
+      color: $underline-color;
+      text-decoration: none;
+    }
+
+    &:hover:after{
+      height: 1.5px;
+      opacity: 1;
+      transform: translate(0px);
+    }
+  }
+}
+
+@mixin title-border-bottom($color) {
+  border-bottom: 0.09em solid $color;
+}
+
+@mixin link-plain-push($background-color, $font-color) {
+  @extend .link-box;
+  padding: $modular-scale-md $modular-scale-xxxs;
+  display: block;
+  width: 100%;
+  background-color: $background-color;
+  border: none;
+  color: $font-color;
+  transition: color 0.1s linear;
+
+  @include media($large-screen) {
+    padding: $modular-scale-md $modular-scale-sm;
+  }
+
+  @include media($xlarge-screen) {
+    padding: $modular-scale-md $modular-scale-lg;
+  }
+
+  &:hover,
+  &:focus {
+    background-color: saturate($background-color, 5%);
+    color: $font-color;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+
+  p {
+    color: $font-color;
+    margin: 0;
+    transform: translateY(0);
+    transition: transform 0.2s ease;
+    font-weight: 400;
+    display: inline-block;
+    text-align: center;
+
+    &:hover {
+      transform: translateY(-3px);
+    }
+  }
+
+}
+
+@mixin plain-link($font-color, $background-color) {
+  @include appearance(none);
+  width: 100%;
+  -webkit-font-smoothing: antialiased;
+  background-color: $background-color;
+  border-radius: $base-border-radius;
+  border: none;
+  color: $font-color;
+  cursor: pointer;
+  display: inline-block;
+  font-family: $heading-font-family;
+  font-size: $base-font-size-lg;
+  font-weight: 600;
+  line-height: 1;
+  padding: $modular-scale-xxs $modular-scale-xs;
+  text-decoration: none;
+  text-transform: uppercase;
+  user-select: none;
+  vertical-align: middle;
+  white-space: nowrap;
+  border: solid 0.11em transparent;
+  letter-spacing: $letter-spacing-lg;
+  transition: background-color .15s ease-out, color .15s ease-out;
+
+  &:hover,
+  &:focus {
+    background-color: $font-color;
+    color: $background-color;
+    border: solid 0.11em $background-color;
+  }
+
+  &:disabled {
+    cursor: not-allowed;
+    opacity: 0.5;
+  }
+}
+
+@mixin circle($background-color, $color, $size, $font-size) {
+  height: $size;
+  width: $size;
+  padding: $modular-scale-xxxxs;
+  line-height: $size - 10px;
+  text-align: center;
+  font-size: $font-size;
+  background-color: $background-color;
+  color: $color;
+  transform: rotate(10deg);
+  border-radius: 100%;
+}
+
+@mixin full-width-flex-box {
+  margin: $modular-scale-sm 0;
+  @include span-columns(12 of 12);
+  @include display(flex);
+  @include flex-direction(column);
+  @include omega;
+}
