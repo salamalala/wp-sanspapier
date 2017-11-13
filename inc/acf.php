@@ -1216,7 +1216,7 @@ acf_add_local_field_group(array (
   ),
   'location' => array (
     array (
-      array(
+      array (
 				'param' => 'post_type',
 				'operator' => '==',
 				'value' => 'aktivitaet',
