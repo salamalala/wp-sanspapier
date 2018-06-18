@@ -1,6 +1,14 @@
 .page-template-content-unterstuetzung {
   background-color: $medium-gray;
 
+	a {
+		color: $light-gray;
+
+		&:hover {
+			color: $pink;
+		}
+	}
+
   header {
     border-bottom: none;
   }
