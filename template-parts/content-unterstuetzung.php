@@ -84,7 +84,7 @@ get_header();
 
       <div class="online__agb">
         <input  type="checkbox" name="" id="agb" class="online-spende" required="">
-        <label for="agb">Ich habe die <a href="http://sanspapiersbern.ch/wp-content/uploads/2017/02/AGB-VBBS.pdf" target="_blank">Allgemeinen Geschäftsbedingungen</a> und die <a href="http://sanspapiersbern.ch/wp-content/uploads/2017/02/Datenschutzbestimmungen-VBBS_1.pdf" target="_blank">Datenschutzbestimmungen</a> gelesen und akzeptiere diese. </label>
+        <label for="agb">Ich habe die <a href="http://sanspapiersbern.ch/wp-content/uploads/2017/02/AGB-VBBS.pdf" target="_blank">Allgemeinen Geschäftsbedingungen</a> und die <a href="/impressum" target="_blank">Datenschutzbestimmungen</a> gelesen und akzeptiere diese. </label>
       </div>
 
 
