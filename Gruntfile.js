@@ -89,7 +89,7 @@ module.exports = function(grunt){
         ]
       },
       options: {
-        proxy: "http://sanspapier.test/",
+        proxy: "http://sanspapiers.local/",
         watchTask: true,
       }
     }

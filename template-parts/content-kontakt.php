@@ -15,6 +15,7 @@ get_header();
     <p> 3008 Bern </p>
     <p> Tel: 031 382 00 15</p>
     <p> Email: beratung@sans-papiers-contact.ch <p>
+    <p> Fax: 031 382 00 18 <p>
   </div>
 
   <div class="contact-form">

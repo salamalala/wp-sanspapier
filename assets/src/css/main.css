@@ -1234,8 +1234,7 @@ header {
           background: url("../images/Frau2.jpg") no-repeat right bottom;
           bottom: 2.75em;
           right: 0;
-          -webkit-filter: blur(1px);
-                  filter: blur(1px);
+          filter: blur(1px);
           width: 220px;
           height: 300px;
           z-index: 0; } }
