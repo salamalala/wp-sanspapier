@@ -9,7 +9,11 @@ body {
 
 
       a {
-        @include underline-link($white, $white);
+        color: $white;
+        &:hover,
+        &:focus {
+          color: $white;
+        }
       }
     }
 
