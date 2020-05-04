@@ -6,7 +6,13 @@
     @include media($medium-screen) {
       @include span-columns(6);
     }
+
+    &__email {
+      display: inline-block;
+      margin-bottom: .5em;
+    }
   }
+  
 
   .contact-form {
     @include span-columns(12);

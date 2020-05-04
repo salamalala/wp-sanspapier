@@ -304,8 +304,7 @@ body {
     color: #fff; }
     body .pink-box a,
     body .dark-box a {
-      color: #fff;
-      margin-bottom: .5em; }
+      color: #fff; }
       body .pink-box a:hover, body .pink-box a:focus,
       body .dark-box a:hover,
       body .dark-box a:focus {
@@ -1517,6 +1516,9 @@ html, body {
         width: 48.821174201%; }
         .contact .contact-information:last-child {
           margin-right: 0; } }
+    .contact .contact-information__email {
+      display: inline-block;
+      margin-bottom: .5em; }
   .contact .contact-form {
     float: left;
     display: block;

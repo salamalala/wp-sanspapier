@@ -14,7 +14,7 @@ get_header();
     <p> Effingerstrasse 35 </p>
     <p> 3008 Bern </p>
     <p> Tel: 031 382 00 15</p>
-    <a href="mailto:beratung@sanspapiersbern.ch">Email: beratung@sanspapiersbern.ch </a>
+    <a href="mailto:beratung@sanspapiersbern.ch" class="contact-information__email">Email: beratung@sanspapiersbern.ch </a>
     <p> Fax: 031 382 00 18 <p>
   </div>
 
