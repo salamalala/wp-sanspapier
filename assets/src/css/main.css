@@ -1516,9 +1516,6 @@ html, body {
         width: 48.821174201%; }
         .contact .contact-information:last-child {
           margin-right: 0; } }
-    .contact .contact-information__email {
-      display: inline-block;
-      margin-bottom: .5em; }
   .contact .contact-form {
     float: left;
     display: block;
