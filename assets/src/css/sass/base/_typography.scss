@@ -5,7 +5,11 @@ body {
 
     .pink-box,
     .dark-box {
-      color: $white
+      color: $white;
+
+      a {
+        @include underline-link($white, $white);
+      }
     }
 
   font-family: $base-font-family;
